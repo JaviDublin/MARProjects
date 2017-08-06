@@ -1,0 +1,161 @@
+﻿/*===================================================================
+// LAYOUT FOR USERCONTROLS
+//===================================================================*/
+
+
+/* Navigation Menu */
+.div-TabbedMenu { width: 100%; position :relative ; top :1px;font-size: 11px;font-weight: bold;text-align: center;}
+.div-TabbedMenu a:link{text-decoration: none;color: #000;display: block;height: 25px;line-height: 25px;padding-right: 8px;padding-left: 8px;}
+.div-TabbedMenu a:visited { text-decoration: none; color: #000; display: block; height :25px; line-height :25px;padding-right: 8px;padding-left: 8px;}
+.div-TabbedMenu a:hover { text-decoration: none; color: #949494;  display: block; height :25px; line-height :25px;padding-right: 8px;padding-left: 8px;}
+.div-TabbedMenu a:active { text-decoration: none; color: #000; display: block; height :25px; line-height :25px;padding-right: 8px;padding-left: 8px;}
+.image-SideMenu { border: none; vertical-align: middle; padding-right: 0px; }
+.panel-PanelMenuItem { height: 25px;width:120px; float: left; font-weight: bold;  margin-right: 0px; border :1px solid #d3d3d3; background-position: left center; background-image: url(../App.Images/tab-background.gif); background-repeat: repeat-x; }
+.panel-PanelMenuItem-Selected{height: 26px;width:120px; float: left; font-weight: bold; margin-right: 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-color: #d3d3d3; border-right-color: #d3d3d3; border-left-color: #d3d3d3; background-color :#fff;}
+
+/* Form Search */
+.labelColumnFormSettings {padding:3px 3px 3px 3px; width:100px;}
+.dataColumnFormSettings {padding:3px 3px 3px 3px;}
+.dropDownListFormSettings {border:solid 1px #210765;width:120px;font-family: Verdana,Arial,Tahoma,sans-serif;color: black;font-size: 10px;}
+.textBoxCheckBoxListForm {border:solid 1px #210765;font-size: 11px;padding:2px 2px 2px 2px;font-family: Verdana,Arial,Tahoma,sans-serif;color: black;}
+.textBoxListForm {border:solid 1px #210765;font-size: 11px;width:120px;padding:2px 2px 2px 2px;font-family: Verdana,Arial,Tahoma,sans-serif;color: black;}
+
+.labelFormSettings {font-family: Verdana,Arial,Tahoma,sans-serif;color: black;font-size: 11px;}
+/* fieldset {background-color :#fff;} */
+
+.SingleDatePicker {
+   
+}
+
+.SingleTimePicker {
+    
+}
+
+.Left-Align {
+    text-align: left;
+    horiz-align: left;
+}
+
+
+
+.rad__panel-Ribbon-LinkButtonSplit-MenuItems ul
+{
+    width: 80px;
+    background-color: #fff;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-top-color: #747474;
+    border-right-color: #747474;
+    border-bottom-color: #747474;
+}
+
+
+/*.tableReportSettingsSearchCriteria {border:1px solid black;}*/
+.div-form-vehicledetails {border:1px solid black;font-size: 12px;background-color: #B0C4DE;}
+.table-form-vehicledetails {width:100%;}
+.table-rowHeader {background-color: #B0C4DE;font-weight: bold;font-family: Verdana,Arial,Tahoma,sans-serif;}
+.table-rowData {background-color: #fff;height :25px;font-family: Verdana,Arial,Tahoma,sans-serif;}
+.table-cellHeader {width:120px;height :20px;text-align: center;}
+.table-cellData {width:120px;height :25px;text-align: center;}
+
+.div-carsearch-nonrev {width:100%;background-color:#F2F2F2;height :450px;}
+
+.rad__textbox-AutoComplete {
+    border: none;
+    background: url("../App.Styles/images/ui-bg_glass_100_dcdcdc_1x400.png") repeat-x scroll 50% 50% #DCDCDC;
+    font-size: 10px;
+}
+
+.AutoCompleteForm
+{
+    font-size:13px;
+    margin : 0px;
+    border:solid 1px #3F497F;
+    padding:0px 0px;  
+}
+
+.backgroundCover
+{
+    background-color: Black; 
+    position: fixed; 
+    top: 0px; 
+    left: 0px; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 998; 
+    opacity:0.4; 
+    filter:alpha(opacity=40);
+}
+.loadData
+{
+    border: 1px solid black; 
+    z-index:999; 
+    position:absolute; 
+    top:45%; 
+    left:45%; 
+    width:200px; 
+    height:100px; 
+    background-color:white; 
+    font-size: medium; 
+    font-weight: bold;
+}
+.loadDataImage
+{
+    left:80px;
+    position:absolute;
+}
+
+.PanelGrid {width:100%;background-color:#F2F2F2;}
+.table-multiview {width:95%;background-color:#F2F2F2;}
+.div-NavigationPanel {width:100%; height:30px; text-align:left;background-image: url(../App.Images/tab-background.gif); background-repeat: repeat-x;}
+.cell-filterform {background-color:#F2F2F2; width:20%; height:100%;}
+.cell-showdata{background-color:#F2F2F2;}
+.divControlContent{}
+
+
+
+.GridRowStyleSizing 
+{
+    background-color: #f5f5f5;
+    height: 25px;
+    text-align: right;
+
+}
+
+.GridRowStyleSizing td
+{
+    padding-right: 5px;
+    padding-left: inherit;
+}
+
+.ui-multiselect { padding:2px 0 2px 4px; text-align:left }
+.ui-multiselect span.ui-icon { float:right }
+.ui-multiselect-single .ui-multiselect-checkboxes input { position:absolute !important; top: auto !important; left:-9999px; }
+.ui-multiselect-single .ui-multiselect-checkboxes label { padding:5px !important }
+
+.ui-multiselect-header { margin-bottom:3px; padding:3px 0 3px 4px }
+.ui-multiselect-header ul { font-size:0.9em }
+.ui-multiselect-header ul li { float:left; padding:0 10px 0 0 }
+.ui-multiselect-header a { text-decoration:none }
+.ui-multiselect-header a:hover { text-decoration:underline }
+.ui-multiselect-header span.ui-icon { float:left }
+.ui-multiselect-header li.ui-multiselect-close { float:right; text-align:right; padding-right:0 }
+
+.ui-multiselect-menu { display:none; padding:3px; position:absolute; z-index:10000; text-align: left }
+.ui-multiselect-checkboxes { position:relative /* fixes bug in IE6/7 */; overflow-y:scroll }
+.ui-multiselect-checkboxes label { cursor:default; display:block; border:1px solid transparent; padding:3px 1px }
+.ui-multiselect-checkboxes label input { position:relative; top:1px }
+.ui-multiselect-checkboxes li { clear:both; font-size:0.9em; padding-right:3px }
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label { text-align:center; font-weight:bold; border-bottom:1px solid }
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label a { display:block; padding:3px; margin:1px 0; text-decoration:none }
+
+/* remove label borders in IE6 because IE6 does not support transparency */
+* html .ui-multiselect-checkboxes label { border:none }
+
+
+
+

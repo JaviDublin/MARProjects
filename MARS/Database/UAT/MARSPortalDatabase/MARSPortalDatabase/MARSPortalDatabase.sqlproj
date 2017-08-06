@@ -1,0 +1,935 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+    <PostConversionRemoveFromScc>
+    </PostConversionRemoveFromScc>
+    <PostConversionAddToScc>
+    </PostConversionAddToScc>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>MARSPortalDatabase</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.0</ProjectVersion>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ShowWizard>False</ShowWizard>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <LoadSqlClrTypes>True</LoadSqlClrTypes>
+    <RootNamespace>MARSPortalDatabase</RootNamespace>
+    <DefaultSchema>dbo</DefaultSchema>
+    <PreviousProjectVersion>4.0</PreviousProjectVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <ValidateCasingOnIdentifiers>False</ValidateCasingOnIdentifiers>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{d662c35d-686d-4cd6-b183-b7d52107ba1b}</ProjectGuid>
+    <GenerateDatabaseFile>False</GenerateDatabaseFile>
+    <GenerateCreateScript>False</GenerateCreateScript>
+    <SqlServerVerification>False</SqlServerVerification>
+    <TargetLanguage>CS</TargetLanguage>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <AnsiNullDefault>True</AnsiNullDefault>
+    <AnsiNulls>True</AnsiNulls>
+    <AnsiPadding>True</AnsiPadding>
+    <AnsiWarnings>True</AnsiWarnings>
+    <ArithAbort>True</ArithAbort>
+    <ConcatNullYieldsNull>True</ConcatNullYieldsNull>
+    <QuotedIdentifier>True</QuotedIdentifier>
+    <NumericRoundAbort>False</NumericRoundAbort>
+    <RecursiveTriggersEnabled>False</RecursiveTriggersEnabled>
+    <DatabaseState>ONLINE</DatabaseState>
+    <UpdateOptions>READ_WRITE</UpdateOptions>
+    <CloseCursorOnCommitEnabled>False</CloseCursorOnCommitEnabled>
+    <DefaultCursor>LOCAL</DefaultCursor>
+    <AutoClose>False</AutoClose>
+    <AutoCreateStatistics>True</AutoCreateStatistics>
+    <AutoShrink>False</AutoShrink>
+    <AutoUpdateStatistics>True</AutoUpdateStatistics>
+    <TornPageDetection>False</TornPageDetection>
+    <DatabaseAccess>MULTI_USER</DatabaseAccess>
+    <Recovery>FULL</Recovery>
+    <EnableFullTextSearch>True</EnableFullTextSearch>
+    <DatabaseChaining>False</DatabaseChaining>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <Trustworthy>False</Trustworthy>
+    <AutoUpdateStatisticsAsynchronously>False</AutoUpdateStatisticsAsynchronously>
+    <PageVerify>NONE</PageVerify>
+    <ServiceBrokerOption>DisableBroker</ServiceBrokerOption>
+    <DateCorrelationOptimizationOn>False</DateCorrelationOptimizationOn>
+    <Parameterization>SIMPLE</Parameterization>
+    <AllowSnapshotIsolation>False</AllowSnapshotIsolation>
+    <ReadCommittedSnapshot>False</ReadCommittedSnapshot>
+    <VardecimalStorageFormatOn>True</VardecimalStorageFormatOn>
+    <SupplementalLoggingOn>False</SupplementalLoggingOn>
+    <DefaultFileStreamFilegroup />
+    <IsChangeTrackingOn>False</IsChangeTrackingOn>
+    <IsChangeTrackingAutoCleanupOn>True</IsChangeTrackingAutoCleanupOn>
+    <ChangeTrackingRetentionPeriod>2</ChangeTrackingRetentionPeriod>
+    <ChangeTrackingRetentionUnit>Days</ChangeTrackingRetentionUnit>
+    <IsEncryptionOn>False</IsEncryptionOn>
+    <IsBrokerPriorityHonored>False</IsBrokerPriorityHonored>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\sql\release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\sql\debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+    <RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>
+  </PropertyGroup>
+  <!--Import the settings-->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Pre-Deployment" />
+    <Folder Include="Scripts\Post-Deployment" />
+    <Folder Include="Data Generation Plans" />
+    <Folder Include="Schema Comparisons" />
+    <Folder Include="Properties\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="VehiclesAbroad\" />
+    <Folder Include="VehiclesAbroad\Tables\" />
+    <Folder Include="Settings\" />
+    <Folder Include="Settings\Tables\" />
+    <Folder Include="Inp\" />
+    <Folder Include="Inp\Tables\" />
+    <Folder Include="General\" />
+    <Folder Include="General\Tables\" />
+    <Folder Include="Export\" />
+    <Folder Include="Export\Tables\" />
+    <Folder Include="bcs\" />
+    <Folder Include="bcs\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Settings\Views\" />
+    <Folder Include="Inp\Views\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="VehiclesAbroad\Stored Procedures\" />
+    <Folder Include="System\" />
+    <Folder Include="System\Stored Procedures\" />
+    <Folder Include="Settings\Stored Procedures\" />
+    <Folder Include="Inp\Stored Procedures\" />
+    <Folder Include="Import\" />
+    <Folder Include="Import\Stored Procedures\" />
+    <Folder Include="General\Stored Procedures\" />
+    <Folder Include="Export\Stored Procedures\" />
+    <Folder Include="bcs\Stored Procedures\" />
+    <Folder Include="Assemblies\" />
+    <Folder Include="Storage\" />
+    <Folder Include="Security\" />
+    <Folder Include="System\Tables\" />
+    <Folder Include="General\Views\" />
+    <Folder Include="Pooling\" />
+    <Folder Include="Pooling\Views\" />
+    <Folder Include="Fao\" />
+    <Folder Include="Fao\Tables\" />
+    <Folder Include="Fao\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BuildContributorArgument Include="OutDir=$(OutDir)" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Debug.publish.xml" />
+    <None Include="Release.publish.xml" />
+    <None Include="Schema Comparisons\SqlSchemaCompare-radschemareader-hescmars01.scmp" />
+    <None Include="Assemblies\SqlServerProject1.dll" />
+    <None Include="Assemblies\MARS Pooling.dll" />
+    <None Include="Schema Comparisons\SqlSchemaCompare-hescmarsq01.scmp" />
+    <None Include="Scripts\Post-Deployment\Settings.RibbonMenu.data.sql" />
+    <None Include="Schema Comparisons\SqlSchemaCompare-cleanuptest-hescmarsq01.scmp" />
+    <None Include="Schema Comparisons\SqlSchemaCompare_Test.scmp" />
+    <None Include="Schema Comparisons\SqlSchemaCompare_Test2.scmp" />
+    <None Include="Schema Comparisons\SqlSchemaCompare_Dev_Prod.scmp" />
+    <None Include="Schema Comparisons\SqlSchemaCompare_Prod_Dev.scmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Permissions.sql" />
+    <Build Include="dbo\Tables\VEHICLE_REMARKS.sql" />
+    <Build Include="dbo\Tables\Trace.sql" />
+    <Build Include="dbo\Tables\SqlLog.sql" />
+    <Build Include="dbo\Tables\RESERVATIONS_EUROPE_ACTUAL_QUERY_TABLE.sql" />
+    <Build Include="dbo\Tables\RESERVATIONS_EUROPE_ACTUAL.sql" />
+    <Build Include="dbo\Tables\Reservation_Log.sql" />
+    <Build Include="dbo\Tables\Reservation_Error_Log.sql" />
+    <Build Include="dbo\Tables\RES_CARS_ABROAD.sql" />
+    <Build Include="dbo\Tables\POOLING_TOPICS.sql" />
+    <Build Include="dbo\Tables\POOLING_RESERVATION_TYPE.sql" />
+    <Build Include="dbo\Tables\POOLING_RESERVATION_FILTERS.sql" />
+    <Build Include="dbo\Tables\OPS_REGIONS.sql" />
+    <Build Include="dbo\Tables\OPS_AREAS.sql" />
+    <Build Include="dbo\Tables\OPERSTATS.sql" />
+    <Build Include="dbo\Tables\NONPOOL_EU_LICENCEE.sql" />
+    <Build Include="dbo\Tables\MODELCODES.sql" />
+    <Build Include="dbo\Tables\MARS_UsersInRoles.sql" />
+    <Build Include="dbo\Tables\MARS_UsersControls.sql" />
+    <Build Include="dbo\Tables\MARS_Users_Saved_Searches.sql" />
+    <Build Include="dbo\Tables\MARS_Users.sql" />
+    <Build Include="dbo\Tables\Mars_UserCarSearch.sql" />
+    <Build Include="dbo\Tables\MARS_USAGE_STATISTICS.sql" />
+    <Build Include="dbo\Tables\MARS_TOOLS.sql" />
+    <Build Include="dbo\Tables\MARS_Roles.sql" />
+    <Build Include="dbo\Tables\MARS_REPORT_NAMES.sql" />
+    <Build Include="dbo\Tables\Mars_Logging_CategoryLog.sql" />
+    <Build Include="dbo\Tables\Mars_Logging_Category.sql" />
+    <Build Include="dbo\Tables\Mars_Log.sql" />
+    <Build Include="dbo\Tables\MARS_CMS_NECESSARY_FLEET.sql" />
+    <Build Include="dbo\Tables\MARS_CMS_FrozenZoneAcceptanceLog.sql" />
+    <Build Include="dbo\Tables\MARS_CMS_FORECAST_HISTORY.sql" />
+    <Build Include="dbo\Tables\MARS_CMS_FORECAST_cle.sql" />
+    <Build Include="dbo\Tables\MARS_CMS_FORECAST_ADJUSTMENT.sql" />
+    <Build Include="dbo\Tables\MARS_CMS_FORECAST.sql" />
+    <Build Include="dbo\Tables\MARS_CMS_FleetPlanEntryUploadArchive.sql" />
+    <Build Include="dbo\Tables\MARS_CMS_FleetPlanEntry.sql" />
+    <Build Include="dbo\Tables\MARS_CMS_FleetPlanDetails.sql" />
+    <Build Include="dbo\Tables\MARS_CMS_FleetPlan_pre.sql" />
+    <Build Include="dbo\Tables\Log.sql" />
+    <Build Include="dbo\Tables\LOCATIONS.sql" />
+    <Build Include="dbo\Tables\KpiCalculationTypes.sql" />
+    <Build Include="dbo\Tables\ISO_CountryCodes.sql" />
+    <Build Include="dbo\Tables\FleetSizeFutureTrend.sql" />
+    <Build Include="dbo\Tables\FleetSizeForecast.sql" />
+    <Build Include="dbo\Tables\FLEET_LOOKUP.sql" />
+    <Build Include="dbo\Tables\FLEET_EUROPE_SUMMARY_HISTORY.sql" />
+    <Build Include="dbo\Tables\FLEET_EUROPE_SUMMARY_ARCHIVE.sql" />
+    <Build Include="dbo\Tables\FLEET_EUROPE_SUMMARY.sql" />
+    <Build Include="dbo\Tables\FLEET_EUROPE_STATS.sql" />
+    <Build Include="dbo\Tables\FLEET_EUROPE_OKCFILE.sql" />
+    <Build Include="dbo\Tables\FLEET_EUROPE_ACTUAL_QUERY_TABLE.sql" />
+    <Build Include="dbo\Tables\FLEET_EUROPE_ACTUAL.sql" />
+    <Build Include="dbo\Tables\ExportLevelSite.sql" />
+    <Build Include="dbo\Tables\ExportLevelFleet.sql" />
+    <Build Include="dbo\Tables\ExclusionList.sql" />
+    <Build Include="dbo\Tables\DateIndex.sql" />
+    <Build Include="dbo\Tables\DATA_IMPORT_TYPES.sql" />
+    <Build Include="dbo\Tables\DATA_IMPORT_INFORMATION.sql" />
+    <Build Include="dbo\Tables\DATA_IMPORT_DETAILS.sql" />
+    <Build Include="dbo\Tables\COUNTRIES.sql" />
+    <Build Include="dbo\Tables\Controls.sql" />
+    <Build Include="dbo\Tables\ComparisonTopics.sql" />
+    <Build Include="dbo\Tables\COMPANIES.sql" />
+    <Build Include="dbo\Tables\CMS_Reporting_Time_Zone.sql" />
+    <Build Include="dbo\Tables\CMS_POOLS.sql" />
+    <Build Include="dbo\Tables\CMS_LOCATION_GROUPS.sql" />
+    <Build Include="dbo\Tables\CMS_ForecastTypes.sql" />
+    <Build Include="dbo\Tables\CMS_Fleet_Plans.sql" />
+    <Build Include="dbo\Tables\CAR_SEGMENTS.sql" />
+    <Build Include="dbo\Tables\CAR_GROUPS.sql" />
+    <Build Include="dbo\Tables\CAR_CLASSES.sql" />
+    <Build Include="dbo\Tables\CalendarWeek.sql" />
+    <Build Include="dbo\Tables\AREACODES.sql" />
+    <Build Include="VehiclesAbroad\Tables\Utilisation.sql" />
+    <Build Include="VehiclesAbroad\Tables\CARS_ABROAD_HISTORY.sql" />
+    <Build Include="Settings\Tables\RibbonMenu.sql" />
+    <Build Include="Inp\Tables\Fact_FLEET_EUROPE_SUMMARY_HISTORY_Month_DOW.sql" />
+    <Build Include="Inp\Tables\Fact_FLEET_EUROPE_SUMMARY_HISTORY.sql" />
+    <Build Include="Inp\Tables\Data_Aggregate.sql" />
+    <Build Include="Inp\Tables\Fact_FLEET_EUROPE_SUMMARY_HISTORY_Aggregate.sql" />
+    <Build Include="Inp\Tables\Fact_FLEET_EUROPE_SUMMARY_HISTORY_Month.sql" />
+    <Build Include="Inp\Tables\dim_Calendar.sql" />
+    <Build Include="Inp\Tables\WeekOfYearData.sql" />
+    <Build Include="Inp\Tables\Fact_FLEET_EUROPE_SUMMARY_HISTORY_WeekOfYear.sql" />
+    <Build Include="Inp\Tables\MonthlyData.sql" />
+    <Build Include="General\Tables\VEHICLE_LEASE.sql" />
+    <Build Include="Export\Tables\Error_Log.sql" />
+    <Build Include="Export\Tables\Log.sql" />
+    <Build Include="Export\Tables\Status.sql" />
+    <Build Include="Export\Tables\LogType.sql" />
+    <Build Include="Export\Tables\GermanyForecast.sql" />
+    <Build Include="bcs\Tables\FileList.sql" />
+    <Build Include="bcs\Tables\SSIS_Log.sql" />
+    <Build Include="bcs\Tables\FileProcess.sql" />
+    <Build Include="bcs\Tables\BatchControl.sql" />
+    <Build Include="bcs\Tables\BatchProcessHistory.sql" />
+    <Build Include="bcs\Tables\BatchHistory.sql" />
+    <Build Include="bcs\Tables\ProcessControl.sql" />
+    <Build Include="bcs\Tables\ProcessBatch.sql" />
+    <Build Include="dbo\Views\vw_Pooling_Vehicles.sql" />
+    <Build Include="dbo\Views\vw_Pooling_OPS_Reservations_Checkout.sql" />
+    <Build Include="dbo\Views\vw_Pooling_OPS_Reservations_Checkin.sql" />
+    <Build Include="dbo\Views\vw_Pooling_OPS_REA.sql" />
+    <Build Include="dbo\Views\vw_Pooling_OPS_FEA.sql" />
+    <Build Include="dbo\Views\vw_Pooling_Locations_OPS.sql" />
+    <Build Include="dbo\Views\vw_Pooling_Locations_CMS.sql" />
+    <Build Include="dbo\Views\vw_Pooling_CMS_FEA.sql" />
+    <Build Include="dbo\Views\vw_MARS_User_Roles.sql" />
+    <Build Include="dbo\Views\vw_MARS_Locations.sql" />
+    <Build Include="dbo\Views\vw_Mapping_CMS_Location_Group.sql" />
+    <Build Include="dbo\Views\vw_Mapping_CMS_Location.sql" />
+    <Build Include="dbo\Views\vw_Mapping_CarClass.sql" />
+    <Build Include="dbo\Views\qry_TransferDesk.sql" />
+    <Build Include="dbo\Views\qry_CROSS_BORDER_IDLE.sql" />
+    <Build Include="dbo\Views\MarsLogView.sql" />
+    <Build Include="dbo\Views\FleetSizeFutureTrendView.sql" />
+    <Build Include="dbo\Views\FleetSizeForecastView.sql" />
+    <Build Include="dbo\Views\FEA_Location_CarGroup.sql" />
+    <Build Include="Settings\Views\vw_Locations_OPS.sql" />
+    <Build Include="Settings\Views\vw_Locations_CMS.sql" />
+    <Build Include="Settings\Views\vw_CarGroups.sql" />
+    <Build Include="Inp\Views\FLEET_EUROPE_SUMMARY_HISTORY.sql" />
+    <Build Include="Inp\Views\dim_Location.sql" />
+    <Build Include="Inp\Views\dim_Location1.sql" />
+    <Build Include="dbo\Functions\TRIM.sql" />
+    <Build Include="dbo\Functions\fnPoolingREALocationHierarchy.sql" />
+    <Build Include="dbo\Functions\fnPoolingREACarGroupHierarchy.sql" />
+    <Build Include="dbo\Functions\fnMARSUserRoles.sql" />
+    <Build Include="dbo\Functions\fnGetWsRacForOperstatAndOwnarea-TEMP.sql" />
+    <Build Include="dbo\Functions\fnGetWsRacForOperstatAndOwnarea.sql" />
+    <Build Include="dbo\Functions\fnGetWsNonracForOperstatAndOwnarea.sql" />
+    <Build Include="dbo\Functions\fnGetTotalFleetForLicenseAndOwnwwd.sql" />
+    <Build Include="dbo\Functions\fnGetResRentLocFromResLoc.sql" />
+    <Build Include="dbo\Functions\fnGetResOnewayFromRentLocAndRtrnLoc.sql" />
+    <Build Include="dbo\Functions\fnGetResGRinclGoldupgrFromN1typeAndGsAndResVehClass.sql" />
+    <Build Include="dbo\Functions\fnGetResCOHoursForImporttimeAndRsarrivaldateAndRsarrivaltime.sql" />
+    <Build Include="dbo\Functions\fnGetResCODaysForImporttimeAndRsarrivaldate.sql" />
+    <Build Include="dbo\Functions\fnGetResCIHoursOffsetForImporttimeAndRtrndateAndRtrntime.sql" />
+    <Build Include="dbo\Functions\fnGetResCIHoursForImporttimeAndRtrndateAndRtrntime.sql" />
+    <Build Include="dbo\Functions\fnGetResCIDaysForImporttimeAndRtrndate.sql" />
+    <Build Include="dbo\Functions\fnGetPoolForLocation.sql" />
+    <Build Include="dbo\Functions\fnGetOverdueForOperstatAndMovetypeAndDuedate.sql" />
+    <Build Include="dbo\Functions\fnGetOperationalFleetForOperstat.sql" />
+    <Build Include="dbo\Functions\fnGetOnrentForOperstatAndMovetypeAndDuedate.sql" />
+    <Build Include="dbo\Functions\fnGetLocGroupForLocation.sql" />
+    <Build Include="dbo\Functions\fnGetFleetRACTTLForOwnareaAndLstwwd.sql" />
+    <Build Include="dbo\Functions\fnGetFleetRACTTLForOwnarea.sql" />
+    <Build Include="dbo\Functions\fnGetFleetRACOPSForCarhold1AndDepstatAndOperstatAndOwnareaAndLstwwdAndDuewwdAndVehclas.sql" />
+    <Build Include="dbo\Functions\fnGetFleetLicenseeForOwnarea.sql" />
+    <Build Include="dbo\Functions\fnGetFleetHertzOnDemandForOwnarea.sql" />
+    <Build Include="dbo\Functions\fnGetFleetCIHoursOffsetForDuewwdOperstatAndMovetypeAndImporttimeAndDuedateAndDuetime.sql" />
+    <Build Include="dbo\Functions\fnGetFleetCIHoursForOperstatAndMovetypeAndImporttimeAndDuedateAndDuetime.sql" />
+    <Build Include="dbo\Functions\fnGetFleetCIDaysForOperstatAndMovetypeAndImporttimeAndDuedate.sql" />
+    <Build Include="dbo\Functions\fnGetFleetCarsalesForOwnarea.sql" />
+    <Build Include="dbo\Functions\fnGetFleetAdvantageForOwnareaAndLstwwd.sql" />
+    <Build Include="dbo\Functions\fnGetCarSalesForOwnarea.sql" />
+    <Build Include="dbo\Functions\fnGetCarClassForVcAndOwnwwd-TEMP.sql" />
+    <Build Include="dbo\Functions\fnGetAvailableFleetForOperstat.sql" />
+    <Build Include="dbo\Functions\RepresentiveLocationByLocationGroup.sql" />
+    <Build Include="dbo\Functions\GetDateList.sql" />
+    <Build Include="dbo\Functions\fSplit.sql" />
+    <Build Include="dbo\Functions\FleetPlanSummary.sql" />
+    <Build Include="dbo\Functions\FleetPlan_pre_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\spVehicleRemarksSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spVehicleRemarksInsertUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spTrackStarFleetEuropeActual.sql" />
+    <Build Include="dbo\Stored Procedures\spSSISFreezeForecastForFollowingWeek.sql" />
+    <Build Include="dbo\Stored Procedures\spSSISCMSForecastOperationalFleetUpdateByLocationGroup.sql" />
+    <Build Include="dbo\Stored Procedures\spSSISCMSForecastOperationalFleetUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spSSISCMSForecastHistoryUpdateONRENT.sql" />
+    <Build Include="dbo\Stored Procedures\spSSISCMSForecastHistoryUpdateFrozenForecast.sql" />
+    <Build Include="dbo\Stored Procedures\spSSISCMSForecastHistoryUpdateADJUSTMENT.sql" />
+    <Build Include="dbo\Stored Procedures\spSSISCMSForecastHistoryUpdate8weeksForecastMultipleDays.sql" />
+    <Build Include="dbo\Stored Procedures\spSSISCMSForecastHistoryUpdate8weeksForecast.sql" />
+    <Build Include="dbo\Stored Procedures\spSSISCMSForecastAdjustmentInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spSSISClearVehicleRemarks.sql" />
+    <Build Include="dbo\Stored Procedures\spSSISArchiveToHistoryTable.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonWS_RAC.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonWS_NONRAC.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonWS.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonUTILISATIONINCLOVERDUE.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonUTILISATION.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonTW.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonTOTAL_FLEET.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonTN.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonTC.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonTB.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonSV.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonSU.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonRT.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonRP.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonRL.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonPREDELIVERY.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonPL.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonOVERDUE.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonOPERATIONAL_FLEET.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonON_RENT.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonNC.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonMM.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonLL.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonHL.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonHA.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonGOLD.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonFS.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonCU.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonCARSALES.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonCARHOLD_L.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonCARHOLD_H.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonBD.sql" />
+    <Build Include="dbo\Stored Procedures\spReportSiteComparisonAVAILABLE_FLEET.sql" />
+    <Build Include="dbo\Stored Procedures\spReportKPIUnavailableOperationalFleet.sql" />
+    <Build Include="dbo\Stored Procedures\spReportKPIUnavailableNonOperationalFleet.sql" />
+    <Build Include="dbo\Stored Procedures\spReportKPIRentableFleetOnPeak.sql" />
+    <Build Include="dbo\Stored Procedures\spReportKPIOverdues.sql" />
+    <Build Include="dbo\Stored Procedures\spReportKPIOperationalUtilization.sql" />
+    <Build Include="dbo\Stored Procedures\spReportKPIIdleFleet.sql" />
+    <Build Include="dbo\Stored Procedures\spReportKPIFleetStatus.sql" />
+    <Build Include="dbo\Stored Procedures\spReportKPIDownloadVehicleStatus.sql" />
+    <Build Include="dbo\Stored Procedures\spReportKPIDownloadOperationalUtilization.sql" />
+    <Build Include="dbo\Stored Procedures\spReportKPIDownloadIdleUnitsOnPeak.sql" />
+    <Build Include="dbo\Stored Procedures\spReportKPIDownload30DayOverview.sql" />
+    <Build Include="dbo\Stored Procedures\spReportKPIAvailableFleet.sql" />
+    <Build Include="dbo\Stored Procedures\spReportHistoricalTrend.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetStatus.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonWS_RAC.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonWS_NONRAC.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonWS.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonUTILISATIONINCLOVERDUE.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonUTILISATION.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonTW.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonTOTAL_FLEET.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonTN.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonTC.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonTB.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonSV.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonSU.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonRT.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonRP.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonRL.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonPREDELIVERY.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonPL.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonOVERDUE.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonOPERATIONAL_FLEET.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonON_RENT.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonNC.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonMM.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonLL.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonHL.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonHA.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonGOLD.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonFS.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonCU.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonCarSegment.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonCARSALES.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonCARHOLD_L.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonCARHOLD_H.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonCarClass.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonBD.sql" />
+    <Build Include="dbo\Stored Procedures\spReportFleetComparisonAVAILABLE_FLEET.sql" />
+    <Build Include="dbo\Stored Procedures\spReportCarSearch.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_UserUpdateRoles.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_UserUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_UsersInRolesSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_UserSelectPageAccess.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_UserSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_UserInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_UserDeleteRoles.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_UserDelete.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_UserCheckExists.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_Transfer_REA.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_Transfer_FEA.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_SavedSearchesUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_SavedSearchesSelectDropDownListAllByUserId.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_SavedSearchesSelectBySearchId.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_SavedSearchesSelectAllByUserId.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_SavedSearchesInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_SavedSearchesDelete.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_RolesUserCarSearch.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_RolesSelectForUser.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_RolesSelectDescriptions.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_RolesSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_OPSRegionUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_OPSRegionSelectWithCountry.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_OPSRegionSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_OPSRegionSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_OPSRegionInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_OPSRegionDelete.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_OPSAreaWithOPSRegion.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_OPSAreaUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_OPSAreaSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_OPSAreaSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_OPSAreaInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_OPSAreaDelete.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_ModelCodeUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_ModelCodeSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_ModelCodeSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_ModelCodeInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_ModelCodeDelete.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_LocationUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_LocationSelectByLocation.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_LocationSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_LocationInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_LocationDelete.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_LocationCheckExists.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CountryUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CountrySelectByCountry.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CountrySelect.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CountryInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CountryDelete.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CountryCheckExists.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CountriesSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CMSPoolUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CMSPoolSelectWithCountry.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CMSPoolSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CMSPoolSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CMSPoolInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CMSPoolDelete.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CMSLocationGroupUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CMSLocationGroupSelectWithCMSPool.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CMSLocationGroupSelectByCode.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CMSLocationGroupSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CMSLocationGroupInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CMSLocationGroupDelete.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CMSLocationGroupCheckExists.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarSegmentUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarSegmentSelectWithCountry.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarSegmentSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarSegmentSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarSegmentInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarSegmentDelete.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarGroupUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarGroupSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarGroupSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarGroupInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarGroupDelete.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarClassUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarClassSelectWithCarSegment.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarClassSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarClassSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarClassInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_CarClassDelete.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_AreaCodeUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_AreaCodeSelectByOwnArea.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_AreaCodeSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_AreaCodeInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_AreaCodeDelete.sql" />
+    <Build Include="dbo\Stored Procedures\spPortal_AreaCodeCheckExists.sql" />
+    <Build Include="dbo\Stored Procedures\spOwnareaSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spOPSRegionsSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spOPSAreasSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spOperstatsSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spModelcodeSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spMARS_UsageStatisticsInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spMARS_UsageStatisticsBySelection.sql" />
+    <Build Include="dbo\Stored Procedures\spMARS_UsageStatisticsByDate.sql" />
+    <Build Include="dbo\Stored Procedures\spLocationsSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spGetNextImportTimeByImportType.sql" />
+    <Build Include="dbo\Stored Procedures\spGetLastImportTimeByImportType.sql" />
+    <Build Include="dbo\Stored Procedures\spForecasting_AdjustableWeeks.sql" />
+    <Build Include="dbo\Stored Procedures\spForecasting_AdjustableTDBU12List.sql" />
+    <Build Include="dbo\Stored Procedures\spForecasting_AdjustableCountryList.sql" />
+    <Build Include="dbo\Stored Procedures\spFleetLookupSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spCountriesSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spCMSPoolsSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spCMSLocationGroupsSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spCarSegmentsSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spCarGroupsSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spCarClassesSelect.sql" />
+    <Build Include="dbo\Stored Procedures\s_Populate_Fact_FLEET_EUROPE_SUMMARY_HISTORY_WeekOfYear.sql" />
+    <Build Include="dbo\Stored Procedures\s_Populate_Fact_FLEET_EUROPE_SUMMARY_HISTORY_Month.sql" />
+    <Build Include="dbo\Stored Procedures\s_Populate_Fact_FLEET_EUROPE_SUMMARY_HISTORY_Aggregate_Week.sql" />
+    <Build Include="dbo\Stored Procedures\s_Populate_Fact_FLEET_EUROPE_SUMMARY_HISTORY_Aggregate.sql" />
+    <Build Include="dbo\Stored Procedures\s_Populate_Fact_FLEET_EUROPE_SUMMARY_HISTORY.sql" />
+    <Build Include="dbo\Stored Procedures\s_Generate_spReportSiteComparison.sql" />
+    <Build Include="dbo\Stored Procedures\s_Generate_spReportFleetComparison.sql" />
+    <Build Include="dbo\Stored Procedures\proc_UsersInRolesSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\proc_RepresentiveLocationByLocationGroupSelect.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ReportingTimeZoneGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\proc_NecessaryFleetUtilisationUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\proc_NecessaryFleetNonRevUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MarsV2ManagementCountriesGetAllByUser.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MarsLog_WriteLog.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MarsLog_InsertCategoryLog.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MarsLog_ClearLogs.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MarsLog_AddCategory.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MarsCountriesGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MARS_CMS_Necessayfleet_GetByCountry.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MARS_CMS_NecessaryFleet_Update.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MARS_CMS_NecessaryFleet_MultipleUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MARS_CMS_FrozenZoneAcceptanceLog_Update.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MARS_CMS_FrozenZoneAcceptanceLog_GetByCountry.sql" />
+    <Build Include="dbo\Stored Procedures\proc_LocationGroupGetByCountryID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetNecessaryFleetExportData.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetAdjustmentCount.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetAdjustment.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FleetPlanMovementUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FleetPlanEntryUploadArchiveGetBy.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FleetPlanEntryUploadArchiveCreate.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FleetPlanDetailGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FleetPlanDetailGetBy.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FleetPlanDetailExport.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FleetplanDelete.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Controls_MenuSelectRoles.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Controls_MenuSelect.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Controls_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Controls_CleanUp.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CMSForecastTypeGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CMSFleetPlanGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\proc_AdjustmentUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\proc_AdjustmentReconcile.sql" />
+    <Build Include="dbo\Stored Procedures\proc_AdjustmentAdapt.sql" />
+    <Build Include="dbo\Stored Procedures\forecastHistory8Week.sql" />
+    <Build Include="dbo\Stored Procedures\forecastHistory_V1_0.sql" />
+    <Build Include="dbo\Stored Procedures\FleetSizeForecastGenerate.sql" />
+    <Build Include="dbo\Stored Procedures\ExportLevelSiteGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\ExportLevelFleetGetAll.sql" />
+    <Build Include="VehiclesAbroad\Stored Procedures\InsertUtilisation.sql" />
+    <Build Include="VehiclesAbroad\Stored Procedures\ReservationBalance.sql" />
+    <Build Include="VehiclesAbroad\Stored Procedures\GetNonRevData.sql" />
+    <Build Include="VehiclesAbroad\Stored Procedures\GetUtilizationData.sql" />
+    <Build Include="VehiclesAbroad\Stored Procedures\Flat_File_Loading.sql" />
+    <Build Include="System\Stored Procedures\Insert_Fleet_Archive.sql" />
+    <Build Include="System\Stored Procedures\Delete_CMS_Forecast_History.sql" />
+    <Build Include="Settings\Stored Procedures\RibbonMenuSelect.sql" />
+    <Build Include="Settings\Stored Procedures\RibbonMenuInsert.sql" />
+    <Build Include="Settings\Stored Procedures\RibbonMenuDelete.sql" />
+    <Build Include="Settings\Stored Procedures\RibbonMenuCleanup.sql" />
+    <Build Include="Inp\Stored Procedures\s_Populate_Data_Aggregate.sql" />
+    <Build Include="Inp\Stored Procedures\s_Populate_WeekOfYearData.sql" />
+    <Build Include="Inp\Stored Procedures\s_Populate_MonthlyData.sql" />
+    <Build Include="Import\Stored Procedures\Update_Import_Data_Tables.sql" />
+    <Build Include="Import\Stored Procedures\Insert_Fleet_Summary_Averages.sql" />
+    <Build Include="Import\Stored Procedures\Insert_Fleet_Summary_History.sql" />
+    <Build Include="Import\Stored Procedures\Update_Fleet_Actual.sql" />
+    <Build Include="Import\Stored Procedures\Update_Fleet_Query.sql" />
+    <Build Include="Import\Stored Procedures\Truncate_Fleet_Summary.sql" />
+    <Build Include="Import\Stored Procedures\Insert_Fleet_Stats.sql" />
+    <Build Include="Import\Stored Procedures\Insert_Fleet_Summary.sql" />
+    <Build Include="Import\Stored Procedures\Insert_ModelCodes.sql" />
+    <Build Include="Import\Stored Procedures\Truncate_ModelCodes.sql" />
+    <Build Include="Import\Stored Procedures\Insert_Fleet_Actual.sql" />
+    <Build Include="Import\Stored Procedures\Insert_Fleet_Query.sql" />
+    <Build Include="Import\Stored Procedures\Insert_Fleet_Summary_Averages_Hour.sql" />
+    <Build Include="Import\Stored Procedures\Truncate_Fleet_Query.sql" />
+    <Build Include="Import\Stored Procedures\Delete_VehicleRemarks.sql" />
+    <Build Include="Import\Stored Procedures\Truncate_Fleet_Stats.sql" />
+    <Build Include="Import\Stored Procedures\Truncate_Fleet_Actual.sql" />
+    <Build Include="Import\Stored Procedures\Review_Fleet_OKC.sql" />
+    <Build Include="Import\Stored Procedures\Truncate_Fleet_OKC.sql" />
+    <Build Include="Import\Stored Procedures\Execute_CMS_Procedures.sql" />
+    <Build Include="Import\Stored Procedures\Insert_FleetPlanDetails.sql" />
+    <Build Include="Import\Stored Procedures\Insert_Fleet_Summary_History_Fact.sql" />
+    <Build Include="Import\Stored Procedures\Notification_Failure.sql" />
+    <Build Include="Import\Stored Procedures\Review_Forecast_CMS.sql" />
+    <Build Include="Import\Stored Procedures\Update_CMS_Forecast_ONRENT_LY.sql" />
+    <Build Include="Import\Stored Procedures\Update_CMS_Forecast_OPERATIONAL_FLEET.sql" />
+    <Build Include="Import\Stored Procedures\Insert_CMS_Adjustment.sql" />
+    <Build Include="Import\Stored Procedures\Update_CMS_Forecast_CURRENT_ONRENT.sql" />
+    <Build Include="Import\Stored Procedures\Insert_CMS_Forecast.sql" />
+    <Build Include="Import\Stored Procedures\Truncate_CMS_Forecast.sql" />
+    <Build Include="Import\Stored Procedures\Update_CMS_Forecast_History_ADJUSTMENT.sql" />
+    <Build Include="Import\Stored Procedures\Update_CMS_Forecast_History_ONRENT.sql" />
+    <Build Include="Import\Stored Procedures\Update_CMS_Forecast_History.sql" />
+    <Build Include="Import\Stored Procedures\Insert_CMS_Forecast_History.sql" />
+    <Build Include="Import\Stored Procedures\Truncate_CMS_Forecast_cle.sql" />
+    <Build Include="Import\Stored Procedures\Insert_Fleet_Summary_History_Fact_Daily.sql" />
+    <Build Include="Import\Stored Procedures\Insert_Fleet_Summary_History_Daily.sql" />
+    <Build Include="Import\Stored Procedures\Truncate_Fleet_Summary_Daily.sql" />
+    <Build Include="General\Stored Procedures\Update_Vehicles_Lease.sql" />
+    <Build Include="General\Stored Procedures\Update_Fleet_Actual_Vehicles_Sublease.sql" />
+    <Build Include="General\Stored Procedures\Select_Vehicles_Lease_ModelDescription.sql" />
+    <Build Include="General\Stored Procedures\Select_Vehicles_Lease_Gridview.sql" />
+    <Build Include="General\Stored Procedures\Select_Vehicles_Lease_CheckExist.sql" />
+    <Build Include="General\Stored Procedures\Select_Vehicles_Lease_BySerial.sql" />
+    <Build Include="General\Stored Procedures\Insert_Vehicles_Lease.sql" />
+    <Build Include="General\Stored Procedures\Delete_Vehicles_Lease_Actual.sql" />
+    <Build Include="General\Stored Procedures\Delete_Vehicles_Lease.sql" />
+    <Build Include="Export\Stored Procedures\GEForecast.sql" />
+    <Build Include="Export\Stored Procedures\GEForecastController.sql" />
+    <Build Include="Export\Stored Procedures\GenerateGEForecast.sql" />
+    <Build Include="Export\Stored Procedures\BPServer_Fleet.sql" />
+    <Build Include="Export\Stored Procedures\GenerateFiles_cmd.sql" />
+    <Build Include="Export\Stored Procedures\DEReports_Fleet.sql" />
+    <Build Include="bcs\Stored Procedures\s_FileList.sql" />
+    <Build Include="bcs\Stored Procedures\s_Populate_BatchControl.sql" />
+    <Build Include="bcs\Stored Procedures\s_FileProcess.sql" />
+    <Build Include="bcs\Stored Procedures\s_rpt_Batches.sql" />
+    <Build Include="bcs\Stored Procedures\s_rpt_FileProcessing.sql" />
+    <Build Include="bcs\Stored Procedures\s_rpt_BatchProcess.sql" />
+    <Build Include="bcs\Stored Procedures\s_ProcessControl.sql" />
+    <Build Include="bcs\Stored Procedures\s_Populate_ProcessControl_MARS.sql" />
+    <Build Include="Storage\funct_fleet_partition_month.sql" />
+    <Build Include="Storage\scheme_fleet_partition_month.sql" />
+    <Build Include="Security\VehiclesAbroad.sql" />
+    <Build Include="Security\System.sql" />
+    <Build Include="Security\Settings.sql" />
+    <Build Include="Security\Inp.sql" />
+    <Build Include="Security\Import.sql" />
+    <Build Include="Security\General.sql" />
+    <Build Include="Security\Export.sql" />
+    <Build Include="Security\bcs.sql" />
+    <Build Include="ExtendedProperties.sql" />
+    <Build Include="Settings\Views\vw_NonRevStatus.sql" />
+    <Build Include="General\Views\vw_Fleet_NonRevLog_Report.sql" />
+    <Build Include="General\Views\vw_Fleet_NonRevLog.sql" />
+    <Build Include="dbo\Views\vw_Pooling_FEA.sql" />
+    <Build Include="dbo\Views\ReservationView.sql" />
+    <Build Include="dbo\Views\CmsForecastView.sql" />
+    <Build Include="dbo\Views\vw_MARS_Usage_Statistics.sql" />
+    <Build Include="dbo\Functions\fnGetCarVanForVcAndOwnwwd.sql" />
+    <Build Include="dbo\Tables\VehiclesAbroadComments.sql" />
+    <Build Include="dbo\Tables\FleetSizeForecast_1.sql" />
+    <Build Include="dbo\Tables\Fleet_Europe_Summary_Mars.sql" />
+    <Build Include="dbo\Views\vw_Pooling_CMS_Reservations_Checkout.sql" />
+    <Build Include="dbo\Views\vw_Pooling_CMS_Reservations_Checkin.sql" />
+    <Build Include="dbo\Views\vw_Pooling_CMS_REA.sql" />
+    <Build Include="dbo\Views\FleetSizeForecastView_1.sql" />
+    <Build Include="dbo\Functions\fnPoolingStatusGetOverdueOpenTripsDue3DayActuals.sql" />
+    <Build Include="dbo\Functions\fnPoolingStatusGetOverdueOpenTripsDue30DayActuals.sql" />
+    <Build Include="dbo\Functions\fnPoolingStatusGetOverdueCollections3DayActuals.sql" />
+    <Build Include="dbo\Functions\fnPoolingStatusGetOverdueCollections30DayActuals.sql" />
+    <Build Include="dbo\Functions\fnGetCarClassForVcAndOwnwwd.sql" />
+    <Build Include="Import\Stored Procedures\Execute_CMS_ProcessControl.sql" />
+    <Build Include="Import\Stored Procedures\Execute_CMS_Procedures_Recovery.sql" />
+    <Build Include="Export\Stored Procedures\TransferDesk_Fleet.sql" />
+    <Build Include="dbo\Stored Procedures\SqlLogCreate.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FleetPlanEntryBulkInsert.sql" />
+    <Build Include="Settings\Tables\RevStatus.sql" />
+    <Build Include="Settings\Tables\Operational_Status.sql" />
+    <Build Include="Settings\Tables\NonRev_Remarks_List.sql" />
+    <Build Include="Settings\Tables\NonRev_Day_Groups.sql" />
+    <Build Include="Settings\Tables\Movement_Types.sql" />
+    <Build Include="General\Tables\Staging_Fleet.sql" />
+    <Build Include="General\Tables\Import_NonRevFile.sql" />
+    <Build Include="General\Tables\Fleet_Actual_Summary.sql" />
+    <Build Include="General\Tables\Fact_NonRevLog_ToDelete.sql" />
+    <Build Include="General\Tables\Fact_NonRevLog_Summary.sql" />
+    <Build Include="General\Tables\Fact_NonRevLog_DailyReport.sql" />
+    <Build Include="General\Tables\Fact_NonRevLog_Approval.sql" />
+    <Build Include="General\Tables\Fact_NonRevLog.sql" />
+    <Build Include="General\Tables\Dim_Fleet.sql" />
+    <Build Include="dbo\Tables\Users.sql" />
+    <Build Include="dbo\Tables\MARS_UsersAccount.sql" />
+    <Build Include="dbo\Tables\MARS_RoleRibbonMenu.sql" />
+    <Build Include="dbo\Tables\ManualMovementXCmd.sql" />
+    <Build Include="dbo\Tables\FLEET_EUROPE_ACTUAL_STAGING.sql" />
+    <Build Include="dbo\Tables\FLEET_EUROPE_ACTUAL_NON_REV.sql" />
+    <Build Include="Settings\Views\vw_NonRevStatus_1.sql" />
+    <Build Include="General\Views\vw_Fleet_NonRevLog_Report_1.sql" />
+    <Build Include="General\Views\vw_Fleet_NonRevLog_1.sql" />
+    <Build Include="dbo\Views\FleetSizeSiteComparisonView.sql" />
+    <Build Include="dbo\Views\CmsForecastView_1.sql" />
+    <Build Include="dbo\Functions\fnAddCommaToInt.sql" />
+    <Build Include="Import\Stored Procedures\Update_NonRevRemarks.sql" />
+    <Build Include="Import\Stored Procedures\Truncate_NonRevFile.sql" />
+    <Build Include="Import\Stored Procedures\Insert_NonRevFile.sql" />
+    <Build Include="General\Stored Procedures\Update_NonRev_Approval.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_ModelCodes.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Grid_Start_Remarks.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Grid_Start.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Grid_History.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Grid_HistoricalTrend.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Grid_Excel.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Grid_Comparison.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Grid_Approval_UserCars_Excel.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Grid_Approval_UserCars.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Grid_Approval_User.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Grid_Approval_Excel.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Grid_Approval.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Grid.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Form_Serial.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Form.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Chart_Start.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Chart_HistoricalTrend.sql" />
+    <Build Include="General\Stored Procedures\Select_NonRev_Chart_Comparison.sql" />
+    <Build Include="General\Stored Procedures\Select_Fleet_Serial_ByCountry.sql" />
+    <Build Include="General\Stored Procedures\NonRev_Review_Summary.sql" />
+    <Build Include="General\Stored Procedures\NonRev_Review_DailyReport.sql" />
+    <Build Include="General\Stored Procedures\NonRev_Review.sql" />
+    <Build Include="General\Stored Procedures\NonRev_FileUpload.sql" />
+    <Build Include="General\Stored Procedures\Insert_NonRev_Remarks.sql" />
+    <Build Include="dbo\Stored Procedures\spRemarkListSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spOperstatsSelect_Settings.sql" />
+    <Build Include="dbo\Stored Procedures\spMovTypeSelect.sql" />
+    <Build Include="dbo\Stored Procedures\spDayGroupCodeSelect.sql" />
+    <Build Include="dbo\Stored Procedures\FutureTrendDataAccessExcel.sql" />
+    <Build Include="dbo\Stored Procedures\FutureTrendDataAccess.sql" />
+    <Build Include="dbo\Tables\UserLogonHistory.sql" />
+    <Build Include="dbo\Views\vw_Pooling_Usage_Statistics.sql" />
+    <Build Include="dbo\Stored Procedures\spForecasting_ReportForecasting.sql" />
+    <Build Include="dbo\Stored Procedures\spForecasting_LocationGroupByCountryUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spForecasting_LocationGroupByCountryGridview.sql" />
+    <Build Include="dbo\Stored Procedures\spForecasting_LocationGroupByCountry.sql" />
+    <Build Include="dbo\Stored Procedures\spForecasting_CountryTotalUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\spForecasting_CountryTotalGridview.sql" />
+    <Build Include="dbo\Tables\ResRemarks.sql" />
+    <Build Include="dbo\Tables\ReservationStaging.sql" />
+    <Build Include="dbo\Tables\Reservations.sql" />
+    <Build Include="dbo\Tables\ResErrorType.sql" />
+    <Build Include="dbo\Tables\ResControl.sql" />
+    <Build Include="dbo\Tables\ResContCondition.sql" />
+    <Build Include="dbo\Tables\ResTopics.sql" />
+    <Build Include="dbo\Tables\ResRmkStaging.sql" />
+    <Build Include="dbo\Tables\DatabaseFileSize.sql" />
+    <Build Include="dbo\Stored Procedures\usp_util_SelectDatabaseSize.sql" />
+    <Build Include="dbo\Stored Procedures\usp_util_CollectDatabaseSize.sql" />
+    <Build Include="dbo\Stored Procedures\ReservationImport.sql" />
+    <Build Include="dbo\Stored Procedures\ReservationControl.sql" />
+    <Build Include="dbo\Stored Procedures\FleetSizeForecastUpdate.sql" />
+    <Build Include="dbo\Views\vwUserLogonHistoryDistinctUsers.sql" />
+    <Build Include="dbo\Views\vwUserLogonHistoryDetails.sql" />
+    <Build Include="dbo\Tables\ReservationStaging_1.sql" />
+    <Build Include="dbo\Views\vw_Pooling_Usage_Statistics_1.sql" />
+    <Build Include="dbo\Tables\StatisticsPageAccess.sql" />
+    <Build Include="dbo\Tables\Communications.sql" />
+    <Build Include="dbo\Tables\tempResData.sql" />
+    <Build Include="dbo\Tables\ResDeletions.sql" />
+    <Build Include="dbo\Tables\ResBuffer.sql" />
+    <Build Include="dbo\Tables\ResAdditions.sql" />
+    <Build Include="dbo\Views\vwPageUsage.sql" />
+    <Build Include="dbo\Stored Procedures\UserLogonHistoryInsert.sql" />
+    <Build Include="dbo\Stored Procedures\ResTruncateStaging.sql" />
+    <Build Include="dbo\Stored Procedures\ResTruncateRmksStaging.sql" />
+    <Build Include="dbo\Stored Procedures\ResStagingRowCount.sql" />
+    <Build Include="dbo\Stored Procedures\ResRmksImport.sql" />
+    <Build Include="dbo\Stored Procedures\ResRmksDelete.sql" />
+    <Build Include="dbo\Stored Procedures\ResInsertTimestamp.sql" />
+    <Build Include="dbo\Stored Procedures\ResGetLastTimstamp.sql" />
+    <Build Include="dbo\Stored Procedures\ReservationUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\ResControlSelect.sql" />
+    <Build Include="dbo\Stored Procedures\ResControlInsert.sql" />
+    <Build Include="General\Tables\Fact_NonRevLog_DailyReport_History_1.sql" />
+    <Build Include="dbo\Tables\LogDashboardRestrictAreas.sql" />
+    <Build Include="dbo\Tables\ResRmkStaging2.sql" />
+    <Build Include="dbo\Tables\ReservationTeradataControlLog.sql" />
+    <Build Include="dbo\Tables\ReservationStaging2.sql" />
+    <Build Include="dbo\Tables\Document.sql" />
+    <Build Include="General\Stored Procedures\NonRev_Review_DailyReport_Ensure.sql" />
+    <Build Include="General\Stored Procedures\NonRev_Review_DailyReport_Archive.sql" />
+    <Build Include="dbo\Stored Procedures\ReservationImportImproved.sql" />
+    <Build Include="dbo\Tables\ResLoyaltyProgram.sql" />
+    <Build Include="dbo\Tables\ResGoldLevel.sql" />
+    <Build Include="dbo\Functions\fnResGetUpgradedCarGroupId.sql" />
+    <Build Include="dbo\Stored Procedures\LogDashboardForecast.sql" />
+    <Build Include="dbo\Tables\VehicleNonRevPeriodEntryRemark_1.sql" />
+    <Build Include="dbo\Tables\VehicleNonRevPeriodEntry_1.sql" />
+    <Build Include="dbo\Tables\VehicleNonRevPeriod_1.sql" />
+    <Build Include="dbo\Tables\VehicleNonRevApprovalEntry.sql" />
+    <Build Include="dbo\Tables\VehicleNonRevApproval.sql" />
+    <Build Include="dbo\Tables\VehicleHistory.sql" />
+    <Build Include="dbo\Tables\VehicleFleetType_1.sql" />
+    <Build Include="dbo\Tables\Vehicle_1.sql" />
+    <Build Include="dbo\Tables\UkAddDel24-03-2014.sql" />
+    <Build Include="dbo\Functions\SplitStringComma.sql" />
+    <Build Include="dbo\Functions\fnGetLatestRemarkForNonRevVehicle.sql" />
+    <Build Include="Export\Stored Procedures\DashboardData_1.sql" />
+    <Build Include="dbo\Stored Procedures\VehcileAutoCompleteVin.sql" />
+    <Build Include="dbo\Stored Procedures\VehcileAutoCompleteUnitNumber.sql" />
+    <Build Include="dbo\Stored Procedures\VehcileAutoCompleteModelDescription.sql" />
+    <Build Include="dbo\Stored Procedures\VehcileAutoCompleteLicencePlate.sql" />
+    <Build Include="dbo\Stored Procedures\VehcileAutoCompleteDriverName.sql" />
+    <Build Include="dbo\Stored Procedures\VehcileAutoCompleteColour.sql" />
+    <Build Include="dbo\Stored Procedures\VehcileAutoCompleteAreaCode.sql" />
+    <Build Include="dbo\Stored Procedures\PopulateVehicleTableFromFea_1.sql" />
+    <Build Include="dbo\Stored Procedures\NonRevOvernightHistory.sql" />
+    <Build Include="dbo\Stored Procedures\CheckMarsReadyForLogisticsDashboardData_1.sql" />
+    <Build Include="dbo\Tables\Tmp_FleetHistory.sql" />
+    <Build Include="dbo\Tables\MARS_CountryRoles_1.sql" />
+    <Build Include="dbo\Tables\FleetNow_1.sql" />
+    <Build Include="dbo\Tables\FleetHistory_1.sql" />
+    <Build Include="dbo\Views\N1GoldGroupUpgrade_1.sql" />
+    <Build Include="dbo\Stored Procedures\Spportal_userselectfilter_1.sql" />
+    <Build Include="dbo\Stored Procedures\PopulateFleetNowFromVehicle_1.sql" />
+    <Build Include="dbo\Stored Procedures\PopulateFleetHistoryFromFleetNow_1.sql" />
+    <Build Include="dbo\Stored Procedures\AddUnmappedLocations.sql" />
+    <Build Include="dbo\Stored Procedures\AddUnmappedCarSegmentsClassesAndGroups.sql" />
+    <Build Include="Export\Stored Procedures\FleetDaily.sql" />
+    <Build Include="dbo\Tables\WeekDays.sql" />
+    <Build Include="dbo\Tables\resTempHolderTable.sql" />
+    <Build Include="dbo\Tables\Reservation.sql" />
+    <Build Include="dbo\Tables\MarsUserUserRole.sql" />
+    <Build Include="dbo\Tables\MarsUserType.sql" />
+    <Build Include="dbo\Tables\MarsUserRoleMenuAccess.sql" />
+    <Build Include="dbo\Tables\MarsUserRole.sql" />
+    <Build Include="dbo\Tables\MarsUser.sql" />
+    <Build Include="dbo\Tables\IsoWeekOfYear.sql" />
+    <Build Include="dbo\Tables\FleetSizeFutureTrendBackup.sql" />
+    <Build Include="dbo\Tables\FleetOwner.sql" />
+    <Build Include="dbo\Tables\CountryAdmin.sql" />
+    <Build Include="dbo\Tables\CompanyType.sql" />
+    <Build Include="dbo\Tables\Company.sql" />
+    <Build Include="Fao\Tables\IsoWeekToMonth.sql" />
+    <Build Include="Fao\Tables\FileUploadType.sql" />
+    <Build Include="Fao\Tables\CurrencyRate.sql" />
+    <Build Include="Fao\Tables\RevenueByCommercialCarSegment.sql" />
+    <Build Include="Fao\Tables\CommercialCarSegment.sql" />
+    <Build Include="Fao\Tables\MaxFleetFactor.sql" />
+    <Build Include="Fao\Tables\MonthlyLimitOnCarGroup.sql" />
+    <Build Include="Fao\Tables\PlannedDeletionDaily.sql" />
+    <Build Include="Fao\Tables\WeeklyLimitOnCarSegment.sql" />
+    <Build Include="Fao\Tables\LifecycleHoldingCost.sql" />
+    <Build Include="Fao\Tables\PredictionModelFileUpload.sql" />
+    <Build Include="Fao\Tables\FileUpload.sql" />
+    <Build Include="Fao\Tables\MaxFleetSize.sql" />
+    <Build Include="Fao\Tables\PredictionModel.sql" />
+    <Build Include="Fao\Tables\MinCommercialSegment.sql" />
+    <Build Include="Fao\Tables\PredictionModelNonRevFactor.sql" />
+    <Build Include="Fao\Tables\PredictionModelUtilizationFactor.sql" />
+    <Build Include="Fao\Tables\PredictionModelMinCommercialSegment.sql" />
+    <Build Include="Fao\Tables\CmsToLocationLevelPercent.sql" />
+    <Build Include="Fao\Tables\MinNessesaryFleet.sql" />
+    <Build Include="dbo\Functions\GetIsoWeekOfYear.sql" />
+    <Build Include="Export\Stored Procedures\Operational_Dashboard.sql" />
+    <Build Include="dbo\Stored Procedures\spUserswithRacfid.sql" />
+    <Build Include="dbo\Stored Procedures\spUserSearchbyName.sql" />
+    <Build Include="dbo\Stored Procedures\spOpsRegionAutoComplete.sql" />
+    <Build Include="dbo\Stored Procedures\spOpsAreaAutoComplete.sql" />
+    <Build Include="dbo\Stored Procedures\spLocationCodebyOpsArea.sql" />
+    <Build Include="dbo\Stored Procedures\spLocationCodebyCmsLocGrp.sql" />
+    <Build Include="dbo\Stored Procedures\spLocationbyOpsAreaAutoComplete.sql" />
+    <Build Include="dbo\Stored Procedures\spLocationAutoComplete.sql" />
+    <Build Include="dbo\Stored Procedures\spCMSPoolAutoComplete.sql" />
+    <Build Include="dbo\Stored Procedures\spCmsLocGroupAutoComplete.sql" />
+    <Build Include="dbo\Stored Procedures\spCarSegmentsAutoComplete.sql" />
+    <Build Include="dbo\Stored Procedures\spCarGroupsAutoComplete.sql" />
+    <Build Include="dbo\Stored Procedures\spCarClassesAutoComplete.sql" />
+    <Build Include="dbo\Stored Procedures\spCarClassAutoComplete.sql" />
+    <Build Include="dbo\Stored Procedures\ReservationImportFromGdwStaging.sql" />
+    <Build Include="dbo\Stored Procedures\ReservationAutoCompleteFlightNumber.sql" />
+    <Build Include="dbo\Stored Procedures\ReservationAutoCompleteExternalId.sql" />
+    <Build Include="dbo\Stored Procedures\ReservationAutoCompleteCustomerName.sql" />
+    <Build Include="dbo\Stored Procedures\AutoCompleteLocationWwdCode.sql" />
+    <Build Include="dbo\Stored Procedures\AddUnmappedLocationsFromReservations.sql" />
+    <Build Include="dbo\Stored Procedures\AddUnmappedCarSegmentsClassesAndGroupsFromReservations.sql" />
+    <Build Include="dbo\Stored Procedures\AddUnknownFleetOwners.sql" />
+    <Build Include="Fao\Stored Procedures\CalculateMaxFleetFactors.sql" />
+    <Build Include="Fao\Stored Procedures\CalculateMax.sql" />
+    <Build Include="Fao\Stored Procedures\CalculateCmsToLocationLevelPercent.sql" />
+    <Build Include="Fao\Stored Procedures\CalculateMin.sql" />
+    <Build Include="Security\Fao.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="SqlServerProject1">
+      <HintPath>Assemblies\SqlServerProject1.dll</HintPath>
+      <SqlAssemblyName>SqlServerProject1</SqlAssemblyName>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>False</GenerateSqlClrDdl>
+      <SqlOwnerName>dbo</SqlOwnerName>
+      <SqlPermissionSet>SAFE</SqlPermissionSet>
+    </Reference>
+    <Reference Include="MARS Pooling">
+      <HintPath>Assemblies\MARS Pooling.dll</HintPath>
+      <SqlAssemblyName>MARS Pooling</SqlAssemblyName>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>False</GenerateSqlClrDdl>
+      <SqlOwnerName>dbo</SqlOwnerName>
+      <SqlPermissionSet>SAFE</SqlPermissionSet>
+    </Reference>
+  </ItemGroup>
+</Project>

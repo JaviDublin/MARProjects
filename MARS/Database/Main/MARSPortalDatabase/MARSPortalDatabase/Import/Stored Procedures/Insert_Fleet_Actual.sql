@@ -1,0 +1,100 @@
+﻿-- =============================================
+-- Author:		Javier
+-- Create date: June 2012
+-- Description:	2) FLEET_EUROPE_ACTUAL_QUERY_TABLE -> FLEET_EUROPE_ACTUAL
+-- =============================================
+CREATE PROCEDURE [Import].[Insert_Fleet_Actual]
+@Type varchar(20)
+	
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+	
+if @Type = 'Daily'
+begin
+	DECLARE @TranStarted   BIT
+	SET		@TranStarted = 0
+	
+	-- Check transaction count and Begin Transaction
+	--=======================================================================================
+	IF( @@TRANCOUNT = 0 )
+		BEGIN
+			BEGIN TRANSACTION		-- Start transaction
+			SET @TranStarted = 1
+		END
+	ELSE
+			SET @TranStarted = 0
+
+	--	TRANSFER DATA from dbo.FLEET_EUROPE_ACTUAL_QUERY_TABLE  to dbo.FLEET_EUROPE_ACTUAL 
+	--=======================================================================================
+	BEGIN	
+
+		INSERT INTO [dbo].FLEET_EUROPE_ACTUAL 
+		(
+			 IMPORTTIME, BASEOP, BDDAYS, CAPCOST, CAPDATE, CARHOLD1, COLOR, DAYSAREA, 
+			 DAYSCTRY, DAYSMOVE, DAYSREV , DEPAMT, DEPSTAT, DRVNAME, 
+			 DUEAREA, DUEDATE, DUETIME, DUEWWD, IDATE, LICENSE, LSTAREA, LSTDATE, 
+			 LSTMLG, LSTNO, LSTOORC, LSTTIME , LSTTYPE, LSTWWD, MMDAYS, MODDESC, 
+			 MODEL, MODGROUP, MOVETYPE, MSODATE, OPERDAYS, OPERSTAT, OWNAREA, OWNWWD, 
+			 PONO, PREVWWD, RADATE, RALOC, RC , SDATE, SERIAL, SPROCDAT, 
+			 TERMDAYS, UNIT, VC, VEHCLAS, VEHTYPE, VENDNBR, VISMODEL, COUNTRY, [POOL], 
+			 LOC_GROUP, CARVAN, CAR_CLASS , FLEET_RAC_TTL, FLEET_RAC_OPS, 
+			 FLEET_CARSALES, FLEET_LICENSEE, TOTAL_FLEET, CARSALES, CARHOLD_H, 
+			 CARHOLD_L, CU, HA, HL, LL, NC, PL, TC, SV , WS, WS_NONRAC, 
+			 OPERATIONAL_FLEET, BD, MM, TW, TB, WS_RAC, AVAILABLE_TB, FS, RL, RP, TN, 
+			 AVAILABLE_FLEET, RT, SU, GOLD , PREDELIVERY, OVERDUE, ON_RENT , CI_HOURS, 
+			 CI_HOURS_OFFSET, CI_DAYS , FLEET_ADV , FLEET_HOD
+		)
+		SELECT
+			 IMPORTTIME, BASEOP, BDDAYS, CAPCOST, CAPDATE, CARHOLD1, COLOR, DAYSAREA, 
+			 DAYSCTRY, DAYSMOVE, DAYSREV , DEPAMT, DEPSTAT, DRVNAME, 
+			 DUEAREA, DUEDATE, DUETIME, DUEWWD, IDATE, LICENSE, LSTAREA, LSTDATE, 
+			 LSTMLG, LSTNO, LSTOORC, LSTTIME , LSTTYPE, LSTWWD, MMDAYS, MODDESC, 
+			 MODEL, MODGROUP, MOVETYPE, MSODATE, OPERDAYS, OPERSTAT, OWNAREA, OWNWWD, 
+			 PONO, PREVWWD, RADATE, RALOC, RC , SDATE, SERIAL, SPROCDAT, 
+			 TERMDAYS, UNIT, VC, VEHCLAS, VEHTYPE, VENDNBR, VISMODEL, COUNTRY, [POOL], 
+			 LOC_GROUP, CARVAN, CAR_CLASS , FLEET_RAC_TTL, FLEET_RAC_OPS, 
+			 FLEET_CARSALES, FLEET_LICENSEE, TOTAL_FLEET, CARSALES, CARHOLD_H, 
+			 CARHOLD_L, CU, HA, HL, LL, NC, PL, TC, SV , WS, WS_NONRAC, 
+			 OPERATIONAL_FLEET, BD, MM, TW, TB, WS_RAC, AVAILABLE_TB, FS, RL, RP, TN, 
+			 AVAILABLE_FLEET, RT, SU, GOLD , PREDELIVERY, OVERDUE, ON_RENT , CI_HOURS, 
+			 CI_HOURS_OFFSET, CI_DAYS ,  FLEET_ADV , FLEET_HOD			
+		FROM
+			dbo.FLEET_EUROPE_ACTUAL_QUERY_TABLE
+
+		-- Check if error occured --
+		IF (@@ERROR <> 0) 
+		GOTO CLEANUP	
+		
+	END
+
+
+	UPDATE [dbo].FLEET_EUROPE_ACTUAL  SET TOTAL_FLEET = 0 WHERE OPERSTAT = 'UNK'
+
+
+	exec [dbo].[PopulateFleetHistoryFromFleetNow]
+
+	exec [dbo].[AddUnmappedCarSegmentsClassesAndGroups]
+	exec [dbo].[AddUnmappedLocations]
+
+	exec PopulateVehicleTableFromFea
+	exec [PopulateFleetNowFromVehicle]
+	
+	-- No error Commit transaction --
+	IF( @TranStarted = 1 )
+	BEGIN
+		SET @TranStarted = 0
+		COMMIT TRANSACTION
+	END
+
+	-- ROLLBACK TRANSACTION --
+	CLEANUP:
+	IF (@TranStarted = 1)
+	BEGIN
+		SET @TranStarted = 0
+		ROLLBACK TRANSACTION
+	END
+end
+    
+END

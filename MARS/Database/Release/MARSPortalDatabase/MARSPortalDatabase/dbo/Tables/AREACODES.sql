@@ -1,0 +1,14 @@
+﻿CREATE TABLE [dbo].[AREACODES] (
+    [ownarea]       VARCHAR (5)  NOT NULL,
+    [country]       VARCHAR (10) NOT NULL,
+    [area_name]     VARCHAR (50) NOT NULL,
+    [opco]          BIT          CONSTRAINT [DF_tbl_MAPPING_COUNTRY_AREACODES_OPCO] DEFAULT ((0)) NOT NULL,
+    [fleetco]       BIT          CONSTRAINT [DF_tbl_MAPPING_COUNTRY_AREACODES_FLEETCO] DEFAULT ((0)) NOT NULL,
+    [carsales]      BIT          CONSTRAINT [DF_tbl_MAPPING_COUNTRY_AREACODES_CARSALES] DEFAULT ((0)) NOT NULL,
+    [licensee]      BIT          CONSTRAINT [DF_tbl_MAPPING_COUNTRY_AREACODES_LICENSEE] DEFAULT ((0)) NOT NULL,
+    [Advantage]     BIT          NULL,
+    [HertzOnDemand] BIT          NULL,
+    CONSTRAINT [PK_tbl_MAPPING_COUNTRY_AREACODES] PRIMARY KEY CLUSTERED ([ownarea] ASC),
+    CONSTRAINT [FK_COUNTRY_AREACODES_COUNTRIES] FOREIGN KEY ([country]) REFERENCES [dbo].[COUNTRIES] ([country])
+);
+

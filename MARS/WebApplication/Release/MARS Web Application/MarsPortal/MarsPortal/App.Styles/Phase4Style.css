@@ -1,0 +1,190 @@
+﻿.insetBorders {
+    border-style: outset;
+    border-width: 4px;
+    border-Color: aliceblue;
+    
+}
+
+.hidden
+{
+    display:none; 
+}
+
+.LeftAlign {
+    text-align: left;
+}
+
+.TreeViewHeader {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.PageHeader {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.StandardBorder {
+    border-color: gainsboro;
+    border-style: outset;
+    border-width: 3px;
+}
+
+.StandardScrollBars {
+    overflow-y:auto;
+    overflow-x:auto;
+}
+
+.StandardBorder td {
+    padding-right: 5px;
+}
+
+.PadRight {
+    padding-right: 5px;
+}
+
+.PadLeft {
+    padding-left: 5px;
+}
+
+.ReasonRepeaterHolder {
+
+}
+
+
+.StandardRadioButtonList input[type="radio"] {
+    width: auto;
+    margin-right:1px;
+    margin-left:9px;
+    vertical-align: middle;
+}
+
+.StandardRadioButtonList label {
+    display: inline;
+    vertical-align: middle;
+}
+
+.StandardButton {
+    height: 22px;
+    width: 80px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.StandardCheckBox input[type="checkbox"] {
+    height: 10px;
+    width: 10px;
+    
+}
+
+.StandardAdminDropdown {
+    width: 120px;
+    
+}
+
+.StandardDataGrid {
+    padding: 3px;
+    
+}
+
+.RightAlign {
+    text-align: right;
+    margin-right: 1px;
+    margin-left: auto;
+}
+
+.StandardDataGrid { border: solid 0px gray;  }
+.StandardDataGrid td { border: solid 1px gray; padding-left: 2px; padding-right: 2px; }
+.StandardDataGrid a:link { color: #000000; text-decoration: none; }
+.StandardDataGrid:hover { background-color: aliceblue;}
+
+.StandardDataGrid a:hover { color: #000000; text-decoration: underline; }
+.StandardDataGrid a:active { color: #000000; text-decoration: none; }
+.StandardDataGrid a:visited { color: #000000; text-decoration: none; }
+.StandardDataGridHeaderStyle { background: url(../App.Styles/Images/listview-header-bg.png) repeat-x 0px 0px; 
+                               border: solid 1px #000; 
+                               padding-left: 2px; padding-right: 2px; height: 25px; color: #000; text-align: center; }
+.StandardDataGridHeaderStyle a:link { color: #000000; text-decoration: none; }
+.StandardDataGridHeaderStyle a:hover { color: #000000; text-decoration: underline; }
+.StandardDataGridHeaderStyle a:active { color: #000000; text-decoration: none; }
+.StandardDataGridHeaderStyle a:visited { color: #000000; text-decoration: none; }
+.StandardDataGrid { background-color: #f5f5f5; height: 20px; font-family: Arial; font-size: 11px; width: 100%; }
+.StandardDataGridAlterenatingRowStyle { background-color: #ffffff; height: 25px; }
+
+.SpacedHeader { ;}
+.SpacedHeader th { padding-left: 5px;padding-right: 5px;}
+
+.HighLighted {
+    border-style: outset;
+    border-width: 2px;
+    background-color: aliceblue;
+}
+
+.AutoCompleteTextBox {
+     padding: 2px 0 2px 4px;
+    text-align: left;
+     background: url("../App.Styles/images/ui-bg_glass_100_dcdcdc_1x400.png") repeat-x scroll 50% 50% #DCDCDC;
+    border: 1px solid #D3D3D3;
+    color: #000000;
+    font-weight: normal;
+    font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+    font-size: 11px;
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.hide-calendar {
+    display: none !important;
+}
+
+.AutoCompleteMonthPicker {
+         padding: 2px 0 2px 4px;
+    text-align: left;
+     background: url("../App.Styles/images/ui-bg_glass_100_dcdcdc_1x400.png") repeat-x scroll 50% 50% #DCDCDC;
+    border: 1px solid #D3D3D3;
+    color: #000000;
+    font-weight: normal;
+    font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+    font-size: 11px;
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.SingleDropDownList {
+     padding: 2px 0 2px 4px;
+    width: 160px;
+    text-align: left;
+     background: url("../App.Styles/images/ui-bg_glass_100_dcdcdc_1x400.png") repeat-x scroll 50% 50% #DCDCDC;
+    border: 1px solid #D3D3D3;
+    color: #000000;
+    font-weight: normal;
+    font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+    font-size: 11px;
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+TR.separate-below TD,TR.separate-below TH {
+    border-bottom: 10px;
+    border-width: 10px;
+}
+
+.MonthPicker {
+    
+}
+
+.MultiDropDownList {
+
+}
+
+.MultiDropDownListShowSelected {
+
+}
+
+.MultiDropDownListNoSelectAll {
+
+}

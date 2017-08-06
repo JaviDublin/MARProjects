@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 43.375, 25.125" name="Fao">
+  <DataContextMoniker Name="/FaoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="bd8b4d28-c71f-4293-9e7e-494c30979c33" absoluteBounds="6.25, 10.625, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/FaoDataContext/PlannedDeletionDaily" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4fe1db60-6533-4f6f-b49b-6e63c4d5e837" absoluteBounds="6.265, 11.085, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ba0c1558-6776-407b-80e2-c9db2d9d98c2" absoluteBounds="6.25, 14.25, 2, 1.7535424804687469">
+      <DataClassMoniker Name="/FaoDataContext/PredictionModelUtilizationFactor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac918d57-14d1-403e-97bc-a81d22ab6f6a" absoluteBounds="6.265, 14.71, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" absoluteBounds="17.25, 0.5, 2, 3.7257104492187496">
+      <DataClassMoniker Name="/FaoDataContext/LOCATION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9398cf2d-706a-4150-8364-85b9a174d994" absoluteBounds="17.265, 0.96, 1.9700000000000002, 3.16571044921875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(18.25 : 4.22571044921875); (18.25 : 12.0252063608806); (8.25 : 12.0252063608806)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/LOCATION/LOCATION_PlannedDeletionDaily" />
+      <nodes>
+        <classShapeMoniker Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" />
+        <classShapeMoniker Id="bd8b4d28-c71f-4293-9e7e-494c30979c33" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(18.914065625 : 4.22571044921875); (18.914065625 : 14.65625); (18.6653661458333 : 14.65625 : JumpStart); (18.4986994791667 : 14.65625 : JumpEnd); (18.0677070833333 : 14.65625 : JumpStart); (17.9010404166667 : 14.65625 : JumpEnd); (17.8020808333333 : 14.65625 : JumpStart); (17.6354141666667 : 14.65625 : JumpEnd); (8.25 : 14.65625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/LOCATION/LOCATION_PredictionModelUtilizationFactor" />
+      <nodes>
+        <classShapeMoniker Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" />
+        <classShapeMoniker Id="ba0c1558-6776-407b-80e2-c9db2d9d98c2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="29820d12-7834-4b03-a8ed-c3015193eb97" absoluteBounds="20.375, 6.375, 2, 2.24658447265625">
+      <DataClassMoniker Name="/FaoDataContext/CAR_GROUP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c91635fc-f9ac-4e66-99bd-92a919829545" absoluteBounds="20.39, 6.835, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(21.109374 : 8.62158447265625); (21.109374 : 11.4450179105632); (21.0266909583333 : 11.4450179105632 : JumpStart); (20.5279915416667 : 11.4450179105632 : JumpEnd); (18.9973989583333 : 11.4450179105632 : JumpStart); (18.8307322916667 : 11.4450179105632 : JumpEnd); (18.6653661458333 : 11.4450179105632 : JumpStart); (18.4986994791667 : 11.4450179105632 : JumpEnd); (18.3333333333333 : 11.4450179105632 : JumpStart); (18.1666666666667 : 11.4450179105632 : JumpEnd); (18.0677070833333 : 11.4450179105632 : JumpStart); (17.9010404166667 : 11.4450179105632 : JumpEnd); (17.8020808333333 : 11.4450179105632 : JumpStart); (17.6354141666667 : 11.4450179105632 : JumpEnd); (8.25 : 11.4450179105632)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_PlannedDeletionDaily" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="bd8b4d28-c71f-4293-9e7e-494c30979c33" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20.77734125 : 8.62158447265625); (20.77734125 : 14.4218725); (20.6946582083333 : 14.4218725 : JumpStart); (20.5279915416667 : 14.4218725 : JumpEnd); (18.9973989583333 : 14.4218725 : JumpStart); (18.8307322916667 : 14.4218725 : JumpEnd); (18.6653661458333 : 14.4218725 : JumpStart); (18.4986994791667 : 14.4218725 : JumpEnd); (18.0677070833333 : 14.4218725 : JumpStart); (17.9010404166667 : 14.4218725 : JumpEnd); (17.8020808333333 : 14.4218725 : JumpStart); (17.6354141666667 : 14.4218725 : JumpEnd); (8.25 : 14.4218725)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_PredictionModelUtilizationFactor" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="ba0c1558-6776-407b-80e2-c9db2d9d98c2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="bfc9b4ff-eccc-4535-b622-6fac3f18c16c" absoluteBounds="23.5, 7, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/FaoDataContext/CAR_CLASS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="988b85dc-d23a-4aa9-b6c1-7d5ebf508d04" absoluteBounds="23.515, 7.46, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(23.5 : 7.79459757486979); (23.3333333333333 : 7.79459757486979 : JumpStart); (23.0416691666667 : 7.79459757486979 : JumpEnd); (22.375 : 7.79459757486979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_CLASS/CAR_CLASS_CAR_GROUP" />
+      <nodes>
+        <classShapeMoniker Id="bfc9b4ff-eccc-4535-b622-6fac3f18c16c" />
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="769b773b-f19f-4efb-a7bd-3d5e8a75cf5d" absoluteBounds="27.125, 7.375, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/FaoDataContext/CAR_SEGMENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51904e07-17e8-447b-93b2-697507ee4a51" absoluteBounds="27.14, 7.835, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(27.125 : 7.65915895279948); (25.8333333333333 : 7.65915895279948 : JumpStart); (25.6666666666667 : 7.65915895279948 : JumpEnd); (25.5 : 7.65915895279948)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_SEGMENT/CAR_SEGMENT_CAR_CLASS" />
+      <nodes>
+        <classShapeMoniker Id="769b773b-f19f-4efb-a7bd-3d5e8a75cf5d" />
+        <classShapeMoniker Id="bfc9b4ff-eccc-4535-b622-6fac3f18c16c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6a116235-30b4-43db-bb97-d0595db970b5" absoluteBounds="21.625, 0.875, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/FaoDataContext/CMS_LOCATION_GROUP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13ff65e9-3d67-4f00-966f-ace540d9d097" absoluteBounds="21.64, 1.335, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(21.625 : 1.66959757486979); (19.25 : 1.66959757486979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CMS_LOCATION_GROUP/CMS_LOCATION_GROUP_LOCATION" />
+      <nodes>
+        <classShapeMoniker Id="6a116235-30b4-43db-bb97-d0595db970b5" />
+        <classShapeMoniker Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="747afbd5-cf12-4717-b9e7-d0a00162f8de" absoluteBounds="24.5, 1, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/FaoDataContext/CMS_POOL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="49dbcd6a-faae-483a-a265-02005887e262" absoluteBounds="24.515, 1.46, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(24.5 : 1.71242390950521); (23.625 : 1.71242390950521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CMS_POOL/CMS_POOL_CMS_LOCATION_GROUP" />
+      <nodes>
+        <classShapeMoniker Id="747afbd5-cf12-4717-b9e7-d0a00162f8de" />
+        <classShapeMoniker Id="6a116235-30b4-43db-bb97-d0595db970b5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3706eab3-4554-4cc0-a106-7acdcdeb902d" absoluteBounds="28, 1.375, 2, 1.75354248046875">
+      <DataClassMoniker Name="/FaoDataContext/COUNTRy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7202366b-882f-48e2-980c-7ec07f2fd70e" absoluteBounds="28.015, 1.835, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(28 : 2.82761881510417); (27.3333333333333 : 2.82761881510417 : JumpStart); (27.1666666666667 : 2.82761881510417 : JumpEnd); (23.2083358333333 : 2.82761881510417 : JumpStart); (23.0416691666667 : 2.82761881510417 : JumpEnd); (19.25 : 2.82761881510417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/COUNTRy/COUNTRy_LOCATION" />
+      <nodes>
+        <classShapeMoniker Id="3706eab3-4554-4cc0-a106-7acdcdeb902d" />
+        <classShapeMoniker Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(28.5625 : 3.12854248046875); (28.5625 : 7.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/COUNTRy/COUNTRy_CAR_SEGMENT" />
+      <nodes>
+        <classShapeMoniker Id="3706eab3-4554-4cc0-a106-7acdcdeb902d" />
+        <classShapeMoniker Id="769b773b-f19f-4efb-a7bd-3d5e8a75cf5d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(28 : 1.89992390950521); (26.5 : 1.89992390950521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/COUNTRy/COUNTRy_CMS_POOL" />
+      <nodes>
+        <classShapeMoniker Id="3706eab3-4554-4cc0-a106-7acdcdeb902d" />
+        <classShapeMoniker Id="747afbd5-cf12-4717-b9e7-d0a00162f8de" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fad2167a-6bf9-49ee-bb66-d598c6dcf91d" absoluteBounds="30.75, 4.875, 2, 3.8900577799479166">
+      <DataClassMoniker Name="/FaoDataContext/MARS_CMS_FORECAST" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df218c79-450c-456d-8920-a18517600ecf" absoluteBounds="30.765, 5.335, 1.9700000000000002, 3.3300577799479165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(22.375 : 6.65625); (23.0416691666667 : 6.65625 : JumpStart); (23.2083358333333 : 6.65625 : JumpEnd); (28.0416666666667 : 6.65625 : JumpStart); (28.2083333333333 : 6.65625 : JumpEnd); (29.3932279166667 : 6.65625 : JumpStart); (29.5598945833333 : 6.65625 : JumpEnd); (29.8619829166667 : 6.65625 : JumpStart); (30.0286495833333 : 6.65625 : JumpEnd); (30.75 : 6.65625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_MARS_CMS_FORECAST" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="fad2167a-6bf9-49ee-bb66-d598c6dcf91d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.9375 : 2.46419514973958); (22.9375 : 5.46587239583333); (23.0416691666667 : 5.46587239583333 : JumpStart); (23.2083358333333 : 5.46587239583333 : JumpEnd); (28.4791666666667 : 5.46587239583333 : JumpStart); (28.6458333333333 : 5.46587239583333 : JumpEnd); (29.1588504166667 : 5.46587239583333 : JumpStart); (29.6770833333333 : 5.46587239583333 : JumpEnd); (29.7447941666667 : 5.46587239583333 : JumpStart); (30.0286495833333 : 5.46587239583333 : JumpEnd); (30.4166666666667 : 5.46587239583333 : JumpStart); (30.5833333333333 : 5.46587239583333 : JumpEnd); (30.75 : 5.46587239583333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CMS_LOCATION_GROUP/CMS_LOCATION_GROUP_MARS_CMS_FORECAST" />
+      <nodes>
+        <classShapeMoniker Id="6a116235-30b4-43db-bb97-d0595db970b5" />
+        <classShapeMoniker Id="fad2167a-6bf9-49ee-bb66-d598c6dcf91d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(29.59375 : 3.12854248046875); (29.59375 : 6.06106119791667); (29.8619829166667 : 6.06106119791667 : JumpStart); (30.0286495833333 : 6.06106119791667 : JumpEnd); (30.75 : 6.06106119791667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/COUNTRy/COUNTRy_MARS_CMS_FORECAST" />
+      <nodes>
+        <classShapeMoniker Id="3706eab3-4554-4cc0-a106-7acdcdeb902d" />
+        <classShapeMoniker Id="fad2167a-6bf9-49ee-bb66-d598c6dcf91d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ac4efd8c-a900-47b8-911a-350a02a10062" absoluteBounds="14.25, 9.375, 2, 1.26050048828125">
+      <DataClassMoniker Name="/FaoDataContext/IsoWeekOfYear" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef45be57-947b-444f-a4db-9dd0a50abc84" absoluteBounds="14.265, 9.835, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eaf980d8-ffb4-4859-889e-a78ecfb3608a" absoluteBounds="9, 5.875, 2, 1.26050048828125">
+      <DataClassMoniker Name="/FaoDataContext/CommercialCarSegment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f43e3d9-1b9b-44b3-a1d2-69f1a85866ff" absoluteBounds="9.015, 6.335, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eebe3d65-f9d4-4af9-8ca0-8538cbe4745b" absoluteBounds="37.125, 2.25, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/FaoDataContext/CmsToLocationLevelPercent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f6b7ad9-d748-402b-bbcd-96efc56fb862" absoluteBounds="37.14, 2.71, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(21.906252 : 6.375); (21.906252 : 3.37854248046875); (23.0416691666667 : 3.37854248046875 : JumpStart); (23.2083358333333 : 3.37854248046875 : JumpEnd); (27.1666666666667 : 3.37854248046875 : JumpStart); (27.3333333333333 : 3.37854248046875 : JumpEnd); (29.3932279166667 : 3.37854248046875 : JumpStart); (29.5598945833333 : 3.37854248046875 : JumpEnd); (29.8619829166667 : 3.37854248046875 : JumpStart); (30.0286495833333 : 3.37854248046875 : JumpEnd); (32.75 : 3.37854248046875); (32.75 : 1); (36.75 : 1); (36.75 : 3.04459757486979); (36.7916666666667 : 3.04459757486979 : JumpStart); (36.9583333333333 : 3.04459757486979 : JumpEnd); (37.125 : 3.04459757486979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_CmsToLocationLevelPercent" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="eebe3d65-f9d4-4af9-8ca0-8538cbe4745b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(23.625 : 0.90625); (38.125 : 0.90625); (38.125 : 2.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CMS_LOCATION_GROUP/CMS_LOCATION_GROUP_CmsToLocationLevelPercent" />
+      <nodes>
+        <classShapeMoniker Id="6a116235-30b4-43db-bb97-d0595db970b5" />
+        <classShapeMoniker Id="eebe3d65-f9d4-4af9-8ca0-8538cbe4745b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.25 : 0.65625); (37.5937475 : 0.65625); (37.5937475 : 2.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/LOCATION/LOCATION_CmsToLocationLevelPercent" />
+      <nodes>
+        <classShapeMoniker Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" />
+        <classShapeMoniker Id="eebe3d65-f9d4-4af9-8ca0-8538cbe4745b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="aba32e61-2414-40fd-8c2b-e4a5960cb0ed" absoluteBounds="33.25, 1.25, 2, 21.310874837239584">
+      <DataClassMoniker Name="/FaoDataContext/FleetHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef67dcf9-fb5f-4879-9602-676bdd8e9297" absoluteBounds="33.265, 1.71, 1.9700000000000002, 20.750874837239582" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(22.171878 : 8.62158447265625); (22.171878 : 18.7422751578776); (29.3932279166667 : 18.7422751578776 : JumpStart); (29.5598945833333 : 18.7422751578776 : JumpEnd); (29.7447941666667 : 18.7422751578776 : JumpStart); (29.9114608333333 : 18.7422751578776 : JumpEnd); (33.25 : 18.7422751578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_FleetHistory" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="aba32e61-2414-40fd-8c2b-e4a5960cb0ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.25 : 3.86462646484375); (33.25 : 3.86462646484375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/LOCATION/LOCATION_FleetHistory" />
+      <nodes>
+        <classShapeMoniker Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" />
+        <classShapeMoniker Id="aba32e61-2414-40fd-8c2b-e4a5960cb0ed" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="94f1e35f-85a5-4f9c-b633-57243bdf993e" absoluteBounds="37.375, 7.125, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/FaoDataContext/ResAddition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9bdac810-53fb-49d2-934d-eb3762c8f6c7" absoluteBounds="37.39, 7.585, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(21.375 : 6.375); (21.375 : 6.25); (21.8229186666667 : 6.25 : JumpStart); (21.9895853333333 : 6.25 : JumpEnd); (22.5729141666667 : 6.25 : JumpStart); (22.7395808333333 : 6.25 : JumpEnd); (23.0416691666667 : 6.25 : JumpStart); (23.2083358333333 : 6.25 : JumpEnd); (25.6666666666667 : 6.25 : JumpStart); (25.8333333333333 : 6.25 : JumpEnd); (28.0416666666667 : 6.25 : JumpStart); (28.2083333333333 : 6.25 : JumpEnd); (28.4791666666667 : 6.25 : JumpStart); (28.6458333333333 : 6.25 : JumpEnd); (29.1588504166667 : 6.25 : JumpStart); (29.5598945833333 : 6.25 : JumpEnd); (29.7447941666667 : 6.25 : JumpStart); (30.0286495833333 : 6.25 : JumpEnd); (30.5 : 6.25); (30.5 : 1.125); (32.6666666666667 : 1.125 : JumpStart); (32.8333333333333 : 1.125 : JumpEnd); (35.3229166666667 : 1.125 : JumpStart); (35.4895833333333 : 1.125 : JumpEnd); (36.5416666666667 : 1.125 : JumpStart); (36.8333333333333 : 1.125 : JumpEnd); (37 : 1.125); (37 : 7.91959757486979); (37.375 : 7.91959757486979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_ResAddition" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="94f1e35f-85a5-4f9c-b633-57243bdf993e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.25 : 0.7656275); (39.28125 : 0.7656275); (39.28125 : 7.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/LOCATION/LOCATION_ResAddition" />
+      <nodes>
+        <classShapeMoniker Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" />
+        <classShapeMoniker Id="94f1e35f-85a5-4f9c-b633-57243bdf993e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="91a6e43e-aca2-4a1f-97bf-c9ef5852d8b3" absoluteBounds="36.5, 9.75, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/FaoDataContext/ResDeletion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e6fdab96-dbf4-424e-980b-5e0aa85c101b" absoluteBounds="36.515, 10.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(22.375 : 7.49829223632813); (23.0416691666667 : 7.49829223632813 : JumpStart); (23.2083358333333 : 7.49829223632813 : JumpEnd); (23.25 : 7.49829223632813); (23.25 : 9.46419514973958); (29.3932279166667 : 9.46419514973958 : JumpStart); (29.5598945833333 : 9.46419514973958 : JumpEnd); (33.125 : 9.46419514973958); (33.125 : 1.0625); (36.875 : 1.0625); (36.875 : 9.375); (37.5 : 9.375); (37.5 : 9.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_ResDeletion" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="91a6e43e-aca2-4a1f-97bf-c9ef5852d8b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.25 : 0.5468725); (36.625 : 0.5468725); (36.625 : 9.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/LOCATION/LOCATION_ResDeletion" />
+      <nodes>
+        <classShapeMoniker Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" />
+        <classShapeMoniker Id="91a6e43e-aca2-4a1f-97bf-c9ef5852d8b3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="986070c0-28a0-4204-b794-5963d7667375" absoluteBounds="33.5, 23.5, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/FaoDataContext/OPS_AREA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d477ccfd-6d4c-4ffe-b5b6-09ffd004e393" absoluteBounds="33.515, 23.96, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a7d66170-2937-4777-9942-a3707a4318e8" absoluteBounds="30.75, 23.5, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/FaoDataContext/OPS_REGION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="519ad17d-2528-45b1-b371-7920d0020609" absoluteBounds="30.765, 23.96, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(35.40625 : 23.5); (35.40625 : 0.78906375); (19.25 : 0.78906375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/OPS_AREA/OPS_AREA_LOCATION" />
+      <nodes>
+        <classShapeMoniker Id="986070c0-28a0-4204-b794-5963d7667375" />
+        <classShapeMoniker Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(32.75 : 24.2124239095052); (33.5 : 24.2124239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/OPS_REGION/OPS_REGION_OPS_AREA" />
+      <nodes>
+        <classShapeMoniker Id="a7d66170-2937-4777-9942-a3707a4318e8" />
+        <classShapeMoniker Id="986070c0-28a0-4204-b794-5963d7667375" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(29.8281275 : 3.12854248046875); (29.8281275 : 24.2124239095052); (30.75 : 24.2124239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/COUNTRy/COUNTRy_OPS_REGION" />
+      <nodes>
+        <classShapeMoniker Id="3706eab3-4554-4cc0-a106-7acdcdeb902d" />
+        <classShapeMoniker Id="a7d66170-2937-4777-9942-a3707a4318e8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="66575b3f-d85a-489a-9c41-cb15dc6d9f4c" absoluteBounds="13.75, 16.625, 2, 1.0961531575520833">
+      <DataClassMoniker Name="/FaoDataContext/WeekDay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3614a9e7-db24-4f1f-b51c-da96919f9da9" absoluteBounds="13.765, 17.085, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b7f9c047-6faa-460f-b1c6-36b34ec0be1d" absoluteBounds="6.625, 6.5, 2, 1.75354248046875">
+      <DataClassMoniker Name="/FaoDataContext/WeeklyLimitOnCarSegment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9403377c-ee44-4e05-b7f8-cd00f9cf3278" absoluteBounds="6.64, 6.96, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(28.125 : 7.375); (28.125 : 6); (25.8333333333333 : 6 : JumpStart); (25.6666666666667 : 6 : JumpEnd); (23.2083358333333 : 6 : JumpStart); (23.0416691666667 : 6 : JumpEnd); (22.7395808333333 : 6 : JumpStart); (22.5729141666667 : 6 : JumpEnd); (21.9895853333333 : 6 : JumpStart); (21.8229186666667 : 6 : JumpEnd); (18.9973989583333 : 6 : JumpStart); (18.8307322916667 : 6 : JumpEnd); (18.6653661458333 : 6 : JumpStart); (18.4986994791667 : 6 : JumpEnd); (18.3333333333333 : 6 : JumpStart); (18.1666666666667 : 6 : JumpEnd); (18.0677070833333 : 6 : JumpStart); (17.9010404166667 : 6 : JumpEnd); (17.8020808333333 : 6 : JumpStart); (17.6354141666667 : 6 : JumpEnd); (17.5364545833333 : 6 : JumpStart); (17.3697879166667 : 6 : JumpEnd); (11.25 : 6); (11.25 : 7.725770984375); (8.625 : 7.725770984375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_SEGMENT/CAR_SEGMENT_WeeklyLimitOnCarSegment" />
+      <nodes>
+        <classShapeMoniker Id="769b773b-f19f-4efb-a7bd-3d5e8a75cf5d" />
+        <classShapeMoniker Id="b7f9c047-6faa-460f-b1c6-36b34ec0be1d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="74d03c75-f9ea-4e19-ab6d-7356ce07ccfa" absoluteBounds="13.75, 6.25, 2, 2.9039737955729166">
+      <DataClassMoniker Name="/FaoDataContext/RevenueByCommercialCarSegment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cede65a5-d931-4382-9821-456389771dc3" absoluteBounds="13.765, 6.71, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20.375 : 7.49829223632813); (18.9973989583333 : 7.49829223632813 : JumpStart); (18.8307322916667 : 7.49829223632813 : JumpEnd); (18.6653661458333 : 7.49829223632813 : JumpStart); (18.4986994791667 : 7.49829223632813 : JumpEnd); (18.3333333333333 : 7.49829223632813 : JumpStart); (18.1666666666667 : 7.49829223632813 : JumpEnd); (18.0677070833333 : 7.49829223632813 : JumpStart); (17.9010404166667 : 7.49829223632813 : JumpEnd); (17.8020808333333 : 7.49829223632813 : JumpStart); (17.6354141666667 : 7.49829223632813 : JumpEnd); (17.5364545833333 : 7.49829223632813 : JumpStart); (17.3697879166667 : 7.49829223632813 : JumpEnd); (15.75 : 7.49829223632813)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_RevenueByCommercialCarSegment" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="74d03c75-f9ea-4e19-ab6d-7356ce07ccfa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 6.69275024414063); (11.1666666666667 : 6.69275024414063 : JumpStart); (11.3333333333333 : 6.69275024414063 : JumpEnd); (13.75 : 6.69275024414063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CommercialCarSegment/CommercialCarSegment_RevenueByCommercialCarSegment" />
+      <nodes>
+        <classShapeMoniker Id="eaf980d8-ffb4-4859-889e-a78ecfb3608a" />
+        <classShapeMoniker Id="74d03c75-f9ea-4e19-ab6d-7356ce07ccfa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.45312125 : 4.22571044921875); (17.45312125 : 8.35738551595052); (15.75 : 8.35738551595052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/LOCATION/LOCATION_RevenueByCommercialCarSegment" />
+      <nodes>
+        <classShapeMoniker Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" />
+        <classShapeMoniker Id="74d03c75-f9ea-4e19-ab6d-7356ce07ccfa" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6101ce12-45a6-4c0c-a96f-338385f67a66" absoluteBounds="1.5, 11.375, 2, 1.75354248046875">
+      <DataClassMoniker Name="/FaoDataContext/LifecycleHoldingCost" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1259945-c798-441c-ac2c-0c5cc84b672d" absoluteBounds="1.5150000000000001, 11.835, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(21.375 : 8.62158447265625); (21.375 : 12.8669661458333); (21.0266909583333 : 12.8669661458333 : JumpStart); (20.5279915416667 : 12.8669661458333 : JumpEnd); (18.9973989583333 : 12.8669661458333 : JumpStart); (18.8307322916667 : 12.8669661458333 : JumpEnd); (18.6653661458333 : 12.8669661458333 : JumpStart); (18.4986994791667 : 12.8669661458333 : JumpEnd); (18.0677070833333 : 12.8669661458333 : JumpStart); (17.9010404166667 : 12.8669661458333 : JumpEnd); (17.8020808333333 : 12.8669661458333 : JumpStart); (17.6354141666667 : 12.8669661458333 : JumpEnd); (5.64583333333333 : 12.8669661458333 : JumpStart); (5.47916666666667 : 12.8669661458333 : JumpEnd); (4.93489333333333 : 12.8669661458333 : JumpStart); (4.76822666666667 : 12.8669661458333 : JumpEnd); (3.5 : 12.8669661458333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_LifecycleHoldingCost" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="6101ce12-45a6-4c0c-a96f-338385f67a66" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="82a9247d-6142-49e6-a3e0-e5236fafe85e" absoluteBounds="30.875, 10.25, 2, 2.24658447265625">
+      <DataClassMoniker Name="/FaoDataContext/FleetSizeFutureTrend" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3d578be-1f81-40dd-81f2-678a117c36c9" absoluteBounds="30.89, 10.71, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(22.3046915 : 8.62158447265625); (22.3046915 : 10.8475089552816); (23.0416691666667 : 10.8475089552816 : JumpStart); (23.2083358333333 : 10.8475089552816 : JumpEnd); (29.3932279166667 : 10.8475089552816 : JumpStart); (29.5598945833333 : 10.8475089552816 : JumpEnd); (29.8619829166667 : 10.8475089552816 : JumpStart); (30.0286495833333 : 10.8475089552816 : JumpEnd); (30.875 : 10.8475089552816)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_FleetSizeFutureTrend" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="82a9247d-6142-49e6-a3e0-e5236fafe85e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.6562475 : 2.46419514973958); (22.6562475 : 11.7032992139689); (23.0416691666667 : 11.7032992139689 : JumpStart); (23.2083358333333 : 11.7032992139689 : JumpEnd); (29.1588504166667 : 11.7032992139689 : JumpStart); (29.3255170833333 : 11.7032992139689 : JumpEnd); (29.3932279166667 : 11.7032992139689 : JumpStart); (29.5598945833333 : 11.7032992139689 : JumpEnd); (29.8619829166667 : 11.7032992139689 : JumpStart); (30.0286495833333 : 11.7032992139689 : JumpEnd); (30.875 : 11.7032992139689)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CMS_LOCATION_GROUP/CMS_LOCATION_GROUP_FleetSizeFutureTrend" />
+      <nodes>
+        <classShapeMoniker Id="6a116235-30b4-43db-bb97-d0595db970b5" />
+        <classShapeMoniker Id="82a9247d-6142-49e6-a3e0-e5236fafe85e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(29.3593725 : 3.12854248046875); (29.3593725 : 11.2754040846253); (29.3932279166667 : 11.2754040846253 : JumpStart); (29.5598945833333 : 11.2754040846253 : JumpEnd); (29.7447941666667 : 11.2754040846253 : JumpStart); (30.0286495833333 : 11.2754040846253 : JumpEnd); (30.875 : 11.2754040846253)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/COUNTRy/COUNTRy_FleetSizeFutureTrend" />
+      <nodes>
+        <classShapeMoniker Id="3706eab3-4554-4cc0-a106-7acdcdeb902d" />
+        <classShapeMoniker Id="82a9247d-6142-49e6-a3e0-e5236fafe85e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e5515879-28c1-4cc0-abf4-3a1e63cb7464" absoluteBounds="9.375, 8.75, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/FaoDataContext/MonthlyLimitOnCarGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f65baa7-24b1-47e2-a2c0-6eca75d1bfb6" absoluteBounds="9.39, 9.21, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(21.906252 : 8.62158447265625); (21.906252 : 9.26448689778646); (21.7239593333333 : 9.26448689778646 : JumpStart); (21.5572926666667 : 9.26448689778646 : JumpEnd); (21.4583333333333 : 9.26448689778646 : JumpStart); (21.2916666666667 : 9.26448689778646 : JumpEnd); (21.1927073333333 : 9.26448689778646 : JumpStart); (20.5279915416667 : 9.26448689778646 : JumpEnd); (18.9973989583333 : 9.26448689778646 : JumpStart); (18.8307322916667 : 9.26448689778646 : JumpEnd); (18.6653661458333 : 9.26448689778646 : JumpStart); (18.4986994791667 : 9.26448689778646 : JumpEnd); (18.3333333333333 : 9.26448689778646 : JumpStart); (18.1666666666667 : 9.26448689778646 : JumpEnd); (18.0677070833333 : 9.26448689778646 : JumpStart); (17.9010404166667 : 9.26448689778646 : JumpEnd); (17.8020808333333 : 9.26448689778646 : JumpStart); (17.6354141666667 : 9.26448689778646 : JumpEnd); (11.375 : 9.26448689778646)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_MonthlyLimitOnCarGroup" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="e5515879-28c1-4cc0-abf4-3a1e63cb7464" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7d9fa5f3-564e-4f27-997f-785f45a71edf" absoluteBounds="41.125, 1.375, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/FaoDataContext/IsoWeekToMonth" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7695404-fecf-4a60-a1b3-3e79324ee6cd" absoluteBounds="41.14, 1.835, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="efef642a-ae0a-411a-8572-6a0e49954907" absoluteBounds="30.5, 13.25, 2.375, 1.75354248046875">
+      <DataClassMoniker Name="/FaoDataContext/MARS_CMS_NECESSARY_FLEET" />
+      <nestedChildShapes>
+        <elementListCompartment Id="134e59cc-f3b3-4be8-bc62-cf55f566fdf8" absoluteBounds="30.515, 13.71, 2.3449999999999998, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(22.039065 : 8.62158447265625); (22.039065 : 13.796875); (23.0416691666667 : 13.796875 : JumpStart); (23.2083358333333 : 13.796875 : JumpEnd); (29.1588504166667 : 13.796875 : JumpStart); (29.3255170833333 : 13.796875 : JumpEnd); (29.3932279166667 : 13.796875 : JumpStart); (29.5598945833333 : 13.796875 : JumpEnd); (29.8619829166667 : 13.796875 : JumpStart); (30.0286495833333 : 13.796875 : JumpEnd); (30.5 : 13.796875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_MARS_CMS_NECESSARY_FLEET" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="efef642a-ae0a-411a-8572-6a0e49954907" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(23.1250025 : 2.46419514973958); (23.1250025 : 14.4314612402344); (29.3932279166667 : 14.4314612402344 : JumpStart); (29.5598945833333 : 14.4314612402344 : JumpEnd); (30.5 : 14.4314612402344)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CMS_LOCATION_GROUP/CMS_LOCATION_GROUP_MARS_CMS_NECESSARY_FLEET" />
+      <nodes>
+        <classShapeMoniker Id="6a116235-30b4-43db-bb97-d0595db970b5" />
+        <classShapeMoniker Id="efef642a-ae0a-411a-8572-6a0e49954907" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(29.94531625 : 3.12854248046875); (29.94531625 : 14.1141681201172); (30.5 : 14.1141681201172)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/COUNTRy/COUNTRy_MARS_CMS_NECESSARY_FLEET" />
+      <nodes>
+        <classShapeMoniker Id="3706eab3-4554-4cc0-a106-7acdcdeb902d" />
+        <classShapeMoniker Id="efef642a-ae0a-411a-8572-6a0e49954907" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9fa0df18-dff3-4991-95eb-8c87511a29a2" absoluteBounds="5.75, 0.75, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/FaoDataContext/MinCommercialSegmentScenario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f92a434-f4af-474c-9e11-71fdea365f51" absoluteBounds="5.765, 1.21, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(28 : 2.25177124023438); (27.25 : 2.25177124023438); (27.25 : 4.97571044921875); (23.2083358333333 : 4.97571044921875 : JumpStart); (23.0416691666667 : 4.97571044921875 : JumpEnd); (23.0208333333333 : 4.97571044921875 : JumpStart); (22.8541666666667 : 4.97571044921875 : JumpEnd); (22.7395808333333 : 4.97571044921875 : JumpStart); (22.5729141666667 : 4.97571044921875 : JumpEnd); (21.9895853333333 : 4.97571044921875 : JumpStart); (21.8229186666667 : 4.97571044921875 : JumpEnd); (18.9973989583333 : 4.97571044921875 : JumpStart); (18.8307322916667 : 4.97571044921875 : JumpEnd); (18.6653661458333 : 4.97571044921875 : JumpStart); (18.4986994791667 : 4.97571044921875 : JumpEnd); (18.3333333333333 : 4.97571044921875 : JumpStart); (18.1666666666667 : 4.97571044921875 : JumpEnd); (18.0677070833333 : 4.97571044921875 : JumpStart); (17.9010404166667 : 4.97571044921875 : JumpEnd); (17.8020808333333 : 4.97571044921875 : JumpStart); (17.6354141666667 : 4.97571044921875 : JumpEnd); (17.5364545833333 : 4.97571044921875 : JumpStart); (17.3697879166667 : 4.97571044921875 : JumpEnd); (13.5833333333333 : 4.97571044921875 : JumpStart); (13.4166666666667 : 4.97571044921875 : JumpEnd); (10.0833333333333 : 4.97571044921875 : JumpStart); (9.91666666666667 : 4.97571044921875 : JumpEnd); (7.0624995 : 4.97571044921875); (7.0624995 : 2.17484781901042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/COUNTRy/COUNTRy_MinCommercialSegmentScenario" />
+      <nodes>
+        <classShapeMoniker Id="3706eab3-4554-4cc0-a106-7acdcdeb902d" />
+        <classShapeMoniker Id="9fa0df18-dff3-4991-95eb-8c87511a29a2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8d147f00-b9f9-40a7-9008-9f992408f29d" absoluteBounds="10.375, 18, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/FaoDataContext/MaxFleetFactorScenario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90355a64-ac46-40ec-923f-b196b0d9bce4" absoluteBounds="10.39, 18.46, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(29.24218375 : 3.12854248046875); (29.24218375 : 18.3711375789388); (22.2552113333333 : 18.3711375789388 : JumpStart); (22.0885446666667 : 18.3711375789388 : JumpEnd); (21.7239593333333 : 18.3711375789388 : JumpStart); (21.5572926666667 : 18.3711375789388 : JumpEnd); (21.0266909583333 : 18.3711375789388 : JumpStart); (20.8600242916667 : 18.3711375789388 : JumpEnd); (18.6653661458333 : 18.3711375789388 : JumpStart); (18.4986994791667 : 18.3711375789388 : JumpEnd); (18.0677070833333 : 18.3711375789388 : JumpStart); (17.9010404166667 : 18.3711375789388 : JumpEnd); (12.375 : 18.3711375789388)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/COUNTRy/COUNTRy_MaxFleetFactorScenario" />
+      <nodes>
+        <classShapeMoniker Id="3706eab3-4554-4cc0-a106-7acdcdeb902d" />
+        <classShapeMoniker Id="8d147f00-b9f9-40a7-9008-9f992408f29d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3f4d0393-73ef-43cb-a7ec-dba3c2fec8df" absoluteBounds="3.875, 2.5, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/FaoDataContext/MarsUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="064acb34-8d0a-481a-9dae-3551472a008a" absoluteBounds="3.89, 2.96, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b3c7c37-e93f-46d7-aa6d-4cb56ce06c1c" absoluteBounds="12.5, 1.5, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/FaoDataContext/MinCommercialSegment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61ed7f8d-9ce7-4870-b658-ad2bd263bec1" absoluteBounds="12.515, 1.96, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(27.125 : 8.16959757486979); (25.75 : 8.16959757486979); (25.75 : 5.75); (23.2083358333333 : 5.75 : JumpStart); (23.0416691666667 : 5.75 : JumpEnd); (22.7395808333333 : 5.75 : JumpStart); (22.5729141666667 : 5.75 : JumpEnd); (21.9895853333333 : 5.75 : JumpStart); (21.8229186666667 : 5.75 : JumpEnd); (18.9973989583333 : 5.75 : JumpStart); (18.8307322916667 : 5.75 : JumpEnd); (18.6653661458333 : 5.75 : JumpStart); (18.4986994791667 : 5.75 : JumpEnd); (18.3333333333333 : 5.75 : JumpStart); (18.1666666666667 : 5.75 : JumpEnd); (18.0677070833333 : 5.75 : JumpStart); (17.9010404166667 : 5.75 : JumpEnd); (17.8020808333333 : 5.75 : JumpStart); (17.6354141666667 : 5.75 : JumpEnd); (17.5364545833333 : 5.75 : JumpStart); (17.3697879166667 : 5.75 : JumpEnd); (13.5 : 5.75); (13.5 : 3.58223714192708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_SEGMENT/CAR_SEGMENT_MinCommercialSegment" />
+      <nodes>
+        <classShapeMoniker Id="769b773b-f19f-4efb-a7bd-3d5e8a75cf5d" />
+        <classShapeMoniker Id="2b3c7c37-e93f-46d7-aa6d-4cb56ce06c1c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10 : 5.875); (10 : 2.54111857096354); (12.5 : 2.54111857096354)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CommercialCarSegment/CommercialCarSegment_MinCommercialSegment" />
+      <nodes>
+        <classShapeMoniker Id="eaf980d8-ffb4-4859-889e-a78ecfb3608a" />
+        <classShapeMoniker Id="2b3c7c37-e93f-46d7-aa6d-4cb56ce06c1c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.25 : 2.54111857096354); (14.5 : 2.54111857096354)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/LOCATION/LOCATION_MinCommercialSegment" />
+      <nodes>
+        <classShapeMoniker Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" />
+        <classShapeMoniker Id="2b3c7c37-e93f-46d7-aa6d-4cb56ce06c1c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.875 : 2.87677124023438); (6.97916616666667 : 2.87677124023438 : JumpStart); (7.14583283333333 : 2.87677124023438 : JumpEnd); (12.5 : 2.87677124023438)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/MarsUser/MarsUser_MinCommercialSegment" />
+      <nodes>
+        <classShapeMoniker Id="3f4d0393-73ef-43cb-a7ec-dba3c2fec8df" />
+        <classShapeMoniker Id="2b3c7c37-e93f-46d7-aa6d-4cb56ce06c1c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.75 : 1.83742390950521); (12.5 : 1.83742390950521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/MinCommercialSegmentScenario/MinCommercialSegmentScenario_MinCommercialSegment" />
+      <nodes>
+        <classShapeMoniker Id="9fa0df18-dff3-4991-95eb-8c87511a29a2" />
+        <classShapeMoniker Id="2b3c7c37-e93f-46d7-aa6d-4cb56ce06c1c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2f5129cb-381c-469e-a18a-a0900f4e42df" absoluteBounds="10.625, 15.125, 2, 2.24658447265625">
+      <DataClassMoniker Name="/FaoDataContext/MaxFleetFactor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0d712e73-10b1-49d9-a0b7-aef449571941" absoluteBounds="10.64, 15.585, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20.611324875 : 8.62158447265625); (20.611324875 : 15.84375); (18.6653661458333 : 15.84375 : JumpStart); (18.4986994791667 : 15.84375 : JumpEnd); (18.0677070833333 : 15.84375 : JumpStart); (17.9010404166667 : 15.84375 : JumpEnd); (12.625 : 15.84375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_MaxFleetFactor" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="2f5129cb-381c-469e-a18a-a0900f4e42df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.7187475 : 4.22571044921875); (17.7187475 : 15.4531225); (12.625 : 15.4531225)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/LOCATION/LOCATION_MaxFleetFactor" />
+      <nodes>
+        <classShapeMoniker Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" />
+        <classShapeMoniker Id="2f5129cb-381c-469e-a18a-a0900f4e42df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.85156 : 3.92484781901042); (4.85156 : 16.7188134765625); (5.47916666666667 : 16.7188134765625 : JumpStart); (5.64583333333333 : 16.7188134765625 : JumpEnd); (10.625 : 16.7188134765625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/MarsUser/MarsUser_MaxFleetFactor" />
+      <nodes>
+        <classShapeMoniker Id="3f4d0393-73ef-43cb-a7ec-dba3c2fec8df" />
+        <classShapeMoniker Id="2f5129cb-381c-469e-a18a-a0900f4e42df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 18); (11.5 : 17.3715844726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/MaxFleetFactorScenario/MaxFleetFactorScenario_MaxFleetFactor" />
+      <nodes>
+        <classShapeMoniker Id="8d147f00-b9f9-40a7-9008-9f992408f29d" />
+        <classShapeMoniker Id="2f5129cb-381c-469e-a18a-a0900f4e42df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 16.9982922363281); (12.625 : 16.9982922363281)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/WeekDay/WeekDay_MaxFleetFactor" />
+      <nodes>
+        <classShapeMoniker Id="66575b3f-d85a-489a-9c41-cb15dc6d9f4c" />
+        <classShapeMoniker Id="2f5129cb-381c-469e-a18a-a0900f4e42df" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f2652285-073b-480b-8bdd-739daf04d8c0" absoluteBounds="1.875, 15.25, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/FaoDataContext/CurrencyUsdRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6fcebc01-a7f5-4588-a331-ef05c008fd86" absoluteBounds="1.8900000000000001, 15.71, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4bf0ffb1-1fd4-4101-9fef-bc3cfd79fd4c" absoluteBounds="5.25, 19.5, 2, 3.3970157877604166">
+      <DataClassMoniker Name="/FaoDataContext/AdditionPlan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f8ad682-e187-432d-8981-a27de3eeb1a2" absoluteBounds="5.265, 19.96, 1.9700000000000002, 2.8370157877604165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(29.47656125 : 3.12854248046875); (29.47656125 : 19.59375); (21.7239593333333 : 19.59375 : JumpStart); (21.5572926666667 : 19.59375 : JumpEnd); (21.0266909583333 : 19.59375 : JumpStart); (20.8600242916667 : 19.59375 : JumpEnd); (18.6653661458333 : 19.59375 : JumpStart); (18.4986994791667 : 19.59375 : JumpEnd); (18.0677070833333 : 19.59375 : JumpStart); (17.9010404166667 : 19.59375 : JumpEnd); (7.25 : 19.59375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/COUNTRy/COUNTRy_AdditionPlan" />
+      <nodes>
+        <classShapeMoniker Id="3706eab3-4554-4cc0-a106-7acdcdeb902d" />
+        <classShapeMoniker Id="4bf0ffb1-1fd4-4101-9fef-bc3cfd79fd4c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5625 : 3.92484781901042); (5.5625 : 19.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/MarsUser/MarsUser_AdditionPlan" />
+      <nodes>
+        <classShapeMoniker Id="3f4d0393-73ef-43cb-a7ec-dba3c2fec8df" />
+        <classShapeMoniker Id="4bf0ffb1-1fd4-4101-9fef-bc3cfd79fd4c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6a8a61e4-a6b0-4d8a-b9cf-aebafdddf192" absoluteBounds="15.375, 19.75, 2, 2.73962646484375">
+      <DataClassMoniker Name="/FaoDataContext/AdditionPlanMinMaxValue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c55054e-2496-45f1-b7ab-e077bcb4a4e7" absoluteBounds="15.39, 20.21, 1.9700000000000002, 2.17962646484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.25 : 20.78125); (15.375 : 20.78125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/AdditionPlan/AdditionPlan_AdditionPlanMinMaxValue" />
+      <nodes>
+        <classShapeMoniker Id="4bf0ffb1-1fd4-4101-9fef-bc3cfd79fd4c" />
+        <classShapeMoniker Id="6a8a61e4-a6b0-4d8a-b9cf-aebafdddf192" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20.943357625 : 8.62158447265625); (20.943357625 : 21.1198132324219); (18.6653661458333 : 21.1198132324219 : JumpStart); (18.4986994791667 : 21.1198132324219 : JumpEnd); (17.375 : 21.1198132324219)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_AdditionPlanMinMaxValue" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="6a8a61e4-a6b0-4d8a-b9cf-aebafdddf192" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.98437375 : 4.22571044921875); (17.98437375 : 20.4036541162109); (17.375 : 20.4036541162109)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FaoDataContext/LOCATION/LOCATION_AdditionPlanMinMaxValue" />
+      <nodes>
+        <classShapeMoniker Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" />
+        <classShapeMoniker Id="6a8a61e4-a6b0-4d8a-b9cf-aebafdddf192" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="972c2aff-c114-4157-b571-5ab0e61c871a" absoluteBounds="9.75, 21.875, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/FaoDataContext/AdditionPlanEntry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f17030fc-5339-4e91-a6e3-724dcaaa779a" absoluteBounds="9.765, 22.335, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.25 : 22.3860078938802); (9.75 : 22.3860078938802)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FaoDataContext/AdditionPlan/AdditionPlan_AdditionPlanEntry" />
+      <nodes>
+        <classShapeMoniker Id="4bf0ffb1-1fd4-4101-9fef-bc3cfd79fd4c" />
+        <classShapeMoniker Id="972c2aff-c114-4157-b571-5ab0e61c871a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(21.640626 : 8.62158447265625); (21.640626 : 23.2546818033854); (11.75 : 23.2546818033854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FaoDataContext/CAR_GROUP/CAR_GROUP_AdditionPlanEntry" />
+      <nodes>
+        <classShapeMoniker Id="29820d12-7834-4b03-a8ed-c3015193eb97" />
+        <classShapeMoniker Id="972c2aff-c114-4157-b571-5ab0e61c871a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(18.5820328125 : 4.22571044921875); (18.5820328125 : 22.8721516341146); (11.75 : 22.8721516341146)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FaoDataContext/LOCATION/LOCATION_AdditionPlanEntry" />
+      <nodes>
+        <classShapeMoniker Id="0958ec3c-2bbe-4506-82ed-7cbde4716489" />
+        <classShapeMoniker Id="972c2aff-c114-4157-b571-5ab0e61c871a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

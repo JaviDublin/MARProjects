@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAdaptApplyResource2.Text" xml:space="preserve">
+    <value>Apply Changes</value>
+  </data>
+  <data name="btnAdaptApplyResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAdaptCancelResource2.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btnAdaptCancelResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAdaptDummyResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAdaptDummyResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnApplyChangesResource2.Text" xml:space="preserve">
+    <value>Apply Changes</value>
+  </data>
+  <data name="btnApplyChangesResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCancelResource2.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btnCancelResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDummyResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDummyResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkSelectAllResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkSelectAllResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkSelectedResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkSelectedResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlAdaptFromResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlAdaptToResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lstAdjustmentsResource.ToolTip" xml:space="preserve">
+    <value>Select one or more Adjustment to modify </value>
+  </data>
+  <data name="ddlDirectionResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlItemsPerPageSelectorResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlOperationResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlPageSelectResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="grdForecastAdjustmentResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="grdForecastAdjustmentResource2.EmptyDataText" xml:space="preserve">
+    <value>Please select a country</value>
+  </data>
+  <data name="grdForecastAdjustmentResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonFirstResource2.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonFirstResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonLastResource2.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonLastResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonNextResource2.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonNextResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonPreviousResource2.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonPreviousResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgsep1Resource2.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgsep1Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgsep2Resource2.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgsep2Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdaptFromResource2.Text" xml:space="preserve">
+    <value>Take values from:</value>
+  </data>
+  <data name="lblAdaptFromResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdaptResource2.Text" xml:space="preserve">
+    <value>Please select the Target and Source criteria for Adapting</value>
+  </data>
+  <data name="lblAdaptResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdaptToResource2.Text" xml:space="preserve">
+    <value>Apply values to:</value>
+  </data>
+  <data name="lblAdaptToResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdjustment_BU1Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdjustment_BU2Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdjustment_RCResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdjustment_TDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdjustmentHeaderResource2.Text" xml:space="preserve">
+    <value>Please select the adjustment, direction, value and operation for the selected adjustments</value>
+  </data>
+  <data name="lblAdjustmentHeaderResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdjustmentResource2.Text" xml:space="preserve">
+    <value>Adjustment:</value>
+  </data>
+  <data name="lblAdjustmentResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCarClassIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCarClassResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblConstrainedResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCountResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblDateResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblDirectionResource2.Text" xml:space="preserve">
+    <value>Increase\Decrease:</value>
+  </data>
+  <data name="lblDirectionResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblGroupIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblGroupResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblitemsPerPageResource2.Text" xml:space="preserve">
+    <value>Items per Page:</value>
+  </data>
+  <data name="lblitemsPerPageResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLocationGroupIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLocationGroupResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblONRENTResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOperationResource2.Text" xml:space="preserve">
+    <value>Operation:</value>
+  </data>
+  <data name="lblOperationResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPoolIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPoolResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSegmentIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSegmentResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblUnConstrainedResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblValueResource2.Text" xml:space="preserve">
+    <value>Value:</value>
+  </data>
+  <data name="lblValueResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource10.Text" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="ListItemResource10.Value" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="ListItemResource11.Text" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="ListItemResource11.Value" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="ListItemResource12.Text" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="ListItemResource12.Value" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="ListItemResource13.Text" xml:space="preserve">
+    <value>Increase</value>
+  </data>
+  <data name="ListItemResource13.Value" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="ListItemResource14.Text" xml:space="preserve">
+    <value>Decease</value>
+  </data>
+  <data name="ListItemResource14.Value" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="ListItemResource15.Text" xml:space="preserve">
+    <value>Per Cent</value>
+  </data>
+  <data name="ListItemResource15.Value" xml:space="preserve">
+    <value>PerCent</value>
+  </data>
+  <data name="ListItemResource16.Text" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="ListItemResource16.Value" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="ListItemResource9.Text" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ListItemResource9.Value" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lnkAdaptResource2.Text" xml:space="preserve">
+    <value>Adapt</value>
+  </data>
+  <data name="lnkAdaptResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkCarClassResource2.Text" xml:space="preserve">
+    <value>Car Group</value>
+  </data>
+  <data name="lnkCarClassResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkCarGroupResource2.Text" xml:space="preserve">
+    <value>Car Class</value>
+  </data>
+  <data name="lnkCarGroupResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkCarSegmentResource2.Text" xml:space="preserve">
+    <value>Segment</value>
+  </data>
+  <data name="lnkCarSegmentResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkEditResource2.Text" xml:space="preserve">
+    <value>Adjust</value>
+  </data>
+  <data name="lnkEditResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkLocationGroupResource2.Text" xml:space="preserve">
+    <value>Location Group</value>
+  </data>
+  <data name="lnkLocationGroupResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkPoolResource2.Text" xml:space="preserve">
+    <value>Pool</value>
+  </data>
+  <data name="lnkPoolResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlAdaptResource2.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlAdaptResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlAjustmentparamsResource2.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlAjustmentparamsResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlEditAdjustmentsResource2.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlEditAdjustmentsResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource21.AccessibleHeaderText" xml:space="preserve">
+    <value>SelectedItem</value>
+  </data>
+  <data name="TemplateFieldResource21.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource21.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource22.AccessibleHeaderText" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="TemplateFieldResource22.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource22.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource23.AccessibleHeaderText" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="TemplateFieldResource23.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource23.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource24.AccessibleHeaderText" xml:space="preserve">
+    <value>PoolID</value>
+  </data>
+  <data name="TemplateFieldResource24.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource24.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource25.AccessibleHeaderText" xml:space="preserve">
+    <value>PoolDescription</value>
+  </data>
+  <data name="TemplateFieldResource25.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource25.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource26.AccessibleHeaderText" xml:space="preserve">
+    <value>LocationGroupID</value>
+  </data>
+  <data name="TemplateFieldResource26.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource26.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource27.AccessibleHeaderText" xml:space="preserve">
+    <value>LocationGroupName</value>
+  </data>
+  <data name="TemplateFieldResource27.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource27.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource28.AccessibleHeaderText" xml:space="preserve">
+    <value>CarSegmentId</value>
+  </data>
+  <data name="TemplateFieldResource28.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource28.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource29.AccessibleHeaderText" xml:space="preserve">
+    <value>CarSegmentName</value>
+  </data>
+  <data name="TemplateFieldResource29.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource29.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource30.AccessibleHeaderText" xml:space="preserve">
+    <value>CarGroupID</value>
+  </data>
+  <data name="TemplateFieldResource30.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource30.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource31.AccessibleHeaderText" xml:space="preserve">
+    <value>CarGroupDescription</value>
+  </data>
+  <data name="TemplateFieldResource31.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource31.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource32.AccessibleHeaderText" xml:space="preserve">
+    <value>CarClassID</value>
+  </data>
+  <data name="TemplateFieldResource32.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource32.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource33.AccessibleHeaderText" xml:space="preserve">
+    <value>CarclassDescription</value>
+  </data>
+  <data name="TemplateFieldResource33.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource33.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource34.AccessibleHeaderText" xml:space="preserve">
+    <value>ONRENT</value>
+  </data>
+  <data name="TemplateFieldResource34.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource34.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource35.AccessibleHeaderText" xml:space="preserve">
+    <value>Constrained</value>
+  </data>
+  <data name="TemplateFieldResource35.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource35.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource36.AccessibleHeaderText" xml:space="preserve">
+    <value>UnConstrained</value>
+  </data>
+  <data name="TemplateFieldResource36.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource36.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource37.AccessibleHeaderText" xml:space="preserve">
+    <value>Adjustment_TD</value>
+  </data>
+  <data name="TemplateFieldResource37.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource37.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource38.AccessibleHeaderText" xml:space="preserve">
+    <value>Adjustment_BU1</value>
+  </data>
+  <data name="TemplateFieldResource38.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource38.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource39.AccessibleHeaderText" xml:space="preserve">
+    <value>Adjustment_BU2</value>
+  </data>
+  <data name="TemplateFieldResource39.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource39.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource40.AccessibleHeaderText" xml:space="preserve">
+    <value>Adjustment_RC</value>
+  </data>
+  <data name="TemplateFieldResource40.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource40.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtValueResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtValueResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

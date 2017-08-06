@@ -1,0 +1,237 @@
+﻿/*-----MAIN LAYOUT-----*/
+* { margin: 0; padding: 0; }
+html, body, form { height: 100%; }
+body { font-family: Arial,Tahoma,sans-serif; font-size: 12px; }
+
+/*-----PAGES/CONTROLS-----*/
+/* Standard Items*/
+.labelErrorMessage { font-size: 13px; color: #ff0000; font-weight: bold; }
+.divClearFloats { clear: both; }
+
+
+
+.black_overlay{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+    width: 100%;
+    height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.2;
+	opacity:.80;
+	filter: alpha(opacity=20);
+}
+ 
+.white_content {
+	display: none;
+	position: absolute;
+	top: 35%;
+	left: 35%;
+    width: 300px;
+    height: 60px;
+    vertical-align: middle;
+	font-size: 18px;
+	color: Black;
+	border-style: inset;
+	border-color: AliceBlue;
+	background-color: #FFF985;
+	z-index:1002;
+	overflow: auto;
+}
+
+
+/* Statistics */
+.divMARSStatistics { margin: 0px 10px; }
+.tableStatisticsGridview { width: 100%; }
+.divMARSStatisticsGridview { width: 100%; }
+.divMARSStatisticsInformation { width: 100%; height: 30px; color: #808080; font-style: italic; }
+.panelStatistics { width: 100%; }
+.panelStatisticsNoData { width: 100%; }
+
+/*Car Search*/
+.divHertzLogoCarSearch { float: left; margin-top: 10px; margin-left: 10px; }
+.divCarSearchTitle { margin-top: 25px; margin-left: 25px; float: left; font-weight: bold; font-size: 20px; }
+.divApplicationLogoCarSearch { float: right; margin-top: 10px; margin-right: 10px; }
+.divCarSearchDetails { width: 100%; padding: 5px; margin: 0; }
+.PanelCarSearchTitle { margin: 0; padding: 0; background-position: left top; background-image: url(../App.Styles/ImagesAvailability/header_reservations.gif); height: 61px; cursor: move; background-repeat: no-repeat; }
+
+/* Mapping Details*/
+.PanelMappingDetailsTitleSmall { margin: 0; padding: 0; background-position: left top; background-image: url(../App.Styles/ImagesAvailability/header_mapping_details_small.gif); height: 61px; cursor: move; background-repeat: no-repeat; }
+.PanelMappingDetailsTitleExtraLarge { margin: 0; padding: 0; background-position: left top; height: 61px; width:800px; cursor: move; background-repeat: no-repeat; background-color:#ffdf00; }
+.divApplicationLogoMappingDetails { float: right; margin-top: 10px; margin-right: 10px; }
+.divHertzLogoMappingDetails { float: left; margin-top: 10px; margin-left: 10px; }
+.rowMappingDetailsFooter { padding-top: 10px; }
+
+/*Error Page*/
+.tableError { width: 80%; margin: 50px auto auto; }
+.columnLabelError { width: 130px; }
+
+/*User Details*/
+.divHertzLogoUserDetails { float: left; margin-top: 10px; margin-left: 10px; }
+.divUserDetailsTitle { margin-top: 25px; margin-left: 25px; float: left; font-weight: bold; font-size: 20px; }
+.divApplicationLogoUserDetails { float: right; margin-top: 10px; margin-right: 10px; }
+.divUserDetails { width: 100%; padding: 5px; margin: 0; }
+.PanelUserDetailsTitle { margin: 0; padding: 0; background-position: left top; background-image: url(../App.Styles/ImagesAvailability/header_users.gif); height: 61px; cursor: move; background-repeat: no-repeat; }
+.divUserDetailsFooter { text-align: right; margin-top: 20px; margin-right: 20px; }
+.divUserDetailsLeft { float: left; width: 240px; }
+.divUserDetailsRight { float: left; width: 410px; font-size: 11px; margin-top: 20px; }
+.tableUserDetails { width: 100%; margin-left: 5px; margin-top: 20px; }
+.columnButtonAdd { text-align: right; padding-top: 5px; padding-right: 10px; }
+
+/* GridView */
+.GridViewStyle { border: solid 1px #d3d3d3; font-family: Arial; font-size: 11px; width: 100%; }
+.GridViewStyle td { border: solid 1px #d3d3d3; padding-left: 2px; padding-right: 2px; }
+.GridViewStyle a:link { color: #000000; text-decoration: none; }
+.GridViewCell:hover { font-weight: bold;}
+.GridViewCell{ cursor:pointer;}
+.GridViewStyle a:hover { color: #000000; text-decoration: underline; }
+.GridViewStyle a:active { color: #000000; text-decoration: none; }
+.GridViewStyle a:visited { color: #000000; text-decoration: none; }
+.GridHeaderStyle a:link { color: #000000; text-decoration: none; }
+.GridHeaderStyle a:hover { color: #000000; text-decoration: underline; }
+.GridHeaderStyle a:active { color: #000000; text-decoration: none; }
+.GridHeaderStyle a:visited { color: #000000; text-decoration: none; }
+/*.GridHeaderStyle { font-weight: bold; background-color: #000000; color: #ffffff; height: 25px; }
+.GridHeaderStyle a:link { color: #ffffff; text-decoration: none; }
+.GridHeaderStyle a:hover { color: #ffffff; text-decoration: underline; }
+.GridHeaderStyle a:active { color: #ffffff; text-decoration: none; }
+.GridHeaderStyle a:visited { color: #ffffff; text-decoration: none; }*/
+.GridRowStyle { background-color: #f5f5f5; height: 25px; }
+.GridAlterenatingRowStyle { background-color: #ffffff; height: 25px; }
+
+/* Gridview Statistics*/
+.GridViewStyleStatistics { font-family: Arial; font-size: 11px; width: 100%; border-bottom: #d3d3d3 1px solid; border-left: #d3d3d3 1px solid; border-top: #d3d3d3 2px solid; border-right: #d3d3d3 1px solid; }
+.GridViewStyleStatistics td { border: solid 1px #d3d3d3; padding-left: 2px; padding-right: 2px; }
+.GridViewStyleStatistics a:link { color: #000000; text-decoration: none; }
+.GridViewStyleStatistics a:hover { color: #000000; text-decoration: underline; }
+.GridViewStyleStatistics a:active { color: #000000; text-decoration: none; }
+.GridViewStyleStatistics a:visited { color: #000000; text-decoration: none; }
+.GridHeaderStyleStatistics { font-weight: bold; background-color: #000000; color: #ffffff; height: 25px; }
+.GridHeaderStyleStatistics a:link { color: #ffffff; text-decoration: none; }
+.GridHeaderStyleStatistics a:hover { color: #ffffff; text-decoration: underline; }
+.GridHeaderStyleStatistics a:active { color: #ffffff; text-decoration: none; }
+.GridHeaderStyleStatistics a:visited { color: #ffffff; text-decoration: none; }
+.GridRowStyleStatistics { background-color: #f5f5f5; height: 25px; font-weight: bold; }
+
+/*Modal Popup*/
+.modalBackground { background-color: #FEF500; filter: alpha(opacity=20); opacity: 0.2;  }
+.modalPopup { border: 1px solid #663300; background-color: #FFFFFF; width: 550px; height: 70px; font-size: 10pt; text-align: center; color: #663300; padding: 10px; }
+.modalPopupReservations { border: 1px solid #663300; background-color: #FFFFFF; width: 850px; height: 550px; font-size: 10pt; color: #663300; }
+.modalPopupCarSearch { border: 1px solid #663300; background-color: #FFFFFF; width: 850px; height: 550px; font-size: 10pt; color: #663300; }
+.modalPopupUserDetails { border: 1px solid #663300; background-color: #FFFFFF; width: 800px; height: 400px; font-size: 10pt; color: #663300; }
+.modalPopupMappingDetailsSmall { border: 1px solid #663300; background-color: #FFFFFF; width: 650px; height: 275px; font-size: 10pt; color: #663300; }
+.modalPopupMappingDetailsMedium { border: 1px solid #663300; background-color: #FFFFFF; width: 650px; height: 350px; font-size: 10pt; color: #663300; }
+.modalPopupMappingDetailsLarge { border: 1px solid #663300; background-color: #FFFFFF; width: 650px; height: 600px; font-size: 10pt; color: #663300; }
+.modalPopupMappingDetailsExtraLarge { border: 1px solid #663300; background-color: #FFFFFF; width: 800px; height: 350px; font-size: 10pt; color: #663300; }
+.modalPopupSavedSearches { border: 1px solid #663300; background-color: #FFFFFF; width: 800px; height: 300px; font-size: 10pt; color: #663300; }
+
+/* Mapping Details*/
+.tableMappingDetails { width: 100%; margin-left: 10px; margin-right: 10px; margin-bottom: 5px; margin-top: 5px; }
+
+/* Report Settings UserControl */
+.divReportSettingsWrapper { padding-top: 10px; padding-bottom: 10px; margin-right: 10px; margin-left: 10px; }
+.panelReportSettingsTitle { color: #808080; }
+.panelReportSettingsUserPreferences { width: 100%; }
+.tableReportSettingsUserPreferences { width: 100%; margin-top: 20px; margin-bottom: 20px; }
+.tableReportSettingsFooter { text-align: left; }
+.buttonsColumnReportSettingsFooter { padding-right: 50px; }
+.labelColumnReportSettingsFooter { padding-right: 20px; }
+.dataColumnReportSettingsFooter { padding-right: 20px; }
+.tableReportSettingsSearchCriteria { width: 100%; }
+.dropDownListReportSettings { width: 120px; }
+.labelReportSettings { color: #808080; }
+.labelColumnReportSettings { width: 100px; }
+.dataColumnReportSettings { width: 120px; }
+.dataColumnReportSettingsCalendar { width: 140px; }
+.fieldsetUserPreferencesSettings { border-right: #808080 1px solid; border-top: #808080 1px solid; border-left: #808080 1px solid; border-bottom: #808080 1px solid; padding-left: 10px; padding-right: 10px; }
+.legendUserPreferencesSettings { padding-left: 3px; padding-right: 3px; padding-top: 1px; padding-bottom: 1px; color: #808080; border-right: #808080 1px solid; border-top: #808080 1px solid; border-left: #808080 1px solid; border-bottom: #808080 1px solid; }
+.tableUserPreferencesReportSettingsSave { width: 100%; text-align: center; margin-bottom: 10px; }
+
+/* Report Selection Usercontrol */
+.panelReportSelection { font-size: 12px; font-family: Arial; color: #808080; width: 100%; }
+.tableReportSelection { width: 100%; }
+.labelInformationReportSelection { width: 125px; text-align: left; }
+.labelDisplayReportSelection { font-weight: bold; text-align: left; }
+
+/* PageInformation Usercontrol */
+.divPageInformation { margin-top: 10px; height: 35px; }
+.divPageTitle { float: left; margin-top: 5px; }
+.divPageUpdateInformation { float: right; margin-top: 5px; }
+.divPageOptions { float: right; margin-top: 10px; margin-right: 10px; }
+.labelPageTitle { font-family: Arial; font-weight: bold; font-size: 14pt; text-transform: uppercase; color: #111111; }
+.divLeftPageInformation { float: left; margin-right: 10px; }
+.divRightPageInformation { float: left; }
+
+/* Modal Confirmation Control */
+.divModalConfirm { font-size: 12px; text-align: center; margin-top: 10px; }
+
+/*User Control Pooling charts*/
+.divStatusCharts { margin: auto; width: 970px; }
+
+/*User Control Availabiliy charts*/
+.divAvailabilityCharts { margin: auto; width: 970px; }
+
+/* Validator*/
+.ValidatorBackground { height: 16px; width: 16px; background-image: url(../App.Styles/ImagesAvailability/error.png); background-repeat: no-repeat; background-position: left top; }
+
+/*Pager Style*/
+.tablePager { vertical-align: middle; font-size: 11px; }
+.rowPager { background-color: #ebe7e4; width: 100%; vertical-align: middle; border-bottom: #d3d3d3 1px solid; border-left: #d3d3d3 1px solid; border-right: #d3d3d3 1px solid; height: 25px; }
+.divPagerRecordsSelected { float: left; margin-right: 10px; margin-left: 2px; font-size: 11px; padding-top: 3px; }
+.divPagerControl { float: right; margin-right: 10px; }
+.labelRecordsSelected { font-weight: bold; }
+
+/* Availability Tool - Vehicle Details */
+.divVehicleDetails { width: 850px; padding: 5px; color: #000000; font-size: 12px; }
+.divVehicleDetailsRows { width: 100%; }
+.tableVehicleDetails { width: 100%; }
+.columnLabelVehicleDetailsShort { width: 60px; font-weight: bold; }
+.columnLabelVehicleDetailsLong { width: 90px; font-weight: bold; }
+.columnLabelVehicleDetailsNextOnRent { width: 150px; font-weight: bold; }
+.columnLabelVehicleDetailsDriverName { width: 250px; font-weight: bold; }
+.columnLabelVehicleDetailsModel { width: 150px; font-weight: bold; }
+.columnDataVehicleDetailsShort { width: 60px; }
+.columnDataVehicleDetailsLong { width: 90px; }
+.columnDataVehicleDetailsNextOnRent { width: 150px; }
+.columnDataVehicleDetailsDriverName { width: 250px; }
+.columnDataVehicleDetailsModel { width: 130px; }
+.hrVehicleDetails { margin-left: 20px; margin-right: 20px; }
+.divVehicleDetailsFooter { margin-right: 30px; float: right; margin-top: 5px; }
+.divCarSearchDetailsFooter { text-align: right; margin-right: 50px; }
+.ValidatorText { font-size: 10px; color: #ff0000; }
+.labelMessage { font-size: 11px; color: #ff0000; }
+
+/*Mapping Selection*/
+.divMappingSelection { margin-top: 5px; height: 35px; font-size: 12px; margin-bottom: 5px; }
+.tableMappingSelection { vertical-align: middle; }
+.columnLabelMapping { width: 95px; text-align: left; }
+.mappingGridviewPanelFooter { width: 100%; margin-bottom: 5px; }
+.divMappingGridviewTitle { font-size: 12px; font-weight: bold; font-family: Arial; color: #808080; width: 90%; margin-bottom: 5px; }
+.divComparisonSorting { color: #ffffff; }
+.divComparisonSorting a:link { text-decoration: none; color: #ffffff; }
+.divComparisonSorting a:hover { color: #ffffff; text-decoration: underline; }
+.divComparisonSorting a:active { color: #ffffff; text-decoration: none; }
+.divComparisonSorting a:visited { color: #ffffff; text-decoration: none; }
+
+/*Checkbox lists*/
+.panelPopupCheckBoxList { overflow-y: scroll; overflow-x: hidden; font-size: 11px; border-bottom: #5794bf 1px solid; border-left: #5794bf 1px solid; border-top: #5794bf 1px solid; border-right: #5794bf 1px solid; background-color: #ffffff; visibility: hidden; height: 110px; }
+.divPopUpCheckBoxList { height: 110px; width: 100px; }
+.divPopUpCheckBoxListStatus { height: 110px; width: 150px; }
+.textBoxCheckBoxList { font-size: 11px; cursor: pointer; padding-left: 3px; }
+
+/*-----Drop Down list Checkbox-----*/
+.ui-dropdownchecklist { height: 20px; border: 1px solid #5794bf; border-right: 0; background: #fff url(../App.Styles/ImagesAvailability/dropdown_hover.png) no-repeat center right; }
+.ui-dropdownchecklist-hover, .ui-dropdownchecklist-active { background-image: url(../App.Styles/ImagesAvailability/dropdown_hover.png); border-color: #5794bf; }
+.ui-dropdownchecklist-text { font-size: 11px; font-family: Arial; height: 20px; line-height: 20px; margin-right: 17px; /* background dropdown.png image */ }
+.ui-dropdownchecklist-dropcontainer { background-color: #fff; border: 1px solid #999; overflow-x: hidden; }
+.ui-dropdownchecklist-item-hover { background-color: #39f; }
+.ui-dropdownchecklist-item-disabled label { color: #ccc; }
+.ui-dropdownchecklist-item-hover .ui-dropdownchecklist-text { color: #fff; }
+.ui-dropdownchecklist-group { font-weight: bold; font-style: italic; }
+.ui-dropdownchecklist-indent { padding-left: 20px; }
+
+
+
+.TextBoxWatermarkExtender { font-size: 10px; color:Gray; }

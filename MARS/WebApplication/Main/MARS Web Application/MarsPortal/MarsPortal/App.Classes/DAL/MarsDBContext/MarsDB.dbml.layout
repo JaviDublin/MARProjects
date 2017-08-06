@@ -1,0 +1,1119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 36.75, 76" name="MarsDB">
+  <DataContextMoniker Name="/MarsDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f5ef64e5-1bd9-4706-87c5-ccd179972dab" absoluteBounds="0.75, 8.75, 2, 1.2605004882812487">
+      <DataClassMoniker Name="/MarsDBDataContext/ComparisonTopic" />
+      <nestedChildShapes>
+        <elementListCompartment Id="12270d4d-08e2-4742-ba89-68c4beabdad6" absoluteBounds="0.76500000000000057, 9.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c54748f1-650f-475e-bc4f-273dcc006447" absoluteBounds="9.75, 3.75, 2, 1.2605004882812487">
+      <DataClassMoniker Name="/MarsDBDataContext/KpiCalculationType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52412a81-de57-4807-8091-285e22dcd2e3" absoluteBounds="9.765, 4.2100000000000009, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a8e1917-94db-4965-b5a8-60dddbd69025" absoluteBounds="9, 42.625, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/MarsDBDataContext/MARS_CMS_FleetPlanEntry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="97d9f61b-ee68-41e7-a4b7-4e22e99aaf14" absoluteBounds="9.015, 43.085, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8b66a821-ff28-44bf-ab01-82ad98287b03" absoluteBounds="11.75, 40.5, 2, 2.0822371419270809">
+      <DataClassMoniker Name="/MarsDBDataContext/MARS_CMS_FleetPlanDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c87fd510-482d-470a-bcbc-69a9081f02be" absoluteBounds="11.765, 40.96, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11 : 42.6263478788311); (11.2535744349011 : 42.37277344393 : JumpStart); (11.3714255650989 : 42.2549223137322 : JumpEnd); (11.375 : 42.2513478788311); (11.375 : 42.9572371419271); (11.5035744349011 : 42.828662707026 : JumpStart); (11.6214255650989 : 42.7108115768282 : JumpEnd); (11.6285744349011 : 42.703662707026 : JumpStart); (11.7464255650989 : 42.5858115768282 : JumpEnd); (11.75 : 42.5822371419271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/MARS_CMS_FleetPlanEntry/MARS_CMS_FleetPlanEntry_MARS_CMS_FleetPlanDetail" />
+      <nodes>
+        <classShapeMoniker Id="9a8e1917-94db-4965-b5a8-60dddbd69025" />
+        <classShapeMoniker Id="8b66a821-ff28-44bf-ab01-82ad98287b03" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2f2c4737-673f-474d-b510-dd2d37f6e568" absoluteBounds="11.75, 47.125, 2, 3.7257104492187523">
+      <DataClassMoniker Name="/MarsDBDataContext/MARS_CMS_FORECAST" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb5421ac-b822-4f2e-b70e-4abfca1d9d55" absoluteBounds="11.765, 47.585, 1.9700000000000002, 3.16571044921875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8e927b18-66d2-4e1b-b2ad-c038a57a88ce" absoluteBounds="3.5, 36.25, 2, 2.2465844726562523">
+      <DataClassMoniker Name="/MarsDBDataContext/AREACODE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f99ddc2-cce4-464c-ba4c-be89a20033f1" absoluteBounds="3.5149999999999997, 36.71, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a0dc14b7-f3fe-4cd4-a093-8437b28bd531" absoluteBounds="0.75, 11.75, 2, 1.2605004882812487">
+      <DataClassMoniker Name="/MarsDBDataContext/VehiclesAbroadComment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15a4ce75-ad9a-4ad0-b23b-0f63f3e9e91f" absoluteBounds="0.76500000000000012, 12.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c9045ea3-051b-4d1f-bf4f-eb0d90bffd84" absoluteBounds="12.75, 0.75, 2, 8.9848250325520826">
+      <DataClassMoniker Name="/MarsDBDataContext/RESERVATIONS_EUROPE_ACTUAL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3d2b5928-302a-4198-ad0d-a39a093689b7" absoluteBounds="12.765, 1.21, 1.9700000000000002, 8.4248250325520821" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ac5feb5-9b43-46bd-9405-d1e74503c0d5" absoluteBounds="6.25, 74.375, 2, 1.4248478190104379">
+      <DataClassMoniker Name="/MarsDBDataContext/OPS_AREA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34e17ce2-7258-4a94-8187-2a041719e755" absoluteBounds="6.2650000000000006, 74.835000000000008, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cde911e7-da8d-4d88-8297-b94379c226b6" absoluteBounds="3.5, 74.375, 2, 1.4248478190104379">
+      <DataClassMoniker Name="/MarsDBDataContext/OPS_REGION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea674bec-3562-441a-b00f-04e4bebdcdb1" absoluteBounds="3.5150000000000006, 74.835000000000008, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 75.0874239095052); (6.25 : 75.0874239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/OPS_REGION/OPS_REGION_OPS_AREA" />
+      <nodes>
+        <classShapeMoniker Id="cde911e7-da8d-4d88-8297-b94379c226b6" />
+        <classShapeMoniker Id="4ac5feb5-9b43-46bd-9405-d1e74503c0d5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a371757a-a494-4d76-9c13-8366bcf0d09d" absoluteBounds="6.75, 1, 2, 1.2605004882812505">
+      <DataClassMoniker Name="/MarsDBDataContext/Reservation_Error_Log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="986609fd-0838-48cf-bbcf-538194f5027f" absoluteBounds="6.7650000005960464, 1.4600000008940697, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6fa8e29e-5d98-46a8-929c-63d97d2f9974" absoluteBounds="9.5, 0.875, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/MarsDBDataContext/Reservation_Log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d91c913f-2337-4fb0-aab0-9d333d91684d" absoluteBounds="9.5150000005960464, 1.3350000008940697, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 1.63025024414063); (9.5 : 1.63025024414063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Reservation_Error_Log/Reservation_Error_Log_Reservation_Log" />
+      <nodes>
+        <classShapeMoniker Id="a371757a-a494-4d76-9c13-8366bcf0d09d" />
+        <classShapeMoniker Id="6fa8e29e-5d98-46a8-929c-63d97d2f9974" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7afcbd5c-d754-4c99-8be7-cbb37795da07" absoluteBounds="12.75, 10.75, 2, 3.89005777994792">
+      <DataClassMoniker Name="/MarsDBDataContext/Fact_NonRevLog_Stats" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76943979-8922-4047-9534-624e8e1e1df3" absoluteBounds="12.765, 11.21, 1.9700000000000002, 3.3300577799479165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef7b511d-6e7d-4b6c-9332-58432ab805d4" absoluteBounds="0.75, 14.75, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/MarsDBDataContext/MarsLogView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e09d9757-9589-4d4a-91c1-ea92e54298a3" absoluteBounds="0.76500000000000057, 15.21, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d714c46f-23a5-4636-84e7-ceafcccd4a2c" absoluteBounds="6.5, 3.875, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/MarsDBDataContext/Log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a03333b-6f3b-4a02-8db0-558de8f38486" absoluteBounds="6.5150000005960464, 4.33500000089407, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a27fce89-0c13-4852-9c6b-69062dbfd886" absoluteBounds="3.75, 4.375, 2, 1.0961531575520844">
+      <DataClassMoniker Name="/MarsDBDataContext/LogType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cde9d3d6-def1-4201-b0b2-703f3a5721d6" absoluteBounds="3.7650000005960464, 4.83500000089407, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 4.92307657877604); (6.5 : 4.92307657877604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/LogType/LogType_Log" />
+      <nodes>
+        <classShapeMoniker Id="a27fce89-0c13-4852-9c6b-69062dbfd886" />
+        <classShapeMoniker Id="d714c46f-23a5-4636-84e7-ceafcccd4a2c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="810bd5ba-b98b-4162-9d47-3653f9fb5334" absoluteBounds="3.75, 6.25, 2, 1.2605004882812487">
+      <DataClassMoniker Name="/MarsDBDataContext/Error_Log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f29e087-c876-4568-9466-955b87aeb6fc" absoluteBounds="3.7650000005960464, 6.71000000089407, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 6.78125); (8.03125 : 6.78125); (8.03125 : 5.79288981119792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Error_Log/Error_Log_Log" />
+      <nodes>
+        <classShapeMoniker Id="810bd5ba-b98b-4162-9d47-3653f9fb5334" />
+        <classShapeMoniker Id="d714c46f-23a5-4636-84e7-ceafcccd4a2c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9adb2802-cd35-4bbf-8e7f-fdd3eb75d0d2" absoluteBounds="3.75, 14.75, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/MarsDBDataContext/ManualMovementXCmd" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4b16de53-f8b7-40cf-81dd-397d04701be3" absoluteBounds="3.7650000000000006, 15.21, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3fe93a69-5bcb-435a-8507-658ef8111e88" absoluteBounds="15.75, 0.75, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/MarsDBDataContext/UserLogonHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c97d64b0-8cc1-468f-ada6-6d068acf95a2" absoluteBounds="15.765, 1.21, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="13b856da-84a6-4465-9a04-b45971530e76" absoluteBounds="15.75, 3.75, 2, 5.3691837565104166">
+      <DataClassMoniker Name="/MarsDBDataContext/CmsForecastView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a581aaeb-23ac-4960-ab3a-db03810f826a" absoluteBounds="15.765, 4.21, 1.9700000000000002, 4.8091837565104161" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="65694c9b-fab7-4a0b-831c-d2089e386a0e" absoluteBounds="15.75, 10.75, 2, 2.2465844726562523">
+      <DataClassMoniker Name="/MarsDBDataContext/RibbonMenu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71f899b9-42bc-4137-aad8-d3a6f102e794" absoluteBounds="15.765, 11.21, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9d33c6f6-b631-4d2f-92bf-6523c43f0c17" absoluteBounds="12.75, 15.75, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/MarsDBDataContext/MARS_RoleRibbonMenu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bed92847-fb1c-4232-9e08-d051e4e188e5" absoluteBounds="12.765, 16.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="44ec218d-3744-4899-94bb-813913e199a1" absoluteBounds="6.75, 16.75, 2, 20.489138183593752">
+      <DataClassMoniker Name="/MarsDBDataContext/Fact_NonRevLog_Summary" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d89d2f5c-64bb-4f34-bb1f-de1d758fbcfc" absoluteBounds="6.7650000000000006, 17.21, 1.9700000000000002, 19.92913818359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ee115c7-55f3-45a6-9170-c383e889b572" absoluteBounds="18.75, 22.75, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/MarsDBDataContext/Operational_Status" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3a5d039-33f7-4cb6-9985-177b4f07ff30" absoluteBounds="18.765, 23.21, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c2e4ca2-bcc1-4e39-a1aa-f6850d087542" absoluteBounds="9.5, 7.25, 2, 8.1630883789062523">
+      <DataClassMoniker Name="/MarsDBDataContext/Fact_NonRevLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7633d7e-9509-4dd0-866f-780acce2b7c8" absoluteBounds="9.5150000005960464, 7.71000000089407, 1.9700000000000002, 7.60308837890625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="75b5b837-8dc9-4731-9d0e-fb9790469d08" absoluteBounds="6.75, 9, 2, 4.5474471028645809">
+      <DataClassMoniker Name="/MarsDBDataContext/Dim_Fleet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="01d4458f-ff9a-449a-8488-27465b75cedf" absoluteBounds="6.7650000005960464, 9.46000000089407, 1.9700000000000002, 3.987447102864583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 11.2737235514323); (9.5 : 11.2737235514323)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Dim_Fleet/Dim_Fleet_Fact_NonRevLog" />
+      <nodes>
+        <classShapeMoniker Id="75b5b837-8dc9-4731-9d0e-fb9790469d08" />
+        <classShapeMoniker Id="6c2e4ca2-bcc1-4e39-a1aa-f6850d087542" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5bd372c1-a107-47e6-81c1-48ae5cd612cd" absoluteBounds="15.75, 16.75, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/MarsDBDataContext/NonRev_Day_Group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f215e6d5-096d-4723-8053-2539de4529e7" absoluteBounds="15.765, 17.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9ae11f8b-40a2-4df0-aa26-0de2b663928b" absoluteBounds="18.75, 0.75, 2, 1.5891951497395829">
+      <DataClassMoniker Name="/MarsDBDataContext/StatisticsPageAccess" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05ec69e0-90ae-4120-81be-3ed3ad6435b5" absoluteBounds="18.765, 1.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bd2666d0-7e23-4927-bd60-0d4398ac5de9" absoluteBounds="0.75, 18.75, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/MarsDBDataContext/Communication" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9bdc7b4a-fd09-4348-9576-6d6d69745693" absoluteBounds="0.76500000000000057, 19.21, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b8b0c861-299d-441e-be38-37e7acf741e1" absoluteBounds="17.75, 49.75, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/MarsDBDataContext/ResAddition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="59cf092e-c8a2-471b-b199-9ee65c2ddf36" absoluteBounds="17.765, 50.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="45e1b817-444b-49ea-8b34-2f95b690313e" absoluteBounds="17.75, 52.75, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/MarsDBDataContext/ResDeletion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d1b53ba-65db-4fbb-89b2-8d575f2f9516" absoluteBounds="17.765, 53.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="60f3ef6f-d4fa-46bc-81e0-e866d5918fbc" absoluteBounds="11.75, 51.75, 2, 1.4248478190104237">
+      <DataClassMoniker Name="/MarsDBDataContext/ResBuffer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f7b4d1a-d0b8-4b85-817e-dd98f72dc257" absoluteBounds="11.765, 52.21, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="21f5eb79-b287-443b-9d20-8b594753e4f3" absoluteBounds="18.75, 3.75, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/MarsDBDataContext/Document" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1da2ef3d-75bd-42de-98cc-e09b2a85b1a4" absoluteBounds="18.765, 4.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="adb8602f-5f33-456b-9bd3-edf4adbed4df" absoluteBounds="18.75, 20, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/MarsDBDataContext/Movement_Type" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36ffce77-c4b6-48ab-98d7-aee2eeb354af" absoluteBounds="18.765, 20.46, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b4cd72ef-abcc-46e6-9fbd-d615c43aff38" absoluteBounds="18.75, 25.75, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/MarsDBDataContext/NonRev_Remarks_List" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f4f98f8-6d61-4f34-bfdc-68f6649ae2bc" absoluteBounds="18.765, 26.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7aec6d40-a16a-49e5-858d-fbfd5cc08b3c" absoluteBounds="21.5, 29.5, 2, 2.0822371419270809">
+      <DataClassMoniker Name="/MarsDBDataContext/VehicleNonRevPeriod" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52068b35-5afc-42d4-8417-d574e900cccf" absoluteBounds="21.515, 29.96, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3ce84e96-9a28-479e-aaa2-08d017a4daff" absoluteBounds="27.5, 38.5, 2, 1.9178898111979095">
+      <DataClassMoniker Name="/MarsDBDataContext/VehicleNonRevPeriodEntryRemark" />
+      <nestedChildShapes>
+        <elementListCompartment Id="532800e8-12df-4a8e-9d6a-854e3b5dca77" absoluteBounds="27.515, 38.96, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20.75 : 26.1612470884353); (23.6979166666667 : 26.1612470884353 : JumpStart); (24.0052108333333 : 26.1612470884353 : JumpEnd); (25.4479166666667 : 26.1612470884353 : JumpStart); (25.6145833333333 : 26.1612470884353 : JumpEnd); (28.96875 : 26.1612470884353); (28.96875 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/NonRev_Remarks_List/NonRev_Remarks_List_VehicleNonRevPeriodEntryRemark" />
+      <nodes>
+        <classShapeMoniker Id="b4cd72ef-abcc-46e6-9fbd-d615c43aff38" />
+        <classShapeMoniker Id="3ce84e96-9a28-479e-aaa2-08d017a4daff" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="532c88cb-300d-4e26-940d-39eea569bc3e" absoluteBounds="26.375, 35.5, 2, 2.0822371419270809">
+      <DataClassMoniker Name="/MarsDBDataContext/VehicleNonRevApproval" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16bb8f38-6ad2-4be0-976d-c265b415c059" absoluteBounds="26.39, 35.96, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b5749b49-4aed-48a4-8896-4af593de8805" absoluteBounds="3.5, 56.5, 2, 17.202191569010409">
+      <DataClassMoniker Name="/MarsDBDataContext/FLEET_EUROPE_ACTUAL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3461d41-465d-4fae-983d-636d9ef77dea" absoluteBounds="3.515, 56.96, 1.9700000000000002, 16.642191569010414" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32513f0a-28df-43ae-a25a-1bd752eec5eb" absoluteBounds="11.75, 54, 2, 7.0126570638020809">
+      <DataClassMoniker Name="/MarsDBDataContext/Reservations" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b13f755-8392-4aac-92e3-e15f3d5db298" absoluteBounds="11.765, 54.46, 1.9700000000000002, 6.452657063802083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b8ccbc3-2f99-4b33-a966-aa404d247430" absoluteBounds="14.5, 56.75, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/MarsDBDataContext/ResRemark" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c75c7ea0-5f69-4fbd-99e5-edaceb9d75cf" absoluteBounds="14.515, 57.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.75 : 57.5445975748698); (14.5 : 57.5445975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Reservations/Reservations_ResRemark" />
+      <nodes>
+        <classShapeMoniker Id="32513f0a-28df-43ae-a25a-1bd752eec5eb" />
+        <classShapeMoniker Id="3b8ccbc3-2f99-4b33-a966-aa404d247430" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7f4efaae-77c0-4a3b-8b9b-bde8b23ab07e" absoluteBounds="24.75, 38.375, 2, 2.2465844726562523">
+      <DataClassMoniker Name="/MarsDBDataContext/VehicleNonRevPeriodEntry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="45d579d0-56a8-47ce-a03f-3109ed3a80cf" absoluteBounds="24.765, 38.835, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(26.75 : 39.458944905599); (27.5 : 39.458944905599)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/VehicleNonRevPeriodEntry/VehicleNonRevPeriodEntry_VehicleNonRevPeriodEntryRemark" />
+      <nodes>
+        <classShapeMoniker Id="7f4efaae-77c0-4a3b-8b9b-bde8b23ab07e" />
+        <classShapeMoniker Id="3ce84e96-9a28-479e-aaa2-08d017a4daff" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20.75 : 20.9556684795297); (23.6979166666667 : 20.9556684795297 : JumpStart); (23.8645833333333 : 20.9556684795297 : JumpEnd); (25.53125 : 20.9556684795297); (25.53125 : 38.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Movement_Type/Movement_Type_VehicleNonRevPeriodEntry" />
+      <nodes>
+        <classShapeMoniker Id="adb8602f-5f33-456b-9bd3-edf4adbed4df" />
+        <classShapeMoniker Id="7f4efaae-77c0-4a3b-8b9b-bde8b23ab07e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20.75 : 23.8342621142578); (21.0416666666667 : 23.8342621142578 : JumpStart); (21.2083333333333 : 23.8342621142578 : JumpEnd); (23.6979166666667 : 23.8342621142578 : JumpStart); (24.0052108333333 : 23.8342621142578 : JumpEnd); (25.1093725 : 23.8342621142578); (25.1093725 : 38.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Operational_Status/Operational_Status_VehicleNonRevPeriodEntry" />
+      <nodes>
+        <classShapeMoniker Id="8ee115c7-55f3-45a6-9170-c383e889b572" />
+        <classShapeMoniker Id="7f4efaae-77c0-4a3b-8b9b-bde8b23ab07e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(23.5 : 30.5411185709635); (25.9531275 : 30.5411185709635); (25.9531275 : 38.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/VehicleNonRevPeriod/VehicleNonRevPeriod_VehicleNonRevPeriodEntry" />
+      <nodes>
+        <classShapeMoniker Id="7aec6d40-a16a-49e5-858d-fbfd5cc08b3c" />
+        <classShapeMoniker Id="7f4efaae-77c0-4a3b-8b9b-bde8b23ab07e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="991d0db8-be72-48e0-8e49-9d2c24bdd6f0" absoluteBounds="16, 39, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/MarsDBDataContext/VehicleFleetType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5cfb848e-a5e2-495e-9ed8-ce75fe4ea374" absoluteBounds="16.015, 39.46, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(18 : 39.242786289388); (18.3125 : 39.242786289388); (18.3125 : 43.4060083007813); (21.4166666666667 : 43.4060083007813 : JumpStart); (21.5833333333333 : 43.4060083007813 : JumpEnd); (21.6875 : 43.4060083007813); (21.6875 : 37.8125); (25.8697941666667 : 37.8125 : JumpStart); (26.0364608333333 : 37.8125 : JumpEnd); (26.38281575 : 37.8125); (26.38281575 : 38.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/VehicleFleetType/VehicleFleetType_VehicleNonRevPeriodEntry" />
+      <nodes>
+        <classShapeMoniker Id="991d0db8-be72-48e0-8e49-9d2c24bdd6f0" />
+        <classShapeMoniker Id="7f4efaae-77c0-4a3b-8b9b-bde8b23ab07e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2e291706-df21-4016-91ce-47e1621ba855" absoluteBounds="0.75, 1, 2, 1.0961531575520807">
+      <DataClassMoniker Name="/MarsDBDataContext/MARS_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a7a99588-f064-4f9e-b64c-ce8363c0e745" absoluteBounds="0.76500000059604645, 1.4600000008940697, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b353cdc5-d8bb-4647-a72d-5ee317008b3c" absoluteBounds="0.75, 3.875, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/MarsDBDataContext/MARS_Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4383d136-ab6b-46e7-b91d-340c3d84c8ae" absoluteBounds="0.76500000059604645, 4.33500000089407, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eb33b7da-36f5-454e-badf-8e96a869e3d2" absoluteBounds="3.5, 0.875, 2, 1.4248478190104201">
+      <DataClassMoniker Name="/MarsDBDataContext/MARS_UsersInRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92118e65-8947-4259-b848-d74393f03314" absoluteBounds="3.5150000005960464, 1.3350000008940697, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 4.21242390950521); (3.59375 : 4.21242390950521); (3.59375 : 2.29984781901042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/MARS_Role/MARS_Role_MARS_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="b353cdc5-d8bb-4647-a72d-5ee317008b3c" />
+        <classShapeMoniker Id="eb33b7da-36f5-454e-badf-8e96a869e3d2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.54807657877604); (3.5 : 1.54807657877604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/MARS_User/MARS_User_MARS_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="2e291706-df21-4016-91ce-47e1621ba855" />
+        <classShapeMoniker Id="eb33b7da-36f5-454e-badf-8e96a869e3d2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="aee8b9df-73dc-46c9-ab3b-d393ee32f000" absoluteBounds="19, 43.625, 2, 5.6978784179687523">
+      <DataClassMoniker Name="/MarsDBDataContext/FleetNow" />
+      <nestedChildShapes>
+        <elementListCompartment Id="142239b7-2e40-4fad-b694-f40bb49f089a" absoluteBounds="19.015, 44.085, 1.9700000000000002, 5.13787841796875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16.03125 : 40.0961531575521); (16.03125 : 49.3043435755208); (18.2916666666667 : 49.3043435755208 : JumpStart); (18.4583333333333 : 49.3043435755208 : JumpEnd); (19 : 49.3043435755208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/VehicleFleetType/VehicleFleetType_FleetNow" />
+      <nodes>
+        <classShapeMoniker Id="991d0db8-be72-48e0-8e49-9d2c24bdd6f0" />
+        <classShapeMoniker Id="aee8b9df-73dc-46c9-ab3b-d393ee32f000" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="020659df-5e5e-4926-8086-dc930f4bf733" absoluteBounds="3.5, 42.25, 2, 1.4248478190104237">
+      <DataClassMoniker Name="/MarsDBDataContext/CMS_POOL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="32703ca0-83be-4253-b269-acf5b6947409" absoluteBounds="3.5149999999999997, 42.71, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df619c80-907b-4904-94f6-ca209372b465" absoluteBounds="6.25, 42.25, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/MarsDBDataContext/CMS_LOCATION_GROUP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f4c99d63-c44c-47e8-8018-f974fd9efc16" absoluteBounds="6.265, 42.71, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.25 : 42.25); (7.25 : 41.7465844726563); (8.66666666666667 : 41.7465844726563 : JumpStart); (8.95833333333333 : 41.7465844726563 : JumpEnd); (9.86079928205128 : 41.7465844726563 : JumpStart); (10.0274659487179 : 41.7465844726563 : JumpEnd); (11.1174358974359 : 41.7465844726563 : JumpStart); (11.3958333333333 : 41.7465844726563 : JumpEnd); (11.625 : 41.7465844726563); (11.625 : 41.5098665709635); (11.75 : 41.5098665709635)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CMS_LOCATION_GROUP/CMS_LOCATION_GROUP_MARS_CMS_FleetPlanDetail" />
+      <nodes>
+        <classShapeMoniker Id="df619c80-907b-4904-94f6-ca209372b465" />
+        <classShapeMoniker Id="8b66a821-ff28-44bf-ab01-82ad98287b03" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.21875 : 43.8391951497396); (8.21875 : 48.9878552246094); (11.2291666666667 : 48.9878552246094 : JumpStart); (11.3958333333333 : 48.9878552246094 : JumpEnd); (11.4791666666667 : 48.9878552246094 : JumpStart); (11.6458333333333 : 48.9878552246094 : JumpEnd); (11.75 : 48.9878552246094)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CMS_LOCATION_GROUP/CMS_LOCATION_GROUP_MARS_CMS_FORECAST" />
+      <nodes>
+        <classShapeMoniker Id="df619c80-907b-4904-94f6-ca209372b465" />
+        <classShapeMoniker Id="2f2c4737-673f-474d-b510-dd2d37f6e568" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 42.9624239095052); (5.66666666666667 : 42.9624239095052 : JumpStart); (6.08333333333333 : 42.9624239095052 : JumpEnd); (6.25 : 42.9624239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CMS_POOL/CMS_POOL_CMS_LOCATION_GROUP" />
+      <nodes>
+        <classShapeMoniker Id="020659df-5e5e-4926-8086-dc930f4bf733" />
+        <classShapeMoniker Id="df619c80-907b-4904-94f6-ca209372b465" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="00c1c927-f7da-49e8-b8da-1374ff41b507" absoluteBounds="21.75, 37.875, 2, 21.310874837239581">
+      <DataClassMoniker Name="/MarsDBDataContext/FleetHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2aa0fe9d-02fc-4dd5-95fd-028794ea2b17" absoluteBounds="21.765, 38.335, 1.9700000000000002, 20.750874837239582" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(18 : 39.548076578776); (18.25 : 39.548076578776); (18.25 : 43.4060083007813); (21.375 : 43.4060083007813); (21.375 : 37.5); (22.75 : 37.5); (22.75 : 37.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/VehicleFleetType/VehicleFleetType_FleetHistory" />
+      <nodes>
+        <classShapeMoniker Id="991d0db8-be72-48e0-8e49-9d2c24bdd6f0" />
+        <classShapeMoniker Id="00c1c927-f7da-49e8-b8da-1374ff41b507" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3ded4bbb-65e1-4c3a-a99c-61dee514f033" absoluteBounds="18.75, 6.75, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/MarsDBDataContext/ReservationTeradataControlLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="517b4eac-f187-42fe-b659-21444365c7e4" absoluteBounds="18.765, 7.21, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="52019812-22e8-4252-a058-76445e087bdb" absoluteBounds="9, 39.25, 2, 2.2465844726562523">
+      <DataClassMoniker Name="/MarsDBDataContext/CAR_GROUP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e90bd41f-088f-48bf-96a4-bef6ccf4465d" absoluteBounds="9.015, 39.71, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11 : 40.9355007747897); (11.75 : 40.9355007747897)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_GROUP/CAR_GROUP_MARS_CMS_FleetPlanDetail" />
+      <nodes>
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+        <classShapeMoniker Id="8b66a821-ff28-44bf-ab01-82ad98287b03" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 41.4950450111178); (11.0973239349011 : 41.5923689460189 : JumpStart); (11.2151750650989 : 41.7102200762167 : JumpEnd); (11.2535744349011 : 41.7486194460189 : JumpStart); (11.3714255650989 : 41.8664705762167 : JumpEnd); (11.4410744349011 : 41.9361194460189 : JumpStart); (11.5589255650989 : 42.0539705762167 : JumpEnd); (11.625 : 42.1200450111178); (11.625 : 48.9878552246094); (11.75 : 48.9878552246094)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_GROUP/CAR_GROUP_MARS_CMS_FORECAST" />
+      <nodes>
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+        <classShapeMoniker Id="2f2c4737-673f-474d-b510-dd2d37f6e568" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 39.7112042364471); (11.2291666666667 : 39.7112042364471 : JumpStart); (11.3958333333333 : 39.7112042364471 : JumpEnd); (11.6041666666667 : 39.7112042364471 : JumpStart); (11.7708333333333 : 39.7112042364471 : JumpEnd); (14.0729166666667 : 39.7112042364471 : JumpStart); (14.2395833333333 : 39.7112042364471 : JumpEnd); (15.875 : 39.7112042364471); (15.875 : 49.5728784179688); (18.75 : 49.5728784179688); (18.75 : 49.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_GROUP/CAR_GROUP_ResAddition" />
+      <nodes>
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+        <classShapeMoniker Id="b8b0c861-299d-441e-be38-37e7acf741e1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.94413261538461 : 41.4965844726563); (9.94413261538461 : 42.125); (11.0625 : 42.125); (11.0625 : 53.5445975748698); (11.0729161666667 : 53.5445975748698 : JumpStart); (11.4895833333333 : 53.5445975748698 : JumpEnd); (14.4166666666667 : 53.5445975748698 : JumpStart); (14.5833333333333 : 53.5445975748698 : JumpEnd); (14.625 : 53.5445975748698); (14.625 : 54.3507104492188); (17.375 : 54.3507104492188); (17.375 : 53.5445975748698); (17.75 : 53.5445975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_GROUP/CAR_GROUP_ResDeletion" />
+      <nodes>
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+        <classShapeMoniker Id="45e1b817-444b-49ea-8b34-2f95b690313e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.9507692307692 : 41.4965844726563); (11.5625 : 42.108315241887); (11.5625 : 52.4624239095052); (11.75 : 52.4624239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_GROUP/CAR_GROUP_ResBuffer" />
+      <nodes>
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+        <classShapeMoniker Id="60f3ef6f-d4fa-46bc-81e0-e866d5918fbc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 41.4150450111178); (11.2535744349011 : 41.6686194460189 : JumpStart); (11.3714255650989 : 41.7864705762167 : JumpEnd); (11.40625 : 41.8212950111178); (11.40625 : 53.65625); (11.5660744349011 : 53.8160744349011 : JumpStart); (11.6839255650989 : 53.9339255650989 : JumpEnd); (11.75 : 54)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_GROUP/CAR_GROUP_Reservations" />
+      <nodes>
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+        <classShapeMoniker Id="32513f0a-28df-43ae-a25a-1bd752eec5eb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.94413261538461 : 41.4965844726563); (9.94413261538461 : 42.375); (11.25 : 42.375); (11.25 : 46.4739392089844); (15.625 : 46.4739392089844); (15.625 : 49.4733097330729); (18.375 : 49.4733097330729); (18.375 : 46.4739392089844); (19 : 46.4739392089844)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_GROUP/CAR_GROUP_FleetNow" />
+      <nodes>
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+        <classShapeMoniker Id="aee8b9df-73dc-46c9-ab3b-d393ee32f000" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.531252 : 39.25); (10.531252 : 39); (11.0729161666667 : 39 : JumpStart); (11.3958333333333 : 39 : JumpEnd); (11.5 : 39); (11.5 : 46.875); (11.6041666666667 : 46.875 : JumpStart); (11.7708333333333 : 46.875 : JumpEnd); (14.9947879166667 : 46.875 : JumpStart); (15.1614545833333 : 46.875 : JumpEnd); (15.2604141666667 : 46.875 : JumpStart); (15.4270808333333 : 46.875 : JumpEnd); (15.5416666666667 : 46.875 : JumpStart); (15.7083333333333 : 46.875 : JumpEnd); (15.75 : 46.875); (15.75 : 49.6353784179688); (20.3229161666667 : 49.6353784179688 : JumpStart); (20.4895828333333 : 49.6353784179688 : JumpEnd); (21.375 : 49.6353784179688); (21.375 : 47.7030041503907); (21.4166666666667 : 47.7030041503907 : JumpStart); (21.5833333333333 : 47.7030041503907 : JumpEnd); (21.75 : 47.7030041503907)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_GROUP/CAR_GROUP_FleetHistory" />
+      <nodes>
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+        <classShapeMoniker Id="00c1c927-f7da-49e8-b8da-1374ff41b507" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="91b831ae-e77f-487e-b8dc-4bff913045ef" absoluteBounds="6.25, 39.5, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/MarsDBDataContext/CAR_CLASS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c6ec1a2-ecdb-4213-b7e8-c34b0ae3837f" absoluteBounds="6.265, 39.96, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 40.2945975748698); (8.29166666666667 : 40.2945975748698 : JumpStart); (8.95833333333333 : 40.2945975748698 : JumpEnd); (9 : 40.2945975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_CLASS/CAR_CLASS_CAR_GROUP" />
+      <nodes>
+        <classShapeMoniker Id="91b831ae-e77f-487e-b8dc-4bff913045ef" />
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3ab566dd-2b79-46f4-8e8c-25b36aba2b24" absoluteBounds="3.5, 39.5, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/MarsDBDataContext/CAR_SEGMENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="008650f9-39be-4a60-91a4-cda2b8df2c2f" absoluteBounds="3.5149999999999997, 39.96, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 40.2945975748698); (5.66666666666667 : 40.2945975748698 : JumpStart); (5.83333333333333 : 40.2945975748698 : JumpEnd); (6.25 : 40.2945975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_SEGMENT/CAR_SEGMENT_CAR_CLASS" />
+      <nodes>
+        <classShapeMoniker Id="3ab566dd-2b79-46f4-8e8c-25b36aba2b24" />
+        <classShapeMoniker Id="91b831ae-e77f-487e-b8dc-4bff913045ef" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="385167b7-9f16-44b2-a78e-7f3ddbd8a8ec" absoluteBounds="14.875, 50.125, 2, 3.7257104492187496">
+      <DataClassMoniker Name="/MarsDBDataContext/Reservation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c1d7862-06ff-4002-9b59-3afcd69c92b5" absoluteBounds="14.89, 50.585, 1.9700000000000002, 3.16571044921875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11 : 40.2349124728941); (15.07812125 : 40.2349124728941); (15.07812125 : 50.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_GROUP/CAR_GROUP_Reservation" />
+      <nodes>
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+        <classShapeMoniker Id="385167b7-9f16-44b2-a78e-7f3ddbd8a8ec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 40.4049292882362); (15.3437475 : 40.4049292882362); (15.3437475 : 50.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_GROUP/CAR_GROUP_Reservation1" />
+      <nodes>
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+        <classShapeMoniker Id="385167b7-9f16-44b2-a78e-7f3ddbd8a8ec" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b50e032a-ca31-480f-b5de-445210df5c1f" absoluteBounds="19.625, 16, 2, 1.0961531575520833">
+      <DataClassMoniker Name="/MarsDBDataContext/ResGoldLevel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5550b72f-efb3-40c5-9bd1-eedd7516f586" absoluteBounds="19.64, 16.46, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ca00d97-ea65-4f9a-a3c3-20723f795c13" absoluteBounds="19.375, 17.5, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/MarsDBDataContext/ResLoyaltyProgram" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb9b1eb3-c173-4df4-aee5-23de46d2a224" absoluteBounds="19.39, 17.96, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20.5 : 17.0961531575521); (20.5 : 17.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/ResGoldLevel/ResGoldLevel_ResLoyaltyProgram" />
+      <nodes>
+        <classShapeMoniker Id="b50e032a-ca31-480f-b5de-445210df5c1f" />
+        <classShapeMoniker Id="8ca00d97-ea65-4f9a-a3c3-20723f795c13" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4bcfd840-9f17-434b-87b0-f3decf4b4bfe" absoluteBounds="3.75, 2.625, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/MarsDBDataContext/MARS_UsersAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd6a73de-c1f3-4de4-9a5d-2b1d699bc97a" absoluteBounds="3.7649999999999997, 3.085, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ffca333-a2ed-4431-a55e-f26601fd6782" absoluteBounds="26, 3.125, 2, 1.26050048828125">
+      <DataClassMoniker Name="/MarsDBDataContext/MarsUserUserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="888e1a6c-89c2-42bd-8abe-e675677b11f1" absoluteBounds="26.015, 3.585, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="99cadc70-6215-4121-9ef0-dcf0ee5b272b" absoluteBounds="27.25, 7.75, 2, 1.26050048828125">
+      <DataClassMoniker Name="/MarsDBDataContext/MarsUserRoleMenuAccess" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34b1cbe6-e6da-4dde-ba2e-777efef4b085" absoluteBounds="27.265, 8.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17.75 : 12.1991398111979); (27.0416666666667 : 12.1991398111979 : JumpStart); (27.2083333333333 : 12.1991398111979 : JumpEnd); (28.71875 : 12.1991398111979); (28.71875 : 9.01050048828125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/RibbonMenu/RibbonMenu_MarsUserRoleMenuAccess" />
+      <nodes>
+        <classShapeMoniker Id="65694c9b-fab7-4a0b-831c-d2089e386a0e" />
+        <classShapeMoniker Id="99cadc70-6215-4121-9ef0-dcf0ee5b272b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b876aa29-a062-433a-8aac-10e0a5b9266d" absoluteBounds="24.875, 8.75, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/MarsDBDataContext/FleetOwner" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2b9c8d01-8b4e-4700-9b0e-2336cdc16d82" absoluteBounds="24.89, 9.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a767f71-8ad0-422a-bfb5-7a24aeed3a12" absoluteBounds="30.375, 9.125, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/MarsDBDataContext/Company" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9670fce0-7568-46ea-9a82-31addf6dd87a" absoluteBounds="30.39, 9.585, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(30.375 : 9.73209757486979); (27.1145833333333 : 9.73209757486979 : JumpStart); (26.9479166666667 : 9.73209757486979 : JumpEnd); (26.875 : 9.73209757486979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Company/Company_FleetOwner" />
+      <nodes>
+        <classShapeMoniker Id="0a767f71-8ad0-422a-bfb5-7a24aeed3a12" />
+        <classShapeMoniker Id="b876aa29-a062-433a-8aac-10e0a5b9266d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6f267a43-b909-4ce6-8db0-0575e39ed085" absoluteBounds="9.25, 55.25, 2, 3.7257104492187496">
+      <DataClassMoniker Name="/MarsDBDataContext/LOCATION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="113dee66-0608-4b36-92ff-737f569b4b98" absoluteBounds="9.265, 55.71, 1.9700000000000002, 3.16571044921875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.25 : 55.6688358061523); (11.4375 : 55.6688358061523); (11.4375 : 53.875); (11.5416666666667 : 53.875 : JumpStart); (11.7083333333333 : 53.875 : JumpEnd); (14.375 : 53.875); (14.375 : 49.875); (14.9947879166667 : 49.875 : JumpStart); (15.1614545833333 : 49.875 : JumpEnd); (15.2604141666667 : 49.875 : JumpStart); (15.4270808333333 : 49.875 : JumpEnd); (17.5 : 49.875); (17.5 : 52.5); (18.75 : 52.5); (18.75 : 51.3391951497396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/LOCATION/LOCATION_ResAddition" />
+      <nodes>
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+        <classShapeMoniker Id="b8b0c861-299d-441e-be38-37e7acf741e1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 58.1958697884522); (11.375 : 58.1958697884522); (11.375 : 53.8125); (11.4791666666667 : 53.8125 : JumpStart); (11.6458333333333 : 53.8125 : JumpEnd); (14 : 53.8125); (14 : 56.5); (18.75 : 56.5); (18.75 : 54.3391951497396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/LOCATION/LOCATION_ResDeletion" />
+      <nodes>
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+        <classShapeMoniker Id="45e1b817-444b-49ea-8b34-2f95b690313e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.9101553125 : 55.25); (10.9101553125 : 52.4624239095052); (11.75 : 52.4624239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/LOCATION/LOCATION_ResBuffer" />
+      <nodes>
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+        <classShapeMoniker Id="60f3ef6f-d4fa-46bc-81e0-e866d5918fbc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 56.1189276123047); (11.75 : 56.1189276123047)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/LOCATION/LOCATION_Reservations" />
+      <nodes>
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+        <classShapeMoniker Id="32513f0a-28df-43ae-a25a-1bd752eec5eb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 58.1067828369141); (11.2916666666667 : 58.1067828369141 : JumpStart); (11.4583333333333 : 58.1067828369141 : JumpEnd); (11.5416666666667 : 58.1067828369141 : JumpStart); (11.7083333333333 : 58.1067828369141 : JumpEnd); (11.75 : 58.1067828369141)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/LOCATION/LOCATION_Reservations1" />
+      <nodes>
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+        <classShapeMoniker Id="32513f0a-28df-43ae-a25a-1bd752eec5eb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 58.1958697884522); (11.625 : 58.1958697884522); (11.625 : 53.75); (14.4166666666667 : 53.75 : JumpStart); (14.5833333333333 : 53.75 : JumpEnd); (14.75 : 53.75); (14.75 : 50); (14.9947879166667 : 50 : JumpStart); (15.1614545833333 : 50 : JumpEnd); (15.2604141666667 : 50 : JumpStart); (15.4270808333333 : 50 : JumpEnd); (17.25 : 50); (17.25 : 52.25); (20.4062495 : 52.25); (20.4062495 : 49.3228784179688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/LOCATION/LOCATION_FleetNow" />
+      <nodes>
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+        <classShapeMoniker Id="aee8b9df-73dc-46c9-ab3b-d393ee32f000" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 57.3535251276856); (11.6875 : 57.3535251276856); (11.6875 : 61.2626570638021); (22.75 : 61.2626570638021); (22.75 : 59.1858748372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/LOCATION/LOCATION_FleetHistory" />
+      <nodes>
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+        <classShapeMoniker Id="00c1c927-f7da-49e8-b8da-1374ff41b507" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.679684375 : 55.25); (9.679684375 : 51.3941052246094); (11.0729161666667 : 51.3941052246094 : JumpStart); (11.6458333333333 : 51.3941052246094 : JumpEnd); (14.4166666666667 : 51.3941052246094 : JumpStart); (14.5833333333333 : 51.3941052246094 : JumpEnd); (14.6666666666667 : 51.3941052246094 : JumpStart); (14.8333333333333 : 51.3941052246094 : JumpEnd); (14.875 : 51.3941052246094)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/LOCATION/LOCATION_Reservation" />
+      <nodes>
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+        <classShapeMoniker Id="385167b7-9f16-44b2-a78e-7f3ddbd8a8ec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.664061125 : 55.25); (10.664061125 : 53.3686739095052); (10.8268219791667 : 53.3686739095052 : JumpStart); (11.4895833333333 : 53.3686739095052 : JumpEnd); (14.1666666666667 : 53.3686739095052 : JumpStart); (14.5833333333333 : 53.3686739095052 : JumpEnd); (14.6666666666667 : 53.3686739095052 : JumpStart); (14.8333333333333 : 53.3686739095052 : JumpEnd); (14.875 : 53.3686739095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/LOCATION/LOCATION_Reservation1" />
+      <nodes>
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+        <classShapeMoniker Id="385167b7-9f16-44b2-a78e-7f3ddbd8a8ec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 37.8851943417969); (5.66666666666667 : 37.8851943417969 : JumpStart); (5.83333333333333 : 37.8851943417969 : JumpEnd); (5.91666666666667 : 37.8851943417969 : JumpStart); (6.08333333333333 : 37.8851943417969 : JumpEnd); (8.29166666666667 : 37.8851943417969 : JumpStart); (8.83333333333333 : 37.8851943417969 : JumpEnd); (9.38541416666667 : 37.8851943417969 : JumpStart); (9.55208083333333 : 37.8851943417969 : JumpEnd); (9.91666666666667 : 37.8851943417969 : JumpStart); (10.0833333333333 : 37.8851943417969 : JumpEnd); (11.1562495 : 37.8851943417969); (11.1562495 : 55.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/AREACODE/AREACODE_LOCATION" />
+      <nodes>
+        <classShapeMoniker Id="8e927b18-66d2-4e1b-b2ad-c038a57a88ce" />
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.203125 : 43.8391951497396); (8.203125 : 56.631515168457); (9.25 : 56.631515168457)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CMS_LOCATION_GROUP/CMS_LOCATION_GROUP_LOCATION" />
+      <nodes>
+        <classShapeMoniker Id="df619c80-907b-4904-94f6-ca209372b465" />
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(30.375 : 10.2248878642578); (27.125 : 10.2248878642578); (27.125 : 13.2465844726563); (15 : 13.2465844726563); (15 : 9.98482503255208); (11.75 : 9.98482503255208); (11.75 : 15.6630883789063); (11.3125 : 15.6630883789063); (11.3125 : 54.875); (10.9934886458333 : 54.875 : JumpStart); (10.8268219791667 : 54.875 : JumpEnd); (10.17187275 : 54.875); (10.17187275 : 55.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Company/Company_LOCATION" />
+      <nodes>
+        <classShapeMoniker Id="0a767f71-8ad0-422a-bfb5-7a24aeed3a12" />
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.148439375 : 74.375); (7.148439375 : 58.0755353369141); (7.55338635416667 : 58.0755353369141 : JumpStart); (7.72005302083333 : 58.0755353369141 : JumpEnd); (9.25 : 58.0755353369141)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/OPS_AREA/OPS_AREA_LOCATION" />
+      <nodes>
+        <classShapeMoniker Id="4ac5feb5-9b43-46bd-9405-d1e74503c0d5" />
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="38b7f001-d7a8-4d05-9c08-86a361efb1dd" absoluteBounds="18.375, 30.25, 2, 13.093508300781251">
+      <DataClassMoniker Name="/MarsDBDataContext/Vehicle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="832e08b9-7729-429d-b8eb-b77747367b23" absoluteBounds="18.39, 30.71, 1.9700000000000002, 12.53350830078125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20.375 : 31.0836185709635); (21.5 : 31.0836185709635)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Vehicle/Vehicle_VehicleNonRevPeriod" />
+      <nodes>
+        <classShapeMoniker Id="38b7f001-d7a8-4d05-9c08-86a361efb1dd" />
+        <classShapeMoniker Id="7aec6d40-a16a-49e5-858d-fbfd5cc08b3c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.1562495 : 55.25); (11.1562495 : 33.3125025); (11.2291666666667 : 33.3125025 : JumpStart); (11.3958333333333 : 33.3125025 : JumpEnd); (11.6041666666667 : 33.3125025 : JumpStart); (11.7708333333333 : 33.3125025 : JumpEnd); (12.4166666666667 : 33.3125025 : JumpStart); (12.7083333333333 : 33.3125025 : JumpEnd); (18.375 : 33.3125025)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/LOCATION/LOCATION_Vehicle" />
+      <nodes>
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+        <classShapeMoniker Id="38b7f001-d7a8-4d05-9c08-86a361efb1dd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20.7296380690355 : 21.2605004882813); (21.125 : 21.6558624192458); (21.125 : 29.625); (21 : 29.625); (20.375 : 30.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Movement_Type/Movement_Type_Vehicle" />
+      <nodes>
+        <classShapeMoniker Id="adb8602f-5f33-456b-9bd3-edf4adbed4df" />
+        <classShapeMoniker Id="38b7f001-d7a8-4d05-9c08-86a361efb1dd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(18.75 : 24.1748478190104); (18.375 : 24.5498478190104); (18.375 : 30.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Operational_Status/Operational_Status_Vehicle" />
+      <nodes>
+        <classShapeMoniker Id="8ee115c7-55f3-45a6-9170-c383e889b572" />
+        <classShapeMoniker Id="38b7f001-d7a8-4d05-9c08-86a361efb1dd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(18 : 39.548076578776); (18.375 : 39.548076578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/VehicleFleetType/VehicleFleetType_Vehicle" />
+      <nodes>
+        <classShapeMoniker Id="991d0db8-be72-48e0-8e49-9d2c24bdd6f0" />
+        <classShapeMoniker Id="38b7f001-d7a8-4d05-9c08-86a361efb1dd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7db89e63-b931-432c-96f3-3b47d345f2f4" absoluteBounds="22, 33.125, 2, 3.23266845703125">
+      <DataClassMoniker Name="/MarsDBDataContext/VehicleHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62a11df9-edbb-488e-b4a9-bc7fba0269ff" absoluteBounds="22.015, 33.585, 1.9700000000000002, 2.67266845703125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.25 : 56.5111804669189); (11.6875 : 56.5111804669189); (11.6875 : 53.9375); (14.5 : 53.9375); (14.5 : 50); (14.9947879166667 : 50 : JumpStart); (15.1614545833333 : 50 : JumpEnd); (15.2604141666667 : 50 : JumpStart); (15.4270808333333 : 50 : JumpEnd); (17.625 : 50); (17.625 : 52); (21.5 : 52); (21.5 : 37.375); (23 : 37.375); (23 : 36.3576684570313)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/LOCATION/LOCATION_VehicleHistory" />
+      <nodes>
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+        <classShapeMoniker Id="7db89e63-b931-432c-96f3-3b47d345f2f4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 56.5111804669189); (11.2916666666667 : 56.5111804669189 : JumpStart); (11.4583333333333 : 56.5111804669189 : JumpEnd); (11.5 : 56.5111804669189); (11.5 : 53.6875); (14.25 : 53.6875); (14.25 : 49.9375); (14.9947879166667 : 49.9375 : JumpStart); (15.1614545833333 : 49.9375 : JumpEnd); (15.2604141666667 : 49.9375 : JumpStart); (15.4270808333333 : 49.9375 : JumpEnd); (17.375 : 49.9375); (17.375 : 52.625); (21.25 : 52.625); (21.25 : 37.625); (21.2916666666667 : 37.625 : JumpStart); (21.5833333333333 : 37.625 : JumpEnd); (22.6666666666667 : 37.625 : JumpStart); (22.8333333333333 : 37.625 : JumpEnd); (23 : 37.625); (23 : 36.3576684570313)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/LOCATION/LOCATION_VehicleHistory1" />
+      <nodes>
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+        <classShapeMoniker Id="7db89e63-b931-432c-96f3-3b47d345f2f4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20.75 : 20.5883314707782); (23.78125 : 20.5883314707782); (23.78125 : 33.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Movement_Type/Movement_Type_VehicleHistory" />
+      <nodes>
+        <classShapeMoniker Id="adb8602f-5f33-456b-9bd3-edf4adbed4df" />
+        <classShapeMoniker Id="7db89e63-b931-432c-96f3-3b47d345f2f4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20.75 : 26.6349991768705); (21.0416666666667 : 26.6349991768705 : JumpStart); (21.2083333333333 : 26.6349991768705 : JumpEnd); (23.6406225 : 26.6349991768705); (23.6406225 : 33.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/NonRev_Remarks_List/NonRev_Remarks_List_VehicleHistory" />
+      <nodes>
+        <classShapeMoniker Id="b4cd72ef-abcc-46e6-9fbd-d615c43aff38" />
+        <classShapeMoniker Id="7db89e63-b931-432c-96f3-3b47d345f2f4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20.75 : 23.4311714095052); (23.9218775 : 23.4311714095052); (23.9218775 : 33.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Operational_Status/Operational_Status_VehicleHistory" />
+      <nodes>
+        <classShapeMoniker Id="8ee115c7-55f3-45a6-9170-c383e889b572" />
+        <classShapeMoniker Id="7db89e63-b931-432c-96f3-3b47d345f2f4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20.375 : 34.7413342285156); (22 : 34.7413342285156)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Vehicle/Vehicle_VehicleHistory" />
+      <nodes>
+        <classShapeMoniker Id="38b7f001-d7a8-4d05-9c08-86a361efb1dd" />
+        <classShapeMoniker Id="7db89e63-b931-432c-96f3-3b47d345f2f4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.4062495 : 39); (17.4062495 : 30); (18.2916666666667 : 30 : JumpStart); (18.4583333333333 : 30 : JumpEnd); (21.25 : 30); (21.25 : 34.7413342285156); (22 : 34.7413342285156)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/VehicleFleetType/VehicleFleetType_VehicleHistory" />
+      <nodes>
+        <classShapeMoniker Id="991d0db8-be72-48e0-8e49-9d2c24bdd6f0" />
+        <classShapeMoniker Id="7db89e63-b931-432c-96f3-3b47d345f2f4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3dccd5d3-3de5-46eb-b441-8017d7d333ba" absoluteBounds="34.5, 9.125, 2, 1.0961531575520833">
+      <DataClassMoniker Name="/MarsDBDataContext/CompanyType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d0ecae87-9214-4720-91c7-2914c3ac42a2" absoluteBounds="34.515, 9.585, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(34.5 : 9.67307657877604); (32.375 : 9.67307657877604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CompanyType/CompanyType_Company" />
+      <nodes>
+        <classShapeMoniker Id="3dccd5d3-3de5-46eb-b441-8017d7d333ba" />
+        <classShapeMoniker Id="0a767f71-8ad0-422a-bfb5-7a24aeed3a12" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="43184822-5c67-4b07-aca9-8c7664400184" absoluteBounds="26, 5.375, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/MarsDBDataContext/MarsUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7570c304-9016-47fa-ab01-caf8c0148074" absoluteBounds="26.015, 5.835, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(27 : 5.375); (27 : 4.38550048828125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/MarsUser/MarsUser_MarsUserUserRole" />
+      <nodes>
+        <classShapeMoniker Id="43184822-5c67-4b07-aca9-8c7664400184" />
+        <classShapeMoniker Id="1ffca333-a2ed-4431-a55e-f26601fd6782" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(30.375 : 9.83742390950521); (27.03125 : 9.83742390950521); (27.03125 : 6.79984781901042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Company/Company_MarsUser" />
+      <nodes>
+        <classShapeMoniker Id="0a767f71-8ad0-422a-bfb5-7a24aeed3a12" />
+        <classShapeMoniker Id="43184822-5c67-4b07-aca9-8c7664400184" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(34.5 : 9.67307657877604); (32.625 : 9.67307657877604); (32.625 : 7.5); (27.1145833333333 : 7.5 : JumpStart); (26.9479166666667 : 7.5 : JumpEnd); (26.484373 : 7.5); (26.484373 : 6.79984781901042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CompanyType/CompanyType_MarsUser" />
+      <nodes>
+        <classShapeMoniker Id="3dccd5d3-3de5-46eb-b441-8017d7d333ba" />
+        <classShapeMoniker Id="43184822-5c67-4b07-aca9-8c7664400184" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5a220534-6e19-4389-ba3e-7e9450795a8a" absoluteBounds="30.25, 4.625, 2, 1.75354248046875">
+      <DataClassMoniker Name="/MarsDBDataContext/MarsUserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77f37b7f-2ccc-46f8-8b88-d14bc76e604f" absoluteBounds="30.265, 5.085, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(31.25 : 4.625); (31.25 : 3.75525024414063); (28 : 3.75525024414063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/MarsUserRole/MarsUserRole_MarsUserUserRole" />
+      <nodes>
+        <classShapeMoniker Id="5a220534-6e19-4389-ba3e-7e9450795a8a" />
+        <classShapeMoniker Id="1ffca333-a2ed-4431-a55e-f26601fd6782" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(31.25 : 6.37854248046875); (31.25 : 8.38025024414062); (29.25 : 8.38025024414062)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/MarsUserRole/MarsUserRole_MarsUserRoleMenuAccess" />
+      <nodes>
+        <classShapeMoniker Id="5a220534-6e19-4389-ba3e-7e9450795a8a" />
+        <classShapeMoniker Id="99cadc70-6215-4121-9ef0-dcf0ee5b272b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(35.5 : 9.125); (35.5 : 5.50177124023438); (32.25 : 5.50177124023438)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CompanyType/CompanyType_MarsUserRole" />
+      <nodes>
+        <classShapeMoniker Id="3dccd5d3-3de5-46eb-b441-8017d7d333ba" />
+        <classShapeMoniker Id="5a220534-6e19-4389-ba3e-7e9450795a8a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="264f95a6-86ab-4335-bd8d-b5f3f7370359" absoluteBounds="30.625, 11.625, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/MarsDBDataContext/CountryAdmin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3107293a-e555-4925-9c96-9234c75b7036" absoluteBounds="30.64, 12.085, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(35.5 : 10.2211531575521); (35.5 : 12.4195975748698); (32.625 : 12.4195975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CompanyType/CompanyType_CountryAdmin" />
+      <nodes>
+        <classShapeMoniker Id="3dccd5d3-3de5-46eb-b441-8017d7d333ba" />
+        <classShapeMoniker Id="264f95a6-86ab-4335-bd8d-b5f3f7370359" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" absoluteBounds="6.125, 47, 2, 1.75354248046875">
+      <DataClassMoniker Name="/MarsDBDataContext/COUNTRy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5116ac85-5584-4868-b567-e8e4796a7832" absoluteBounds="6.14, 47.46, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.125 : 47.9392712402344); (8.13541666666667 : 47.9392712402344 : JumpStart); (8.30208333333333 : 47.9392712402344 : JumpEnd); (10.9791666666667 : 47.9392712402344 : JumpStart); (11.7083333333333 : 47.9392712402344 : JumpEnd); (11.75 : 47.9392712402344)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_MARS_CMS_FORECAST" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="2f2c4737-673f-474d-b510-dd2d37f6e568" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.1562505 : 47); (6.1562505 : 38.2221419072266); (6.08333333333333 : 38.2221419072266 : JumpStart); (5.91666666666667 : 38.2221419072266 : JumpEnd); (5.83333333333333 : 38.2221419072266 : JumpStart); (5.66666666666667 : 38.2221419072266 : JumpEnd); (5.5 : 38.2221419072266)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_AREACODE" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="8e927b18-66d2-4e1b-b2ad-c038a57a88ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.12634787883113 : 48.7535424804688); (5.75134787883113 : 49.1285424804688); (5.875 : 49.1285424804688); (5.875 : 74.0010950367839); (5.5 : 74.3760950367839)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_OPS_REGION" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="cde911e7-da8d-4d88-8297-b94379c226b6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.6367196875 : 48.7535424804688); (7.6367196875 : 65.8888634529623); (5.95833333333333 : 65.8888634529623 : JumpStart); (5.79166666666667 : 65.8888634529623 : JumpEnd); (5.5 : 65.8888634529623)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_FLEET_EUROPE_ACTUAL" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="b5749b49-4aed-48a4-8896-4af593de8805" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.125 : 47.8767712402344); (4.5 : 47.8767712402344); (4.5 : 43.6748478190104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_CMS_POOL" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="020659df-5e5e-4926-8086-dc930f4bf733" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.34957178485577 : 47); (5.75134787883113 : 46.625); (5.875 : 46.625); (5.875 : 41.4629716919321); (5.80892556509888 : 41.396897257031 : JumpStart); (5.69107443490112 : 41.2790461268332 : JumpEnd); (5.5 : 41.0879716919321)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_CAR_SEGMENT" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="3ab566dd-2b79-46f4-8e8c-25b36aba2b24" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.102544203125 : 47); (7.102544203125 : 44.0891951497396); (7.27213710416667 : 44.0891951497396 : JumpStart); (7.43880377083333 : 44.0891951497396 : JumpEnd); (8.13541666666667 : 44.0891951497396 : JumpStart); (8.30208333333333 : 44.0891951497396 : JumpEnd); (8.5 : 44.0891951497396); (8.5 : 37.6141381835938); (8.66666666666667 : 37.6141381835938 : JumpStart); (8.83333333333333 : 37.6141381835938 : JumpEnd); (9.38541416666667 : 37.6141381835938 : JumpStart); (9.55208083333333 : 37.6141381835938 : JumpEnd); (11.2291666666667 : 37.6141381835938 : JumpStart); (11.3958333333333 : 37.6141381835938 : JumpEnd); (11.6041666666667 : 37.6141381835938 : JumpStart); (11.7708333333333 : 37.6141381835938 : JumpEnd); (12.5 : 37.6141381835938); (12.5 : 10.2348250325521); (14.9166666666667 : 10.2348250325521 : JumpStart); (15.0833333333333 : 10.2348250325521 : JumpEnd); (24.5 : 10.2348250325521); (24.5 : 9.54459757486979); (24.875 : 9.54459757486979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_FleetOwner" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="b876aa29-a062-433a-8aac-10e0a5b9266d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.74023471875 : 47); (7.74023471875 : 44.5891951497396); (8.11979166666667 : 44.5891951497396 : JumpStart); (8.30208333333333 : 44.5891951497396 : JumpEnd); (8.375 : 44.5891951497396); (8.375 : 37.6766381835938); (8.66666666666667 : 37.6766381835938 : JumpStart); (8.83333333333333 : 37.6766381835938 : JumpEnd); (9.38541416666667 : 37.6766381835938 : JumpStart); (9.55208083333333 : 37.6766381835938 : JumpEnd); (9.91666666666667 : 37.6766381835938 : JumpStart); (10.0833333333333 : 37.6766381835938 : JumpEnd); (11.0729161666667 : 37.6766381835938 : JumpStart); (11.3958333333333 : 37.6766381835938 : JumpEnd); (11.6041666666667 : 37.6766381835938 : JumpStart); (11.7708333333333 : 37.6766381835938 : JumpEnd); (12.25 : 37.6766381835938); (12.25 : 10.5891951497396); (12.4166666666667 : 10.5891951497396 : JumpStart); (12.5833333333333 : 10.5891951497396 : JumpEnd); (14.9166666666667 : 10.5891951497396 : JumpStart); (15.0833333333333 : 10.5891951497396 : JumpEnd); (27.0416666666667 : 10.5891951497396 : JumpStart); (27.2083333333333 : 10.5891951497396 : JumpEnd); (28.6354166666667 : 10.5891951497396 : JumpStart); (28.8020833333333 : 10.5891951497396 : JumpEnd); (30 : 10.5891951497396); (30 : 9.83742390950521); (30.375 : 9.83742390950521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_Company" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="0a767f71-8ad0-422a-bfb5-7a24aeed3a12" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.66864612691557 : 48.7535424804688); (6.66864612691557 : 55.9095050842285); (7.55338635416667 : 55.9095050842285 : JumpStart); (7.72005302083333 : 55.9095050842285 : JumpEnd); (9.25 : 55.9095050842285)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_LOCATION" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="6f267a43-b909-4ce6-8db0-0575e39ed085" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.78711296875 : 47); (6.78711296875 : 44.2141951497396); (7.27213710416667 : 44.2141951497396 : JumpStart); (7.43880377083333 : 44.2141951497396 : JumpEnd); (8.13541666666667 : 44.2141951497396 : JumpStart); (8.30208333333333 : 44.2141951497396 : JumpEnd); (8.75 : 44.2141951497396); (8.75 : 37.3641381835938); (11.2291666666667 : 37.3641381835938 : JumpStart); (11.3958333333333 : 37.3641381835938 : JumpEnd); (11.6041666666667 : 37.3641381835938 : JumpStart); (11.7708333333333 : 37.3641381835938 : JumpEnd); (12.625 : 37.3641381835938); (12.625 : 15.5); (15.5 : 15.5); (15.5 : 13.4965844726563); (30.25 : 13.4965844726563); (30.25 : 12.4195975748698); (30.625 : 12.4195975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_CountryAdmin" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="264f95a6-86ab-4335-bd8d-b5f3f7370359" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fb69e82e-1a93-43bd-aaf7-7f485c847826" absoluteBounds="14.125, 36.375, 2.625, 1.75354248046875">
+      <DataClassMoniker Name="/MarsDBDataContext/MARS_CMS_NECESSARY_FLEET" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1545392b-6793-42f0-bd09-750e785b06c1" absoluteBounds="14.14, 36.835, 2.5949999999999998, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10 : 39.25); (10 : 36.9008190917969); (11.2291666666667 : 36.9008190917969 : JumpStart); (11.3958333333333 : 36.9008190917969 : JumpEnd); (11.6041666666667 : 36.9008190917969 : JumpStart); (11.7708333333333 : 36.9008190917969 : JumpEnd); (12.4166666666667 : 36.9008190917969 : JumpStart); (12.7083333333333 : 36.9008190917969 : JumpEnd); (14.125 : 36.9008190917969)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_GROUP/CAR_GROUP_MARS_CMS_NECESSARY_FLEET" />
+      <nodes>
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+        <classShapeMoniker Id="fb69e82e-1a93-43bd-aaf7-7f485c847826" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.79681095753205 : 42.25); (8.875 : 41.875); (8.875 : 38.5035424804688); (11.2291666666667 : 38.5035424804688 : JumpStart); (11.3958333333333 : 38.5035424804688 : JumpEnd); (11.6041666666667 : 38.5035424804688 : JumpStart); (11.7708333333333 : 38.5035424804688 : JumpEnd); (13.7513478788311 : 38.5035424804688); (14.1263478788312 : 38.1285424804688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CMS_LOCATION_GROUP/CMS_LOCATION_GROUP_MARS_CMS_NECESSARY_FLEET" />
+      <nodes>
+        <classShapeMoniker Id="df619c80-907b-4904-94f6-ca209372b465" />
+        <classShapeMoniker Id="fb69e82e-1a93-43bd-aaf7-7f485c847826" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.1562505 : 47); (6.1562505 : 37.7184162626953); (8.41666666666667 : 37.7184162626953 : JumpStart); (8.83333333333333 : 37.7184162626953 : JumpEnd); (9.38541416666667 : 37.7184162626953 : JumpStart); (9.55208083333333 : 37.7184162626953 : JumpEnd); (9.91666666666667 : 37.7184162626953 : JumpStart); (10.0833333333333 : 37.7184162626953 : JumpEnd); (11.0729161666667 : 37.7184162626953 : JumpStart); (11.3958333333333 : 37.7184162626953 : JumpEnd); (11.6041666666667 : 37.7184162626953 : JumpStart); (11.7708333333333 : 37.7184162626953 : JumpEnd); (14.125 : 37.7184162626953)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_MARS_CMS_NECESSARY_FLEET" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="fb69e82e-1a93-43bd-aaf7-7f485c847826" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5585f13b-6858-4346-bc84-773e1f3c2c0e" absoluteBounds="16.125, 42.375, 2, 6.8483097330729157">
+      <DataClassMoniker Name="/MarsDBDataContext/MARS_CMS_FORECAST_HISTORY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8e1259af-cc81-413f-ae00-fcc9786129b9" absoluteBounds="16.14, 42.835, 1.9700000000000002, 6.2883097330729161" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11 : 40.3736767882362); (18.09375 : 40.3736767882362); (18.09375 : 42.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_GROUP/CAR_GROUP_MARS_CMS_FORECAST_HISTORY" />
+      <nodes>
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+        <classShapeMoniker Id="5585f13b-6858-4346-bc84-773e1f3c2c0e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.234375 : 43.8391951497396); (8.234375 : 46.6744696044922); (11.0729161666667 : 46.6744696044922 : JumpStart); (11.7708333333333 : 46.6744696044922 : JumpEnd); (14.9947879166667 : 46.6744696044922 : JumpStart); (15.1614545833333 : 46.6744696044922 : JumpEnd); (15.2604141666667 : 46.6744696044922 : JumpStart); (15.4270808333333 : 46.6744696044922 : JumpEnd); (15.5416666666667 : 46.6744696044922 : JumpStart); (15.7083333333333 : 46.6744696044922 : JumpEnd); (15.7916666666667 : 46.6744696044922 : JumpStart); (16.1145833333333 : 46.6744696044922 : JumpEnd); (16.125 : 46.6744696044922)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CMS_LOCATION_GROUP/CMS_LOCATION_GROUP_MARS_CMS_FORECAST_HISTORY" />
+      <nodes>
+        <classShapeMoniker Id="df619c80-907b-4904-94f6-ca209372b465" />
+        <classShapeMoniker Id="5585f13b-6858-4346-bc84-773e1f3c2c0e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.125 : 47.03125); (16.125 : 47.03125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_MARS_CMS_FORECAST_HISTORY" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="5585f13b-6858-4346-bc84-773e1f3c2c0e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8184bd90-1cd3-4c76-aa5e-4c02db4bb1d2" absoluteBounds="12.5, 44, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/MarsDBDataContext/MARS_CMS_FORECAST_ADJUSTMENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aefe6b26-7c64-4a09-a4b9-eac01c1c7772" absoluteBounds="12.515, 44.46, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11 : 39.4493496182236); (11.2291666666667 : 39.4493496182236 : JumpStart); (11.3958333333333 : 39.4493496182236 : JumpEnd); (11.6041666666667 : 39.4493496182236 : JumpStart); (11.7708333333333 : 39.4493496182236 : JumpEnd); (14.15625 : 39.4493496182236); (14.15625 : 44)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_GROUP/CAR_GROUP_MARS_CMS_FORECAST_ADJUSTMENT" />
+      <nodes>
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+        <classShapeMoniker Id="8184bd90-1cd3-4c76-aa5e-4c02db4bb1d2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.3554704375 : 43.8391951497396); (7.3554704375 : 45.2616398111979); (11.1666666666667 : 45.2616398111979 : JumpStart); (11.3333333333333 : 45.2616398111979 : JumpEnd); (11.4791666666667 : 45.2616398111979 : JumpStart); (11.6458333333333 : 45.2616398111979 : JumpEnd); (12.5 : 45.2616398111979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CMS_LOCATION_GROUP/CMS_LOCATION_GROUP_MARS_CMS_FORECAST_ADJUSTMENT" />
+      <nodes>
+        <classShapeMoniker Id="df619c80-907b-4904-94f6-ca209372b465" />
+        <classShapeMoniker Id="8184bd90-1cd3-4c76-aa5e-4c02db4bb1d2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1bf20e7b-8734-4462-a89a-c0fe4ac6fdad" absoluteBounds="15, 19, 2, 2.24658447265625">
+      <DataClassMoniker Name="/MarsDBDataContext/FleetSizeFutureTrend" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca4bfbe7-edb0-4ac3-849c-379c06c26fc8" absoluteBounds="15.015, 19.46, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.4687475 : 39.25); (9.4687475 : 20.1232922363281); (11.2291666666667 : 20.1232922363281 : JumpStart); (11.3958333333333 : 20.1232922363281 : JumpEnd); (12.5416666666667 : 20.1232922363281 : JumpStart); (12.7083333333333 : 20.1232922363281 : JumpEnd); (15 : 20.1232922363281)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CAR_GROUP/CAR_GROUP_FleetSizeFutureTrend" />
+      <nodes>
+        <classShapeMoniker Id="52019812-22e8-4252-a058-76445e087bdb" />
+        <classShapeMoniker Id="1bf20e7b-8734-4462-a89a-c0fe4ac6fdad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.781252 : 42.25); (7.781252 : 41.3391951497396); (8.29166666666667 : 41.3391951497396 : JumpStart); (8.58333333333333 : 41.3391951497396 : JumpEnd); (8.625 : 41.3391951497396); (8.625 : 37.5516381835938); (8.66666666666667 : 37.5516381835938 : JumpStart); (8.83333333333333 : 37.5516381835938 : JumpEnd); (9 : 37.5516381835938); (9 : 20.7161903544922); (9.38541416666667 : 20.7161903544922 : JumpStart); (9.55208083333333 : 20.7161903544922 : JumpEnd); (11.2291666666667 : 20.7161903544922 : JumpStart); (11.3958333333333 : 20.7161903544922 : JumpEnd); (12.1666666666667 : 20.7161903544922 : JumpStart); (12.3333333333333 : 20.7161903544922 : JumpEnd); (12.4166666666667 : 20.7161903544922 : JumpStart); (12.7083333333333 : 20.7161903544922 : JumpEnd); (15 : 20.7161903544922)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/CMS_LOCATION_GROUP/CMS_LOCATION_GROUP_FleetSizeFutureTrend" />
+      <nodes>
+        <classShapeMoniker Id="df619c80-907b-4904-94f6-ca209372b465" />
+        <classShapeMoniker Id="1bf20e7b-8734-4462-a89a-c0fe4ac6fdad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.125 : 47.8767712402344); (11.4791666666667 : 47.8767712402344 : JumpStart); (11.6458333333333 : 47.8767712402344 : JumpEnd); (11.6875 : 47.8767712402344); (11.6875 : 21.6215844726563); (16 : 21.6215844726563); (16 : 21.2465844726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_FleetSizeFutureTrend" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="1bf20e7b-8734-4462-a89a-c0fe4ac6fdad" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4b2000db-a71b-42e1-91bb-9cccc456d458" absoluteBounds="22.25, 1, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/MarsDBDataContext/UserTraining" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de25473a-b076-4432-852f-2e7bb0ad8c27" absoluteBounds="22.265, 1.46, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="46e924e8-27fa-435a-a052-4240b76ec04a" absoluteBounds="31.75, 36.375, 2, 3.7257104492187496">
+      <DataClassMoniker Name="/MarsDBDataContext/VehicleNonRevApprovalEntry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f0351a1-5a90-4276-9d64-6e9d8191856f" absoluteBounds="31.765, 36.835, 1.9700000000000002, 3.16571044921875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(28.375 : 36.9786185709635); (31.75 : 36.9786185709635)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/VehicleNonRevApproval/VehicleNonRevApproval_VehicleNonRevApprovalEntry" />
+      <nodes>
+        <classShapeMoniker Id="532c88cb-300d-4e26-940d-39eea569bc3e" />
+        <classShapeMoniker Id="46e924e8-27fa-435a-a052-4240b76ec04a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ab3278c7-3835-4a56-9516-406b74838982" absoluteBounds="3.75, 9, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/MarsDBDataContext/VehicleSublease" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e4c1def-7271-462e-b0eb-778347737fb7" absoluteBounds="3.7649999999999997, 9.46, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.471681734375 : 47); (6.471681734375 : 44.0891951497396); (6 : 44.0891951497396); (6 : 9.79459757486979); (5.75 : 9.79459757486979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_VehicleSublease" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="ab3278c7-3835-4a56-9516-406b74838982" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.125 : 47.4071336201172); (5.75 : 47.4071336201172); (5.75 : 16.0961531575521); (3.5 : 16.0961531575521); (3.5 : 10.9641951497396); (4.75 : 10.9641951497396); (4.75 : 10.5891951497396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/COUNTRy/COUNTRy_VehicleSublease1" />
+      <nodes>
+        <classShapeMoniker Id="df1afcf2-54dc-48ac-948b-15ad21e042ce" />
+        <classShapeMoniker Id="ab3278c7-3835-4a56-9516-406b74838982" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(18.375 : 34.625); (17.4895828333333 : 34.625 : JumpStart); (17.3229161666667 : 34.625 : JumpEnd); (17 : 34.625); (17 : 36.125); (12.7083333333333 : 36.125 : JumpStart); (12.4166666666667 : 36.125 : JumpEnd); (12.3333333333333 : 36.125 : JumpStart); (12.1666666666667 : 36.125 : JumpEnd); (11.7708333333333 : 36.125 : JumpStart); (11.6041666666667 : 36.125 : JumpEnd); (11.3958333333333 : 36.125 : JumpStart); (11.0729161666667 : 36.125 : JumpEnd); (9.55208083333333 : 36.125 : JumpStart); (9.38541416666667 : 36.125 : JumpEnd); (9.125 : 36.125); (9.125 : 16.3461531575521); (6.08333333333333 : 16.3461531575521 : JumpStart); (5.91666666666667 : 16.3461531575521 : JumpEnd); (5.83333333333333 : 16.3461531575521 : JumpStart); (5.66666666666667 : 16.3461531575521 : JumpEnd); (3.25 : 16.3461531575521); (3.25 : 11.2141951497396); (3.41666666666667 : 11.2141951497396 : JumpStart); (3.58333333333333 : 11.2141951497396 : JumpEnd); (5.281252 : 11.2141951497396); (5.281252 : 10.5891951497396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MarsDBDataContext/Vehicle/Vehicle_VehicleSublease" />
+      <nodes>
+        <classShapeMoniker Id="38b7f001-d7a8-4d05-9c08-86a361efb1dd" />
+        <classShapeMoniker Id="ab3278c7-3835-4a56-9516-406b74838982" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="True" CodeBehind="Mars.Master.cs" Inherits="App.MasterPages.Mars"  %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <!--[if lte IE 7]><style type ="text/css">.rad__div-ControlPanel-Wrapper{ position: relative; top: 0; width: 100%; z-index: 999; text-align: center; margin-left: auto; margin-right: auto; }</style><![endif]-->
+    <title></title>
+    <asp:ContentPlaceHolder ID="ContentPlaceholderHead" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    
+     <form id="form1" runat="server">
+            <%-- Script Manager --%>
+            <asp:ScriptManager ID="ScriptManagerMaster" runat ="server" ScriptMode="Auto" AsyncPostBackTimeout="600000"  ></asp:ScriptManager>
+
+            <%-- Master Wrapper --%>
+            <div id="divMasterWrapper" class="div-Master-Wrapper">
+                <%-- Control Panel --%>
+                <div id="divControlPanelWrapper" class="rad__div-ControlPanel-Wrapper">
+                    <asp:UpdatePanel ID="UpdatePanelControlPanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="false">
+                        <ContentTemplate>
+                            <rad:RibbonMenu ID="RibbonControlPanel" runat="server" OnControlPanelItemCommand="ControlPanel_ItemCommand" AutoShowRibbon="true"   DisplayRoot="true"  DisplayControllerTitle="true"  DisplayLogOffCommand="false" ApplicationName="Mars Portal"  />
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+                <%-- Application Content --%>
+                <div id="divApplicationContent" class="div-Application-Content rad__controller">
+                    <asp:ContentPlaceHolder ID="ContentPlaceholderMainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </form>
+        <script type="text/javascript" language="javascript">
+
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            prm.add_endRequest(EndRequest);
+
+            function EndRequest(sender, e) {
+                if (sender._postBackSettings.sourceElement == null
+                    || sender._postBackSettings.sourceElement.className == 'DataExportButton'
+                    || sender._postBackSettings.sourceElement.className == 'PlainDataExportButton') {
+                    //This is part of the solution from MarsV1 which allows the loading window to display while export data is loaded.
+                    //If this is done via Response.Redirect, the loading window will not know when to close
+                    var iframe = document.createElement("iframe");
+                    iframe.src = "../../../../../ExcelGenerator.aspx";
+                    iframe.style.display = "none";
+                    document.body.appendChild(iframe);
+                }
+
+//                if (e.get_error()) {
+//                    alert('Time out has occurred.');
+//                }
+            }        
+        </script>
+</body>
+</html>

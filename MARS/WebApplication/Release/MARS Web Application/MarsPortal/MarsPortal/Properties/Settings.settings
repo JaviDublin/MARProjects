@@ -1,0 +1,54 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Mars.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ApplicationName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Mars Portal</Value>
+    </Setting>
+    <Setting Name="TempDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/Temp/</Value>
+    </Setting>
+    <Setting Name="ApplicationId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CCA7F8C3-22AB-4BFA-9D13-812253AB02D5</Value>
+    </Setting>
+    <Setting Name="FtpNonRev" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\hescft02\MarsFISdata\Temp\Non Rev\</Value>
+    </Setting>
+    <Setting Name="UatRelease" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ParameterFilesUploadFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\hescrad03\FileUploads\LogisticsDashboard</Value>
+    </Setting>
+    <Setting Name="CMSOpFleetSSIS" Type="System.Byte" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="PriceablePercentSSIS" Type="System.Byte" Scope="Application">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="AvgRpdSSIS" Type="System.Byte" Scope="Application">
+      <Value Profile="(Default)">7</Value>
+    </Setting>
+    <Setting Name="OneWayRentalsSSIS" Type="System.Byte" Scope="Application">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="Seperator" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">,</Value>
+    </Setting>
+    <Setting Name="ActiveDirectoryDomain" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">adauth.eu.ad.hertz.com</Value>
+    </Setting>
+    <Setting Name="ADContainer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DC=eu,DC=ad,DC=hertz,DC=com</Value>
+    </Setting>
+    <Setting Name="AdCorporateGroup" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DLG_App_MARS_Corp_Test</Value>
+    </Setting>
+    <Setting Name="AdLicenseeGroup" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DLG_App_MARS_Franch_Test</Value>
+    </Setting>
+    <Setting Name="ADGroup" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DLG_App_MARS_Corporate</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

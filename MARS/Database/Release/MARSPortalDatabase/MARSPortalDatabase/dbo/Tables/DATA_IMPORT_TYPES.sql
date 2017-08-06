@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[DATA_IMPORT_TYPES] (
+    [importTypeId] INT          IDENTITY (1, 1) NOT NULL,
+    [importType]   VARCHAR (50) NULL,
+    CONSTRAINT [PK_DATA_IMPORT_TYPES] PRIMARY KEY CLUSTERED ([importTypeId] ASC)
+);
+

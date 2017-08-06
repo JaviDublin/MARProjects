@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="True" CodeBehind="Fao.Master.cs" Inherits="App.MasterPages.Fao"  %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <meta http-equiv="Content-type" content="text/html" />
+    <!--[if lte IE 7]><style type ="text/css">.rad__div-ControlPanel-Wrapper{ position: relative; top: 0; width: 100%; z-index: 999; text-align: center; margin-left: auto; margin-right: auto; }</style><![endif]-->
+    <title></title>
+    <asp:ContentPlaceHolder ID="ContentPlaceholderHead" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    
+     <form id="form1" runat="server">
+            <%-- Script Manager --%>
+            <asp:ScriptManager ID="ScriptManagerMaster" runat ="server" ScriptMode="Auto"  ></asp:ScriptManager>
+
+            <%-- Master Wrapper --%>
+            <div id="divMasterWrapper" class="div-Master-Wrapper">
+                
+
+                <%-- Application Content --%>
+                <div id="divApplicationContent" class="div-Application-Content rad__controller">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                
+                                <table style="font-size: 16px; text-align: center; width: 70%" >
+                                    <tr>
+                                        <td>
+                                            <asp:LinkButton runat="server" PostBackUrl="~/FleetAllocation/Webpages/DemandGapDisplay.aspx" Text="Demand Gap" />
+                                        </td>
+                                        <td>
+                                            <asp:LinkButton runat="server" PostBackUrl="~/FleetAllocation/Webpages/VehicleDistribution.aspx" Text="Vehicle Distribution" />
+                                        </td>
+                                        <td>
+                                            <asp:LinkButton runat="server" PostBackUrl="~/FleetAllocation/Webpages/Factors/FactorMaintenance.aspx" Text="Factor Maintenance" />
+                                        </td>
+                                        <td>
+                                            <asp:LinkButton runat="server" PostBackUrl="~/FleetAllocation/Webpages/Factors/AdditionsLimits.aspx" Text="Additions Limits" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr />
+                                <asp:ContentPlaceHolder ID="ContentPlaceholderMainContent" runat="server">
+                                </asp:ContentPlaceHolder>            
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </div>
+            </div>
+        </form>
+        <script type="text/javascript" language="javascript">
+
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            prm.add_endRequest(EndRequest);
+
+            function EndRequest(sender, e) {
+                if (sender._postBackSettings.sourceElement == null
+                    || sender._postBackSettings.sourceElement.className == 'DataExportButton'
+                    || sender._postBackSettings.sourceElement.className == 'PlainDataExportButton') {
+                    //This is part of the solution from MarsV1 which allows the loading window to display while export data is loaded.
+                    //If this is done via Response.Redirect, the loading window will not know when to close
+                    var iframe = document.createElement("iframe");
+                    iframe.src = "../../../../../ExcelGenerator.aspx";
+                    iframe.style.display = "none";
+                    document.body.appendChild(iframe);
+                }
+
+
+            }        
+        </script>
+</body>
+</html>

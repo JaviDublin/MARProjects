@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Mars.App.Webservices.Reservations.ReservationUpdateService" CodeBehind="ReservationUpdateService.svc.cs" %>

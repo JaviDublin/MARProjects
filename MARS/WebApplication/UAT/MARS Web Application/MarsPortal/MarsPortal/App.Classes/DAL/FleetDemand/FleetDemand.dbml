@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FleetDemand" Class="FleetDemandDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=hescrad01.hertz.com;Initial Catalog=FleetDemand;User ID=raddbuser;MultipleActiveResultSets=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Rad.Properties.Settings.FleetDemandDataBase" Provider="System.Data.SqlClient" />
+  <Function Name="Dimension.CountriesSelect" Method="CountriesSelect">
+    <ElementType Name="CountriesSelectResult">
+      <Column Name="CountryKey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CountryCode" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="Dimension.PoolsForCountrySelect" Method="PoolsForCountrySelect">
+    <Parameter Name="CountryKey" Parameter="countryKey" Type="System.Int32" DbType="Int" />
+    <ElementType Name="PoolsForCountrySelectResult">
+      <Column Name="CmsPoolKey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CmsPool" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryKey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="Dimension.LocationGroupsForPoolSelect" Method="LocationGroupsForPoolSelect">
+    <Parameter Name="PoolKey" Parameter="poolKey" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LocationGroupsForPoolSelectResult">
+      <Column Name="LocationGroupKey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LocationGroupCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CmsPoolKey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="Dimension.LocationsForLocationGroupSelect" Method="LocationsForLocationGroupSelect">
+    <Parameter Name="LocationGroupKey" Parameter="locationGroupKey" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LocationsForLocationGroupSelectResult">
+      <Column Name="LocationKey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LocationGroupKey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LocationCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LocationName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Dimension.CarClassForCountrySelect" Method="CarClassForCountrySelect">
+    <Parameter Name="CountryKey" Parameter="countryKey" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CarClassForCountrySelectResult">
+      <Column Name="CarClass" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CarClassKey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="Dimension.DimDaysSelect" Method="DimDaysSelect">
+    <ElementType Name="DimDaysSelectResult">
+      <Column Name="DayKey" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="DayOfWeek" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Fact.AvgRpdInsert" Method="AvgRpdInsert">
+    <Parameter Name="ValidFromDateKey" Parameter="validFromDateKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CountryKey" Parameter="countryKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LocationKey" Parameter="locationKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReportDateKey" Parameter="reportDateKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CarClassKey" Parameter="carClassKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AvgRpd" Parameter="avgRpd" Type="System.Decimal" DbType="Decimal(18,8)" />
+    <Parameter Name="ValidFrom" Parameter="validFrom" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="AddedBy" Parameter="addedBy" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="UploadedDate" Parameter="uploadedDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="UploadedDateKey" Parameter="uploadedDateKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ResultCode" Parameter="resultCode" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="AvgRpdInsertResult">
+      <Column Name="ResultCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Fact.OpFleetRatioInsert" Method="OpFleetRatioInsert">
+    <Parameter Name="ValidFromDateKey" Parameter="validFromDateKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CountryKey" Parameter="countryKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LocationKey" Parameter="locationKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DayKey" Parameter="dayKey" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="FleetRatio" Parameter="fleetRatio" Type="System.Decimal" DbType="Decimal(18,8)" />
+    <Parameter Name="ValidFrom" Parameter="validFrom" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="AddedBy" Parameter="addedBy" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="UploadedDate" Parameter="uploadedDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="UploadedDateKey" Parameter="uploadedDateKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ResultCode" Parameter="resultCode" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="OpFleetRatioInsertResult">
+      <Column Name="ResultCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Fact.OneWayInsert" Method="OneWayInsert">
+    <Parameter Name="ValidFromDateKey" Parameter="validFromDateKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CountryKey" Parameter="countryKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LocationKey" Parameter="locationKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DayKey" Parameter="dayKey" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="OneWay" Parameter="oneWay" Type="System.Decimal" DbType="Decimal(18,8)" />
+    <Parameter Name="ValidFrom" Parameter="validFrom" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="AddedBy" Parameter="addedBy" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="UploadedDate" Parameter="uploadedDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="UploadedDateKey" Parameter="uploadedDateKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ResultCode" Parameter="resultCode" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="OneWayInsertResult">
+      <Column Name="ResultCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Fact.PriceablePercentInsert" Method="PriceablePercentInsert">
+    <Parameter Name="ValidFromDateKey" Parameter="validFromDateKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CountryKey" Parameter="countryKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LocationKey" Parameter="locationKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReportDateKey" Parameter="reportDateKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CarClassKey" Parameter="carClassKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceablePercent" Parameter="priceablePercent" Type="System.Decimal" DbType="Decimal(18,8)" />
+    <Parameter Name="ValidFrom" Parameter="validFrom" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="AddedBy" Parameter="addedBy" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="UploadedDate" Parameter="uploadedDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="UploadedDateKey" Parameter="uploadedDateKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ResultCode" Parameter="resultCode" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="PriceablePercentInsertResult">
+      <Column Name="ResultCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Import.ExecuteSqlAgentJob" Method="ExecuteSqlAgentJob">
+    <Parameter Name="PackageId" Parameter="packageId" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="AddedBy" Parameter="addedBy" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="CsvFilePath" Parameter="csvFilePath" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="UploadedDate" Parameter="uploadedDate" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ValidFrom" Parameter="validFrom" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ResultCode" Parameter="resultCode" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Fact.AvgRpdLogSelect" Method="AvgRpdLogSelect">
+    <Parameter Name="CountryKey" Parameter="countryKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CmsPoolKey" Parameter="cmsPoolKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LocationGroupKey" Parameter="locationGroupKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LocationKey" Parameter="locationKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CarClassKey" Parameter="carClassKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReportDateKey" Parameter="reportDateKey" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AvgRpdLogSelectResult">
+      <Column Name="Country" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CmsPool" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LocationGroupCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LocationCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CarClass" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ReportDateKey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgRpd" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" />
+      <Column Name="UploadedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Fact.OpFleetRatioLogSelect" Method="OpFleetRatioLogSelect">
+    <Parameter Name="CountryKey" Parameter="countryKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CmsPoolKey" Parameter="cmsPoolKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LocationGroupKey" Parameter="locationGroupKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LocationKey" Parameter="locationKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DayKey" Parameter="dayKey" Type="System.Int32" DbType="Int" />
+    <ElementType Name="OpFleetRatioLogSelectResult">
+      <Column Name="Country" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CmsPool" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LocationGroupCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LocationCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FleetRatio" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" />
+      <Column Name="DayOfWeek" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UploadedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Fact.PriceablePercentLogSelect" Method="PriceablePercentLogSelect">
+    <Parameter Name="CountryKey" Parameter="countryKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CmsPoolKey" Parameter="cmsPoolKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LocationGroupKey" Parameter="locationGroupKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LocationKey" Parameter="locationKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CarClassKey" Parameter="carClassKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReportDateKey" Parameter="reportDateKey" Type="System.Int32" DbType="Int" />
+    <ElementType Name="PriceablePercentLogSelectResult">
+      <Column Name="Country" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CmsPool" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LocationGroupCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LocationCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CarClass" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ReportDateKey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PriceablePercent" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" />
+      <Column Name="UploadedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Fact.OneWayLogSelect" Method="OneWayLogSelect">
+    <Parameter Name="CountryKey" Parameter="countryKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CmsPoolKey" Parameter="cmsPoolKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LocationGroupKey" Parameter="locationGroupKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LocationKey" Parameter="locationKey" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DayKey" Parameter="dayKey" Type="System.Int32" DbType="Int" />
+    <ElementType Name="OneWayLogSelectResult">
+      <Column Name="Country" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CmsPool" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LocationGroupCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LocationCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="OneWay" Type="System.Decimal" DbType="Decimal(18,8) NOT NULL" CanBeNull="false" />
+      <Column Name="DayOfWeek" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UploadedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AddedBy" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="Import.UploadParameterFile" Method="UploadParameterFile">
+    <Parameter Name="PackageId" Parameter="packageId" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="Addedby" Parameter="addedby" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="CsvFilePath" Parameter="csvFilePath" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="UploadedDate" Parameter="uploadedDate" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Validfrom" Parameter="validfrom" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ExecutionId" Parameter="executionId" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="ResultCode" Parameter="resultCode" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

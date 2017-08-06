@@ -1,0 +1,2730 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{74519043-C9B3-4E35-A3B7-5FBD0AFAEA5F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mars</RootNamespace>
+    <AssemblyName>MarsPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.50508.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\Program Files\AJAX\AjaxControlToolkit.Binary.NET4\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Licenses, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.2.0\lib\net40-client\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\packages\Castle.Windsor.3.2.1\lib\net40\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomChartTypeHelperWeb, Version=7.0.0.1782, Culture=neutral, PublicKeyToken=d64db0fb97dc5746, processorArchitecture=MSIL" />
+    <Reference Include="DundasWebChart, Version=7.0.0.1782, Culture=neutral, PublicKeyToken=90d06b0c62d592d0, processorArchitecture=MSIL">
+      <HintPath>..\..\MARS Portal Web Application\Main\MARS Portal Web Application\bin\DundasWebChart.dll</HintPath>
+    </Reference>
+    <Reference Include="DundasWebExtensions">
+      <HintPath>..\..\MARS Portal Web Application\Main\MARS Portal Web Application\bin\DundasWebExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember">
+      <HintPath>..\packages\FastMember.1.0.0.10\lib\net40\FastMember.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SQLServer.ManagedDTS, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\MARS Portal Web Application\Main\MARS Portal Web Application\bin\Microsoft.SQLServer.ManagedDTS.dll</HintPath>
+    </Reference>
+    <Reference Include="RadLibrary, Version=2.2.2.0, Culture=neutral, PublicKeyToken=c426102934ad1a7c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Project-Templates\RadLibrary\Main\RADLibrary\bin\Debug\RadLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.Images\accept.png" />
+    <Content Include="App.Images\ajax-loader.gif" />
+    <Content Include="App.Images\application-logo.gif" />
+    <Content Include="App.Images\application-logo.png" />
+    <Content Include="App.Images\arrow-collapse.gif" />
+    <Content Include="App.Images\arrow-expand.gif" />
+    <Content Include="App.Images\calendar.png" />
+    <Content Include="App.Images\Checked.jpg" />
+    <Content Include="App.Images\chk_checked.png" />
+    <Content Include="App.Images\chk_unchecked.png" />
+    <Content Include="App.Images\Commands\Blank.png" />
+    <Content Include="App.Images\Commands\ChartColumn.png" />
+    <Content Include="App.Images\Commands\ChartColumn2.png" />
+    <Content Include="App.Images\Commands\ChartLine.png" />
+    <Content Include="App.Images\Commands\Command-About.png" />
+    <Content Include="App.Images\Commands\Command-Application-Help.png" />
+    <Content Include="App.Images\Commands\Command-Application.png" />
+    <Content Include="App.Images\Commands\Command-Book.png" />
+    <Content Include="App.Images\Commands\Command-Bricks.png" />
+    <Content Include="App.Images\Commands\Command-Browse.png" />
+    <Content Include="App.Images\Commands\Command-Calculator.png" />
+    <Content Include="App.Images\Commands\Command-Camera.png" />
+    <Content Include="App.Images\Commands\Command-Clock.png" />
+    <Content Include="App.Images\Commands\Command-Computer.png" />
+    <Content Include="App.Images\Commands\Command-ConnectionManager.png" />
+    <Content Include="App.Images\Commands\Command-Desktop.png" />
+    <Content Include="App.Images\Commands\Command-Document.png" />
+    <Content Include="App.Images\Commands\Command-Documents.png" />
+    <Content Include="App.Images\Commands\Command-Faq.png" />
+    <Content Include="App.Images\Commands\Command-Favourite.png" />
+    <Content Include="App.Images\Commands\Command-Folder-Stuffed.png" />
+    <Content Include="App.Images\Commands\Command-Folder.png" />
+    <Content Include="App.Images\Commands\Command-Frame.png" />
+    <Content Include="App.Images\Commands\Command-Globe.png" />
+    <Content Include="App.Images\Commands\Command-GlobePC.png" />
+    <Content Include="App.Images\Commands\Command-GPS.png" />
+    <Content Include="App.Images\Commands\Command-Gridview.png" />
+    <Content Include="App.Images\Commands\Command-History.png" />
+    <Content Include="App.Images\Commands\Command-Home.png" />
+    <Content Include="App.Images\Commands\Command-Information.png" />
+    <Content Include="App.Images\Commands\Command-Insurance.png" />
+    <Content Include="App.Images\Commands\Command-Keys.png" />
+    <Content Include="App.Images\Commands\Command-Logout.png" />
+    <Content Include="App.Images\Commands\Command-Mail.png" />
+    <Content Include="App.Images\Commands\Command-Move.png" />
+    <Content Include="App.Images\Commands\Command-Movie.png" />
+    <Content Include="App.Images\Commands\Command-Network.png" />
+    <Content Include="App.Images\Commands\Command-Options-Extra.png" />
+    <Content Include="App.Images\Commands\Command-Options.png" />
+    <Content Include="App.Images\Commands\Command-Paste.png" />
+    <Content Include="App.Images\Commands\Command-PC.png" />
+    <Content Include="App.Images\Commands\Command-PersonalSettings.png" />
+    <Content Include="App.Images\Commands\Command-Picture.png" />
+    <Content Include="App.Images\Commands\Command-Printer.png" />
+    <Content Include="App.Images\Commands\Command-Record.png" />
+    <Content Include="App.Images\Commands\Command-ReportsActivity.png" />
+    <Content Include="App.Images\Commands\Command-Search.png" />
+    <Content Include="App.Images\Commands\Command-SearchBox.png" />
+    <Content Include="App.Images\Commands\Command-Security.png" />
+    <Content Include="App.Images\Commands\Command-Settings.png" />
+    <Content Include="App.Images\Commands\Command-Setup.png" />
+    <Content Include="App.Images\Commands\Command-TV.png" />
+    <Content Include="App.Images\Commands\Command-Users.png" />
+    <Content Include="App.Images\Commands\Command-VPN.png" />
+    <Content Include="App.Images\Commands\flag-de.png" />
+    <Content Include="App.Images\Commands\flag-es.png" />
+    <Content Include="App.Images\Commands\flag-fr.png" />
+    <Content Include="App.Images\Commands\flag-gb.png" />
+    <Content Include="App.Images\Commands\flag-it.png" />
+    <Content Include="App.Images\Commands\flag-us.png" />
+    <Content Include="App.Images\Commands\WaterfallChartIcon.png" />
+    <Content Include="App.Images\chk_unchecked2.png" />
+    <Content Include="App.Images\chk_checked2.png" />
+    <Content Include="App.Images\error.png" />
+    <Content Include="App.Images\Excel.jpg" />
+    <Content Include="App.Images\exclamation.png" />
+    <Content Include="App.Images\FaoHoldingCostSample.PNG" />
+    <Content Include="App.Images\FaoMonthlySample.PNG" />
+    <Content Include="App.Images\FaoRevenueSample.PNG" />
+    <Content Include="App.Images\favicon.ico" />
+    <Content Include="App.Images\hertz-logo.jpg" />
+    <Content Include="App.Images\hideLeftIcon.gif" />
+    <Content Include="App.Images\hideRightIcon.gif" />
+    <Content Include="App.Images\Icons\blank_fff.gif" />
+    <Content Include="App.Images\Icons\close.PNG" />
+    <Content Include="App.Images\Icons\delete.png" />
+    <Content Include="App.Images\Icons\edit.png" />
+    <Content Include="App.Images\Icons\flag_green.png" />
+    <Content Include="App.Images\Icons\flag_red.png" />
+    <Content Include="App.Images\Icons\fullscreen.png" />
+    <Content Include="App.Images\Icons\indicator-down.png" />
+    <Content Include="App.Images\Icons\indicator-up.png" />
+    <Content Include="App.Images\Icons\insert.png" />
+    <Content Include="App.Images\Icons\lock.png" />
+    <Content Include="App.Images\Icons\lock_open.png" />
+    <Content Include="App.Images\Icons\magnifier.png" />
+    <Content Include="App.Images\Icons\modal-close.gif" />
+    <Content Include="App.Images\Icons\multiview_chart.png" />
+    <Content Include="App.Images\Icons\multiview_form.png" />
+    <Content Include="App.Images\Icons\multiview_list.png" />
+    <Content Include="App.Images\Icons\no-entry.png" />
+    <Content Include="App.Images\Icons\preview-hover.png" />
+    <Content Include="App.Images\Icons\Print.png" />
+    <Content Include="App.Images\Icons\save.png" />
+    <Content Include="App.Images\Icons\trafficlight-amber.gif" />
+    <Content Include="App.Images\Icons\trafficlight-green.gif" />
+    <Content Include="App.Images\Icons\trafficlight-neutral.gif" />
+    <Content Include="App.Images\Icons\trafficlight-red.gif" />
+    <Content Include="App.Images\Icons\user-profile.png" />
+    <Content Include="App.Images\Icons\view-more.png" />
+    <Content Include="App.Images\Icons\warning.png" />
+    <Content Include="App.Images\line.gif" />
+    <Content Include="App.Images\loading.gif" />
+    <Content Include="App.Images\Mars-Loading.gif" />
+    <Content Include="App.Images\mars_title_print.jpg" />
+    <Content Include="App.Images\NonRev_Sample_Upload.jpg" />
+    <Content Include="App.Images\pager-first-dis.png" />
+    <Content Include="App.Images\pager-first-over.png" />
+    <Content Include="App.Images\pager-first.png" />
+    <Content Include="App.Images\pager-last-dis.png" />
+    <Content Include="App.Images\pager-last-over.png" />
+    <Content Include="App.Images\pager-last.png" />
+    <Content Include="App.Images\pager-next-dis.png" />
+    <Content Include="App.Images\pager-next-over.png" />
+    <Content Include="App.Images\pager-next.png" />
+    <Content Include="App.Images\pager-previous-dis.png" />
+    <Content Include="App.Images\pager-previous-over.png" />
+    <Content Include="App.Images\pager-previous.png" />
+    <Content Include="App.Images\pin-green.png" />
+    <Content Include="App.Images\pin-red.png" />
+    <Content Include="App.Images\pin-yellow.png" />
+    <Content Include="App.Images\Pooling\PoolingAdditionsDeletionsUpload.jpg" />
+    <Content Include="App.Images\Pooling\PoolingBuffersUpload.jpg" />
+    <Content Include="App.Images\Reset_Zoom.png" />
+    <Content Include="App.Images\SampleNonRevUpload.png" />
+    <Content Include="App.Images\sort-ascending.gif" />
+    <Content Include="App.Images\sort-blank.gif" />
+    <Content Include="App.Images\sort-descending.gif" />
+    <Content Include="App.Images\tab-background.gif" />
+    <Content Include="App.Images\TickBox.png" />
+    <Content Include="App.Images\TickBoxTicked.png" />
+    <Content Include="App.Images\Unchecked.jpg" />
+    <Content Include="App.Images\UserInfo.gif" />
+    <Content Include="App.Images\warning.png" />
+    <Content Include="App.References\Enterprise Library\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="App.References\AJAX Toolkit\AjaxControlToolkit.dll" />
+    <Content Include="App.References\AJAX Toolkit\AjaxControlToolkit.pdb" />
+    <Content Include="App.References\AJAX Toolkit\ar\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\cs\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\de\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\es\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\fr\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\he\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\hi\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\it\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\ja\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\ko\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\nl\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\pt\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\ru\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\tr-TR\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\zh-CHS\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\AJAX Toolkit\zh-CHT\AjaxControlToolkit.resources.dll" />
+    <Content Include="App.References\Rad Library\RADLibrary.dll" />
+    <Content Include="App.References\Rad Library\RADLibrary.pdb" />
+    <Content Include="App.Scripts\jquery.multiselect.js" />
+    <Content Include="App.Scripts\jquery.ptTimeSelect.js" />
+    <Content Include="App.Scripts\Pooling\Alerts.js" />
+    <Content Include="App.Scripts\Application.js" />
+    <Content Include="App.Scripts\AutoComplete.js" />
+    <Content Include="App.Scripts\jquery-1.5.1.js" />
+    <Content Include="App.Scripts\jquery-ui-1.8.11.custom.js" />
+    <Content Include="App.Scripts\jquery.bgiframe-2.1.2.js" />
+    <Content Include="App.Scripts\jquery.cookie.js" />
+    <Content Include="App.Scripts\jquery.fixedheadertable.js" />
+    <Content Include="App.Scripts\jquery.ui.selectmenu.js" />
+    <Content Include="App.Scripts\Pooling\PoolingGeneral.js" />
+    <Content Include="App.Scripts\Pooling\SiteComparison.js" />
+    <Content Include="App.Scripts\Reservations\ReservationUpdate.js" />
+    <Content Include="App.Scripts\Sizing\FleetSizeExport.js" />
+    <Content Include="App.Scripts\Sizing\SizingWebService.js" />
+    <Content Include="App.Scripts\ui.dropdownchecklist.js" />
+    <Content Include="App.Site\Administration\FleetDemand\Upload.aspx" />
+    <Content Include="App.Site\Administration\Mappings\Mappings.aspx" />
+    <Content Include="App.Site\Administration\News\NewsAdmin.aspx" />
+    <Content Include="App.Site\Administration\Users\UsersAndRoles.aspx" />
+    <Content Include="App.Site\Administration\VehiclesSublease\Default.aspx" />
+    <Content Include="App.Site\Availability\CarSearch\CarSearch.aspx" />
+    <Content Include="App.Site\Availability\Comparison\Fleet\FleetComparison.aspx" />
+    <Content Include="App.Site\Availability\Comparison\Site\SiteComparison.aspx" />
+    <Content Include="App.Site\Availability\FleetStatus\FleetStatus.aspx" />
+    <Content Include="App.Site\Availability\HistoricalTrend\HistoricalTrend.aspx" />
+    <Content Include="App.Site\Availability\Statistics\Default.aspx" />
+    <Content Include="App.Site\Forecasting\Adjustment\Forecast.aspx" />
+    <Content Include="App.Site\Forecasting\Benchmark\Benchmark.aspx" />
+    <Content Include="App.Site\Forecasting\Forecast\Forecast.aspx" />
+    <Content Include="App.Site\ForeignVehicles\AgeingReport.aspx" />
+    <Content Include="App.Site\ForeignVehicles\ForeignVehicleSearch.aspx" />
+    <Content Include="App.Site\ForeignVehicles\HistoricalTrend.aspx" />
+    <Content Include="App.Site\ForeignVehicles\ReservationMatch.aspx" />
+    <Content Include="App.Site\ForeignVehicles\ReservationOverview.aspx" />
+    <Content Include="App.Site\ForeignVehicles\FleetOverview.aspx" />
+    <Content Include="App.Site\ForeignVehicles\ReservationDetails.aspx" />
+    <Content Include="App.Site\ForeignVehicles\FleetMatch.aspx" />
+    <Content Include="App.Site\ManagerReports\LocationSummary.aspx" />
+    <Content Include="App.Site\NonRevenue\Administration\Administration.aspx" />
+    <Content Include="App.Site\NonRevenue\Approvals\Approval.aspx" />
+    <Content Include="App.Site\NonRevenue\Overview\Overview.aspx" />
+    <Content Include="App.Site\NonRevenue\Reports\AllReports.aspx" />
+    <Content Include="App.Site\Pooling\AdditionsDeletions.aspx" />
+    <Content Include="App.Site\Pooling\Alerts.aspx" />
+    <Content Include="App.Site\Pooling\Buffers.aspx" />
+    <Content Include="App.Site\Pooling\DayActuals.aspx" />
+    <Content Include="App.Site\Pooling\FleetComparison.aspx" />
+    <Content Include="App.Site\Pooling\ReservationDetails.aspx" />
+    <Content Include="App.Site\Pooling\SiteComparison.aspx" />
+    <Content Include="App.Site\Sizing\Comparison\Fleet\FleetComparison.aspx" />
+    <Content Include="App.Site\Sizing\Comparison\Site\SiteComparison.aspx" />
+    <Content Include="App.Site\Sizing\FutureTrend\FutureTrend.aspx" />
+    <Content Include="App.Site\Sizing\KPI\KPI.aspx" />
+    <Content Include="App.Site\Sizing\SupplyAnalysis\Management\FleetSize.aspx" />
+    <Content Include="App.Site\Sizing\SupplyAnalysis\SupplyAnalysis.aspx" />
+    <Content Include="App.Styles\Administration.css" />
+    <Content Include="App.Styles\Availability.css" />
+    <Content Include="App.Styles\Controls.css" />
+    <Content Include="App.Styles\ImagesAvailability\column-header.gif" />
+    <Content Include="App.Styles\ImagesAvailability\dropdown.gif" />
+    <Content Include="App.Styles\ImagesAvailability\dropdown.png" />
+    <Content Include="App.Styles\ImagesAvailability\dropdown_active.gif" />
+    <Content Include="App.Styles\ImagesAvailability\dropdown_hover.gif" />
+    <Content Include="App.Styles\ImagesAvailability\dropdown_hover.png" />
+    <Content Include="App.Styles\ImagesAvailability\header.gif" />
+    <Content Include="App.Styles\ImagesAvailability\header_mapping_details_small.gif" />
+    <Content Include="App.Styles\ImagesAvailability\header_reservations.gif" />
+    <Content Include="App.Styles\ImagesAvailability\header_users.gif" />
+    <Content Include="App.Styles\ImagesAvailability\PaginFirst.gif" />
+    <Content Include="App.Styles\ImagesAvailability\PaginFirstInactive.gif" />
+    <Content Include="App.Styles\ImagesAvailability\PaginLast.gif" />
+    <Content Include="App.Styles\ImagesAvailability\PaginLastInactive.gif" />
+    <Content Include="App.Styles\ImagesAvailability\PaginNext.gif" />
+    <Content Include="App.Styles\ImagesAvailability\PaginNextInactive.gif" />
+    <Content Include="App.Styles\ImagesAvailability\PaginPre.gif" />
+    <Content Include="App.Styles\ImagesAvailability\PaginPreInactive.gif" />
+    <Content Include="App.Styles\Images\bg-black.png" />
+    <Content Include="App.Styles\Images\bg-hover.png" />
+    <Content Include="App.Styles\Images\calender-background.gif" />
+    <Content Include="App.Styles\Images\footer-bg.png" />
+    <Content Include="App.Styles\Images\header-bg-small.gif" />
+    <Content Include="App.Styles\Images\listview-header-bg.png" />
+    <Content Include="App.Styles\Images\login-body-bg.png" />
+    <Content Include="App.Styles\Images\menu-bg.png" />
+    <Content Include="App.Styles\Images\nav-bg.png" />
+    <Content Include="App.Styles\Images\progress-back.png" />
+    <Content Include="App.Styles\Images\progress-bar.png" />
+    <Content Include="App.Styles\Images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="App.Styles\Images\ui-bg_glass_100_dcdcdc_1x400.png" />
+    <Content Include="App.Styles\Images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="App.Styles\Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="App.Styles\Images\ui-bg_highlight-soft_100_dcdcdc_1x100.png" />
+    <Content Include="App.Styles\Images\ui-bg_highlight-soft_100_fdf5ce_1x100.png" />
+    <Content Include="App.Styles\Images\ui-bg_highlight-soft_18_b81900_1x100.png" />
+    <Content Include="App.Styles\Images\ui-bg_highlight-soft_20_fffa96_1x100.png" />
+    <Content Include="App.Styles\Images\ui-bg_highlight-soft_75_fffa96_1x100.png" />
+    <Content Include="App.Styles\Images\ui-icons_000000_256x240.png" />
+    <Content Include="App.Styles\Images\ui-icons_222222_256x240.png" />
+    <Content Include="App.Styles\Images\ui-icons_228ef1_256x240.png" />
+    <Content Include="App.Styles\Images\ui-icons_fedd05_256x240.png" />
+    <Content Include="App.Styles\Images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="App.Styles\Images\ui-icons_fffa96_256x240.png" />
+    <Content Include="App.Styles\Images\user-background.png" />
+    <Content Include="App.Styles\jquery-ui-1.8.11.css" />
+    <Content Include="App.Styles\jquery.ptTimeSelect.css" />
+    <Content Include="App.Styles\jquery.ui.selectmenu.css" />
+    <Content Include="App.Styles\Layout-Application.css" />
+    <Content Include="App.Styles\Phase4Style.css" />
+    <Content Include="App.Styles\Pooling.css" />
+    <Content Include="App.Styles\Site.css" />
+    <Content Include="App.UserControls\AutoComplete\AutoComplete.ascx" />
+    <Content Include="App.UserControls\Charts\ChartControls.ascx" />
+    <Content Include="App.UserControls\CheckBoxList\PopupCheckBoxList.ascx" />
+    <Content Include="App.UserControls\CheckBoxList\PopupCheckBoxListForm.ascx" />
+    <Content Include="App.UserControls\Confirm\DeleteConfirm.ascx" />
+    <Content Include="App.UserControls\Confirm\ModalConfirm.ascx" />
+    <Content Include="App.UserControls\DatePicker\DatePicker.ascx" />
+    <Content Include="App.UserControls\DatePicker\DatePickerTextBox.ascx" />
+    <Content Include="App.UserControls\DatePicker\DatePickerTextBoxForm.ascx" />
+    <Content Include="App.UserControls\DatePicker\DateRangePicker.ascx" />
+    <Content Include="App.UserControls\DatePicker\SingleDateTimePicker.ascx" />
+    <Content Include="App.UserControls\DropDownList\MultiSelectDropDownList.ascx" />
+    <Content Include="App.UserControls\EmptyData\EmptyDataTemplate.ascx" />
+    <Content Include="App.UserControls\FleetDemand\LocationCarClassChoice.ascx" />
+    <Content Include="App.UserControls\FleetDemand\LocationChoice.ascx" />
+    <Content Include="App.UserControls\HelpIcon.ascx" />
+    <Content Include="App.UserControls\Loading\LoadingScreen.ascx" />
+    <Content Include="App.UserControls\Mappings\Details\VehiclesLeaseDetails.ascx" />
+    <Content Include="App.UserControls\Mappings\Gridviews\VehiclesLeaseGridView.ascx" />
+    <Content Include="App.UserControls\MarsControls\ExportToExcel.ascx" />
+    <Content Include="App.UserControls\MarsControls\FleetPlan\FleetPlanUploadActivityLog.ascx" />
+    <Content Include="App.UserControls\MarsControls\ForecastAdjustment.ascx" />
+    <Content Include="App.UserControls\MarsControls\ForecastReconciliation.ascx" />
+    <Content Include="App.UserControls\MarsControls\FrozenZoneManagement.ascx" />
+    <Content Include="App.UserControls\MarsControls\ManualMovementGridView.ascx" />
+    <Content Include="App.UserControls\MarsControls\ManualMovementTabView.ascx" />
+    <Content Include="App.UserControls\MarsControls\ManualMovementUpload.ascx" />
+    <Content Include="App.UserControls\MarsControls\NecessaryFleetManagement.ascx" />
+    <Content Include="App.UserControls\MarsControls\VehiclesAbroadReservations.ascx" />
+    <Content Include="App.UserControls\Pages\PageInformation.ascx" />
+    <Content Include="App.UserControls\Panel\CommunicationsPanel.ascx" />
+    <Content Include="App.UserControls\Panel\NavigationPanel.ascx" />
+    <Content Include="App.UserControls\Parameters\Dynamic\DynamicReportParameters.ascx" />
+    <Content Include="App.UserControls\Parameters\GeneralReportParameters.ascx" />
+    <Content Include="App.UserControls\Parameters\NonRevenueParameters.ascx" />
+    <Content Include="App.UserControls\Parameters\QuickSelectLocationGroup.ascx" />
+    <Content Include="App.UserControls\Parameters\ReportType\ReportTypeParameters.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Fleet\FleetAdmin.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\AreaPopup.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\CarClassPopup.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\CarGroupPopup.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\CarSegmentPopup.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\CountryPopup.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Mapping\EntityGrid.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Mapping\EntityParameter.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\LocationGroupPopup.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\LocationPopup.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\PoolPopup.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\RegionPopup.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Roles\RolePageMapping.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Users\CompanyFleetOwnerMapping.ascx" />
+    <Content Include="App.UserControls\Phase4\Administration\Users\UserRoleMapping.ascx" />
+    <Content Include="App.UserControls\Phase4\AvailabilityParameters.ascx" />
+    <Content Include="App.UserControls\Phase4\Availability\ComparisonChart.ascx" />
+    <Content Include="App.UserControls\Phase4\Availability\ComparisonGrid.ascx" />
+    <Content Include="App.UserControls\Phase4\Availability\FleetStatusChart.ascx" />
+    <Content Include="App.UserControls\Phase4\Availability\FleetStatusGrid.ascx" />
+    <Content Include="App.UserControls\Phase4\Availability\HistoricalTrendChart.ascx" />
+    <Content Include="App.UserControls\Phase4\Availability\HistoricalTrendGrid.ascx" />
+    <Content Include="App.UserControls\Phase4\Common\ConfirmPopup.ascx" />
+    <Content Include="App.UserControls\Phase4\Common\NoDataScreen.ascx" />
+    <Content Include="App.UserControls\Phase4\Common\UpdateProgress.ascx" />
+    <Content Include="App.UserControls\Phase4\ForeignVehicles\AgeingGrid.ascx" />
+    <Content Include="App.UserControls\Phase4\ForeignVehicles\HistoricalTrendGrid.ascx" />
+    <Content Include="App.UserControls\Phase4\ForeignVehicles\ReservationMatchGrid.ascx" />
+    <Content Include="App.UserControls\Phase4\ForeignVehicles\FleetMatchGrid.ascx" />
+    <Content Include="App.UserControls\Phase4\ForeignVehicles\ForeignVehiclesParameters.ascx" />
+    <Content Include="App.UserControls\Phase4\ForeignVehicles\VehicleOverview.ascx" />
+    <Content Include="App.UserControls\Phase4\MultiSelectVehicleParameters.ascx" />
+    <Content Include="App.UserControls\Phase4\HelpIcons\ExportToExcel.ascx" />
+    <Content Include="App.UserControls\Phase4\NonRevParameters.ascx" />
+    <Content Include="App.UserControls\Phase4\NonRev\AgeingChart.ascx" />
+    <Content Include="App.UserControls\Phase4\NonRev\AgeingGrid.ascx" />
+    <Content Include="App.UserControls\Phase4\NonRev\ComparisonChart.ascx" />
+    <Content Include="App.UserControls\Phase4\NonRev\ComparisonGrid.ascx" />
+    <Content Include="App.UserControls\Phase4\NonRev\HistoricalTrendChart.ascx" />
+    <Content Include="App.UserControls\Phase4\NonRev\HistoricalTrendGrid.ascx" />
+    <Content Include="App.UserControls\Phase4\NonRev\MultiReasonEntry.ascx" />
+    <Content Include="App.UserControls\Phase4\NonRev\OverviewGrid.ascx" />
+    <Content Include="App.UserControls\Phase4\NonRev\OverviewVehicle.ascx" />
+    <Content Include="App.UserControls\Phase4\NonRev\OverviewVehicleHistory.ascx" />
+    <Content Include="App.UserControls\Phase4\NonRev\ReasonEntryForm.ascx" />
+    <Content Include="App.UserControls\Phase4\NonRev\ReasonHistoryGrid.ascx" />
+    <Content Include="App.UserControls\Phase4\ReservationParameters.ascx" />
+    <Content Include="App.UserControls\Phase4\Reservations\ReservationMultiVehicleParameters.ascx" />
+    <Content Include="App.UserControls\Phase4\Reservations\ReservationDetails.ascx" />
+    <Content Include="App.UserControls\Phase4\Reservations\ReservationsGrid.ascx" />
+    <Content Include="App.UserControls\Phase4\Reservations\ReservationVehicleParameters.ascx" />
+    <Content Include="App.UserControls\Phase4\VehicleParameters.ascx" />
+    <Content Include="App.UserControls\Pooling\AdditionsDeletions\AdditionDeletion.ascx" />
+    <Content Include="App.UserControls\Pooling\BottomDropDown.ascx" />
+    <Content Include="App.UserControls\Pooling\GeneralTopFeedback.ascx" />
+    <Content Include="App.UserControls\Pooling\ReservationDetailsModal.ascx" />
+    <Content Include="App.UserControls\Pooling\TopFeedback.ascx" />
+    <Content Include="App.UserControls\Pooling\TopFeedback2.ascx" />
+    <Content Include="App.UserControls\Vehicles\VehiclesCheckBoxList.ascx" />
+    <Content Include="App.UserControls\Vehicles\VehiclesDatePicker.ascx" />
+    <Content Include="App.UserControls\Vehicles\VehiclesSelection.ascx" />
+    <Content Include="App.Webservices\Pooling\AlertsService.aspx" />
+    <Content Include="App.Webservices\Reservations\ReservationUpdateService.svc" />
+    <Content Include="AutoComplete.asmx" />
+    <Content Include="app_offline1.htm" />
+    <Content Include="Default.aspx" />
+    <Content Include="ExcelGenerator.aspx" />
+    <Content Include="FleetAllocation\UserControls\AppliedAdditionPlans.ascx" />
+    <Content Include="FleetAllocation\UserControls\AdditionPlanHistory.ascx" />
+    <Content Include="FleetAllocation\UserControls\DemandGapProgress\DemandGapCalculationProgress.ascx" />
+    <Content Include="FleetAllocation\UserControls\Factors\RankingDisplay.ascx" />
+    <Content Include="FleetAllocation\UserControls\Factors\UsdConversionRate.ascx" />
+    <Content Include="FleetAllocation\UserControls\LimitFiles\LimitUpload.ascx" />
+    <Content Include="FleetAllocation\UserControls\MissingHoldingCosts.ascx" />
+    <Content Include="FleetAllocation\UserControls\MissingRevenueEntries.ascx" />
+    <Content Include="FleetAllocation\UserControls\Reports\FleetComparison.ascx" />
+    <Content Include="FleetAllocation\UserControls\Reports\FleetComparisonChart.ascx" />
+    <Content Include="FleetAllocation\UserControls\Reports\ForecastContributionChart.ascx" />
+    <Content Include="FleetAllocation\UserControls\Reports\ForecastContribution.ascx" />
+    <Content Include="FleetAllocation\UserControls\Reports\ForecastedFleetSize.ascx" />
+    <Content Include="FleetAllocation\UserControls\AutoGrid.ascx" />
+    <Content Include="FleetAllocation\UserControls\AdditionPlanGenerator.ascx" />
+    <Content Include="FleetAllocation\UserControls\Factors\LifecycleHoldingCost.ascx" />
+    <Content Include="FleetAllocation\UserControls\Factors\MinCommercialSegment.ascx" />
+    <Content Include="FleetAllocation\UserControls\Factors\MaxFleetFactors.ascx" />
+    <Content Include="FleetAllocation\UserControls\Factors\Revenue.ascx" />
+    <Content Include="FleetAllocation\UserControls\FaoParameter.ascx" />
+    <Content Include="FleetAllocation\UserControls\Reports\ForecastedFleetSizeChart.ascx" />
+    <Content Include="FleetAllocation\UserControls\Reports\SiteComparison.ascx" />
+    <Content Include="FleetAllocation\UserControls\Reports\SiteComparisonChart.ascx" />
+    <Content Include="FleetAllocation\UserControls\ScenarioSelection\ScenarioSelection.ascx" />
+    <Content Include="FleetAllocation\UserControls\DistributionLimits\MonthlyLimitDetails.ascx" />
+    <Content Include="FleetAllocation\UserControls\DistributionLimits\WeeklyLimitDetails.ascx" />
+    <Content Include="FleetAllocation\Webpages\AdditionsLimits.aspx" />
+    <Content Include="FleetAllocation\Webpages\FactorMaintenance.aspx" />
+    <Content Include="FleetAllocation\Webpages\AdditionPlanGenerator.aspx" />
+    <Content Include="FleetAllocation\Webpages\Reporting.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Login\Default.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Webservices\FaoServices.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.Classes\BLL\Base\MasterBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Classes\BLL\Base\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Classes\BLL\Cache\ParameterCache.cs" />
+    <Compile Include="App.Classes\BLL\Common\Charts.cs" />
+    <Compile Include="App.Classes\BLL\Common\Gridviews.cs" />
+    <Compile Include="App.Classes\BLL\Common\Mappings.cs" />
+    <Compile Include="App.Classes\BLL\Common\ReportSettings.cs" />
+    <Compile Include="App.Classes\BLL\Common\StartUpScripts.cs" />
+    <Compile Include="App.Classes\BLL\Common\UserPreferences.cs" />
+    <Compile Include="App.Classes\BLL\DynamicLinq\Dynamic.cs" />
+    <Compile Include="App.Classes\BLL\DynamicLinq\GroupResult.cs" />
+    <Compile Include="App.Classes\BLL\EventArgs\ExportToExcelEventArgs.cs" />
+    <Compile Include="App.Classes\BLL\EventArgs\GraphLinkingEventArgs.cs" />
+    <Compile Include="App.Classes\BLL\EventArgs\OpsParameterLogicChangedArgs.cs" />
+    <Compile Include="App.Classes\BLL\EventArgs\ParameterChangeEventArgs.cs" />
+    <Compile Include="App.Classes\BLL\EventArgs\QuickSelectEventArgs.cs" />
+    <Compile Include="App.Classes\BLL\EventArgs\RefreshGraphEventArgs.cs" />
+    <Compile Include="App.Classes\BLL\ExtensionMethods\DateTimeExtensions.cs" />
+    <Compile Include="App.Classes\BLL\ExtensionMethods\DecimalExtensions.cs" />
+    <Compile Include="App.Classes\BLL\ExtensionMethods\DictionaryExtensions.cs" />
+    <Compile Include="App.Classes\BLL\ExtensionMethods\EnumerableExtensions.cs" />
+    <Compile Include="App.Classes\BLL\ExtensionMethods\GridViewExtensions.cs" />
+    <Compile Include="App.Classes\BLL\ExtensionMethods\ListExtensions.cs" />
+    <Compile Include="App.Classes\BLL\ExtensionMethods\PageExtensions.cs" />
+    <Compile Include="App.Classes\BLL\ExtensionMethods\ParameterListExtensions.cs" />
+    <Compile Include="App.Classes\BLL\ExtensionMethods\UserControlExtensions.cs" />
+    <Compile Include="App.Classes\BLL\Files\BLLExcelExport.cs" />
+    <Compile Include="App.Classes\BLL\Files\CSVGenerator.cs" />
+    <Compile Include="App.Classes\BLL\Files\ExportLevel.cs" />
+    <Compile Include="App.Classes\BLL\Files\ICSVGenerator.cs" />
+    <Compile Include="App.Classes\BLL\Management\BLLManagement.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\AdditionDeletion\AdditionDeletionBusinessLogic.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\AdditionDeletion\AdditionDeletionFileSummary.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\AdditionDeletion\AdditionDeletionGridViewHolder.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\AdditionDeletion\BufferBusinessLogic.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\AdditionDeletion\BufferFileSummary.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\AdditionDeletion\BufferGridViewHolder.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\AdditionDeletion\EnumAdditionDeletion.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\AdditionDeletion\RawAdditionDeletionDataHolder.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\AdditionDeletion\RawBufferHolder.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Controllers\Abstract\PoolingController.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Controllers\AlertsController.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Controllers\ComparisonController.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Controllers\SiteComparisonController.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Controllers\FleetComparisonController.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\HTMLFactories\ActualHtmlTable.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\HTMLFactories\AlertsHtmlPopup.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\HTMLFactories\AlertsHtmlTable.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\HTMLFactories\HtmlFactory.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\HTMLFactories\Abstract\IHtmlFactory.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\HTMLFactories\Abstract\HtmlTable.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\HTMLFactories\CompHtmlTable.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Installer\PoolingInstaller.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IActualsModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IBrowserParamsModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IButtonModel2.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IChartButtonModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IDayRedirectModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IDirectedModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IFilterModel3.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IPoolingChartModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\ActualsModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\AlertGridviewModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\AlertsBreakdownModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\BrowserParamsModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\ButtonModel2.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\ChartButtonModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\RedirectModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\DirectedModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\FilterModel3.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\ICompGridModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\FleetCompGridModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\PoolingChartModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\HeadingModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Controllers\DayActualController.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\ICmsOpsLogicModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IDateRangeModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IFilterModel2.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Controllers\Abstract\IPoolingController.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Controllers\ReservationDetailsController.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IHeadingModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IPoolingGridViewModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IReservationGridViewModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\ILabelModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\CmsOpsLogicModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\DateRangeModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\FilterModel2.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IThreeFilterCascadeModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\IJavaScriptModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\JavaScriptModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\LabelStatusModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\LabelUpdateDBModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\ReservationGridViewModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\Abstract\LabelModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\SiteCompGridModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Models\ThreeFilterCascadeModel.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Services\Abstract\FilterService.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Services\Abstract\IFilterService.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Services\Abstract\IResTopicFilterService.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Services\AlertsMainFilterService.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Services\CompMainFilterService.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Services\DayActualMainFilterService.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Services\MainFilterService.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Services\MainFilterWithTopicService.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Services\ReservationFilterService.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Services\ResMainFilterService.cs" />
+    <Compile Include="App.Classes\BLL\Pooling\Services\ResTopicFilterService.cs" />
+    <Compile Include="App.Classes\BLL\Reports\BLLReportParameters.cs" />
+    <Compile Include="App.Classes\BLL\Reports\FleetSize\DataType.cs" />
+    <Compile Include="App.Classes\BLL\Reports\FleetSize\FutureTrendType.cs" />
+    <Compile Include="App.Classes\BLL\Reports\FleetSize\KpiCalculationType.cs" />
+    <Compile Include="App.Classes\BLL\Reports\FleetSize\TopicDataType.cs" />
+    <Compile Include="App.Classes\BLL\Sizing\FleetSizeExportLogic.cs" />
+    <Compile Include="App.Classes\BLL\Sizing\Models\FleetPlanLabelModel.cs" />
+    <Compile Include="App.Classes\BLL\Sizing\Models\Abstract\IFleetPlanModel.cs" />
+    <Compile Include="App.Classes\BLL\Utilities\ConfigAccess.cs" />
+    <Compile Include="App.Classes\BLL\Utilities\Enums.cs" />
+    <Compile Include="App.Classes\BLL\Utilities\GenericSorter.cs" />
+    <Compile Include="App.Classes\BLL\Utilities\Helper.cs" />
+    <Compile Include="App.Classes\BLL\Utilities\MarsV2Cache.cs" />
+    <Compile Include="App.Classes\BLL\Utilities\StaticStrings.cs" />
+    <Compile Include="App.Classes\BLL\Reports\BLLcmsReportType.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Abstract\ICSVDownload.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Abstract\IDataTable.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Abstract\IDataTableEntity.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Abstract\IFilterRepository.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Abstract\IFleetRepository.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Abstract\IReservationDetailsRepository.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Abstract\IUtilHistoryRepository.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Concrete\FilterRepository.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Concrete\ReservationDetailsRepository.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Concrete\SaveCSVFileVehicleDetails.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Concrete\SaveCSVReservationDetails.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Controllers\Abstract\IController.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Controllers\Abstract\IFleetOverviewController.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Controllers\Abstract\IForeignNonRevenueController.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Controllers\Abstract\IReservationAnalysisController.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Controllers\Abstract\IReservationBalanceController.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Controllers\Abstract\IUtilisationHistoryController.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Controllers\FleetOverviewController.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Controllers\ForeignNonRevenueController.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Controllers\ReservationAnalysisController.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Controllers\ReservationBalanceController.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Controllers\UtilisationHistoryController.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Factories\DataTableHTMLFactory.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Factories\DataTableUtilisationHTMLFactory.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Abstract\IButtonModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Abstract\IChartModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Abstract\IDataTableModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Abstract\IFilterModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Abstract\IGridviewModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Abstract\IGridViewReservationBalanceModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Abstract\INonrevModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Abstract\ITextFilterModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Abstract\IThreeCascadeFilterModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\ButtonModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\ChartModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\DataTableModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Filters\FilterModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Filters\NonRevFilterModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Filters\PagerMaxRowsModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Filters\TextFilterModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Filters\ThreeCascadeFilterModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\FleetReservationModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\GeneralFilterModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\GridviewModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\GridViewReservationBalanceModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\NonrevModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\Obsolete\ReservationAnaysisModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\ReservationAnalysisGridViewModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\ReservationBalanceModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\ReservationDetailsModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\ReservationFleetModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\ReservationOverviewModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\UtilisationDataTableModel.cs" />
+    <Compile Include="App.Classes\BLL\VehiclesAbroad\Models\VehicleDetailModel2.cs" />
+    <Compile Include="App.Classes\BLL\Web\LayoutStyle\MarsColours.cs" />
+    <Compile Include="App.Classes\BLL\Web\LayoutStyle\MarsFonts.cs" />
+    <Compile Include="App.Classes\BLL\Web\Navigation.cs" />
+    <Compile Include="App.Classes\BLL\Web\Routes.cs" />
+    <Compile Include="App.Classes\BLL\Web\SessionHandler.cs" />
+    <Compile Include="App.Classes\BLL\Web\TrendLine\TrendLine.cs" />
+    <Compile Include="App.Classes\BLL\Web\TrendLine\TrendLineCalculator.cs" />
+    <Compile Include="App.Classes\DAL\Common\ImportDetails.cs" />
+    <Compile Include="App.Classes\DAL\Data\BranchHolder.cs" />
+    <Compile Include="App.Classes\DAL\Data\CarGroupHolder.cs" />
+    <Compile Include="App.Classes\DAL\Data\CmsLocationGroupHolder.cs" />
+    <Compile Include="App.Classes\DAL\Data\CmsPoolHolder.cs" />
+    <Compile Include="App.Classes\DAL\Data\CountryHolder.cs" />
+    <Compile Include="App.Classes\DAL\Data\DBManager.cs" />
+    <Compile Include="App.Classes\DAL\Data\StoredProcedures.cs" />
+    <Compile Include="App.Classes\DAL\Files\DALExportExcel.cs" />
+    <Compile Include="App.Classes\DAL\Files\DALExportLevel.cs" />
+    <Compile Include="App.Classes\DAL\FleetDemand\DataAccess.cs" />
+    <Compile Include="App.Classes\DAL\FleetDemand\FleetDemand.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FleetDemand.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="App.Classes\DAL\Management\DALManagement.cs" />
+    <Compile Include="App.Classes\DAL\CsvExportStaticData\CsvExportHeaders.cs" />
+    <Compile Include="App.Classes\DAL\CsvExportStaticData\CsvExportMethods.cs" />
+    <Compile Include="App.Classes\DAL\Forecasting\BenchMarkDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\Forecasting\BenchmarkDataHolders\BenchmarkExcelDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\Forecasting\BenchmarkDataHolders\BenchmarkGraphDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\Forecasting\ForecastDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\Forecasting\ForecastDataHolders\ForecastExcelDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\Forecasting\ForecastDataHolders\ForecastGraphDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\Forecasting\ForecastDataHolders\ForecastRawDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\Management\AdditionDeletionExcelDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\Management\AdditionDeletionRawDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\Management\ManagementDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\MarsDataAccess\CommunicationDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\MarsDataAccess\UserActivity.cs" />
+    <Compile Include="App.Classes\DAL\MarsDBContext\DebugTextWriter.cs" />
+    <Compile Include="App.Classes\DAL\MarsDBContext\RadMembership.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadMembership.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="App.Classes\DAL\NonRevReWrite\Enums\FleetName.cs" />
+    <Compile Include="App.Classes\DAL\NonRevReWrite\Enums\RemarksCountGroup.cs" />
+    <Compile Include="App.Classes\DAL\NonRevReWrite\ParameterHolders\ReportsParameters.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Abstract\IDoPostBackRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Abstract\IFilterRepository3.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Abstract\IComparisonRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\AdditionsDeletions\AdditionDeletionDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\AdditionsDeletions\BufferDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\AlertsPopupRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\AlertsRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\DayActualRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\DoPostBackRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Filters\BranchRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Filters\CarClsRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Filters\CarGrpRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Filters\CarSegRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Filters\CountryRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Filters\LocGrpRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Filters\PoolRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\FleetComparisonRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\OverdueOpenTripsRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\PoolingDataContext\PoolingDataClasses.cs">
+      <DependentUpon>PoolingDataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\AlertsReturnQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\FeaPoolingDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\FeaAlertsQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\FeaFilteredQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\FeaFleetQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\FeaSiteQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\PoolingCheckOutReservations.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\ResActualCIQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\ResAlertsCIQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\PoolingCheckOutReservationsWithLabels.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\PoolingCheckInReservations.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\ResGridDisplay.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\ResSiteCOQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\SharedDataAccess\AlertsDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\SharedDataAccess\DayActualEntityRetrievers.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\SharedDataAccess\ReservationsDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Queryables\ReservationsFilterCar.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\ResAlertsCOQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\ResSiteCIQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Queryables\TopicQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\SiteComparisonRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\SiteComparisonRepositoryTest.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Filters\TopicRepository.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Abstract\IReservationDayActualsRepository.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Queryables\ResDetailCIQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Queryables\ResDetailCOQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Queryables\ReservationsSiteFilter.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Queryables\ResDetailsBottomFilterQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Queryables\ResDetailsQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Queryables\ResDetailsSortQueryable.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\ResDetailsRepository.cs" />
+    <Compile Include="App.Classes\DAL\MarsDataAccess\Sizing\FutureTrendDBContext.cs" />
+    <Compile Include="App.Classes\DAL\ParameterAccess\AdditionDeletionParameterRestriction.cs" />
+    <Compile Include="App.Classes\DAL\Data\LocationGroupHolder.cs" />
+    <Compile Include="App.Classes\DAL\ParameterAccess\ForecastParameterRestriction.cs" />
+    <Compile Include="App.Classes\DAL\ParameterAccess\ParameterDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Abstract\Enums.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Abstract\HtmlTableRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Abstract\IBrowserJavascriptRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Abstract\IButtonModelRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Abstract\IDateRangeRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Abstract\IHeaderRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Abstract\IHtmlTableRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Abstract\IOverdueActualRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Abstract\IThreeFilterRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\AlertsHtmlRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Filters\AreasRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Filters\BranchOPSRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\BrowserJavascriptRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\ButtonModelRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\CheckInOutRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\DataAccess\GeneralDayActualStoredProcedure.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\DataAccess\GetPoolingAlertsStoredProcedure.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\DataAccess\ThreeDayActualStoredProcedure.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\DateRangeRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\FilterRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\GridviewNoOfDaysRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\GridviewNoOfHoursRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\HeaderRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\OverdueCollectionRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\PoolingDataContext\PoolingDataClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PoolingDataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="App.Classes\DAL\Pooling\Filters\RegionsRepository.cs" />
+    <Compile Include="App.Classes\DAL\Pooling\Filters\ThreeFilterRepository.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Abstract\IJavaScriptRepository.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Abstract\IReservationLogRepository.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Abstract\IReservationRepository.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Queryables\SortRepository\Abstract\ISortRepository.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Queryables\ReservationQueryableCars.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Queryables\ReservationQueryableCheckIn.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Queryables\ReservationQueryableCheckOut.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Queryables\ReservationQueryableDetails.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Queryables\ReservationQueryableSort.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\Queryables\SortRepository\DetailsSortRepository.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\ReservationActualsJavascriptRepository.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\ReservationLogRepository.cs" />
+    <Compile Include="App.Classes\DAL\Reservations\ReservationRepository.cs" />
+    <Compile Include="App.Classes\DAL\SiteAndFleetComparisonDataHolders\SiteAndFleetComparisonDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\SiteAndFleetComparisonDataHolders\SiteAndFleetComparisonExcelDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\SiteAndFleetComparisonDataHolders\SiteAndFleetComparisonRawDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\MarsDBContext\MarsConnectionString.cs" />
+    <Compile Include="App.Classes\DAL\MarsDBContext\MarsDB.cs">
+      <DependentUpon>MarsDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="App.Classes\DAL\MarsDBContext\MarsDB.designer.cs">
+      <DependentUpon>MarsDB.dbml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App.Classes\DAL\Reports\DALCmsReportType.cs" />
+    <Compile Include="App.Classes\DAL\Reports\DALReportParameters.cs" />
+    <Compile Include="App.Classes\DAL\Reports\ReportLookups.cs" />
+    <Compile Include="App.Classes\DAL\Reports\ReportStatistics.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\Abstract\IFleetPlanWebServiceRepository.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\Abstract\IFleetSizeExportRepository.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\FleetComparisonDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\FleetPlanWebServiceRepository.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\FutureTrendDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\FutureTrendDataHolders\FutureTrendExcelDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\FutureTrendDataHolders\FutureTrendGraphDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\FutureTrendDataHolders\FutureTrendOrSupplyAnalysisRawDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\GenericSizingDataAccess\GenericSizingDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\GenericSizingHolders\GenericSizingHolder.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\KpiDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\KPIDataHolders\KpiExcelDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\KPIDataHolders\KpiGraphDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\KPIDataHolders\KpiRawDataHolderOld.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\Management\FleetSizeExportRepository.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\Management\FleetSizeExportTestRepository.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\Management\ManualMovementCommands.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\SiteComparisonDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\SupplyAnalysisDataAccess.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\SupplyAnalysisDataHolders\SupplyAnalysisExcelDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\SupplyAnalysisDataHolders\SupplyAnalysisGraphDataHolder.cs" />
+    <Compile Include="App.Classes\DAL\Sizing\SupplyAnalysisDataHolders\SupplyAnalysisWeeklyGrouping.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Abstract\ICountryDescriptionRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Abstract\IFilterRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Abstract\IFleetOverviewRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Abstract\IFleetReservationRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Abstract\IForeignNonRevenueEntity.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Abstract\IReservationAnalysisRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Abstract\IReservationBalanceRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Abstract\IUtilisationHistoryRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Abstract\IVehicleDetailsRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Abstract\Queryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Abstract\ReservationRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\FakeGridViewRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\CarClassRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\CarGroupRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\CarSegmentRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\CountryDescriptionRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\FakeRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\FleetActualEuropeOwnCountriesRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\FleetEuropeActualDueCountriesRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\GridViewMaxRowsRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\LocationRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\MoveTypeRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\NonrevRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\NoOfDaysRespository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\OperstatRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\PoolRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\ReservationCountryRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\ReservationReturnCountryRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Filters\VehiclePredicamentRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\FleetOverviewRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\FleetReservationRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\ForeignNonRevenueRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\CarFilterQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\Reservation\FleetEuropeActualQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\Reservation\ReservationMatchCarClassQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\Reservation\ReservationMatchCarSegmentQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\Reservation\ReservationMatchPoolQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\Reservation\ReservationMatchReturnQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\VehicleDetails\VehicleDetailsAllQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\VehicleDetails\VehicleDetailsIdleQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\VehicleDetails\VehicleDetailsNonRevQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\VehicleDetails\VehicleDetailsORInBetweenQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\VehicleDetails\VehicleDetailsOROwnToForeign.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\VehicleDetails\VehicleDetailsORReturningQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\VehicleDetails\VehicleDetailsQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\VehicleDetails\VehicleDetailsSortQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\VehicleDetails\VehicleDetailsSort_Switch_Queryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\VehicleDetails\VehicleDetailsTXReturningQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\VehicleDetails\VehicleDetailsTXToForeignQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\Queryables\VehiclesFilterQueryable.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\ReservationAnalysisRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\ReservationBalanceRespository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\ReservationFleetRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\UtilisationHistoryRepository.cs" />
+    <Compile Include="App.Classes\DAL\VehiclesAbroad\VehicleDetailsRepository.cs" />
+    <Compile Include="App.Classes\DAL\Web\Mappings\MappingsVehiclesLease.cs" />
+    <Compile Include="App.Classes\Entities\CarClass.cs" />
+    <Compile Include="App.Classes\Entities\CarGroup.cs" />
+    <Compile Include="App.Classes\Entities\CarSegment.cs" />
+    <Compile Include="App.Classes\Entities\CMSFleetPlan.cs" />
+    <Compile Include="App.Classes\Entities\CMSForecastType.cs" />
+    <Compile Include="App.Classes\Entities\CMSPool.cs" />
+    <Compile Include="App.Classes\Entities\CMSReportingTimeZone.cs" />
+    <Compile Include="App.Classes\Entities\Country.cs" />
+    <Compile Include="App.Classes\Entities\Pooling\DropdownEntity.cs" />
+    <Compile Include="App.Classes\Entities\ExportLevelFleet.cs" />
+    <Compile Include="App.Classes\Entities\ExportLevelSite.cs" />
+    <Compile Include="App.Classes\Entities\FleetPlanDetail.cs" />
+    <Compile Include="App.Classes\Entities\FleetPlanDetailListContainer.cs" />
+    <Compile Include="App.Classes\Entities\FleetPlanEntry.cs" />
+    <Compile Include="App.Classes\Entities\FleetPlanEntryArchive.cs" />
+    <Compile Include="App.Classes\Entities\ForecastAdjustmentEntity.cs" />
+    <Compile Include="App.Classes\Entities\FrozenZoneAcceptance.cs" />
+    <Compile Include="App.Classes\Entities\Graphing\GraphData.cs" />
+    <Compile Include="App.Classes\Entities\Graphing\GraphSeries.cs" />
+    <Compile Include="App.Classes\Entities\Graphing\Parameters\FutureTrendSupplyAnalysisTransfer.cs" />
+    <Compile Include="App.Classes\Entities\Graphing\Parameters\ParameterNames.cs" />
+    <Compile Include="App.Classes\Entities\Graphing\Parameters\ReportParameter.cs" />
+    <Compile Include="App.Classes\Entities\Graphing\WeeklyMinValue.cs" />
+    <Compile Include="App.Classes\Entities\LocationGroup.cs" />
+    <Compile Include="App.Classes\Entities\NecessaryFleet.cs" />
+    <Compile Include="App.Classes\Entities\Pooling\Abstract\IMainFilterEntity.cs" />
+    <Compile Include="App.Classes\Entities\Pooling\Abstract\IReservationDetailsFilterEntity.cs" />
+    <Compile Include="App.Classes\Entities\Pooling\Abstract\IStatusEntity.cs" />
+    <Compile Include="App.Classes\Entities\Pooling\AlertEntity.cs" />
+    <Compile Include="App.Classes\Entities\Pooling\AlertsPopupEntity.cs" />
+    <Compile Include="App.Classes\Entities\Pooling\AlertsReturnEntity.cs" />
+    <Compile Include="App.Classes\Entities\Pooling\AlertTempEntity.cs" />
+    <Compile Include="App.Classes\Entities\Pooling\FeaEntity.cs" />
+    <Compile Include="App.Classes\Entities\Pooling\ResDetailsHeadingEntity.cs" />
+    <Compile Include="App.Classes\Entities\Pooling\ResevationDetailsFilterEntity.cs" />
+    <Compile Include="App.Classes\Entities\Pooling\MainFilterEntity.cs" />
+    <Compile Include="App.Classes\Entities\Pooling\StatusEntity.cs" />
+    <Compile Include="App.Classes\Entities\Pooling\DayActualEntity.cs" />
+    <Compile Include="App.Classes\Entities\Reservations\Abstract\IReservationDBUpdateEntity.cs" />
+    <Compile Include="App.Classes\Entities\Reservations\Abstract\IReservationDetailsEntity.cs" />
+    <Compile Include="App.Classes\Entities\Reservations\ReservationDBUpdateEntity.cs" />
+    <Compile Include="App.Classes\Entities\Reservations\ReservationDetailsEntity.cs" />
+    <Compile Include="App.Classes\Entities\Sizing\Abstract\IFleetPlanEntity.cs" />
+    <Compile Include="App.Classes\Entities\Sizing\FleetPlanEntity.cs" />
+    <Compile Include="App.Classes\Entities\Sizing\FutureTrendEntity.cs" />
+    <Compile Include="App.Classes\Entities\Sizing\FutureTrendExcelEntity.cs" />
+    <Compile Include="App.Classes\Entities\UserRole.cs" />
+    <Compile Include="App.Classes\Entities\Graphing\ICarFilterEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\Abstract\ICarSearchDataEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\Abstract\IFilterEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\Abstract\IUtilisationHistoryEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\CarFilterEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\CarSearchDataEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\DataTableEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\FilterEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\FleetActualEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\FleetMatchEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\ForeignNonRevenueEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\Abstract\IVehiclePredicamentEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\Abstract\IFleetMatchEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\Abstract\IReservationMatchEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\Abstract\IReservationBalanceEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\ReservationBalanceEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\ReservationDetailsEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\ReservationMatchEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\ResVehiclesEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\UtilisationHistoryEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\UtilisationHistoryStoredProcEntity.cs" />
+    <Compile Include="App.Classes\Entities\VehiclesAbroad\VehiclePredicamentEntity.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Administration\AdminMappingEnum.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Administration\CompanyTypeEnum.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Administration\DomainTranslator.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Administration\EnittyBusinessLogic\AreaEntityCheck.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Administration\EnittyBusinessLogic\CarClassEntityCheck.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Administration\EnittyBusinessLogic\CarSegmentEntityCheck.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Administration\EnittyBusinessLogic\CountryEntityCheck.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Administration\EnittyBusinessLogic\LocationEntityCheck.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Administration\EnittyBusinessLogic\LocationGroupEntityCheck.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Administration\EnittyBusinessLogic\PoolEntityCheck.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Administration\EnittyBusinessLogic\RegionEntityCheck.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Administration\Enums.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Availability\LastUpdatedFromFleetNow.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Availability\TopicTranslation.cs" />
+    <Compile Include="App.Classes\Phase4Bll\CustomGridViewItems\MappingGridViewTemplate.cs" />
+    <Compile Include="App.Classes\Phase4Bll\CustomGridViewItems\GridViewTemplate.cs" />
+    <Compile Include="App.Classes\Phase4Bll\ExtensionMethods\DateTimeExtensions.cs" />
+    <Compile Include="App.Classes\Phase4Bll\ForeignVehicles\AgeingGroupCalculator.cs" />
+    <Compile Include="App.Classes\Phase4Bll\ForeignVehicles\PredicamentTranslation.cs" />
+    <Compile Include="App.Classes\Phase4Bll\WebControlsHelper.cs" />
+    <Compile Include="App.Classes\Phase4Bll\HtmlTableGenerator.cs" />
+    <Compile Include="App.Classes\Phase4Bll\NonRev\AgeingGroupCalulator.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Parameters\ComparisonLevelLookup.cs" />
+    <Compile Include="App.Classes\Phase4Bll\Parameters\ParamaterDropdownListHolder.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\AdminParameterDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\Entities\CarClass.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\Entities\CarGroups.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\Entities\CmsLocationGroupRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\Entities\CountrtyAdministrator.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\Entities\LocationsRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\Entities\OpsAreaRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\Entities\Role.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\Entities\UserRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\FleetOwner\FleetOwnerDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingDeleteAndCreate.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingListSelect.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingEntities\AreaEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingEntities\CarClassEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingEntities\CarGroupEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingEntities\CarSegmentEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingEntities\CountryEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingEntities\HeadingTranslator.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingEntities\IMappingEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingEntities\LocationEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingEntities\LocationGroupEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingEntities\PoolEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingEntities\RegionEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingSingleUpdate.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\Membership\MembershipDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\UserEntities\CompanyEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\UserEntities\FleetOwnerEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\UserEntities\PageEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\UserEntities\RoleEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\UserEntities\UserEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\UserEntities\UserRoleEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\Users\CompanyAndFleetOwnerDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\Users\RolesAndPagesDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\Users\UsersAndRolesDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\UserTraining\Entities\UserTrainingEntity.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\UserTraining\UserTrainingDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Availability\AvailabilityDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Availability\ComparisonDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Availability\Entities\FleetStatusRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Availability\Entities\FleetStatusGridPercentRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Availability\Entities\FleetStatusGridRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Availability\Entities\StringDateGrouping.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Availability\FleetStatusDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Availability\HistoricalTrendDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\BaseDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Enumerators\AgeGroup.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Enumerators\AutoCompleteTypes.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Enumerators\AvailabilityGrouping.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Enumerators\AvailabilityTopic.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Enumerators\ForeignVehiclePredicament.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Enumerators\ModuleType.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Enumerators\PercentageDivisorType.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Enumerators\ReportType.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Enumerators\DictionaryParameter.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ForeignVehicles\AgeingDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ForeignVehicles\Entities\AgeingRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ForeignVehicles\Entities\CountryHolder.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ForeignVehicles\Entities\HistoricalTrendRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ForeignVehicles\Entities\LocationCount.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ForeignVehicles\Entities\LocationIdHolder.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ForeignVehicles\Entities\ReservationMatchGridRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ForeignVehicles\Entities\VehicleMatchGridRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ForeignVehicles\HistoricalTrendDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ForeignVehicles\MatchDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ForeignVehicles\ReservationOverviewDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Administration\MappingSingleSelect.cs" />
+    <Compile Include="App.Classes\Phase4Dal\LicenceeRestriction\FleetHistoryRestriction.cs" />
+    <Compile Include="App.Classes\Phase4Dal\LicenceeRestriction\FleetNowRestriction.cs" />
+    <Compile Include="App.Classes\Phase4Dal\LicenceeRestriction\ReservationRestriction.cs" />
+    <Compile Include="App.Classes\Phase4Dal\LicenceeRestriction\VehicleRestriction.cs" />
+    <Compile Include="App.Classes\Phase4Dal\LicenceeRestriction\VehicleHistoryRestriction.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ManagerReports\Entities\LocationSummaryForeignRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ManagerReports\Entities\LocationSummaryRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ManagerReports\LocationSummaryDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\AdminDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\AgeingDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\ApprovalDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\Entities\AgeingRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\Entities\ComparisonRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\Entities\EmptyRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\Entities\FileUploadEntities\UploadRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\Entities\FileUploadEntities\UploadSummary.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\Entities\HistoricalTrendRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\Entities\VehicleApprovalHistory.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\Entities\VehicleRemarkIdHolder.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\HistoricalTrendDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\OverviewDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\Entities\NonRevPeriodEntry.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\Entities\NonRevPeriodEntryRemark.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Enumerators\ParameterTypes.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\Entities\OverviewVehicleDetails.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\Entities\MultiVehicleReasonEntry.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\NonRevBaseDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\Entities\OverviewGridRow.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\Parameters\NonRevParameterDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\BaseVehicleDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\NonRev\ComparisonDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ParamaterListItemGenerator.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ParameterDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ForeignVehicles\Entities\OverviewGridItemHolder.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Pooling\DayActualsQueryable.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Reservations\Entities\ReservationData.cs" />
+    <Compile Include="App.Classes\Phase4Dal\ForeignVehicles\VehicleOverviewDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Reservations\ReservationDataAccess.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Reservations\ReservationFieldRestrictions.cs" />
+    <Compile Include="App.Classes\Phase4Dal\Sizing\ForecastQueryable.cs" />
+    <Compile Include="App.Classes\Phase4Dal\VehicleFieldRestrictions.cs" />
+    <Compile Include="App.MasterPages\Fao.Master.cs">
+      <DependentUpon>Fao.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.MasterPages\Fao.Master.designer.cs">
+      <DependentUpon>Fao.Master</DependentUpon>
+    </Compile>
+    <Compile Include="App.MasterPages\Application.Master.cs">
+      <DependentUpon>Application.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.MasterPages\Application.Master.designer.cs">
+      <DependentUpon>Application.Master</DependentUpon>
+    </Compile>
+    <Compile Include="App.MasterPages\Mars.Master.cs">
+      <DependentUpon>Mars.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.MasterPages\Mars.Master.designer.cs">
+      <DependentUpon>Mars.Master</DependentUpon>
+    </Compile>
+    <Compile Include="App.MasterPages\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.MasterPages\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Administration\FleetDemand\Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Administration\FleetDemand\Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Administration\Mappings\Mappings.aspx.cs">
+      <DependentUpon>Mappings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Administration\Mappings\Mappings.aspx.designer.cs">
+      <DependentUpon>Mappings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Administration\News\NewsAdmin.aspx.cs">
+      <DependentUpon>NewsAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Administration\News\NewsAdmin.aspx.designer.cs">
+      <DependentUpon>NewsAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Administration\Users\UsersAndRoles.aspx.cs">
+      <DependentUpon>UsersAndRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Administration\Users\UsersAndRoles.aspx.designer.cs">
+      <DependentUpon>UsersAndRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Administration\VehiclesSublease\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Administration\VehiclesSublease\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Availability\CarSearch\CarSearch.aspx.cs">
+      <DependentUpon>CarSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Availability\CarSearch\CarSearch.aspx.designer.cs">
+      <DependentUpon>CarSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Availability\Comparison\Fleet\FleetComparison.aspx.cs">
+      <DependentUpon>FleetComparison.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Availability\Comparison\Fleet\FleetComparison.aspx.designer.cs">
+      <DependentUpon>FleetComparison.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Availability\Comparison\Site\SiteComparison.aspx.cs">
+      <DependentUpon>SiteComparison.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Availability\Comparison\Site\SiteComparison.aspx.designer.cs">
+      <DependentUpon>SiteComparison.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Availability\FleetStatus\FleetStatus.aspx.cs">
+      <DependentUpon>FleetStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Availability\FleetStatus\FleetStatus.aspx.designer.cs">
+      <DependentUpon>FleetStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Availability\HistoricalTrend\HistoricalTrend.aspx.cs">
+      <DependentUpon>HistoricalTrend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Availability\HistoricalTrend\HistoricalTrend.aspx.designer.cs">
+      <DependentUpon>HistoricalTrend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Availability\Statistics\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Availability\Statistics\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Forecasting\Adjustment\Forecast.aspx.cs">
+      <DependentUpon>Forecast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Forecasting\Adjustment\Forecast.aspx.designer.cs">
+      <DependentUpon>Forecast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Forecasting\Benchmark\Benchmark.aspx.cs">
+      <DependentUpon>Benchmark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Forecasting\Benchmark\Benchmark.aspx.designer.cs">
+      <DependentUpon>Benchmark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Forecasting\Forecast\Forecast.aspx.cs">
+      <DependentUpon>Forecast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Forecasting\Forecast\Forecast.aspx.designer.cs">
+      <DependentUpon>Forecast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\AgeingReport.aspx.cs">
+      <DependentUpon>AgeingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\AgeingReport.aspx.designer.cs">
+      <DependentUpon>AgeingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\ForeignVehicleSearch.aspx.cs">
+      <DependentUpon>ForeignVehicleSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\ForeignVehicleSearch.aspx.designer.cs">
+      <DependentUpon>ForeignVehicleSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\HistoricalTrend.aspx.cs">
+      <DependentUpon>HistoricalTrend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\HistoricalTrend.aspx.designer.cs">
+      <DependentUpon>HistoricalTrend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\ReservationMatch.aspx.cs">
+      <DependentUpon>ReservationMatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\ReservationMatch.aspx.designer.cs">
+      <DependentUpon>ReservationMatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\ReservationOverview.aspx.cs">
+      <DependentUpon>ReservationOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\ReservationOverview.aspx.designer.cs">
+      <DependentUpon>ReservationOverview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\FleetOverview.aspx.cs">
+      <DependentUpon>FleetOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\FleetOverview.aspx.designer.cs">
+      <DependentUpon>FleetOverview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\ReservationDetails.aspx.cs">
+      <DependentUpon>ReservationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\ReservationDetails.aspx.designer.cs">
+      <DependentUpon>ReservationDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\FleetMatch.aspx.cs">
+      <DependentUpon>FleetMatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\ForeignVehicles\FleetMatch.aspx.designer.cs">
+      <DependentUpon>FleetMatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\ManagerReports\LocationSummary.aspx.cs">
+      <DependentUpon>LocationSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\ManagerReports\LocationSummary.aspx.designer.cs">
+      <DependentUpon>LocationSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\NonRevenue\Administration\Administration.aspx.cs">
+      <DependentUpon>Administration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\NonRevenue\Administration\Administration.aspx.designer.cs">
+      <DependentUpon>Administration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\NonRevenue\Approvals\Approval.aspx.cs">
+      <DependentUpon>Approval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\NonRevenue\Approvals\Approval.aspx.designer.cs">
+      <DependentUpon>Approval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\NonRevenue\Overview\Overview.aspx.cs">
+      <DependentUpon>Overview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\NonRevenue\Overview\Overview.aspx.designer.cs">
+      <DependentUpon>Overview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\NonRevenue\Reports\AllReports.aspx.cs">
+      <DependentUpon>AllReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\NonRevenue\Reports\AllReports.aspx.designer.cs">
+      <DependentUpon>AllReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Pooling\AdditionsDeletions.aspx.cs">
+      <DependentUpon>AdditionsDeletions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Pooling\AdditionsDeletions.aspx.designer.cs">
+      <DependentUpon>AdditionsDeletions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Pooling\Alerts.aspx.cs">
+      <DependentUpon>Alerts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Pooling\Alerts.aspx.designer.cs">
+      <DependentUpon>Alerts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Pooling\Buffers.aspx.cs">
+      <DependentUpon>Buffers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Pooling\Buffers.aspx.designer.cs">
+      <DependentUpon>Buffers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Pooling\DayActuals.aspx.cs">
+      <DependentUpon>DayActuals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Pooling\DayActuals.aspx.designer.cs">
+      <DependentUpon>DayActuals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Pooling\FleetComparison.aspx.cs">
+      <DependentUpon>FleetComparison.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Pooling\FleetComparison.aspx.designer.cs">
+      <DependentUpon>FleetComparison.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Pooling\ReservationDetails.aspx.cs">
+      <DependentUpon>ReservationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Pooling\ReservationDetails.aspx.designer.cs">
+      <DependentUpon>ReservationDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Pooling\SiteComparison.aspx.cs">
+      <DependentUpon>SiteComparison.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Pooling\SiteComparison.aspx.designer.cs">
+      <DependentUpon>SiteComparison.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Sizing\Comparison\Fleet\FleetComparison.aspx.cs">
+      <DependentUpon>FleetComparison.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Sizing\Comparison\Fleet\FleetComparison.aspx.designer.cs">
+      <DependentUpon>FleetComparison.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Sizing\Comparison\Site\SiteComparison.aspx.cs">
+      <DependentUpon>SiteComparison.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Sizing\Comparison\Site\SiteComparison.aspx.designer.cs">
+      <DependentUpon>SiteComparison.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Sizing\FutureTrend\FutureTrend.aspx.cs">
+      <DependentUpon>FutureTrend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Sizing\FutureTrend\FutureTrend.aspx.designer.cs">
+      <DependentUpon>FutureTrend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Sizing\KPI\KPI.aspx.cs">
+      <DependentUpon>KPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Sizing\KPI\KPI.aspx.designer.cs">
+      <DependentUpon>KPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Sizing\SupplyAnalysis\Management\FleetSize.aspx.cs">
+      <DependentUpon>FleetSize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Sizing\SupplyAnalysis\Management\FleetSize.aspx.designer.cs">
+      <DependentUpon>FleetSize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Site\Sizing\SupplyAnalysis\SupplyAnalysis.aspx.cs">
+      <DependentUpon>SupplyAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Site\Sizing\SupplyAnalysis\SupplyAnalysis.aspx.designer.cs">
+      <DependentUpon>SupplyAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\AutoComplete\AutoComplete.ascx.cs">
+      <DependentUpon>AutoComplete.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\AutoComplete\AutoComplete.ascx.designer.cs">
+      <DependentUpon>AutoComplete.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Charts\ChartControls.ascx.cs">
+      <DependentUpon>ChartControls.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Charts\ChartControls.ascx.designer.cs">
+      <DependentUpon>ChartControls.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\CheckBoxList\PopupCheckBoxList.ascx.cs">
+      <DependentUpon>PopupCheckBoxList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\CheckBoxList\PopupCheckBoxList.ascx.designer.cs">
+      <DependentUpon>PopupCheckBoxList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\CheckBoxList\PopupCheckBoxListForm.ascx.cs">
+      <DependentUpon>PopupCheckBoxListForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\CheckBoxList\PopupCheckBoxListForm.ascx.designer.cs">
+      <DependentUpon>PopupCheckBoxListForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Confirm\DeleteConfirm.ascx.cs">
+      <DependentUpon>DeleteConfirm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Confirm\DeleteConfirm.ascx.designer.cs">
+      <DependentUpon>DeleteConfirm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Confirm\ModalConfirm.ascx.cs">
+      <DependentUpon>ModalConfirm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Confirm\ModalConfirm.ascx.designer.cs">
+      <DependentUpon>ModalConfirm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\DatePicker\DatePicker.ascx.cs">
+      <DependentUpon>DatePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\DatePicker\DatePicker.ascx.designer.cs">
+      <DependentUpon>DatePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\DatePicker\DatePickerTextBox.ascx.cs">
+      <DependentUpon>DatePickerTextBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\DatePicker\DatePickerTextBox.ascx.designer.cs">
+      <DependentUpon>DatePickerTextBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\DatePicker\DatePickerTextBoxForm.ascx.cs">
+      <DependentUpon>DatePickerTextBoxForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\DatePicker\DatePickerTextBoxForm.ascx.designer.cs">
+      <DependentUpon>DatePickerTextBoxForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\DatePicker\DateRangePicker.ascx.cs">
+      <DependentUpon>DateRangePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\DatePicker\DateRangePicker.ascx.designer.cs">
+      <DependentUpon>DateRangePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\DatePicker\SingleDateTimePicker.ascx.cs">
+      <DependentUpon>SingleDateTimePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\DatePicker\SingleDateTimePicker.ascx.designer.cs">
+      <DependentUpon>SingleDateTimePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\DropDownList\MultiSelectDropDownList.ascx.cs">
+      <DependentUpon>MultiSelectDropDownList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\DropDownList\MultiSelectDropDownList.ascx.designer.cs">
+      <DependentUpon>MultiSelectDropDownList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\EmptyData\EmptyDataTemplate.ascx.cs">
+      <DependentUpon>EmptyDataTemplate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\EmptyData\EmptyDataTemplate.ascx.designer.cs">
+      <DependentUpon>EmptyDataTemplate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\FleetDemand\LocationCarClassChoice.ascx.cs">
+      <DependentUpon>LocationCarClassChoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\FleetDemand\LocationCarClassChoice.ascx.designer.cs">
+      <DependentUpon>LocationCarClassChoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\FleetDemand\LocationChoice.ascx.cs">
+      <DependentUpon>LocationChoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\FleetDemand\LocationChoice.ascx.designer.cs">
+      <DependentUpon>LocationChoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\HelpIcon.ascx.cs">
+      <DependentUpon>HelpIcon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\HelpIcon.ascx.designer.cs">
+      <DependentUpon>HelpIcon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Loading\LoadingScreen.ascx.cs">
+      <DependentUpon>LoadingScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Loading\LoadingScreen.ascx.designer.cs">
+      <DependentUpon>LoadingScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Mappings\Details\VehiclesLeaseDetails.ascx.cs">
+      <DependentUpon>VehiclesLeaseDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Mappings\Details\VehiclesLeaseDetails.ascx.designer.cs">
+      <DependentUpon>VehiclesLeaseDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Mappings\Gridviews\VehiclesLeaseGridView.ascx.cs">
+      <DependentUpon>VehiclesLeaseGridView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Mappings\Gridviews\VehiclesLeaseGridView.ascx.designer.cs">
+      <DependentUpon>VehiclesLeaseGridView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\ExportToExcel.ascx.cs">
+      <DependentUpon>ExportToExcel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\ExportToExcel.ascx.designer.cs">
+      <DependentUpon>ExportToExcel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\FleetPlan\FleetPlanUploadActivityLog.ascx.cs">
+      <DependentUpon>FleetPlanUploadActivityLog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\FleetPlan\FleetPlanUploadActivityLog.ascx.designer.cs">
+      <DependentUpon>FleetPlanUploadActivityLog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\ForecastAdjustment.ascx.cs">
+      <DependentUpon>ForecastAdjustment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\ForecastAdjustment.ascx.designer.cs">
+      <DependentUpon>ForecastAdjustment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\ForecastReconciliation.ascx.cs">
+      <DependentUpon>ForecastReconciliation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\ForecastReconciliation.ascx.designer.cs">
+      <DependentUpon>ForecastReconciliation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\FrozenZoneManagement.ascx.cs">
+      <DependentUpon>FrozenZoneManagement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\FrozenZoneManagement.ascx.designer.cs">
+      <DependentUpon>FrozenZoneManagement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\ManualMovementGridView.ascx.cs">
+      <DependentUpon>ManualMovementGridView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\ManualMovementGridView.ascx.designer.cs">
+      <DependentUpon>ManualMovementGridView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\ManualMovementTabView.ascx.cs">
+      <DependentUpon>ManualMovementTabView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\ManualMovementTabView.ascx.designer.cs">
+      <DependentUpon>ManualMovementTabView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\ManualMovementUpload.ascx.cs">
+      <DependentUpon>ManualMovementUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\ManualMovementUpload.ascx.designer.cs">
+      <DependentUpon>ManualMovementUpload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\NecessaryFleetManagement.ascx.cs">
+      <DependentUpon>NecessaryFleetManagement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\NecessaryFleetManagement.ascx.designer.cs">
+      <DependentUpon>NecessaryFleetManagement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\VehiclesAbroadReservations.ascx.cs">
+      <DependentUpon>VehiclesAbroadReservations.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\MarsControls\VehiclesAbroadReservations.ascx.designer.cs">
+      <DependentUpon>VehiclesAbroadReservations.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Pages\PageInformation.ascx.cs">
+      <DependentUpon>PageInformation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Pages\PageInformation.ascx.designer.cs">
+      <DependentUpon>PageInformation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Panel\CommunicationsPanel.ascx.cs">
+      <DependentUpon>CommunicationsPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Panel\CommunicationsPanel.ascx.designer.cs">
+      <DependentUpon>CommunicationsPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Panel\NavigationPanel.ascx.cs">
+      <DependentUpon>NavigationPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Panel\NavigationPanel.ascx.designer.cs">
+      <DependentUpon>NavigationPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Parameters\Dynamic\DynamicReportParameters.ascx.cs">
+      <DependentUpon>DynamicReportParameters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Parameters\Dynamic\DynamicReportParameters.ascx.designer.cs">
+      <DependentUpon>DynamicReportParameters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Parameters\GeneralReportParameters.ascx.cs">
+      <DependentUpon>GeneralReportParameters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Parameters\GeneralReportParameters.ascx.designer.cs">
+      <DependentUpon>GeneralReportParameters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Parameters\NonRevenueParameters.ascx.cs">
+      <DependentUpon>NonRevenueParameters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Parameters\NonRevenueParameters.ascx.designer.cs">
+      <DependentUpon>NonRevenueParameters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Parameters\QuickSelectLocationGroup.ascx.cs">
+      <DependentUpon>QuickSelectLocationGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Parameters\QuickSelectLocationGroup.ascx.designer.cs">
+      <DependentUpon>QuickSelectLocationGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Parameters\ReportType\ReportTypeParameters.ascx.cs">
+      <DependentUpon>ReportTypeParameters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Parameters\ReportType\ReportTypeParameters.ascx.designer.cs">
+      <DependentUpon>ReportTypeParameters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Fleet\FleetAdmin.ascx.cs">
+      <DependentUpon>FleetAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Fleet\FleetAdmin.ascx.designer.cs">
+      <DependentUpon>FleetAdmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\AreaPopup.ascx.cs">
+      <DependentUpon>AreaPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\AreaPopup.ascx.designer.cs">
+      <DependentUpon>AreaPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\CarClassPopup.ascx.cs">
+      <DependentUpon>CarClassPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\CarClassPopup.ascx.designer.cs">
+      <DependentUpon>CarClassPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\CarGroupPopup.ascx.cs">
+      <DependentUpon>CarGroupPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\CarGroupPopup.ascx.designer.cs">
+      <DependentUpon>CarGroupPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\CarSegmentPopup.ascx.cs">
+      <DependentUpon>CarSegmentPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\CarSegmentPopup.ascx.designer.cs">
+      <DependentUpon>CarSegmentPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\CountryPopup.ascx.cs">
+      <DependentUpon>CountryPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\CountryPopup.ascx.designer.cs">
+      <DependentUpon>CountryPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityGrid.ascx.cs">
+      <DependentUpon>EntityGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityGrid.ascx.designer.cs">
+      <DependentUpon>EntityGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityParameter.ascx.cs">
+      <DependentUpon>EntityParameter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityParameter.ascx.designer.cs">
+      <DependentUpon>EntityParameter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\LocationGroupPopup.ascx.cs">
+      <DependentUpon>LocationGroupPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\LocationGroupPopup.ascx.designer.cs">
+      <DependentUpon>LocationGroupPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\LocationPopup.ascx.cs">
+      <DependentUpon>LocationPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\LocationPopup.ascx.designer.cs">
+      <DependentUpon>LocationPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\PoolPopup.ascx.cs">
+      <DependentUpon>PoolPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\PoolPopup.ascx.designer.cs">
+      <DependentUpon>PoolPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\PopupEntityUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\RegionPopup.ascx.cs">
+      <DependentUpon>RegionPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Mapping\EntityPopups\RegionPopup.ascx.designer.cs">
+      <DependentUpon>RegionPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Roles\RolePageMapping.ascx.cs">
+      <DependentUpon>RolePageMapping.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Roles\RolePageMapping.ascx.designer.cs">
+      <DependentUpon>RolePageMapping.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Users\CompanyFleetOwnerMapping.ascx.cs">
+      <DependentUpon>CompanyFleetOwnerMapping.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Users\CompanyFleetOwnerMapping.ascx.designer.cs">
+      <DependentUpon>CompanyFleetOwnerMapping.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Users\UserRoleMapping.ascx.cs">
+      <DependentUpon>UserRoleMapping.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Administration\Users\UserRoleMapping.ascx.designer.cs">
+      <DependentUpon>UserRoleMapping.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\AvailabilityParameters.ascx.cs">
+      <DependentUpon>AvailabilityParameters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\AvailabilityParameters.ascx.designer.cs">
+      <DependentUpon>AvailabilityParameters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Availability\ComparisonChart.ascx.cs">
+      <DependentUpon>ComparisonChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Availability\ComparisonChart.ascx.designer.cs">
+      <DependentUpon>ComparisonChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Availability\ComparisonGrid.ascx.cs">
+      <DependentUpon>ComparisonGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Availability\ComparisonGrid.ascx.designer.cs">
+      <DependentUpon>ComparisonGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Availability\FleetStatusChart.ascx.cs">
+      <DependentUpon>FleetStatusChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Availability\FleetStatusChart.ascx.designer.cs">
+      <DependentUpon>FleetStatusChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Availability\FleetStatusGrid.ascx.cs">
+      <DependentUpon>FleetStatusGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Availability\FleetStatusGrid.ascx.designer.cs">
+      <DependentUpon>FleetStatusGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Availability\HistoricalTrendChart.ascx.cs">
+      <DependentUpon>HistoricalTrendChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Availability\HistoricalTrendChart.ascx.designer.cs">
+      <DependentUpon>HistoricalTrendChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Availability\HistoricalTrendGrid.ascx.cs">
+      <DependentUpon>HistoricalTrendGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Availability\HistoricalTrendGrid.ascx.designer.cs">
+      <DependentUpon>HistoricalTrendGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Common\ConfirmPopup.ascx.cs">
+      <DependentUpon>ConfirmPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Common\ConfirmPopup.ascx.designer.cs">
+      <DependentUpon>ConfirmPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Common\NoDataScreen.ascx.cs">
+      <DependentUpon>NoDataScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Common\NoDataScreen.ascx.designer.cs">
+      <DependentUpon>NoDataScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Common\UpdateProgress.ascx.cs">
+      <DependentUpon>UpdateProgress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Common\UpdateProgress.ascx.designer.cs">
+      <DependentUpon>UpdateProgress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\ForeignVehicles\AgeingGrid.ascx.cs">
+      <DependentUpon>AgeingGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\ForeignVehicles\AgeingGrid.ascx.designer.cs">
+      <DependentUpon>AgeingGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\ForeignVehicles\HistoricalTrendGrid.ascx.cs">
+      <DependentUpon>HistoricalTrendGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\ForeignVehicles\HistoricalTrendGrid.ascx.designer.cs">
+      <DependentUpon>HistoricalTrendGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\ForeignVehicles\ReservationMatchGrid.ascx.cs">
+      <DependentUpon>ReservationMatchGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\ForeignVehicles\ReservationMatchGrid.ascx.designer.cs">
+      <DependentUpon>ReservationMatchGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\ForeignVehicles\FleetMatchGrid.ascx.cs">
+      <DependentUpon>FleetMatchGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\ForeignVehicles\FleetMatchGrid.ascx.designer.cs">
+      <DependentUpon>FleetMatchGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\ForeignVehicles\ForeignVehiclesParameters.ascx.cs">
+      <DependentUpon>ForeignVehiclesParameters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\ForeignVehicles\ForeignVehiclesParameters.ascx.designer.cs">
+      <DependentUpon>ForeignVehiclesParameters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\ForeignVehicles\VehicleOverview.ascx.cs">
+      <DependentUpon>VehicleOverview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\ForeignVehicles\VehicleOverview.ascx.designer.cs">
+      <DependentUpon>VehicleOverview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\MultiSelectVehicleParameters.ascx.cs">
+      <DependentUpon>MultiSelectVehicleParameters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\MultiSelectVehicleParameters.ascx.designer.cs">
+      <DependentUpon>MultiSelectVehicleParameters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\HelpIcons\ExportToExcel.ascx.cs">
+      <DependentUpon>ExportToExcel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\HelpIcons\ExportToExcel.ascx.designer.cs">
+      <DependentUpon>ExportToExcel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRevParameters.ascx.cs">
+      <DependentUpon>NonRevParameters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRevParameters.ascx.designer.cs">
+      <DependentUpon>NonRevParameters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\AgeingChart.ascx.cs">
+      <DependentUpon>AgeingChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\AgeingChart.ascx.designer.cs">
+      <DependentUpon>AgeingChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\AgeingGrid.ascx.cs">
+      <DependentUpon>AgeingGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\AgeingGrid.ascx.designer.cs">
+      <DependentUpon>AgeingGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\ComparisonChart.ascx.cs">
+      <DependentUpon>ComparisonChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\ComparisonChart.ascx.designer.cs">
+      <DependentUpon>ComparisonChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\ComparisonGrid.ascx.cs">
+      <DependentUpon>ComparisonGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\ComparisonGrid.ascx.designer.cs">
+      <DependentUpon>ComparisonGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\HistoricalTrendChart.ascx.cs">
+      <DependentUpon>HistoricalTrendChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\HistoricalTrendChart.ascx.designer.cs">
+      <DependentUpon>HistoricalTrendChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\HistoricalTrendGrid.ascx.cs">
+      <DependentUpon>HistoricalTrendGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\HistoricalTrendGrid.ascx.designer.cs">
+      <DependentUpon>HistoricalTrendGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\MultiReasonEntry.ascx.cs">
+      <DependentUpon>MultiReasonEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\MultiReasonEntry.ascx.designer.cs">
+      <DependentUpon>MultiReasonEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\OverviewGrid.ascx.cs">
+      <DependentUpon>OverviewGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\OverviewGrid.ascx.designer.cs">
+      <DependentUpon>OverviewGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\OverviewVehicle.ascx.cs">
+      <DependentUpon>OverviewVehicle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\OverviewVehicle.ascx.designer.cs">
+      <DependentUpon>OverviewVehicle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\OverviewVehicleHistory.ascx.cs">
+      <DependentUpon>OverviewVehicleHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\OverviewVehicleHistory.ascx.designer.cs">
+      <DependentUpon>OverviewVehicleHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\ReasonEntryForm.ascx.cs">
+      <DependentUpon>ReasonEntryForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\ReasonEntryForm.ascx.designer.cs">
+      <DependentUpon>ReasonEntryForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\ReasonHistoryGrid.ascx.cs">
+      <DependentUpon>ReasonHistoryGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\NonRev\ReasonHistoryGrid.ascx.designer.cs">
+      <DependentUpon>ReasonHistoryGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\ReservationParameters.ascx.cs">
+      <DependentUpon>ReservationParameters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\ReservationParameters.ascx.designer.cs">
+      <DependentUpon>ReservationParameters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Reservations\ReservationMultiVehicleParameters.ascx.cs">
+      <DependentUpon>ReservationMultiVehicleParameters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Reservations\ReservationMultiVehicleParameters.ascx.designer.cs">
+      <DependentUpon>ReservationMultiVehicleParameters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Reservations\ReservationDetails.ascx.cs">
+      <DependentUpon>ReservationDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Reservations\ReservationDetails.ascx.designer.cs">
+      <DependentUpon>ReservationDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Reservations\ReservationsGrid.ascx.cs">
+      <DependentUpon>ReservationsGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Reservations\ReservationsGrid.ascx.designer.cs">
+      <DependentUpon>ReservationsGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Reservations\ReservationVehicleParameters.ascx.cs">
+      <DependentUpon>ReservationVehicleParameters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\Reservations\ReservationVehicleParameters.ascx.designer.cs">
+      <DependentUpon>ReservationVehicleParameters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\VehicleParameters.ascx.cs">
+      <DependentUpon>VehicleParameters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Phase4\VehicleParameters.ascx.designer.cs">
+      <DependentUpon>VehicleParameters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Pooling\AdditionsDeletions\AdditionDeletion.ascx.cs">
+      <DependentUpon>AdditionDeletion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Pooling\AdditionsDeletions\AdditionDeletion.ascx.designer.cs">
+      <DependentUpon>AdditionDeletion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Pooling\BottomDropDown.ascx.cs">
+      <DependentUpon>BottomDropDown.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Pooling\BottomDropDown.ascx.designer.cs">
+      <DependentUpon>BottomDropDown.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Pooling\GeneralTopFeedback.ascx.cs">
+      <DependentUpon>GeneralTopFeedback.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Pooling\GeneralTopFeedback.ascx.designer.cs">
+      <DependentUpon>GeneralTopFeedback.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Pooling\ReservationDetailsModal.ascx.cs">
+      <DependentUpon>ReservationDetailsModal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Pooling\ReservationDetailsModal.ascx.designer.cs">
+      <DependentUpon>ReservationDetailsModal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Pooling\TopFeedback.ascx.cs">
+      <DependentUpon>TopFeedback.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Pooling\TopFeedback.ascx.designer.cs">
+      <DependentUpon>TopFeedback.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Pooling\TopFeedback2.ascx.cs">
+      <DependentUpon>TopFeedback2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Pooling\TopFeedback2.ascx.designer.cs">
+      <DependentUpon>TopFeedback2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Vehicles\VehiclesCheckBoxList.ascx.cs">
+      <DependentUpon>VehiclesCheckBoxList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Vehicles\VehiclesCheckBoxList.ascx.designer.cs">
+      <DependentUpon>VehiclesCheckBoxList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Vehicles\VehiclesDatePicker.ascx.cs">
+      <DependentUpon>VehiclesDatePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Vehicles\VehiclesDatePicker.ascx.designer.cs">
+      <DependentUpon>VehiclesDatePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.UserControls\Vehicles\VehiclesSelection.ascx.cs">
+      <DependentUpon>VehiclesSelection.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.UserControls\Vehicles\VehiclesSelection.ascx.designer.cs">
+      <DependentUpon>VehiclesSelection.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Webservices\Pooling\AlertsService.aspx.cs">
+      <DependentUpon>AlertsService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Webservices\Pooling\AlertsService.aspx.designer.cs">
+      <DependentUpon>AlertsService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Webservices\Reservations\Abstract\IReservationUpdateService.cs" />
+    <Compile Include="App.Webservices\Reservations\ReservationUpdateService.svc.cs">
+      <DependentUpon>ReservationUpdateService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="App.Classes\DAL\Sizing\Abstract\FleetPlanOptions.cs" />
+    <Compile Include="App_GlobalResources\lang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lang.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ListViewHeaders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListViewHeaders.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\LocalizedChartControl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizedChartControl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\LocalizedParameterControl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizedParameterControl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\LocalizedReportPages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizedReportPages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ToolTips.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToolTips.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AutoComplete.asmx.cs">
+      <DependentUpon>AutoComplete.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelGenerator.aspx.cs">
+      <DependentUpon>ExcelGenerator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExcelGenerator.aspx.designer.cs">
+      <DependentUpon>ExcelGenerator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\BulkInserts\DataTableCreator.cs" />
+    <Compile Include="FleetAllocation\BulkInserts\DataTableHelper.cs" />
+    <Compile Include="FleetAllocation\BusinessLogic\DemandGapCalculationStep.cs" />
+    <Compile Include="FleetAllocation\BusinessLogic\DemandGapOneCalculations.cs" />
+    <Compile Include="FleetAllocation\BusinessLogic\DemandGapTwoCalculations.cs" />
+    <Compile Include="FleetAllocation\BusinessLogic\DropdownLists\ListGenerator.cs" />
+    <Compile Include="FleetAllocation\BusinessLogic\ExcelExport\ExportAutoGrid.cs" />
+    <Compile Include="FleetAllocation\BusinessLogic\GraphingColours.cs" />
+    <Compile Include="FleetAllocation\BusinessLogic\RankLinq.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionDeletion\AdditionDeletionQueryable.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionPlanDataAccess\AdditionPlanDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionPlanDataAccess\AdditionPlanEntryFilter.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionPlanDataAccess\AdditionPlanMinMaxValueFilter.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionPlanDataAccess\Entities\AdditionEntity.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionPlanDataAccess\Entities\AdditionPlanEntity.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionPlanDataAccess\Entities\AdditionPlanMinMaxRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionPlanDataAccess\LocationLevelGroupings.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionPlanDataAccess\VehicleLevelGrouping.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionsLimits\Entities\MonthlyLimitUploadRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionsLimits\Entities\WeeklyEditRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionsLimits\MonthlyAddLimitDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionsLimits\WeeklyAddLimitDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\BaseDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Contribution\ContributionQueryable.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Contribution\Enties\ContributionEntity.cs" />
+    <Compile Include="FleetAllocation\DataAccess\CurrencyConversion\CurrencyConversionDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\DemandGapDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Entities\DemandGapOneByCarGroupRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Entities\RevenueDatabaseRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Entities\WeeklyMaxMinValues.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Entities\DemandGapVisualization.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Entities\LifecycleHoldingCostRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Entities\MaximumFleet.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Entities\MinCommercialSegmentRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Entities\MaxFleetFactorRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Entities\Output\WeeklyAddition.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Entities\Ranking\RankingOrderEntitiy.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Entities\RevenueRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Entities\SpreadCountryRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Entities\SpreadRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionsLimits\Entities\MonthlyLimitRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionsLimits\Entities\WeeklyLimitRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\FactorsDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Forecast\Entities\AddDelRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Forecast\Entities\ForecastHolder.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Forecast\Entities\SummedByWeekForecastHolder.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Forecast\FleetSizeFutureTrendQueryable.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Forecast\ForecastQueryable.cs" />
+    <Compile Include="FleetAllocation\DataAccess\LifecycleHoldingCostDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\LookupDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Reporting\FleetComparison\Entities\FleetComparisonEntity.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Reporting\FleetComparison\FleetComparisonDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Reporting\ForecastContribution\Entities\AdttionPlanHolder.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Reporting\ForecastContribution\Entities\ExpectedFleetHolder.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Reporting\ForecastContribution\Entities\ForecastContributionRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Reporting\ForecastContribution\Entities\TotalContributionRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Reporting\ForecastContribution\ForecastContributionDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Reporting\ForecastedFleetSize\Entities\ForecastedFleetSizeEntity.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Reporting\ForecastedFleetSize\ForecastedFleetSizeDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Reporting\SiteComparison\Entities\SiteComparisonEntity.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Reporting\SiteComparison\SiteComparisonDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\ScenarioAccess\MaxFleetFactorDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\ScenarioAccess\MinCommercialSegmentDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\ParameterAccess\ListItemAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\ParameterFiltering\CarGroupQueryable.cs" />
+    <Compile Include="FleetAllocation\DataAccess\ParameterFiltering\CarSegmentQueryable.cs" />
+    <Compile Include="FleetAllocation\DataAccess\ParameterFiltering\CommercialSegmentQueryable.cs" />
+    <Compile Include="FleetAllocation\DataAccess\ParameterFiltering\FleetHistoryQueryable.cs" />
+    <Compile Include="FleetAllocation\DataAccess\MaxFleetDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\MinFleetDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\Entities\NessesaryFleet.cs" />
+    <Compile Include="FleetAllocation\DataAccess\ParameterFiltering\LocationQueryable.cs" />
+    <Compile Include="FleetAllocation\DataAccess\ParameterFiltering\MaxFleetFactorQueryable.cs" />
+    <Compile Include="FleetAllocation\DataAccess\RevenueDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataAccess\ScenarioAccess\ScenarioCommands.cs" />
+    <Compile Include="FleetAllocation\DataAccess\ScenarioAccess\ScenarioType.cs" />
+    <Compile Include="FleetAllocation\DataAccess\StoredProcedureParameters\UpdateMaxFleetFactorParameter.cs" />
+    <Compile Include="FleetAllocation\DataAccess\VehicleDistribution\VehicleDistributionDataAccess.cs" />
+    <Compile Include="FleetAllocation\DataContext\Fao.cs">
+      <DependentUpon>Fao.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\DataContext\Fao.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fao.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\DataAccess\AdditionsLimits\Entities\MonthlyFileLimitRow.cs" />
+    <Compile Include="FleetAllocation\DataAccess\AdditionsLimits\Entities\WeeklyFileLimitRow.cs" />
+    <Compile Include="FleetAllocation\UserControls\AppliedAdditionPlans.ascx.cs">
+      <DependentUpon>AppliedAdditionPlans.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\AppliedAdditionPlans.ascx.designer.cs">
+      <DependentUpon>AppliedAdditionPlans.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\AdditionPlanHistory.ascx.cs">
+      <DependentUpon>AdditionPlanHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\AdditionPlanHistory.ascx.designer.cs">
+      <DependentUpon>AdditionPlanHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\DemandGapProgress\DemandGapCalculationProgress.ascx.cs">
+      <DependentUpon>DemandGapCalculationProgress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\DemandGapProgress\DemandGapCalculationProgress.ascx.designer.cs">
+      <DependentUpon>DemandGapCalculationProgress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Enums\AdditionPlanComparisonTypes.cs" />
+    <Compile Include="FleetAllocation\DataAccess\CurrencyConversion\Entities\UsdEuroConversionRow.cs" />
+    <Compile Include="FleetAllocation\UserControls\Factors\RankingDisplay.ascx.cs">
+      <DependentUpon>RankingDisplay.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Factors\RankingDisplay.ascx.designer.cs">
+      <DependentUpon>RankingDisplay.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Factors\UsdConversionRate.ascx.cs">
+      <DependentUpon>UsdConversionRate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Factors\UsdConversionRate.ascx.designer.cs">
+      <DependentUpon>UsdConversionRate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\LimitFiles\LimitUpload.ascx.cs">
+      <DependentUpon>LimitUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\LimitFiles\LimitUpload.ascx.designer.cs">
+      <DependentUpon>LimitUpload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\MissingHoldingCosts.ascx.cs">
+      <DependentUpon>MissingHoldingCosts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\MissingHoldingCosts.ascx.designer.cs">
+      <DependentUpon>MissingHoldingCosts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\MissingRevenueEntries.ascx.cs">
+      <DependentUpon>MissingRevenueEntries.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\MissingRevenueEntries.ascx.designer.cs">
+      <DependentUpon>MissingRevenueEntries.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\FleetComparison.ascx.cs">
+      <DependentUpon>FleetComparison.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\FleetComparison.ascx.designer.cs">
+      <DependentUpon>FleetComparison.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\FleetComparisonChart.ascx.cs">
+      <DependentUpon>FleetComparisonChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\FleetComparisonChart.ascx.designer.cs">
+      <DependentUpon>FleetComparisonChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\ForecastContributionChart.ascx.cs">
+      <DependentUpon>ForecastContributionChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\ForecastContributionChart.ascx.designer.cs">
+      <DependentUpon>ForecastContributionChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\ForecastContribution.ascx.cs">
+      <DependentUpon>ForecastContribution.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\ForecastContribution.ascx.designer.cs">
+      <DependentUpon>ForecastContribution.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\ForecastedFleetSize.ascx.cs">
+      <DependentUpon>ForecastedFleetSize.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\ForecastedFleetSize.ascx.designer.cs">
+      <DependentUpon>ForecastedFleetSize.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\AutoGrid.ascx.cs">
+      <DependentUpon>AutoGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\AutoGrid.ascx.designer.cs">
+      <DependentUpon>AutoGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\AdditionPlanGenerator.ascx.cs">
+      <DependentUpon>AdditionPlanGenerator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\AdditionPlanGenerator.ascx.designer.cs">
+      <DependentUpon>AdditionPlanGenerator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Factors\LifecycleHoldingCost.ascx.cs">
+      <DependentUpon>LifecycleHoldingCost.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Factors\LifecycleHoldingCost.ascx.designer.cs">
+      <DependentUpon>LifecycleHoldingCost.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Factors\MinCommercialSegment.ascx.cs">
+      <DependentUpon>MinCommercialSegment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Factors\MinCommercialSegment.ascx.designer.cs">
+      <DependentUpon>MinCommercialSegment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Factors\MaxFleetFactors.ascx.cs">
+      <DependentUpon>MaxFleetFactors.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Factors\MaxFleetFactors.ascx.designer.cs">
+      <DependentUpon>MaxFleetFactors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Factors\Revenue.ascx.cs">
+      <DependentUpon>Revenue.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Factors\Revenue.ascx.designer.cs">
+      <DependentUpon>Revenue.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\FaoParameter.ascx.cs">
+      <DependentUpon>FaoParameter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\FaoParameter.ascx.designer.cs">
+      <DependentUpon>FaoParameter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\ForecastedFleetSizeChart.ascx.cs">
+      <DependentUpon>ForecastedFleetSizeChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\ForecastedFleetSizeChart.ascx.designer.cs">
+      <DependentUpon>ForecastedFleetSizeChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\SiteComparison.ascx.cs">
+      <DependentUpon>SiteComparison.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\SiteComparison.ascx.designer.cs">
+      <DependentUpon>SiteComparison.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\SiteComparisonChart.ascx.cs">
+      <DependentUpon>SiteComparisonChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\Reports\SiteComparisonChart.ascx.designer.cs">
+      <DependentUpon>SiteComparisonChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\ScenarioSelection\ScenarioSelection.ascx.cs">
+      <DependentUpon>ScenarioSelection.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\ScenarioSelection\ScenarioSelection.ascx.designer.cs">
+      <DependentUpon>ScenarioSelection.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\DistributionLimits\MonthlyLimitDetails.ascx.cs">
+      <DependentUpon>MonthlyLimitDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\DistributionLimits\MonthlyLimitDetails.ascx.designer.cs">
+      <DependentUpon>MonthlyLimitDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\DistributionLimits\WeeklyLimitDetails.ascx.cs">
+      <DependentUpon>WeeklyLimitDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\UserControls\DistributionLimits\WeeklyLimitDetails.ascx.designer.cs">
+      <DependentUpon>WeeklyLimitDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\Webpages\AdditionsLimits.aspx.cs">
+      <DependentUpon>AdditionsLimits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\Webpages\AdditionsLimits.aspx.designer.cs">
+      <DependentUpon>AdditionsLimits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\Webpages\FactorMaintenance.aspx.cs">
+      <DependentUpon>FactorMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\Webpages\FactorMaintenance.aspx.designer.cs">
+      <DependentUpon>FactorMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\Webpages\AdditionPlanGenerator.aspx.cs">
+      <DependentUpon>AdditionPlanGenerator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\Webpages\AdditionPlanGenerator.aspx.designer.cs">
+      <DependentUpon>AdditionPlanGenerator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetAllocation\Webpages\Reporting.aspx.cs">
+      <DependentUpon>Reporting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetAllocation\Webpages\Reporting.aspx.designer.cs">
+      <DependentUpon>Reporting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Login\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Settings1.cs" />
+    <Compile Include="Webservices\FaoServices.asmx.cs">
+      <DependentUpon>FaoServices.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App.Classes\BLL\Pooling\Enums\" />
+    <Folder Include="App.Classes\DAL\MarsDataAccess\Sizing\SiteAndFleetComparisonDataHolders\" />
+    <Folder Include="App.Classes\DAL\Pooling\SiteComparison\" />
+    <Folder Include="App.Classes\DAL\SupplyAnalysisDataHolders\" />
+    <Folder Include="App.Classes\DAL\Web\Users\" />
+    <Folder Include="App.Handlers\" />
+    <Folder Include="App.References\log4net\" />
+    <Folder Include="App.UserControls\Pager\" />
+    <Folder Include="App.UserControls\Reports\" />
+    <Folder Include="App_GlobalResources\English\" />
+    <Folder Include="App_GlobalResources\German\" />
+    <Folder Include="Help\" />
+    <Folder Include="Temp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.MasterPages\Site.Master" />
+    <Content Include="App.MasterPages\Application.Master" />
+    <Content Include="App.Classes\DAL\FleetDemand\FleetDemand.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>FleetDemand.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="App.Classes\DAL\MarsDBContext\MarsDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MarsDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Themes\MarsV3\MarsV3.skin" />
+    <Content Include="App.Classes\DAL\MarsDBContext\RadMembership.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>RadMembership.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="App.Classes\DAL\Pooling\PoolingDataContext\PoolingDataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PoolingDataClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="packages.config" />
+    <Content Include="App.MasterPages\Mars.Master" />
+    <Content Include="FleetAllocation\DataContext\Fao.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Fao.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App.MasterPages\Fao.Master" />
+    <Content Include="App.References\Rad Library\RADLibrary.dll.config" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Properties\PublishProfiles\ToTest.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\lang.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>lang.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\LocalizedParameterControl.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>LocalizedParameterControl.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\LocalizedChartControl.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>LocalizedChartControl.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\LocalizedReportPages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>LocalizedReportPages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Classes\DAL\MarsDBContext\MarsDB.dbml.layout">
+      <DependentUpon>MarsDB.dbml</DependentUpon>
+    </None>
+    <Content Include="App.UserControls\Phase4\App_LocalResources\ExportToExcel.ascx.resx" />
+    <Content Include="App.UserControls\Phase4\App_LocalResources\FleetPlanUploadActivityLog.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App.UserControls\Phase4\App_LocalResources\ForecastAdjustment.ascx.resx" />
+    <Content Include="App.UserControls\Phase4\App_LocalResources\ForecastReconciliation.ascx.resx" />
+    <Content Include="App.UserControls\Phase4\App_LocalResources\FrozenZoneManagement.ascx.resx" />
+    <Content Include="App.UserControls\Phase4\App_LocalResources\GeneralReportParameters.ascx.resx" />
+    <Content Include="App.UserControls\Phase4\App_LocalResources\ManualMovementGridView.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App.UserControls\Phase4\App_LocalResources\ManualMovementTabView.ascx.resx" />
+    <Content Include="App.UserControls\Phase4\App_LocalResources\ManualMovementUpload.ascx.resx" />
+    <Content Include="App.UserControls\Phase4\App_LocalResources\NecessaryFleetManagement.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ListViewHeaders.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ListViewHeaders.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ToolTips.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ToolTips.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.UserControls\Pooling\App_LocalResources\TopFeedback.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Classes\DAL\Pooling\PoolingDataContext\PoolingDataClasses.dbml.layout">
+      <DependentUpon>PoolingDataClasses.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.Site\Pooling\App_LocalResources\ReservationDetails.aspx.resx" />
+    <Content Include="App.Site\Pooling\App_LocalResources\ThreeDayActuals.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Classes\DAL\FleetDemand\FleetDemand.dbml.layout">
+      <DependentUpon>FleetDemand.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Classes\DAL\MarsDBContext\RadMembership.dbml.layout">
+      <DependentUpon>RadMembership.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FleetAllocation\DataContext\Fao.dbml.layout">
+      <DependentUpon>Fao.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>33343</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

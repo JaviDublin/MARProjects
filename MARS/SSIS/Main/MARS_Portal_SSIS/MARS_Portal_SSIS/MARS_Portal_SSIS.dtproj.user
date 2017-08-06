@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTransformationsUserConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <CreateDeploymentUtility>true</CreateDeploymentUtility>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>MARS_DS</Id>
+            <Name>MARS_DS</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAy1P7EVnBWUWSDs9lL7mb5wAAAAAQAAAATQBBAFIAUwBfAEQAUwAAAANmAADAAAAAEAAAAMtAQPK7s+evn4AnkPKFUnIAAAAABIAAAKAAAAAQAAAAaSBg1W22kzK8AQ+eWEV0YBgAAAAZEdP5q/rdMvOm/nWJshbJQlsfsXgAw+4UAAAA4PeRi5vqrMLoFN3GLiz9FQB/+To=</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>MARS_DS</Id>
+            <Name>MARS_DS</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAy1P7EVnBWUWSDs9lL7mb5wAAAAAQAAAATQBBAFIAUwBfAEQAUwAAAANmAADAAAAAEAAAAEtvdhil9xt0Zh14QPzo2psAAAAABIAAAKAAAAAQAAAAB7N6HHze25+2GpheyyhosRgAAACfG0Wql4p+LhC5sPeKSaR+xORG/8cMC9gUAAAAU43QHhvDHOcr2g9RONROl7u+sSo=</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <OfflineMode>false</OfflineMode>
+        <ProgressReporting>true</ProgressReporting>
+      </Options>
+    </Configuration>
+  </Configurations>
+</DataTransformationsUserConfiguration>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="RadMembership">
+  <DataContextMoniker Name="/RadMembershipDataContext" />
+  <nestedChildShapes>
+    <classShape Id="683f6c45-2d84-4171-8b4c-068cbf847bab" absoluteBounds="5.125, 1.5, 2, 2.24658447265625">
+      <DataClassMoniker Name="/RadMembershipDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fc9da1e4-eb3a-49a5-9105-6ec049dfb70f" absoluteBounds="5.14, 1.96, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

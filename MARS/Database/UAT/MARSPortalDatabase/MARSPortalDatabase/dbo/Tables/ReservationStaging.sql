@@ -1,0 +1,35 @@
+﻿--CREATE TABLE [dbo].[ReservationStaging](
+--	[RES_ID_NBR] [varchar](14) NOT NULL,
+--	[COUNTRY] [varchar](10) NULL,
+--	[RENT_LOC] [varchar](10) NULL,
+--	[RTRN_LOC] [varchar](10) NULL,
+--	[ICIND] [varchar](2) NULL,
+--	[ONEWAY] [varchar](2) NULL,
+--	[RS_ARRIVAL_DATE] [datetime] NULL,
+--	[RS_ARRIVAL_TIME] [datetime] NULL,
+--	[RTRN_DATE] [datetime] NULL,
+--	[RTRN_TIME] [datetime] NULL,
+--	[RES_DAYS] [float] NULL,
+--	[GR_INCL_GOLDUPGR] [varchar](4) NULL,
+--	[RATE_QUOTED] [varchar](15) NULL,
+--	[SUBTOTAL_2] [float] NULL,
+--	[MOP] [varchar](10) NULL,
+--	[PREPAID] [varchar](2) NULL,
+--	[NEVERLOST] [varchar](20) NULL,
+--	[PREDELIVERY] [varchar](2) NULL,
+--	[CUST_NAME] [varchar](28) NULL,
+--	[PHONE] [varchar](25) NULL,
+--	[CDPID_NBR] [varchar](10) NULL,
+--	[CNTID_NBR] [varchar](10) NULL,
+--	[NO1_CLUB_GOLD] [varchar](20) NULL,
+--	[TACO] [varchar](10) NULL,
+--	[FLIGHT_NBR] [varchar](10) NULL,
+--	[GS] [varchar](2) NULL,
+--	[N1TYPE] [varchar](2) NULL,
+--	[DATE_SOLD_DT] [datetime] NULL,
+--	[DATE_SOLD_TM] [datetime] NULL,
+-- CONSTRAINT [PK_RES_ID_NBR] PRIMARY KEY CLUSTERED 
+--(
+--	[RES_ID_NBR] ASC
+--)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+--) ON [PRIMARY]

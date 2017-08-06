@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnCancelNecessaryFleetUpdateResource2.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btnCancelNecessaryFleetUpdateResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDummyResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDummyResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMultiUpdateResource2.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="btnMultiUpdateResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnResetResource2.Text" xml:space="preserve">
+    <value>Reset Country</value>
+  </data>
+  <data name="btnResetResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSaveNecessaryFleetUpdateResource2.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btnSaveNecessaryFleetUpdateResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cvNonRevResource2.ErrorMessage" xml:space="preserve">
+    <value>Invalid Non Rev Value</value>
+  </data>
+  <data name="cvNonRevResource2.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="cvNonRevResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cvUtilisationResource2.ErrorMessage" xml:space="preserve">
+    <value>Invalid Utilisation Value</value>
+  </data>
+  <data name="cvUtilisationResource2.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="cvUtilisationResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlCountryListResetResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlItemsPerPageSelectorResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlPageSelectResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlResetTypeResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="grdNecessaryFleetResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="grdNecessaryFleetResource2.EmptyDataText" xml:space="preserve">
+    <value>Please select a country</value>
+  </data>
+  <data name="grdNecessaryFleetResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonFirstResource2.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonFirstResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonLastResource2.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonLastResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonNextResource2.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonNextResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonPreviousResource2.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgButtonPreviousResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgsep1Resource2.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgsep1Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgsep2Resource2.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgsep2Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCarclassDescriptionResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCarClassIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCarClassResource2.Text" xml:space="preserve">
+    <value>Car Class:</value>
+  </data>
+  <data name="lblCarClassResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCountryDescriptionResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCountryIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCountryResource2.Text" xml:space="preserve">
+    <value>Country:</value>
+  </data>
+  <data name="lblCountryResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblitemsPerPageResource2.Text" xml:space="preserve">
+    <value>Items per Page:</value>
+  </data>
+  <data name="lblitemsPerPageResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLocationGroupIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLocationGroupNameResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLocationGroupResource2.Text" xml:space="preserve">
+    <value>Location Group:</value>
+  </data>
+  <data name="lblLocationGroupResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNecFleetMessageResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNecFleetMessageResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNonRevEditResource2.Text" xml:space="preserve">
+    <value>Non Rev:</value>
+  </data>
+  <data name="lblNonRevEditResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNonRevFleetResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNonRevResource2.Text" xml:space="preserve">
+    <value>Non Rev:</value>
+  </data>
+  <data name="lblNonRevResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSelectCountryResetResource2.Text" xml:space="preserve">
+    <value>Select Country:  </value>
+  </data>
+  <data name="lblSelectCountryResetResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSelectResetTypeResource2.Text" xml:space="preserve">
+    <value>Reset criteria:  </value>
+  </data>
+  <data name="lblSelectResetTypeResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblUtilisationEditResource2.Text" xml:space="preserve">
+    <value>Utilization:</value>
+  </data>
+  <data name="lblUtilisationEditResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblUtilisationResource2.Text" xml:space="preserve">
+    <value>Util.:</value>
+  </data>
+  <data name="lblUtilisationResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource5.Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ListItemResource5.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ListItemResource6.Text" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ListItemResource6.Value" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ListItemResource7.Text" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ListItemResource7.Value" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ListItemResource8.Text" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="ListItemResource8.Value" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="lnkCarClassResource2.Text" xml:space="preserve">
+    <value>Car Class</value>
+  </data>
+  <data name="lnkCarClassResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkEditResource2.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="lnkEditResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkLocationGroupfromResource2.Text" xml:space="preserve">
+    <value>Location Group</value>
+  </data>
+  <data name="lnkLocationGroupfromResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlEditNecessaryFleetResource2.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlEditNecessaryFleetResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlNecFleetResetResource2.GroupingText" xml:space="preserve">
+    <value>Reset Country Utilisation\ Non-Rev</value>
+  </data>
+  <data name="pnlNecFleetResetResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource10.AccessibleHeaderText" xml:space="preserve">
+    <value>CountryID</value>
+  </data>
+  <data name="TemplateFieldResource10.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource10.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource11.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource11.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource11.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource12.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource12.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource12.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource13.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource13.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource13.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource14.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource14.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource14.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource15.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource15.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource15.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource16.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource16.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource16.HeaderText" xml:space="preserve">
+    <value>Av. Fleet Util.</value>
+  </data>
+  <data name="TemplateFieldResource17.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource17.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource17.HeaderText" xml:space="preserve">
+    <value>NonRev Op. Fleet %</value>
+  </data>
+  <data name="TemplateFieldResource18.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource18.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource18.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCarClassResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCarClassResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCountryResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCountryResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLocationGroupResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLocationGroupResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtNonRevEditResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtNonRevEditResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtNonRevResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtNonRevResource2.ToolTip" xml:space="preserve">
+    <value>Leave this field blank to remain unmodified</value>
+  </data>
+  <data name="txtUtilisationEditResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtUtilisationEditResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtUtilisationResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtUtilisationResource2.ToolTip" xml:space="preserve">
+    <value>Leave this field blank to remain unmodified</value>
+  </data>
+  <data name="vsNecessaryFleetResource2.HeaderText" xml:space="preserve">
+    <value>You must enter valid data in the following fields:</value>
+  </data>
+  <data name="vsNecessaryFleetResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

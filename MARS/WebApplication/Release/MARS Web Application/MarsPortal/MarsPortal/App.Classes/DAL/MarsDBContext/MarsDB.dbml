@@ -1,0 +1,1615 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MARSPortal" Class="MarsDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=hescmarsq01;Initial Catalog=MARSPortal;User ID=raddbuser;Asynchronous Processing=True;MultipleActiveResultSets=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Rad.Properties.Settings.ApplicationDataBase" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ComparisonTopics" Member="ComparisonTopics">
+    <Type Name="ComparisonTopic">
+      <Column Name="ComparisonTopicId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ComparisonName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KpiCalculationTypes" Member="KpiCalculationTypes">
+    <Type Name="KpiCalculationType">
+      <Column Name="KpiCalculationTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CalculationName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MARS_CMS_FleetPlanEntry" Member="MARS_CMS_FleetPlanEntries">
+    <Type Name="MARS_CMS_FleetPlanEntry">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="fleetPlanID" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="uploadedBy" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="uploadedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="uploadedFileName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="MARS_CMS_FleetPlanEntry_MARS_CMS_FleetPlanDetail" Member="MARS_CMS_FleetPlanDetails" ThisKey="PKID" OtherKey="fleetPlanEntryID" Type="MARS_CMS_FleetPlanDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MARS_CMS_FleetPlanDetails" Member="MARS_CMS_FleetPlanDetails">
+    <Type Name="MARS_CMS_FleetPlanDetail">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fleetPlanEntryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="targetDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cms_Location_Group_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="car_class_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="addition" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="deletion" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="amount" Type="System.Int16" DbType="SmallInt" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="MARS_CMS_FleetPlanEntry_MARS_CMS_FleetPlanDetail" Member="MARS_CMS_FleetPlanEntry" ThisKey="fleetPlanEntryID" OtherKey="PKID" Type="MARS_CMS_FleetPlanEntry" IsForeignKey="true" />
+      <Association Name="CMS_LOCATION_GROUP_MARS_CMS_FleetPlanDetail" Member="CMS_LOCATION_GROUP" ThisKey="cms_Location_Group_ID" OtherKey="cms_location_group_id" Type="CMS_LOCATION_GROUP" IsForeignKey="true" />
+      <Association Name="CAR_GROUP_MARS_CMS_FleetPlanDetail" Member="CAR_GROUP" ThisKey="car_class_id" OtherKey="car_group_id" Type="CAR_GROUP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MARS_CMS_FORECAST" Member="MARS_CMS_FORECASTs">
+    <Type Name="MARS_CMS_FORECAST">
+      <Column Name="REP_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="COUNTRY" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CMS_LOCATION_GROUP_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CAR_CLASS_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CONSTRAINED" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="UNCONSTRAINED" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="FLEET" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="RESERVATIONS_BOOKED" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CURRENT_ONRENT" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="FORECASTED_RETURNS" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="ONRENT_LY" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="AVAILABLE_FLEET" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="OPERATIONAL_FLEET" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="OPERATIONAL_FLEET_S1" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="OPERATIONAL_FLEET_S2" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="OPERATIONAL_FLEET_S3" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="OPERATIONAL_FLEET_AV" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="TOTAL_FLEET" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Association Name="CMS_LOCATION_GROUP_MARS_CMS_FORECAST" Member="CMS_LOCATION_GROUP" ThisKey="CMS_LOCATION_GROUP_ID" OtherKey="cms_location_group_id" Type="CMS_LOCATION_GROUP" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="CAR_GROUP_MARS_CMS_FORECAST" Member="CAR_GROUP" ThisKey="CAR_CLASS_ID" OtherKey="car_group_id" Type="CAR_GROUP" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="COUNTRy_MARS_CMS_FORECAST" Member="COUNTRy1" ThisKey="COUNTRY" OtherKey="country1" Type="COUNTRy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AREACODES" Member="AREACODEs">
+    <Type Name="AREACODE">
+      <Column Name="ownarea" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="country" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="area_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="opco" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="fleetco" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="carsales" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="licensee" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Advantage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HertzOnDemand" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="AREACODE_LOCATION" Member="LOCATIONs" ThisKey="ownarea" OtherKey="ownarea" Type="LOCATION" />
+      <Association Name="COUNTRy_AREACODE" Member="COUNTRy1" ThisKey="country" OtherKey="country1" Type="COUNTRy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehiclesAbroadComments" Member="VehiclesAbroadComments">
+    <Type Name="VehiclesAbroadComment">
+      <Column Name="License" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RESERVATIONS_EUROPE_ACTUAL" Member="RESERVATIONS_EUROPE_ACTUALs">
+    <Type Name="RESERVATIONS_EUROPE_ACTUAL">
+      <Column Name="IMPORTTIME" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="REP_YEAR" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="REP_MONTH" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="COUNTRY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CMS_POOL" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CMS_LOC_GRP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="OPS_REGION" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="OPS_AREA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CAR_SEGMENT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CAR_CLASS" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CARVAN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RES_ID_NBR" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="RES_LOC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RENT_LOC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RTRN_LOC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ICIND" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ONEWAY" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="RS_ARRIVAL_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RS_ARRIVAL_TIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RTRN_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RTRN_TIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RES_DAYS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RES_VEH_CLASS" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="GR_INCL_GOLDUPGR" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="RATE_QUOTED" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="SUBTOTAL_2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MOP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PREPAID" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="NEVERLOST" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="PREDELIVERY" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CUST_NAME" Type="System.String" DbType="VarChar(28)" CanBeNull="true" />
+      <Column Name="PHONE" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="CDPID_NBR" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CNTID_NBR" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NO1_CLUB_GOLD" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TACO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FLIGHT_NBR" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="REMARKS" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="GS" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="N1TYPE" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="DATE_SOLD" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="R1" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="R2" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="R3" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="TS" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CO_HOURS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CO_DAYS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CI_HOURS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CI_HOURS_OFFSET" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CI_DAYS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OPS_AREAS" Member="OPS_AREAs">
+    <Type Name="OPS_AREA">
+      <Column Name="ops_area_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ops_area" Member="ops_area1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ops_region_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="isActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="OPS_AREA_LOCATION" Member="LOCATIONs" ThisKey="ops_area_id" OtherKey="ops_area_id" Type="LOCATION" />
+      <Association Name="OPS_REGION_OPS_AREA" Member="OPS_REGION" ThisKey="ops_region_id" OtherKey="ops_region_id" Type="OPS_REGION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OPS_REGIONS" Member="OPS_REGIONs">
+    <Type Name="OPS_REGION">
+      <Column Name="ops_region_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ops_region" Member="ops_region1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="country" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="isActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="OPS_REGION_OPS_AREA" Member="OPS_AREAs" ThisKey="ops_region_id" OtherKey="ops_region_id" Type="OPS_AREA" />
+      <Association Name="COUNTRy_OPS_REGION" Member="COUNTRy1" ThisKey="country" OtherKey="country1" Type="COUNTRy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reservation_Error_Log" Member="Reservation_Error_Logs">
+    <Type Name="Reservation_Error_Log">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Reservation_Error_Log_Reservation_Log" Member="Reservation_Logs" ThisKey="Id" OtherKey="ErrorLog_Id" Type="Reservation_Log" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reservation_Log" Member="Reservation_Logs">
+    <Type Name="Reservation_Log">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ErrorLog_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Reservation_Error_Log_Reservation_Log" Member="Reservation_Error_Log" ThisKey="ErrorLog_Id" OtherKey="Id" Type="Reservation_Error_Log" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="[General].[Fact_NonRevLog_Stats]" Member="Fact_NonRevLog_Stats">
+    <Type Name="Fact_NonRevLog_Stats">
+      <Column Name="Rep_Date" Type="System.DateTime" CanBeNull="false" />
+      <Column Name="dim_calendar_id" Type="System.Int32" CanBeNull="false" />
+      <Column Name="Rep_Year" Type="System.Int32" CanBeNull="false" />
+      <Column Name="Rep_Month" Type="System.Int32" CanBeNull="false" />
+      <Column Name="Rep_WeekOfYear" Type="System.Int32" CanBeNull="false" />
+      <Column Name="Rep_DayOfWeek" Type="System.Int32" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" CanBeNull="false" />
+      <Column Name="Lstwwd" Type="System.String" CanBeNull="false" />
+      <Column Name="CarGroup" Type="System.String" CanBeNull="false" />
+      <Column Name="OperStat" Type="System.String" CanBeNull="false" />
+      <Column Name="TotalVehicles" Type="System.Int32" CanBeNull="false" />
+      <Column Name="TotalVehiclesNR" Type="System.Int32" CanBeNull="false" />
+      <Column Name="cms_location_group_id" Type="System.Int32" CanBeNull="false" />
+      <Column Name="cms_pool_id" Type="System.Int32" CanBeNull="false" />
+      <Column Name="ops_area_id" Type="System.Int32" CanBeNull="false" />
+      <Column Name="ops_region_id" Type="System.Int32" CanBeNull="false" />
+      <Column Name="car_segment_id" Type="System.Int32" CanBeNull="false" />
+      <Column Name="car_class_id" Type="System.Int32" CanBeNull="false" />
+      <Column Name="car_group_id" Type="System.Int32" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MarsLogView" Member="MarsLogViews">
+    <Type Name="MarsLogView">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ErrorLog_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorMessage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Status_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LogType_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Timestamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Export.[Log]" Member="Logs">
+    <Type Name="Log">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ErrorLog_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LogType_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="LogType_Log" Member="LogType" ThisKey="LogType_Id" OtherKey="Id" Type="LogType" IsForeignKey="true" />
+      <Association Name="Error_Log_Log" Member="Error_Log" ThisKey="ErrorLog_Id" OtherKey="Id" Type="Error_Log" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Export.LogType" Member="LogTypes">
+    <Type Name="LogType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="LogType_Log" Member="Logs" ThisKey="Id" OtherKey="LogType_Id" Type="Log" />
+    </Type>
+  </Table>
+  <Table Name="Export.Error_Log" Member="Error_Logs">
+    <Type Name="Error_Log">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Error_Log_Log" Member="Logs" ThisKey="Id" OtherKey="ErrorLog_Id" Type="Log" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ManualMovementXCmd" Member="ManualMovementXCmds">
+    <Type Name="ManualMovementXCmd">
+      <Column Name="Descriptor" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Command" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserLogonHistory" Member="UserLogonHistories">
+    <Type Name="UserLogonHistory">
+      <Column Name="UserLogonHistoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CmsForecastView" Member="CmsForecastViews">
+    <Type Name="CmsForecastView">
+      <Column Name="REP_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="COUNTRY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CMS_LOCATION_GROUP_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Car_Group_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CONSTRAINED" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="UNCONSTRAINED" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="FLEET" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="RESERVATIONS_BOOKED" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CURRENT_ONRENT" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="FORECASTED_RETURNS" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="ONRENT_LY" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="AVAILABLE_FLEET" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="NecessaryConstrained" Type="System.Decimal" DbType="Decimal(38,19)" CanBeNull="true" />
+      <Column Name="NecessaryUnconstrained" Type="System.Decimal" DbType="Decimal(38,19)" CanBeNull="true" />
+      <Column Name="NecessaryBooked" Type="System.Decimal" DbType="Decimal(38,19)" CanBeNull="true" />
+      <Column Name="NONREV_FLEET" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="UTILISATION" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="cms_pool_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="car_class_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="car_segment_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cms_location_group" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="car_group" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="car_class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="car_segment" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cms_pool" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="country_description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="OPERATIONAL_FLEET" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="TOTAL_FLEET" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Settings.RibbonMenu" Member="RibbonMenus">
+    <Type Name="RibbonMenu">
+      <Column Name="MenuId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UrlId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Position" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IconUrl" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="RibbonMenu_MarsUserRoleMenuAccess" Member="MarsUserRoleMenuAccesses" ThisKey="UrlId" OtherKey="UrlId" Type="MarsUserRoleMenuAccess" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MARS_RoleRibbonMenu" Member="MARS_RoleRibbonMenus">
+    <Type Name="MARS_RoleRibbonMenu">
+      <Column Name="MenuId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="roleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="General.Fact_NonRevLog_Summary" Member="Fact_NonRevLog_Summaries">
+    <Type Name="Fact_NonRevLog_Summary">
+      <Column Name="log_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dim_calendar_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="country_car" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="country_loc" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="location_group" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="location_group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="location_pool" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="location_pool_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="location_ops_area" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="location_ops_area_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="location_ops_region" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="location_ops_region_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="car_group" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="car_group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="car_class" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="car_class_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="car_segment" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="car_segment_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="location" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="total_records" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total_fleet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="operational_fleet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="available_fleet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rev_fleet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="non_rev_fleet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup4" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup5" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup6" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup7" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup8" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup9" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total_fleet_cs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="operational_fleet_cs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="available_fleet_cs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rev_fleet_cs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="non_rev_fleet_cs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup1_cs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup2_cs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup3_cs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup4_cs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup5_cs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup6_cs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup7_cs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup8_cs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup9_cs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total_fleet_lc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="operational_fleet_lc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="available_fleet_lc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rev_fleet_lc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="non_rev_fleet_lc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup1_lc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup2_lc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup3_lc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup4_lc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup5_lc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup6_lc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup7_lc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup8_lc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup9_lc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total_fleet_ad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="operational_fleet_ad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="available_fleet_ad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rev_fleet_ad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="non_rev_fleet_ad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup1_ad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup2_ad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup3_ad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup4_ad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup5_ad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup6_ad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup7_ad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup8_ad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup9_ad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total_fleet_hd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="operational_fleet_hd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="available_fleet_hd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rev_fleet_hd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="non_rev_fleet_hd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup1_hd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup2_hd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup3_hd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup4_hd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup5_hd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup6_hd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup7_hd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup8_hd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup9_hd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total_fleet_op" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="operational_fleet_op" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="available_fleet_op" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rev_fleet_op" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="non_rev_fleet_op" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup1_op" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup2_op" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup3_op" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup4_op" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup5_op" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup6_op" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup7_op" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup8_op" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup9_op" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total_fleet_tt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="operational_fleet_tt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="available_fleet_tt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rev_fleet_tt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="non_rev_fleet_tt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup1_tt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup2_tt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup3_tt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup4_tt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup5_tt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup6_tt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup7_tt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup8_tt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daygroup9_tt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OperationalStatusCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Rep_DayOfWeek" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Settings.Operational_Status" Member="Operational_Status">
+    <Type Name="Operational_Status">
+      <Column Name="OperationalStatusId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OperationalStatusCode" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="OperationalStatusName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KCICode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Operational_Status_VehicleNonRevPeriodEntry" Member="VehicleNonRevPeriodEntries" ThisKey="OperationalStatusId" OtherKey="OperationalStatusId" Type="VehicleNonRevPeriodEntry" />
+      <Association Name="Operational_Status_Vehicle" Member="Vehicles" ThisKey="OperationalStatusId" OtherKey="LastOperationalStatusId" Type="Vehicle" />
+      <Association Name="Operational_Status_VehicleHistory" Member="VehicleHistories" ThisKey="OperationalStatusId" OtherKey="OperationalStatusId" Type="VehicleHistory" />
+    </Type>
+  </Table>
+  <Table Name="General.Fact_NonRevLog" Member="Fact_NonRevLogs">
+    <Type Name="Fact_NonRevLog">
+      <Column Name="NonRevLogId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VehicleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NRdays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BDDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MMDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Lstwwd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LstNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LstDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Duewwd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Prevwwd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LstMlg" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DrvName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OperStat" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="MoveType" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="DepStat" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="CarHold" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="IDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ERDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="RemarkId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsOpen" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fleet_rac_ops" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fleet_rac_ttl" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fleet_carsales" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fleet_licensee" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fleet_adv" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fleet_hod" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TotalFleet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AvailableFleet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OperationalFleet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KCICode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DayGroupCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="IsApproved" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RacfId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ApprovalDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RemarkIdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LocationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountryLoc" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CarGroup" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CountryCar" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="RemarkRacfid" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Dim_Fleet_Fact_NonRevLog" Member="Dim_Fleet" ThisKey="VehicleId" OtherKey="VehicleId" Type="Dim_Fleet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="General.Dim_Fleet" Member="Dim_Fleets">
+    <Type Name="Dim_Fleet">
+      <Column Name="VehicleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Serial" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Plate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Unit" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MSODate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ModelDesc" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CarGroup" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="OwnArea" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LastDailyFileDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FirstDailyFileDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Total_Fleet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Operational_Fleet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Available_Fleet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fleet_rac_ops" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fleet_rac_ttl" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fleet_licensee" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fleet_carsales" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fleet_adv" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fleet_hod" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Dim_Fleet_Fact_NonRevLog" Member="Fact_NonRevLogs" ThisKey="VehicleId" OtherKey="VehicleId" Type="Fact_NonRevLog" />
+    </Type>
+  </Table>
+  <Table Name="Settings.NonRev_Day_Groups" Member="NonRev_Day_Groups">
+    <Type Name="NonRev_Day_Group">
+      <Column Name="NonRevDayGroupId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DayGroupCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DayMin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DayMax" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DayGroupName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StatisticsPageAccess" Member="StatisticsPageAccesses">
+    <Type Name="StatisticsPageAccess">
+      <Column Name="StatisticsPageAccessId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AccessedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AccessedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Communications" Member="Communications">
+    <Type Name="Communication">
+      <Column Name="CommunicationsID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CommDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Heading" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Details" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResAdditions" Member="ResAdditions">
+    <Type Name="ResAddition">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LocId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CarGrpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RepDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CAR_GROUP_ResAddition" Member="CAR_GROUP" ThisKey="CarGrpId" OtherKey="car_group_id" Type="CAR_GROUP" IsForeignKey="true" />
+      <Association Name="LOCATION_ResAddition" Member="LOCATION" ThisKey="LocId" OtherKey="dim_Location_id" Type="LOCATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResDeletions" Member="ResDeletions">
+    <Type Name="ResDeletion">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LocId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CarGrpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RepDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CAR_GROUP_ResDeletion" Member="CAR_GROUP" ThisKey="CarGrpId" OtherKey="car_group_id" Type="CAR_GROUP" IsForeignKey="true" />
+      <Association Name="LOCATION_ResDeletion" Member="LOCATION" ThisKey="LocId" OtherKey="dim_Location_id" Type="LOCATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResBuffer" Member="ResBuffers">
+    <Type Name="ResBuffer">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LocId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CarGrpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CAR_GROUP_ResBuffer" Member="CAR_GROUP" ThisKey="CarGrpId" OtherKey="car_group_id" Type="CAR_GROUP" IsForeignKey="true" />
+      <Association Name="LOCATION_ResBuffer" Member="LOCATION" ThisKey="LocId" OtherKey="dim_Location_id" Type="LOCATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Document" Member="Documents">
+    <Type Name="Document">
+      <Column Name="DocumentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="OrderNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Settings.Movement_Types" Member="Movement_Types">
+    <Type Name="Movement_Type">
+      <Column Name="MovementTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MovementTypeCode" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="MovementTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Movement_Type_VehicleNonRevPeriodEntry" Member="VehicleNonRevPeriodEntries" ThisKey="MovementTypeId" OtherKey="MovementTypeId" Type="VehicleNonRevPeriodEntry" />
+      <Association Name="Movement_Type_Vehicle" Member="Vehicles" ThisKey="MovementTypeId" OtherKey="LastMovementTypeId" Type="Vehicle" />
+      <Association Name="Movement_Type_VehicleHistory" Member="VehicleHistories" ThisKey="MovementTypeId" OtherKey="MovementTypeId" Type="VehicleHistory" />
+    </Type>
+  </Table>
+  <Table Name="Settings.NonRev_Remarks_List" Member="NonRev_Remarks_Lists">
+    <Type Name="NonRev_Remarks_List">
+      <Column Name="RemarkId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RemarkText" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="isActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="NonRev_Remarks_List_VehicleNonRevPeriodEntryRemark" Member="VehicleNonRevPeriodEntryRemarks" ThisKey="RemarkId" OtherKey="RemarkId" Type="VehicleNonRevPeriodEntryRemark" />
+      <Association Name="NonRev_Remarks_List_VehicleHistory" Member="VehicleHistories" ThisKey="RemarkId" OtherKey="RemarkId" Type="VehicleHistory" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleNonRevPeriod" Member="VehicleNonRevPeriods">
+    <Type Name="VehicleNonRevPeriod">
+      <Column Name="VechicleNonRevPeriodId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VehicleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EnteredNonRevTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LeftNonRevTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EnteredNonRevLastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LeftNonRevLastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DaysInNonRev" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="VehicleNonRevPeriod_VehicleNonRevPeriodEntry" Member="VehicleNonRevPeriodEntries" ThisKey="VechicleNonRevPeriodId" OtherKey="VehicleNonRevPeriodId" Type="VehicleNonRevPeriodEntry" />
+      <Association Name="Vehicle_VehicleNonRevPeriod" Member="Vehicle" ThisKey="VehicleId" OtherKey="VehicleId" Type="Vehicle" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleNonRevPeriodEntryRemark" Member="VehicleNonRevPeriodEntryRemarks">
+    <Type Name="VehicleNonRevPeriodEntryRemark">
+      <Column Name="VehicleNonRevPeriodEntryRemarkId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VehicleNonRevPeriodEntryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RemarkId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExpectedResolutionDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="NonRev_Remarks_List_VehicleNonRevPeriodEntryRemark" Member="NonRev_Remarks_List" ThisKey="RemarkId" OtherKey="RemarkId" Type="NonRev_Remarks_List" IsForeignKey="true" />
+      <Association Name="VehicleNonRevPeriodEntry_VehicleNonRevPeriodEntryRemark" Member="VehicleNonRevPeriodEntry" ThisKey="VehicleNonRevPeriodEntryId" OtherKey="VehicleNonRevPeriodEntryId" Type="VehicleNonRevPeriodEntry" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleNonRevApproval" Member="VehicleNonRevApprovals">
+    <Type Name="VehicleNonRevApproval">
+      <Column Name="VehicleNonRevApprovalId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ApprovedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="VehiclesApproved" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OwningCountry" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="LocationCountry" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="OperationalStatusIds" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="MinimumDaysNonRev" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="VehicleNonRevApproval_VehicleNonRevApprovalEntry" Member="VehicleNonRevApprovalEntries" ThisKey="VehicleNonRevApprovalId" OtherKey="VehicleNonRevApprovalId" Type="VehicleNonRevApprovalEntry" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleNonRevApprovalEntry" Member="VehicleNonRevApprovalEntries">
+    <Type Name="VehicleNonRevApprovalEntry">
+      <Column Name="VehicleNonRevApprovalEntryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VehicleNonRevApprovalId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VehicleNonRevPeriodEntryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DaysNonRevAtApproval" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="VehicleNonRevApproval_VehicleNonRevApprovalEntry" Member="VehicleNonRevApproval" ThisKey="VehicleNonRevApprovalId" OtherKey="VehicleNonRevApprovalId" Type="VehicleNonRevApproval" IsForeignKey="true" />
+      <Association Name="VehicleNonRevPeriodEntry_VehicleNonRevApprovalEntry" Member="VehicleNonRevPeriodEntry" ThisKey="VehicleNonRevPeriodEntryId" OtherKey="VehicleNonRevPeriodEntryId" Type="VehicleNonRevPeriodEntry" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FLEET_EUROPE_ACTUAL" Member="FLEET_EUROPE_ACTUALs">
+    <Type Name="FLEET_EUROPE_ACTUAL">
+      <Column Name="IMPORTTIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BASEOP" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BDDAYS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAPCOST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CAPDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CARHOLD1" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="COLOR" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="DAYSAREA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DAYSCTRY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DAYSMOVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DAYSREV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DEPAMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DEPSTAT" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="DRVNAME" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="DUEAREA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DUEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DUETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DUEWWD" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="IDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LICENSE" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="LSTAREA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LSTDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LSTMLG" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="LSTNO" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="LSTOORC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LSTTIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LSTTYPE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LSTWWD" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MMDAYS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MODDESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODEL" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MODGROUP" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="MOVETYPE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MSODATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OPERDAYS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OPERSTAT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OWNAREA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="OWNWWD" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PONO" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="PREVWWD" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RADATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RALOC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RC" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="SDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SERIAL" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="SPROCDAT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TERMDAYS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UNIT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VC" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="VEHCLAS" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="VEHTYPE" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="VENDNBR" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VISMODEL" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="COUNTRY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="POOL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LOC_GROUP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARVAN" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CAR_CLASS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FLEET_RAC_TTL" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FLEET_RAC_OPS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FLEET_CARSALES" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FLEET_LICENSEE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TOTAL_FLEET" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARSALES" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARHOLD_H" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CARHOLD_L" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CU" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WS_NONRAC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OPERATIONAL_FLEET" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TW" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TB" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WS_RAC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AVAILABLE_TB" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AVAILABLE_FLEET" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RT" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SU" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GOLD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PREDELIVERY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OVERDUE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ON_RENT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CI_HOURS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CI_HOURS_OFFSET" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CI_DAYS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FLEET_ADV" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FLEET_HOD" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VehicleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="COUNTRy_FLEET_EUROPE_ACTUAL" Member="COUNTRy1" ThisKey="COUNTRY" OtherKey="country1" Type="COUNTRy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reservations" Member="Reservations">
+    <Type Name="Reservations">
+      <Column Name="RES_ID_NBR" Type="System.String" DbType="VarChar(14) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="COUNTRY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RENT_LOC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RTRN_LOC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ICIND" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ONEWAY" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="RS_ARRIVAL_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RS_ARRIVAL_TIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RTRN_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RTRN_TIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RES_DAYS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GR_INCL_GOLDUPGR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RATE_QUOTED" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="SUBTOTAL_2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MOP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PREPAID" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="NEVERLOST" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="PREDELIVERY" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CUST_NAME" Type="System.String" DbType="VarChar(28)" CanBeNull="true" />
+      <Column Name="PHONE" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="CDPID_NBR" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CNTID_NBR" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NO1_CLUB_GOLD" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TACO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FLIGHT_NBR" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="GS" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="N1TYPE" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="DATE_SOLD" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CO_HOURS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CO_DAYS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CI_HOURS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CI_HOURS_OFFSET" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CI_DAYS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ArrivalDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReturnDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReservedCarGroup" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="ReservedCarGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Reservations_ResRemark" Member="ResRemarks" ThisKey="RES_ID_NBR" OtherKey="ResIdNbr" Type="ResRemark" />
+      <Association Name="CAR_GROUP_Reservations" Member="CAR_GROUP" ThisKey="GR_INCL_GOLDUPGR" OtherKey="car_group_id" Type="CAR_GROUP" IsForeignKey="true" />
+      <Association Name="LOCATION_Reservations" Member="LOCATION" ThisKey="RTRN_LOC" OtherKey="dim_Location_id" Type="LOCATION" IsForeignKey="true" />
+      <Association Name="LOCATION_Reservations1" Member="LOCATION1" ThisKey="RENT_LOC" OtherKey="dim_Location_id" Type="LOCATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResRemarks" Member="ResRemarks">
+    <Type Name="ResRemark">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SeqNbr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResRmkType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ResIdNbr" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Association Name="Reservations_ResRemark" Member="Reservations" ThisKey="ResIdNbr" OtherKey="RES_ID_NBR" Type="Reservations" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleNonRevPeriodEntry" Member="VehicleNonRevPeriodEntries">
+    <Type Name="VehicleNonRevPeriodEntry">
+      <Column Name="VehicleNonRevPeriodEntryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VehicleNonRevPeriodId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OperationalStatusId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MovementTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastLocationCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastChangeDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VehicleFleetTypeId" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DaysNonRev" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="VehicleNonRevPeriodEntry_VehicleNonRevPeriodEntryRemark" Member="VehicleNonRevPeriodEntryRemarks" ThisKey="VehicleNonRevPeriodEntryId" OtherKey="VehicleNonRevPeriodEntryId" Type="VehicleNonRevPeriodEntryRemark" />
+      <Association Name="VehicleNonRevPeriodEntry_VehicleNonRevApprovalEntry" Member="VehicleNonRevApprovalEntries" ThisKey="VehicleNonRevPeriodEntryId" OtherKey="VehicleNonRevPeriodEntryId" Type="VehicleNonRevApprovalEntry" />
+      <Association Name="Movement_Type_VehicleNonRevPeriodEntry" Member="Movement_Type" ThisKey="MovementTypeId" OtherKey="MovementTypeId" Type="Movement_Type" IsForeignKey="true" />
+      <Association Name="Operational_Status_VehicleNonRevPeriodEntry" Member="Operational_Status" ThisKey="OperationalStatusId" OtherKey="OperationalStatusId" Type="Operational_Status" IsForeignKey="true" />
+      <Association Name="VehicleNonRevPeriod_VehicleNonRevPeriodEntry" Member="VehicleNonRevPeriod" ThisKey="VehicleNonRevPeriodId" OtherKey="VechicleNonRevPeriodId" Type="VehicleNonRevPeriod" IsForeignKey="true" />
+      <Association Name="VehicleFleetType_VehicleNonRevPeriodEntry" Member="VehicleFleetType" ThisKey="VehicleFleetTypeId" OtherKey="VehicleFleetTypeId" Type="VehicleFleetType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleFleetType" Member="VehicleFleetTypes">
+    <Type Name="VehicleFleetType">
+      <Column Name="VehicleFleetTypeId" Type="System.Byte" DbType="TinyInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FleetTypeName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="VehicleFleetType_VehicleNonRevPeriodEntry" Member="VehicleNonRevPeriodEntries" ThisKey="VehicleFleetTypeId" OtherKey="VehicleFleetTypeId" Type="VehicleNonRevPeriodEntry" />
+      <Association Name="VehicleFleetType_FleetNow" Member="FleetNows" ThisKey="VehicleFleetTypeId" OtherKey="FleetTypeId" Type="FleetNow" />
+      <Association Name="VehicleFleetType_FleetHistory" Member="FleetHistories" ThisKey="VehicleFleetTypeId" OtherKey="FleetTypeId" Type="FleetHistory" />
+      <Association Name="VehicleFleetType_Vehicle" Member="Vehicles" ThisKey="VehicleFleetTypeId" OtherKey="VehicleFleetTypeId" Type="Vehicle" />
+      <Association Name="VehicleFleetType_VehicleHistory" Member="VehicleHistories" ThisKey="VehicleFleetTypeId" OtherKey="VehicleFleetTypeId" Type="VehicleHistory" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MARS_Users" Member="MARS_Users">
+    <Type Name="MARS_User">
+      <Column Name="racfId" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="MARS_User_MARS_UsersInRole" Member="MARS_UsersInRoles" ThisKey="racfId" OtherKey="userId" Type="MARS_UsersInRole" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MARS_Roles" Member="MARS_Roles">
+    <Type Name="MARS_Role">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="roleName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="pageAccess" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Association Name="MARS_Role_MARS_UsersInRole" Member="MARS_UsersInRoles" ThisKey="id" OtherKey="roleId" Type="MARS_UsersInRole" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MARS_UsersInRoles" Member="MARS_UsersInRoles">
+    <Type Name="MARS_UsersInRole">
+      <Column Name="userId" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="roleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="country" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="userRoleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="MARS_Role_MARS_UsersInRole" Member="MARS_Role" ThisKey="roleId" OtherKey="id" Type="MARS_Role" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="MARS_User_MARS_UsersInRole" Member="MARS_User" ThisKey="userId" OtherKey="racfId" Type="MARS_User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FleetNow" Member="FleetNows">
+    <Type Name="FleetNow">
+      <Column Name="FleetNowId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CarGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LocationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FleetTypeId" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SumTotal" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumBd" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumCu" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumFs" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumHa" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumHl" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumLl" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumMm" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumNc" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumPl" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumRl" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumRp" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumIdle" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumSu" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumSv" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumTb" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumTc" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumTn" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumTw" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumWs" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SumOverdue" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Utilization" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="OperationalFleet" Type="System.Double" DbType="Float NOT NULL" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="AvailableFleet" Type="System.Double" DbType="Float NOT NULL" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="OnRent" Type="System.Double" DbType="Float NOT NULL" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="VehicleFleetType_FleetNow" Member="VehicleFleetType" ThisKey="FleetTypeId" OtherKey="VehicleFleetTypeId" Type="VehicleFleetType" IsForeignKey="true" />
+      <Association Name="CAR_GROUP_FleetNow" Member="CAR_GROUP" ThisKey="CarGroupId" OtherKey="car_group_id" Type="CAR_GROUP" IsForeignKey="true" />
+      <Association Name="LOCATION_FleetNow" Member="LOCATION" ThisKey="LocationId" OtherKey="dim_Location_id" Type="LOCATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CMS_POOLS" Member="CMS_POOLs">
+    <Type Name="CMS_POOL">
+      <Column Name="cms_pool_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="cms_pool" Member="cms_pool1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="country" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CMS_POOL_CMS_LOCATION_GROUP" Member="CMS_LOCATION_GROUPs" ThisKey="cms_pool_id" OtherKey="cms_pool_id" Type="CMS_LOCATION_GROUP" />
+      <Association Name="COUNTRy_CMS_POOL" Member="COUNTRy1" ThisKey="country" OtherKey="country1" Type="COUNTRy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CMS_LOCATION_GROUPS" Member="CMS_LOCATION_GROUPs">
+    <Type Name="CMS_LOCATION_GROUP">
+      <Column Name="cms_location_group_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="cms_location_group_code_dw" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="cms_location_group" Member="cms_location_group1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="cms_pool_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CMS_LOCATION_GROUP_MARS_CMS_FleetPlanDetail" Member="MARS_CMS_FleetPlanDetails" ThisKey="cms_location_group_id" OtherKey="cms_Location_Group_ID" Type="MARS_CMS_FleetPlanDetail" />
+      <Association Name="CMS_LOCATION_GROUP_MARS_CMS_FORECAST" Member="MARS_CMS_FORECASTs" ThisKey="cms_location_group_id" OtherKey="CMS_LOCATION_GROUP_ID" Type="MARS_CMS_FORECAST" />
+      <Association Name="CMS_LOCATION_GROUP_LOCATION" Member="LOCATIONs" ThisKey="cms_location_group_id" OtherKey="cms_location_group_id" Type="LOCATION" />
+      <Association Name="CMS_LOCATION_GROUP_MARS_CMS_NECESSARY_FLEET" Member="MARS_CMS_NECESSARY_FLEETs" ThisKey="cms_location_group_id" OtherKey="CMS_LOCATION_GROUP_ID" Type="MARS_CMS_NECESSARY_FLEET" />
+      <Association Name="CMS_LOCATION_GROUP_MARS_CMS_FORECAST_HISTORY" Member="MARS_CMS_FORECAST_HISTORies" ThisKey="cms_location_group_id" OtherKey="CMS_LOCATION_GROUP_ID" Type="MARS_CMS_FORECAST_HISTORY" />
+      <Association Name="CMS_LOCATION_GROUP_MARS_CMS_FORECAST_ADJUSTMENT" Member="MARS_CMS_FORECAST_ADJUSTMENTs" ThisKey="cms_location_group_id" OtherKey="CMS_LOCATION_GROUP_ID" Type="MARS_CMS_FORECAST_ADJUSTMENT" />
+      <Association Name="CMS_LOCATION_GROUP_FleetSizeFutureTrend" Member="FleetSizeFutureTrends" ThisKey="cms_location_group_id" OtherKey="LocGrpId" Type="FleetSizeFutureTrend" />
+      <Association Name="CMS_POOL_CMS_LOCATION_GROUP" Member="CMS_POOL" ThisKey="cms_pool_id" OtherKey="cms_pool_id" Type="CMS_POOL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FleetHistory" Member="FleetHistories">
+    <Type Name="FleetHistory">
+      <Column Name="FleetHistoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CarGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LocationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FleetTypeId" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="AvgTotal" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinTotal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxTotal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakTotal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughTotal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgBd" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinBd" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxBd" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakBd" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughBd" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgCu" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinCu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxCu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakCu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughCu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgFs" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinFs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxFs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakFs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughFs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgHa" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinHa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxHa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakHa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughHa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgHl" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinHl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxHl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakHl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughHl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgLl" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinLl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxLl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakLl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughLl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgMm" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinMm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxMm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakMm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughMm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgNc" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinNc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxNc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakNc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughNc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgPl" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinPl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxPl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakPl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughPl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgRl" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinRl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxRl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakRl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughRl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgRp" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinRp" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxRp" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakRp" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughRp" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgIdle" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinIdle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxIdle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakIdle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughIdle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgSu" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinSu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxSu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakSu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughSu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgSv" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinSv" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxSv" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakSv" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughSv" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgTb" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinTb" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxTb" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakTb" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughTb" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgTc" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinTc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxTc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakTc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughTc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgTn" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinTn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxTn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakTn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughTn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgTw" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinTw" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxTw" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakTw" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughTw" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgWs" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinWs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxWs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakWs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughWs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgOverdue" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinOverdue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxOverdue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakOverdue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughOverdue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgOperationalFleet" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinOperationalFleet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxOperationalFleet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakOperationalFleet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughOperationalFleet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgAvailableFleet" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinAvailableFleet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxAvailableFleet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakAvailableFleet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughAvailableFleet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvgOnRent" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MinOnRent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxOnRent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeakOnRent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TroughOnRent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="VehicleFleetType_FleetHistory" Member="VehicleFleetType" ThisKey="FleetTypeId" OtherKey="VehicleFleetTypeId" Type="VehicleFleetType" IsForeignKey="true" />
+      <Association Name="CAR_GROUP_FleetHistory" Member="CAR_GROUP" ThisKey="CarGroupId" OtherKey="car_group_id" Type="CAR_GROUP" IsForeignKey="true" />
+      <Association Name="LOCATION_FleetHistory" Member="LOCATION" ThisKey="LocationId" OtherKey="dim_Location_id" Type="LOCATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReservationTeradataControlLog" Member="ReservationTeradataControlLogs">
+    <Type Name="ReservationTeradataControlLog">
+      <Column Name="ReservationTeradataControlLogId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HertzTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TeradataTimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Processed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CAR_GROUPS" Member="CAR_GROUPs">
+    <Type Name="CAR_GROUP">
+      <Column Name="car_group_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="car_group" Member="car_group1" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="car_group_gold" Type="System.String" DbType="VarChar(3)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="car_class_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="sort_car_group" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="car_group_fivestar" Type="System.String" DbType="VarChar(3)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="car_group_presidentCircle" Type="System.String" DbType="VarChar(3)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="car_group_platinum" Type="System.String" DbType="VarChar(3)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CAR_GROUP_MARS_CMS_FleetPlanDetail" Member="MARS_CMS_FleetPlanDetails" ThisKey="car_group_id" OtherKey="car_class_id" Type="MARS_CMS_FleetPlanDetail" />
+      <Association Name="CAR_GROUP_MARS_CMS_FORECAST" Member="MARS_CMS_FORECASTs" ThisKey="car_group_id" OtherKey="CAR_CLASS_ID" Type="MARS_CMS_FORECAST" />
+      <Association Name="CAR_GROUP_ResAddition" Member="ResAdditions" ThisKey="car_group_id" OtherKey="CarGrpId" Type="ResAddition" />
+      <Association Name="CAR_GROUP_ResDeletion" Member="ResDeletions" ThisKey="car_group_id" OtherKey="CarGrpId" Type="ResDeletion" />
+      <Association Name="CAR_GROUP_ResBuffer" Member="ResBuffers" ThisKey="car_group_id" OtherKey="CarGrpId" Type="ResBuffer" />
+      <Association Name="CAR_GROUP_Reservations" Member="Reservations" ThisKey="car_group_id" OtherKey="GR_INCL_GOLDUPGR" Type="Reservations" />
+      <Association Name="CAR_GROUP_FleetNow" Member="FleetNows" ThisKey="car_group_id" OtherKey="CarGroupId" Type="FleetNow" />
+      <Association Name="CAR_GROUP_FleetHistory" Member="FleetHistories" ThisKey="car_group_id" OtherKey="CarGroupId" Type="FleetHistory" />
+      <Association Name="CAR_GROUP_Reservation" Member="Reservations1" ThisKey="car_group_id" OtherKey="ReservedCarGroupId" Type="Reservation" />
+      <Association Name="CAR_GROUP_Reservation1" Member="Reservations2" ThisKey="car_group_id" OtherKey="UpgradedCarGroupId" Type="Reservation" />
+      <Association Name="CAR_GROUP_MARS_CMS_NECESSARY_FLEET" Member="MARS_CMS_NECESSARY_FLEETs" ThisKey="car_group_id" OtherKey="CAR_CLASS_ID" Type="MARS_CMS_NECESSARY_FLEET" />
+      <Association Name="CAR_GROUP_MARS_CMS_FORECAST_HISTORY" Member="MARS_CMS_FORECAST_HISTORies" ThisKey="car_group_id" OtherKey="CAR_CLASS_ID" Type="MARS_CMS_FORECAST_HISTORY" />
+      <Association Name="CAR_GROUP_MARS_CMS_FORECAST_ADJUSTMENT" Member="MARS_CMS_FORECAST_ADJUSTMENTs" ThisKey="car_group_id" OtherKey="CAR_CLASS_ID" Type="MARS_CMS_FORECAST_ADJUSTMENT" />
+      <Association Name="CAR_GROUP_FleetSizeFutureTrend" Member="FleetSizeFutureTrends" ThisKey="car_group_id" OtherKey="CarGrpId" Type="FleetSizeFutureTrend" />
+      <Association Name="CAR_CLASS_CAR_GROUP" Member="CAR_CLASS" ThisKey="car_class_id" OtherKey="car_class_id" Type="CAR_CLASS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CAR_CLASSES" Member="CAR_CLASSes">
+    <Type Name="CAR_CLASS">
+      <Column Name="car_class_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="car_class" Member="car_class1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="car_segment_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="sort_car_class" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CAR_CLASS_CAR_GROUP" Member="CAR_GROUPs" ThisKey="car_class_id" OtherKey="car_class_id" Type="CAR_GROUP" />
+      <Association Name="CAR_SEGMENT_CAR_CLASS" Member="CAR_SEGMENT" ThisKey="car_segment_id" OtherKey="car_segment_id" Type="CAR_SEGMENT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CAR_SEGMENTS" Member="CAR_SEGMENTs">
+    <Type Name="CAR_SEGMENT">
+      <Column Name="car_segment_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="car_segment" Member="car_segment1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="country" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="sort_car_segment" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CAR_SEGMENT_CAR_CLASS" Member="CAR_CLASSes" ThisKey="car_segment_id" OtherKey="car_segment_id" Type="CAR_CLASS" />
+      <Association Name="COUNTRy_CAR_SEGMENT" Member="COUNTRy1" ThisKey="country" OtherKey="country1" Type="COUNTRy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reservation" Member="Reservations1">
+    <Type Name="Reservation">
+      <Column Name="ReservationId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExternalId" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PickupLocationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReturnLocationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PickupDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ReturnDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="BookedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpgradedCarGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReservedCarGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tariff" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="N1Type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NeverLost" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CustomerName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FlightNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="CAR_GROUP_Reservation" Member="CAR_GROUP" ThisKey="ReservedCarGroupId" OtherKey="car_group_id" Type="CAR_GROUP" IsForeignKey="true" />
+      <Association Name="CAR_GROUP_Reservation1" Member="CAR_GROUP1" ThisKey="UpgradedCarGroupId" OtherKey="car_group_id" Type="CAR_GROUP" IsForeignKey="true" />
+      <Association Name="LOCATION_Reservation" Member="LOCATION" ThisKey="PickupLocationId" OtherKey="dim_Location_id" Type="LOCATION" IsForeignKey="true" />
+      <Association Name="LOCATION_Reservation1" Member="LOCATION1" ThisKey="ReturnLocationId" OtherKey="dim_Location_id" Type="LOCATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResGoldLevel" Member="ResGoldLevels">
+    <Type Name="ResGoldLevel">
+      <Column Name="ResGoldLevelId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GoldLevelName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="ResGoldLevel_ResLoyaltyProgram" Member="ResLoyaltyPrograms" ThisKey="ResGoldLevelId" OtherKey="ResGoldLevelId" Type="ResLoyaltyProgram" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResLoyaltyProgram" Member="ResLoyaltyPrograms">
+    <Type Name="ResLoyaltyProgram">
+      <Column Name="ResLoyaltyProgramId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ResGoldLevelId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoyaltyProgramName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="N1Type" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Association Name="ResGoldLevel_ResLoyaltyProgram" Member="ResGoldLevel" ThisKey="ResGoldLevelId" OtherKey="ResGoldLevelId" Type="ResGoldLevel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MARS_UsersAccount" Member="MARS_UsersAccounts">
+    <Type Name="MARS_UsersAccount">
+      <Column Name="racfId" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="userId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserAccountId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MarsUserUserRole" Member="MarsUserUserRoles">
+    <Type Name="MarsUserUserRole">
+      <Column Name="MarsUserUserRoleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MarsUserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MarsUserRoleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MarsUser_MarsUserUserRole" Member="MarsUser" ThisKey="MarsUserId" OtherKey="MarsUserId" Type="MarsUser" IsForeignKey="true" />
+      <Association Name="MarsUserRole_MarsUserUserRole" Member="MarsUserRole" ThisKey="MarsUserRoleId" OtherKey="MarsUserRoleId" Type="MarsUserRole" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MarsUserRoleMenuAccess" Member="MarsUserRoleMenuAccesses">
+    <Type Name="MarsUserRoleMenuAccess">
+      <Column Name="MarsUserRoleMenuAccessId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MarsUserRoleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UrlId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="RibbonMenu_MarsUserRoleMenuAccess" Member="RibbonMenu" ThisKey="UrlId" OtherKey="UrlId" Type="RibbonMenu" IsForeignKey="true" />
+      <Association Name="MarsUserRole_MarsUserRoleMenuAccess" Member="MarsUserRole" ThisKey="MarsUserRoleId" OtherKey="MarsUserRoleId" Type="MarsUserRole" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FleetOwner" Member="FleetOwners">
+    <Type Name="FleetOwner">
+      <Column Name="FleetOwnerId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OwningAreaCode" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="OwnerName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CountryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Company_FleetOwner" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="COUNTRy_FleetOwner" Member="COUNTRy" ThisKey="CountryId" OtherKey="CountryId" Type="COUNTRy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Company" Member="Companies">
+    <Type Name="Company">
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CountryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Company_FleetOwner" Member="FleetOwners" ThisKey="CompanyId" OtherKey="CompanyId" Type="FleetOwner" />
+      <Association Name="Company_LOCATION" Member="LOCATIONs" ThisKey="CompanyId" OtherKey="CompanyId" Type="LOCATION" />
+      <Association Name="Company_MarsUser" Member="MarsUsers" ThisKey="CompanyId" OtherKey="CompanyId" Type="MarsUser" />
+      <Association Name="CompanyType_Company" Member="CompanyType" ThisKey="CompanyTypeId" OtherKey="CompanyTypeId" Type="CompanyType" IsForeignKey="true" />
+      <Association Name="COUNTRy_Company" Member="COUNTRy" ThisKey="CountryId" OtherKey="CountryId" Type="COUNTRy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOCATIONS" Member="LOCATIONs">
+    <Type Name="LOCATION">
+      <Column Name="location" Member="location1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="location_dw" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="real_location_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="location_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="location_name_dw" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ap_dt_rr" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="cal" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="cms_location_group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ops_area_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="served_by_locn" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="turnaround_hours" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ownarea" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="location_area_id" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="city_desc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="dim_Location_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LOCATION_ResAddition" Member="ResAdditions" ThisKey="dim_Location_id" OtherKey="LocId" Type="ResAddition" />
+      <Association Name="LOCATION_ResDeletion" Member="ResDeletions" ThisKey="dim_Location_id" OtherKey="LocId" Type="ResDeletion" />
+      <Association Name="LOCATION_ResBuffer" Member="ResBuffers" ThisKey="dim_Location_id" OtherKey="LocId" Type="ResBuffer" />
+      <Association Name="LOCATION_Reservations" Member="Reservations" ThisKey="dim_Location_id" OtherKey="RTRN_LOC" Type="Reservations" />
+      <Association Name="LOCATION_Reservations1" Member="Reservations1" ThisKey="dim_Location_id" OtherKey="RENT_LOC" Type="Reservations" />
+      <Association Name="LOCATION_FleetNow" Member="FleetNows" ThisKey="dim_Location_id" OtherKey="LocationId" Type="FleetNow" />
+      <Association Name="LOCATION_FleetHistory" Member="FleetHistories" ThisKey="dim_Location_id" OtherKey="LocationId" Type="FleetHistory" />
+      <Association Name="LOCATION_Reservation" Member="Reservations2" ThisKey="dim_Location_id" OtherKey="PickupLocationId" Type="Reservation" />
+      <Association Name="LOCATION_Reservation1" Member="Reservations3" ThisKey="dim_Location_id" OtherKey="ReturnLocationId" Type="Reservation" />
+      <Association Name="LOCATION_Vehicle" Member="Vehicles" ThisKey="dim_Location_id" OtherKey="LastLocationId" Type="Vehicle" />
+      <Association Name="LOCATION_VehicleHistory" Member="VehicleHistories" ThisKey="dim_Location_id" OtherKey="LastLocationId" Type="VehicleHistory" />
+      <Association Name="LOCATION_VehicleHistory1" Member="VehicleHistories1" ThisKey="dim_Location_id" OtherKey="ExpectedLocationId" Type="VehicleHistory" />
+      <Association Name="AREACODE_LOCATION" Member="AREACODE" ThisKey="ownarea" OtherKey="ownarea" Type="AREACODE" IsForeignKey="true" />
+      <Association Name="CMS_LOCATION_GROUP_LOCATION" Member="CMS_LOCATION_GROUP" ThisKey="cms_location_group_id" OtherKey="cms_location_group_id" Type="CMS_LOCATION_GROUP" IsForeignKey="true" />
+      <Association Name="Company_LOCATION" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="OPS_AREA_LOCATION" Member="OPS_AREA" ThisKey="ops_area_id" OtherKey="ops_area_id" Type="OPS_AREA" IsForeignKey="true" />
+      <Association Name="COUNTRy_LOCATION" Member="COUNTRy1" ThisKey="country" OtherKey="country1" Type="COUNTRy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vehicle" Member="Vehicles">
+    <Type Name="Vehicle">
+      <Column Name="VehicleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OwningCountry" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="OwningArea" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="DaysInOwningArea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OwningLocationCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Vin" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LicensePlate" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UnitNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TasModelCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ModelGroup" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ModelDescription" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ManufacturerCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VisionManufacturerCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VisionModelCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CarGroup" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LastArea" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="LastLocationCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LastChangeDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastDocumentNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LastMilage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastDriverName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DaysInCountry" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DaysInArea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DaysInLocation" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DaysSinceLastMovement" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PreviousLocationCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DaysSinceLastRevenueMovement" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastRevenueMovementDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastRevenueMovementLocationCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LastRevenueMovementStatus" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="OnRentOrIdleIndicator" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LastOperationalStatusId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DaysInCurrentOperationalStatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastDocumentType" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LastDocumentStatus" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LastMovementTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExpectedArea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExpectedLocationCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ExpectedDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CarGroupCharged" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="InstallationDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="InstallationDeliveryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="InstallationMsoDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DaysInService" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstRevenueMovementDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FirstRevenueMovementLocationCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="InstallationModelYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InstallationVendorNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InstallationPoNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="SpiCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DepreciationStatus" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VisionClassCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VisionTypeCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="HoldFlag1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="HoldFlag2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="HoldFlag3" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CapitalCost" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="BaseAndOptions" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="DepreciationAmount" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="BookValue" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="Colour" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DaysInMm" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DaysInBd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReturnTime" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DaysUntilBlockDate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BlockDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="BlockWarningMileage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BlockMileage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SaleProcessDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SaleDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="VehicleFleetTypeId" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsFleet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsNonRev" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="LastLocationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Vehicle_VehicleNonRevPeriod" Member="VehicleNonRevPeriods" ThisKey="VehicleId" OtherKey="VehicleId" Type="VehicleNonRevPeriod" />
+      <Association Name="Vehicle_VehicleHistory" Member="VehicleHistories" ThisKey="VehicleId" OtherKey="VehicleId" Type="VehicleHistory" />
+      <Association Name="LOCATION_Vehicle" Member="LOCATION" ThisKey="LastLocationId" OtherKey="dim_Location_id" Type="LOCATION" IsForeignKey="true" />
+      <Association Name="Movement_Type_Vehicle" Member="Movement_Type" ThisKey="LastMovementTypeId" OtherKey="MovementTypeId" Type="Movement_Type" IsForeignKey="true" />
+      <Association Name="Operational_Status_Vehicle" Member="Operational_Status" ThisKey="LastOperationalStatusId" OtherKey="OperationalStatusId" Type="Operational_Status" IsForeignKey="true" />
+      <Association Name="VehicleFleetType_Vehicle" Member="VehicleFleetType" ThisKey="VehicleFleetTypeId" OtherKey="VehicleFleetTypeId" Type="VehicleFleetType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleHistory" Member="VehicleHistories">
+    <Type Name="VehicleHistory">
+      <Column Name="VehicleHistoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VehicleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OperationalStatusId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VehicleFleetTypeId" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsNonRev" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RemarkId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="DaysNonRev" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MovementTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LocationCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="IsFleet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ExpectedDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DaysInCountry" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastLocationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExpectedLocationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LOCATION_VehicleHistory" Member="LOCATION" ThisKey="LastLocationId" OtherKey="dim_Location_id" Type="LOCATION" IsForeignKey="true" />
+      <Association Name="LOCATION_VehicleHistory1" Member="LOCATION1" ThisKey="ExpectedLocationId" OtherKey="dim_Location_id" Type="LOCATION" IsForeignKey="true" />
+      <Association Name="Movement_Type_VehicleHistory" Member="Movement_Type" ThisKey="MovementTypeId" OtherKey="MovementTypeId" Type="Movement_Type" IsForeignKey="true" />
+      <Association Name="NonRev_Remarks_List_VehicleHistory" Member="NonRev_Remarks_List" ThisKey="RemarkId" OtherKey="RemarkId" Type="NonRev_Remarks_List" IsForeignKey="true" />
+      <Association Name="Operational_Status_VehicleHistory" Member="Operational_Status" ThisKey="OperationalStatusId" OtherKey="OperationalStatusId" Type="Operational_Status" IsForeignKey="true" />
+      <Association Name="Vehicle_VehicleHistory" Member="Vehicle" ThisKey="VehicleId" OtherKey="VehicleId" Type="Vehicle" IsForeignKey="true" />
+      <Association Name="VehicleFleetType_VehicleHistory" Member="VehicleFleetType" ThisKey="VehicleFleetTypeId" OtherKey="VehicleFleetTypeId" Type="VehicleFleetType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CompanyType" Member="CompanyTypes">
+    <Type Name="CompanyType">
+      <Column Name="CompanyTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyTypeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="CompanyType_Company" Member="Companies" ThisKey="CompanyTypeId" OtherKey="CompanyTypeId" Type="Company" />
+      <Association Name="CompanyType_MarsUser" Member="MarsUsers" ThisKey="CompanyTypeId" OtherKey="CompanyTypeId" Type="MarsUser" />
+      <Association Name="CompanyType_MarsUserRole" Member="MarsUserRoles" ThisKey="CompanyTypeId" OtherKey="CompanyTypeId" Type="MarsUserRole" />
+      <Association Name="CompanyType_CountryAdmin" Member="CountryAdmins" ThisKey="CompanyTypeId" OtherKey="CompanyTypeId" Type="CountryAdmin" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MarsUser" Member="MarsUsers">
+    <Type Name="MarsUser">
+      <Column Name="MarsUserId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmployeeId" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CompanyTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MarsUser_MarsUserUserRole" Member="MarsUserUserRoles" ThisKey="MarsUserId" OtherKey="MarsUserId" Type="MarsUserUserRole" />
+      <Association Name="Company_MarsUser" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="CompanyType_MarsUser" Member="CompanyType" ThisKey="CompanyTypeId" OtherKey="CompanyTypeId" Type="CompanyType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MarsUserRole" Member="MarsUserRoles">
+    <Type Name="MarsUserRole">
+      <Column Name="MarsUserRoleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BaseAccess" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AdminAccess" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MarsUserRole_MarsUserUserRole" Member="MarsUserUserRoles" ThisKey="MarsUserRoleId" OtherKey="MarsUserRoleId" Type="MarsUserUserRole" />
+      <Association Name="MarsUserRole_MarsUserRoleMenuAccess" Member="MarsUserRoleMenuAccesses" ThisKey="MarsUserRoleId" OtherKey="MarsUserRoleId" Type="MarsUserRoleMenuAccess" />
+      <Association Name="CompanyType_MarsUserRole" Member="CompanyType" ThisKey="CompanyTypeId" OtherKey="CompanyTypeId" Type="CompanyType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CountryAdmin" Member="CountryAdmins">
+    <Type Name="CountryAdmin">
+      <Column Name="CountryAdminId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EmailAddress" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="CompanyType_CountryAdmin" Member="CompanyType" ThisKey="CompanyTypeId" OtherKey="CompanyTypeId" Type="CompanyType" IsForeignKey="true" />
+      <Association Name="COUNTRy_CountryAdmin" Member="COUNTRy" ThisKey="CountryId" OtherKey="CountryId" Type="COUNTRy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.COUNTRIES" Member="COUNTRies">
+    <Type Name="COUNTRy">
+      <Column Name="country" Member="country1" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="country_dw" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="country_description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CountryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GmtDifference" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="COUNTRy_MARS_CMS_FORECAST" Member="MARS_CMS_FORECASTs" ThisKey="country1" OtherKey="COUNTRY" Type="MARS_CMS_FORECAST" />
+      <Association Name="COUNTRy_AREACODE" Member="AREACODEs" ThisKey="country1" OtherKey="country" Type="AREACODE" />
+      <Association Name="COUNTRy_OPS_REGION" Member="OPS_REGIONs" ThisKey="country1" OtherKey="country" Type="OPS_REGION" />
+      <Association Name="COUNTRy_FLEET_EUROPE_ACTUAL" Member="FLEET_EUROPE_ACTUALs" ThisKey="country1" OtherKey="COUNTRY" Type="FLEET_EUROPE_ACTUAL" />
+      <Association Name="COUNTRy_CMS_POOL" Member="CMS_POOLs" ThisKey="country1" OtherKey="country" Type="CMS_POOL" />
+      <Association Name="COUNTRy_CAR_SEGMENT" Member="CAR_SEGMENTs" ThisKey="country1" OtherKey="country" Type="CAR_SEGMENT" />
+      <Association Name="COUNTRy_FleetOwner" Member="FleetOwners" ThisKey="CountryId" OtherKey="CountryId" Type="FleetOwner" />
+      <Association Name="COUNTRy_Company" Member="Companies" ThisKey="CountryId" OtherKey="CountryId" Type="Company" />
+      <Association Name="COUNTRy_LOCATION" Member="LOCATIONs" ThisKey="country1" OtherKey="country" Type="LOCATION" />
+      <Association Name="COUNTRy_CountryAdmin" Member="CountryAdmins" ThisKey="CountryId" OtherKey="CountryId" Type="CountryAdmin" />
+      <Association Name="COUNTRy_MARS_CMS_NECESSARY_FLEET" Member="MARS_CMS_NECESSARY_FLEETs" ThisKey="country1" OtherKey="COUNTRY" Type="MARS_CMS_NECESSARY_FLEET" />
+      <Association Name="COUNTRy_MARS_CMS_FORECAST_HISTORY" Member="MARS_CMS_FORECAST_HISTORies" ThisKey="country1" OtherKey="COUNTRY" Type="MARS_CMS_FORECAST_HISTORY" />
+      <Association Name="COUNTRy_FleetSizeFutureTrend" Member="FleetSizeFutureTrends" ThisKey="country1" OtherKey="Country" Type="FleetSizeFutureTrend" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MARS_CMS_NECESSARY_FLEET" Member="MARS_CMS_NECESSARY_FLEETs">
+    <Type Name="MARS_CMS_NECESSARY_FLEET">
+      <Column Name="COUNTRY" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CMS_LOCATION_GROUP_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CAR_CLASS_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UTILISATION" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="NONREV_FLEET" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="MarsCmsNessaryFleetId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="CAR_GROUP_MARS_CMS_NECESSARY_FLEET" Member="CAR_GROUP" ThisKey="CAR_CLASS_ID" OtherKey="car_group_id" Type="CAR_GROUP" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="CMS_LOCATION_GROUP_MARS_CMS_NECESSARY_FLEET" Member="CMS_LOCATION_GROUP" ThisKey="CMS_LOCATION_GROUP_ID" OtherKey="cms_location_group_id" Type="CMS_LOCATION_GROUP" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="COUNTRy_MARS_CMS_NECESSARY_FLEET" Member="COUNTRy1" ThisKey="COUNTRY" OtherKey="country1" Type="COUNTRy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MARS_CMS_FORECAST_HISTORY" Member="MARS_CMS_FORECAST_HISTORies">
+    <Type Name="MARS_CMS_FORECAST_HISTORY">
+      <Column Name="REP_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="COUNTRY" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CMS_LOCATION_GROUP_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CAR_CLASS_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CURRENT_ONRENT" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="ONRENT_LY" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="AVAILABLE_FLEET" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="OPERATIONAL_FLEET" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="TOTAL_FLEET" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="FLEET_UTILISATION_FROZEN" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="FLEET_NONREV_FROZEN" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="FLEET_MOVEMENT_FROZEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CMS_CONSTRAINED_FROZEN" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_UNCONSTRAINED_FROZEN" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_CONSTRAINED" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_UNCONSTRAINED" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_CONSTRAINED_WK1" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_UNCONSTRAINED_WK1" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_CONSTRAINED_WK2" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_UNCONSTRAINED_WK2" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_CONSTRAINED_WK3" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_UNCONSTRAINED_WK3" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_CONSTRAINED_WK4" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_UNCONSTRAINED_WK4" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_CONSTRAINED_WK5" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_UNCONSTRAINED_WK5" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_CONSTRAINED_WK6" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_UNCONSTRAINED_WK6" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_CONSTRAINED_WK7" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_UNCONSTRAINED_WK7" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_CONSTRAINED_WK8" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="CMS_UNCONSTRAINED_WK8" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="ADJUSTMENT_TD" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="ADJUSTMENT_BU1" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="ADJUSTMENT_BU2" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="ADJUSTMENT_RC" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="RowId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="CAR_GROUP_MARS_CMS_FORECAST_HISTORY" Member="CAR_GROUP" ThisKey="CAR_CLASS_ID" OtherKey="car_group_id" Type="CAR_GROUP" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="CMS_LOCATION_GROUP_MARS_CMS_FORECAST_HISTORY" Member="CMS_LOCATION_GROUP" ThisKey="CMS_LOCATION_GROUP_ID" OtherKey="cms_location_group_id" Type="CMS_LOCATION_GROUP" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="COUNTRy_MARS_CMS_FORECAST_HISTORY" Member="COUNTRy1" ThisKey="COUNTRY" OtherKey="country1" Type="COUNTRy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MARS_CMS_FORECAST_ADJUSTMENT" Member="MARS_CMS_FORECAST_ADJUSTMENTs">
+    <Type Name="MARS_CMS_FORECAST_ADJUSTMENT">
+      <Column Name="REP_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="COUNTRY" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CMS_LOCATION_GROUP_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CAR_CLASS_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ADJUSTMENT_TD" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="ADJUSTMENT_BU1" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="ADJUSTMENT_BU2" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="ADJUSTMENT_RC" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Association Name="CAR_GROUP_MARS_CMS_FORECAST_ADJUSTMENT" Member="CAR_GROUP" ThisKey="CAR_CLASS_ID" OtherKey="car_group_id" Type="CAR_GROUP" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="CMS_LOCATION_GROUP_MARS_CMS_FORECAST_ADJUSTMENT" Member="CMS_LOCATION_GROUP" ThisKey="CMS_LOCATION_GROUP_ID" OtherKey="cms_location_group_id" Type="CMS_LOCATION_GROUP" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FleetSizeFutureTrend" Member="FleetSizeFutureTrends">
+    <Type Name="FleetSizeFutureTrend">
+      <Column Name="TargetDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="OperationalFleet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExpectedFleet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CarGrpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LocGrpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FleetPlanId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FleetSizeFutureTrendId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="CAR_GROUP_FleetSizeFutureTrend" Member="CAR_GROUP" ThisKey="CarGrpId" OtherKey="car_group_id" Type="CAR_GROUP" IsForeignKey="true" />
+      <Association Name="CMS_LOCATION_GROUP_FleetSizeFutureTrend" Member="CMS_LOCATION_GROUP" ThisKey="LocGrpId" OtherKey="cms_location_group_id" Type="CMS_LOCATION_GROUP" IsForeignKey="true" />
+      <Association Name="COUNTRy_FleetSizeFutureTrend" Member="COUNTRy1" ThisKey="Country" OtherKey="country1" Type="COUNTRy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.proc_GetFutureTrendReportData" Method="proc_GetFutureTrendReportData">
+    <Parameter Name="country" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="carSegmentID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="carClassGroupID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="carclassID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cmsPoolID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cmsLocationroupID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="forecastType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="timezone" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fleetPlan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="startDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="endDate" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FleetPlanSummary" Method="FleetPlanSummary" IsComposable="true">
+    <Parameter Name="COUNTRY" Parameter="cOUNTRY" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="fleetPlanID" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="dateFrom" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="dateTo" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="FleetPlanSummaryResult">
+      <Column Name="targetDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LOCATION_GROUP_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAR_CLASS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FleetSizeForecastGenerate" Method="FleetSizeForecastGenerate">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.fnGetLatestRemarkForNonRevVehicle" Method="fnGetLatestRemarkForNonRevVehicle" IsComposable="true">
+    <Parameter Name="vehicleId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.fnGetNonRevAgeForVehicle" Method="fnGetNonRevAgeForVehicle" IsComposable="true">
+    <Parameter Name="vehicleId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VehcileAutoCompleteModelDescription" Method="VehcileAutoCompleteModelDescription">
+    <Parameter Name="SearchTerm" Parameter="searchTerm" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="VehcileAutoCompleteModelDescriptionResult">
+      <Column Name="ItemId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ItemValue" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ItemLabel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VehcileAutoCompleteDriverName" Method="VehcileAutoCompleteDriverName">
+    <Parameter Name="SearchTerm" Parameter="searchTerm" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="VehcileAutoCompleteDriverNameResult">
+      <Column Name="ItemId" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ItemValue" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ItemLabel" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VehcileAutoCompleteVin" Method="VehcileAutoCompleteVin">
+    <Parameter Name="SearchTerm" Parameter="searchTerm" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="VehcileAutoCompleteVinResult">
+      <Column Name="ItemId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ItemValue" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ItemLabel" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VehcileAutoCompleteLicencePlate" Method="VehcileAutoCompleteLicencePlate">
+    <Parameter Name="SearchTerm" Parameter="searchTerm" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="VehcileAutoCompleteLicencePlateResult">
+      <Column Name="ItemId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ItemValue" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ItemLabel" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spPortal_RolesSelectAll" Method="spPortal_RolesSelectAll">
+    <ElementType Name="spPortal_RolesSelectAllResult">
+      <Column Name="roleId" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="roleName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spPortal_RolesSelectForUser" Method="spPortal_RolesSelectForUser">
+    <Parameter Name="racfid" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="spPortal_RolesSelectForUserResult">
+      <Column Name="roleId" Type="System.String" DbType="VarChar(101)" CanBeNull="true" />
+      <Column Name="roleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

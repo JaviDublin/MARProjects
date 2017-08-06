@@ -1,0 +1,11 @@
+﻿/*===================================================================
+// LAYOUT OF LOGIN
+//===================================================================*/
+/*-----MAIN LAYOUT-----*/
+* { margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif;}
+body{  background: url(../App.Styles/images/login-body-bg.png) repeat-x left top;background-color: #FFFCC5;  }
+/*-----LOGIN PANEL-----*/
+.panel-Login { width: 690px; font-size: 1em; background-color: #fff; margin-right: auto; margin-left: auto;  margin-top :25px; }
+
+.ui-tabs-hide { display: none; }
+

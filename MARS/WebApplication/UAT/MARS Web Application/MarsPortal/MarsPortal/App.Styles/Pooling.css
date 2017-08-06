@@ -1,0 +1,37 @@
+﻿.watermark{color:Gray;}
+.heading{padding:10px; font-size: large; font-weight: bold;text-align:left}
+
+.Overdues{border: 1px solid #333399; display:inline-block; font-size:medium;text-align:left;padding-left:2px}
+.OverduesCenter{text-align:right;padding-right:2px}
+
+.ActualsSurroundTable{border-collapse: collapse; padding:0px;}
+.ActualsTable {border-collapse: collapse; padding:2px;border: 1px solid #000000;}
+.ActualsScroller{overflow-y:hidden;overflow-x:auto; padding-bottom:20px;}
+.ActualsTable th {border-left: 1px solid #ffffff;background-color: #000000; font-weight: bold; font-size:1.1em; color: #FFFFFF;padding:2px;width:200px}
+.ActualsTable td.head1 {border-left: 1px solid #ffffff;background-color: #000000; font-weight: bold; font-size:1.1em; color: #FFFFFF;padding:2px;}
+.ActualsTable td.head2 {background-color: #FF9933; cursor:pointer; font-weight:bold;font-size:1.1em;border: 1px solid #000000;padding-left:6px;padding-right:6px}
+.ActualsTable td.footer {font-weight:bold;font-size:1.2em;background-color:#cccccc;border: 1px solid #000000;padding:2px;}
+.ActualsTable td.powerSelectableSide {cursor:pointer; padding:4px;padding:2px;border: 1px solid #000000;text-align:left; }
+.ActualsTable td.powerSelectableSide:hover {background-color: #cccccc;}
+.ActualsTable td.powerSelectable {cursor:default; padding:2px;border: 1px solid #000000; text-align:right }
+.ActualsTable td.powerSelectable.click {cursor:pointer}
+.ActualsTable td.normal {border: 1px solid #000000; padding:2px; cursor:pointer;text-align:right}
+.ActualsTable td.normal_noHover {border: 1px solid #000000; padding:2px; cursor:default;text-align:right}
+.ActualsTable tr.powerRow {font-weight: bold; font-size:1.2em; }
+.ActualsTable tr {background-color:White; }
+.ActualsTable_Panel {width:96%;margin-top:10px; margin-bottom:10px;position:relative; padding:6px;}
+.ActualsTable_Col_DropDown{ margin-top:6px;}
+.AlertsOuterTable{margin-top:10px;padding:2px;width:96%;border-collapse:collapse;font-size:12px}
+.AlertsTable{text-align:center}
+.AlertLink{padding:4px}
+.AlertTableDiv{height:320px;overflow-y:auto;overflow-x:hidden;margin-left:10px; text-align:left;}
+
+.Pooling_Dropdown_Top{padding: 5px; margin: 5px; background-color: #CCCCCC; border: 2px solid #FFFFFF;Height:32px; font-size:medium}
+.Pooling_Dropdown_List{padding: 5px; margin: 5px; background-color: #CCCCCC; border: 2px solid #FFFFFF;}
+
+.backgroundCover{background-color: Black; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 998; opacity:0.4; filter:alpha(opacity=40);}
+.loadData{border: 1px solid black; z-index:999; position:absolute; top:45%; left:40%; width:200px; height:100px; background-color:white; font-size: medium; font-weight: bold;}
+
+.pooling-topFeedback{text-align:left;}
+.pooling-bottomFeedback{text-align:left;color:Gray}
+

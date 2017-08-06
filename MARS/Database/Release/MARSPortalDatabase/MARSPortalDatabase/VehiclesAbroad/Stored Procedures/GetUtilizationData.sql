@@ -1,0 +1,98 @@
+﻿-- =============================================
+-- Author:		Uwe Ahrendt (implemented by Gavin Williams)
+-- Create date: 9-08-12
+-- Description:	Get the utilisation data for the Vehicles Abroad Utilisation tool
+-- =============================================
+CREATE PROCEDURE [VehiclesAbroad].[GetUtilizationData] 
+
+	 @country as varchar(10) = null
+	,@startDate as datetime = null
+	,@endDate as datetime = null
+	
+AS
+BEGIN
+	SET NOCOUNT ON;
+	
+	/****** Script for SelectTopNRows command from SSMS  ******/
+ -- [dbo].[VehiclesAbroadUtilisation]
+
+	SELECT
+		CAH.REP_DATE REPDATE,
+		CAH.COUNTRY_IN AS ownCountry,
+		(	--UTILIZATION LOCAL: TOTAL_FLEET FOR COUNTRY_IN / ON_RENT FOR ALL VEHICLES WHERE COUNTRY_DUE = COUNTRY_IN
+			(
+				SELECT
+					CASE WHEN SUM(CAH1.TOTAL_FLEET) IS NULL OR SUM(CAH1.TOTAL_FLEET) = 0 THEN 0 ELSE SUM(CAH1.ON_RENT) END AS ON_RENT
+				FROM
+					VehiclesAbroad.CARS_ABROAD_HISTORY CAH1
+				WHERE
+					CAH.REP_DATE = CAH1.REP_DATE
+					AND
+					CAH.COUNTRY_IN = CAH1.COUNTRY_IN
+					AND
+					CAH1.COUNTRY_IN = CAH1.COUNTRY_DUE
+			)
+			/
+			(
+				SELECT
+					CASE WHEN SUM(CAH1.TOTAL_FLEET) IS NULL OR SUM(CAH1.TOTAL_FLEET) = 0 THEN 1 ELSE SUM(CAH1.TOTAL_FLEET) END AS TOTAL_FLEET
+				FROM
+					VehiclesAbroad.CARS_ABROAD_HISTORY CAH1
+				WHERE
+					CAH.REP_DATE = CAH1.REP_DATE
+					AND
+					CAH.COUNTRY_IN = CAH1.COUNTRY_IN
+			)
+		) AS UTILIZATION_IN_COUNTRY,
+		(	--UTILIZATION OUT: TOTAL_FLEET FOR COUNTRY_IN / ON_RENT FOR ALL VEHICLES  WHERE COUNTRY_DUE <> COUNTRY_IN
+			--IDEALLY BACK TO COUNTRY_OWN, BUT WE TAKE ON_RENT BETWEEN COUNTRIES AS A SIGN OF RENTING AT LEAST IN THE RIGHT DIRECTION
+			--I.E. SP IN GE ON RENT TO FR IS THE RIGHT DIRECTION, BUT WE'RE NOT STRICT WITH THIS RULE, SO
+			--SP CAR IN FR ON RENT TO GE WOULD ALSO COUNT, EVEN IF IT'S CLEARLY NOT IDEAL
+			(
+				SELECT
+					CASE WHEN SUM(CAH1.TOTAL_FLEET) IS NULL OR SUM(CAH1.TOTAL_FLEET) = 0 THEN 0 ELSE SUM(CAH1.ON_RENT) + SUM(CAH1.OVERDUE) END AS ON_RENT
+				FROM
+					VehiclesAbroad.CARS_ABROAD_HISTORY CAH1
+				WHERE
+					CAH.REP_DATE = CAH1.REP_DATE
+					AND
+					CAH.COUNTRY_IN = CAH1.COUNTRY_IN
+					AND
+					NOT(CAH1.COUNTRY_IN = CAH1.COUNTRY_DUE)
+			)
+			/
+			(
+				SELECT
+					CASE WHEN SUM(CAH1.TOTAL_FLEET) IS NULL OR SUM(CAH1.TOTAL_FLEET) = 0 THEN 1 ELSE SUM(CAH1.TOTAL_FLEET) END AS TOTAL_FLEET
+				FROM
+					VehiclesAbroad.CARS_ABROAD_HISTORY CAH1
+				WHERE
+					CAH.REP_DATE = CAH1.REP_DATE
+					AND
+					CAH.COUNTRY_IN = CAH1.COUNTRY_IN
+			)
+		) AS UTILIZATION_OUT_OF_COUNTRY 
+	FROM
+		VehiclesAbroad.CARS_ABROAD_HISTORY CAH
+		INNER JOIN dbo.COUNTRIES C ON CAH.COUNTRY_IN = C.country
+	WHERE
+		--APPLY DATE FILTER
+		CAH.REP_DATE BETWEEN @startDate AND @endDate
+		AND
+		--APPLY COUNTRY FILTER
+		(COUNTRY_IN like @country or @country='' or @country='***All***' or @country is null)
+		AND
+		--ACTIVE COUNTRIES ONLY
+		C.active = 1
+	GROUP BY
+		CAH.REP_DATE,
+		CAH.COUNTRY_IN
+END
+  
+
+/*
+exec VehiclesAbroad.GetUtilizationData
+	@country = ''
+	,@startDate = '2012-07-01'
+	,@endDate = '2012-10-09'
+*/

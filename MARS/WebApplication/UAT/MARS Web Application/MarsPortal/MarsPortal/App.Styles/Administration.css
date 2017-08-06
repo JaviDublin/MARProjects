@@ -1,0 +1,196 @@
+﻿
+
+body {
+    font: 12px verdana;
+}
+
+.AdminGridStyle {
+    border-collapse: collapse;
+}
+
+    .AdminGridStyle tr th {
+        padding: 8px;
+        color: white;
+        border: 1px solid black;
+    }
+
+
+    .AdminGridStyle tr:nth-child(even) {
+        background-color: #E1FFEF;
+    }
+
+
+    .AdminGridStyle td {
+        border: 1px solid black;
+        padding: 8px;
+    }
+
+    .paging a {
+        background-color: #c5ccb8;
+        padding: 5px 7px;
+        text-decoration: none;
+        border: 1px solid #c5ccb8;
+    }
+
+        .paging a:hover {
+            background-color: #E1FFEF;
+            color: #c5ccb8;
+            border: 1px solid #c5ccb8;
+        }
+
+    .paging span {
+        background-color: #E1FFEF;
+        padding: 5px 7px;
+        color: #c5ccb8;
+        border: 1px solid #c5ccb8;
+    }
+
+tr.paging {
+    background: none !important;
+}
+
+    tr.paging tr {
+        background: none !important;
+    }
+
+    tr.paging td {
+        border: none;
+    }
+
+
+
+fieldset {
+    background: #f2f2e6;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-color: #fff #666661 #666661 #fff;
+    margin-bottom: 36px;
+    width: 590px;
+}
+
+input, textarea, select {
+    font: 12px/12px Arial, Helvetica, sans-serif;
+    padding: 2;
+}
+
+.action {
+    background: #9da2a6;
+    border-color: #e5e5e5 #797c80 #797c80 #e5e5e5;
+    margin-top: -20px;
+}
+
+legend {
+    background: #bfbf30;
+    color: #fff;
+    font: 17px/21px Calibri, Arial, Helvetica, sans-serif;
+    padding: 0 10px;
+    margin: -26px 0 0 -11px;
+    font-weight: bold;
+    border: 1px solid #fff;
+    border-color: #e5e5c3 #505014 #505014 #e5e5c3;
+}
+
+label {
+    font-size: 11px;
+    font-weight: bold;
+    color: #666;
+}
+
+    label.opt {
+        font-weight: normal;
+    }
+
+dl {
+    clear: both;
+}
+
+dt {
+    float: left;
+    text-align: left;
+    width: 120px;
+    line-height: 25px;
+    margin: 0 10px 10px 0;
+}
+
+dd {
+    float: left;
+    width: 455px;
+    line-height: 25px;
+    margin: 0 0 10px 0;
+}
+
+#footer {
+    font-size: 11px;
+}
+
+
+/* Pop up Style -- End */
+
+
+
+
+/* Cloud */ hr.style-five {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px black;
+}
+
+    hr.style-five:after { /* Not really supposed to work, but does */
+        content: "\00a0"; /* Prevent margin collapse */
+    }
+
+.style-six {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/*Mapping Table*/
+
+table.mappingFilters {
+    /*font-family: verdana,arial,sans-serif;
+    font-size: 11px;*/
+    color: #333333;
+    text-align: left;
+    border-collapse: collapse;
+    padding-top: 7px;
+    float: left;
+    /*width: 700px;*/
+            /*border-width: 1px;
+        border-style: solid;
+        border-color: aqua;*/
+}
+
+    table.mappingFilters th {
+    }
+
+    table.mappingFilters td {
+     
+        /*padding-left: 7px;*/
+
+              /*border-width: 1px;
+        border-style: solid;
+        border-color: #666666;*/
+
+    }
+
+
+
+    /**
+        Checkbox Admin User Edit        
+        
+        */
+
+.admincheckbox input[type="checkbox"] 
+{ 
+    margin-right: 5px;
+    padding-left: 5px;
+}
+
+
+/** Admin Button**/
+
+.AdminButton {
+    Height: 22px;
+}

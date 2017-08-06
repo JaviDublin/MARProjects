@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Mars.Webservices.Sizing.SizingStateService" CodeBehind="SizingStateService.svc.cs" %>

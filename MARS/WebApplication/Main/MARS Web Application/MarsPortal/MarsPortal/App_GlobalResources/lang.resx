@@ -1,0 +1,1800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Administration" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="AlertsNextFourHours" xml:space="preserve">
+    <value>Following 4 Hours</value>
+  </data>
+  <data name="AlertsNextHour" xml:space="preserve">
+    <value>Next Hour</value>
+  </data>
+  <data name="AlertsRestofDay" xml:space="preserve">
+    <value>Rest of Day</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>*** All ***</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="AreaCodeDetailsAdd" xml:space="preserve">
+    <value>Add New Area Code</value>
+  </data>
+  <data name="AreaCodeDetailsSave" xml:space="preserve">
+    <value>Save Area Code</value>
+  </data>
+  <data name="AreYouSureYouWantToContinue" xml:space="preserve">
+    <value>Are you sure you want to continue?</value>
+  </data>
+  <data name="AssignRolesTo" xml:space="preserve">
+    <value>Assign roles to</value>
+  </data>
+  <data name="ATCarSearch" xml:space="preserve">
+    <value>Car Search</value>
+  </data>
+  <data name="ATFleetComparison" xml:space="preserve">
+    <value>Fleet Comparison</value>
+  </data>
+  <data name="ATFleetStatus" xml:space="preserve">
+    <value>Fleet Status</value>
+  </data>
+  <data name="ATHistoricalTrend" xml:space="preserve">
+    <value>Historical Trend</value>
+  </data>
+  <data name="ATKPI" xml:space="preserve">
+    <value>KPI</value>
+  </data>
+  <data name="ATKPIDownload" xml:space="preserve">
+    <value>KPI Download</value>
+  </data>
+  <data name="ATSiteComparison" xml:space="preserve">
+    <value>Site Comparison</value>
+  </data>
+  <data name="ATStatistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="AvailabilityTool" xml:space="preserve">
+    <value>Availability Tool</value>
+  </data>
+  <data name="AVAILABLEFLEET" xml:space="preserve">
+    <value>Available Fleet</value>
+  </data>
+  <data name="BD" xml:space="preserve">
+    <value>BD</value>
+  </data>
+  <data name="BdDays" xml:space="preserve">
+    <value>Bd Days</value>
+  </data>
+  <data name="Blockdate" xml:space="preserve">
+    <value>Blockdate</value>
+  </data>
+  <data name="Branch" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ButtonClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ButtonConfirm" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="ButtonPreferencesClear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="ButtonPreferencesSave" xml:space="preserve">
+    <value>Save Preferences</value>
+  </data>
+  <data name="ButtonPrintDetails" xml:space="preserve">
+    <value>Print Details</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CarClass" xml:space="preserve">
+    <value>Car Class</value>
+  </data>
+  <data name="CarClassDetailsAdd" xml:space="preserve">
+    <value>Add New Car Class</value>
+  </data>
+  <data name="CarClassDetailsSave" xml:space="preserve">
+    <value>Save Car Class</value>
+  </data>
+  <data name="CarCounterWarning" xml:space="preserve">
+    <value>Please note that due to server performance reasons no more than 500 cars can be retrieved at once.&lt;br /&gt;Please change your search criteria to be more specific.</value>
+  </data>
+  <data name="CarGroup" xml:space="preserve">
+    <value>Car Group</value>
+  </data>
+  <data name="CarGroupDetailsAdd" xml:space="preserve">
+    <value>Add New Car Group</value>
+  </data>
+  <data name="CarGroupDetailsSave" xml:space="preserve">
+    <value>Save Car Group</value>
+  </data>
+  <data name="carhold" xml:space="preserve">
+    <value>Carhold</value>
+  </data>
+  <data name="CARHOLDH" xml:space="preserve">
+    <value>Carhold H</value>
+  </data>
+  <data name="CARHOLDL" xml:space="preserve">
+    <value>Carhold L</value>
+  </data>
+  <data name="CARSALES" xml:space="preserve">
+    <value>CarSales</value>
+  </data>
+  <data name="CarSearch" xml:space="preserve">
+    <value>Car Search</value>
+  </data>
+  <data name="CarSearchSaveRemarks" xml:space="preserve">
+    <value>Save Remarks</value>
+  </data>
+  <data name="CarSegment" xml:space="preserve">
+    <value>Car Segment</value>
+  </data>
+  <data name="CarSegmentDetailsAdd" xml:space="preserve">
+    <value>Add New Car Segment</value>
+  </data>
+  <data name="CarSegmentDetailsSave" xml:space="preserve">
+    <value>Save Car Segment</value>
+  </data>
+  <data name="CarsVans" xml:space="preserve">
+    <value>Cars &amp; Vans</value>
+  </data>
+  <data name="charged" xml:space="preserve">
+    <value>Charged</value>
+  </data>
+  <data name="ChartZoomFeature" xml:space="preserve">
+    <value>Click to reset Zoom</value>
+  </data>
+  <data name="ChartZoomText" xml:space="preserve">
+    <value>Reset Zoom</value>
+  </data>
+  <data name="CheckBoxSelectAllToolTipModelCodes" xml:space="preserve">
+    <value>Click to select / deselect all model codes</value>
+  </data>
+  <data name="CheckBoxSelectAllToolTipOwnArea" xml:space="preserve">
+    <value>Click to select / deselect all own areas</value>
+  </data>
+  <data name="CheckBoxSelectAllToolTipStatus" xml:space="preserve">
+    <value>Click to select / deselect all operstats</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="ClickHereToReturnTo" xml:space="preserve">
+    <value>Clic here to return to</value>
+  </data>
+  <data name="CMS" xml:space="preserve">
+    <value>CMS</value>
+  </data>
+  <data name="CMSLocationDetailsAdd" xml:space="preserve">
+    <value>Add New CMS Location Group</value>
+  </data>
+  <data name="CMSLocationDetailsSave" xml:space="preserve">
+    <value>Save CMS Location Group</value>
+  </data>
+  <data name="CMSPoolDetailsAdd" xml:space="preserve">
+    <value>Add New CMS Pool</value>
+  </data>
+  <data name="CMSPoolDetailsSave" xml:space="preserve">
+    <value>Save CMS Pool</value>
+  </data>
+  <data name="ConfidentialNote" xml:space="preserve">
+    <value>!!! CONFIDENTIAL - FOR INTERNAL USE ONLY !!!</value>
+  </data>
+  <data name="ConfirmReportForAllCountries" xml:space="preserve">
+    <value>You selected an option to run the report for all the countries.</value>
+  </data>
+  <data name="ConfirmReportOnPageLoad" xml:space="preserve">
+    <value>Your selection from previous page has been applied to this report.</value>
+  </data>
+  <data name="ConfirmReportQuestion" xml:space="preserve">
+    <value>Would you like to continue loading this report?</value>
+  </data>
+  <data name="ContrType" xml:space="preserve">
+    <value>Contr. Type</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="CountryDetailsAdd" xml:space="preserve">
+    <value>Add New Country</value>
+  </data>
+  <data name="CountryDetailsSave" xml:space="preserve">
+    <value>Save Country</value>
+  </data>
+  <data name="CU" xml:space="preserve">
+    <value>CU</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DatePickerError" xml:space="preserve">
+    <value>Please enter / select date (Format: dd/mm/yyyy)</value>
+  </data>
+  <data name="DateRange" xml:space="preserve">
+    <value>Date Range</value>
+  </data>
+  <data name="DayOfWeek" xml:space="preserve">
+    <value>Day of Week</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>December</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteErrorMessageConstraint" xml:space="preserve">
+    <value>Unable to delete record due to constraints.</value>
+  </data>
+  <data name="DisplayStatus" xml:space="preserve">
+    <value>Display Status</value>
+  </data>
+  <data name="DomainName" xml:space="preserve">
+    <value>Domain Name:</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="DriverName" xml:space="preserve">
+    <value>Driver Name</value>
+  </data>
+  <data name="Duedate" xml:space="preserve">
+    <value>Duedate</value>
+  </data>
+  <data name="duetime" xml:space="preserve">
+    <value>Duetime</value>
+  </data>
+  <data name="DUEWWD" xml:space="preserve">
+    <value>DUEWWD</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="ErrorMessageAdministrator" xml:space="preserve">
+    <value>An error occurred. Please advise system administrator.</value>
+  </data>
+  <data name="ErrorMessageRACFID" xml:space="preserve">
+    <value>Please enter RACFID.</value>
+  </data>
+  <data name="ErrorMessageRoles" xml:space="preserve">
+    <value>Please select role for user.</value>
+  </data>
+  <data name="ErrorMessageUniqueRACFID" xml:space="preserve">
+    <value>Please enter a unique RACFID.</value>
+  </data>
+  <data name="ErrorMessageUsername" xml:space="preserve">
+    <value>Please enter users name.</value>
+  </data>
+  <data name="Europe" xml:space="preserve">
+    <value>Europe</value>
+  </data>
+  <data name="expectedResolutionDate" xml:space="preserve">
+    <value>Expected Resolution Date</value>
+  </data>
+  <data name="FCAdjustment" xml:space="preserve">
+    <value>Adjustment</value>
+  </data>
+  <data name="FCReconciliation" xml:space="preserve">
+    <value>Reconciliation</value>
+  </data>
+  <data name="FCReport" xml:space="preserve">
+    <value>Forecasting Report</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>February</value>
+  </data>
+  <data name="FileDoesntExist" xml:space="preserve">
+    <value>File does not exist</value>
+  </data>
+  <data name="Fleet" xml:space="preserve">
+    <value>Fleet</value>
+  </data>
+  <data name="FleetComparison" xml:space="preserve">
+    <value>Fleet Comparison</value>
+  </data>
+  <data name="FleetStatus" xml:space="preserve">
+    <value>Fleet Status</value>
+  </data>
+  <data name="ForecastingTool" xml:space="preserve">
+    <value>Forecasting Tool</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="FS" xml:space="preserve">
+    <value>FS</value>
+  </data>
+  <data name="GenerateAndDownload" xml:space="preserve">
+    <value>Generate &amp; Download</value>
+  </data>
+  <data name="GenerateReport" xml:space="preserve">
+    <value>Generate Report</value>
+  </data>
+  <data name="GOLD" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="GotoKPIDownloadPage" xml:space="preserve">
+    <value>Go to KPI Download Page</value>
+  </data>
+  <data name="GridviewGeneralNoData" xml:space="preserve">
+    <value>No results found matching your search criteria.</value>
+  </data>
+  <data name="GridviewStatisticsNoData" xml:space="preserve">
+    <value>No reports were generated between the dates you have selected.</value>
+  </data>
+  <data name="GridviewTitleAreaCodes" xml:space="preserve">
+    <value>AREA CODES</value>
+  </data>
+  <data name="GridviewTitleCarClasses" xml:space="preserve">
+    <value>CAR CLASSES</value>
+  </data>
+  <data name="GridviewTitleCarGroups" xml:space="preserve">
+    <value>CAR GROUPS</value>
+  </data>
+  <data name="GridviewTitleCarSegments" xml:space="preserve">
+    <value>CAR SEGMENTS</value>
+  </data>
+  <data name="GridviewTitleCMSLocationGroups" xml:space="preserve">
+    <value>CMS LOCATION GROUPS</value>
+  </data>
+  <data name="GridviewTitleCMSPools" xml:space="preserve">
+    <value>CMS POOLS</value>
+  </data>
+  <data name="GridviewTitleCountries" xml:space="preserve">
+    <value>COUNTRIES</value>
+  </data>
+  <data name="GridviewTitleLocations" xml:space="preserve">
+    <value>LOCATIONS</value>
+  </data>
+  <data name="GridviewTitleModelCodes" xml:space="preserve">
+    <value>MODEL CODES</value>
+  </data>
+  <data name="GridviewTitleOPSAreas" xml:space="preserve">
+    <value>OPS AREAS</value>
+  </data>
+  <data name="GridviewTitleOPSRegions" xml:space="preserve">
+    <value>OPS REGIONS</value>
+  </data>
+  <data name="GridviewTitleSaveSearches" xml:space="preserve">
+    <value>My Saved Searches</value>
+  </data>
+  <data name="GridviewTitleVehiclesLease" xml:space="preserve">
+    <value>Vehicles Lease</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="HA" xml:space="preserve">
+    <value>HA</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="HertzEurope" xml:space="preserve">
+    <value>Hertz Europe</value>
+  </data>
+  <data name="HistoricalTrend" xml:space="preserve">
+    <value>Historical Trend</value>
+  </data>
+  <data name="HL" xml:space="preserve">
+    <value>HL</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="IdleFleet" xml:space="preserve">
+    <value>Idle Fleet</value>
+  </data>
+  <data name="IdleUnitsOnPeak" xml:space="preserve">
+    <value>Idle Units On Peak</value>
+  </data>
+  <data name="InDatabase" xml:space="preserve">
+    <value>In Database</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>July</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>June</value>
+  </data>
+  <data name="KeyPerformanceIndicators" xml:space="preserve">
+    <value>Key Performance Indicators</value>
+  </data>
+  <data name="Kilometers" xml:space="preserve">
+    <value>Kilometers</value>
+  </data>
+  <data name="KPI" xml:space="preserve">
+    <value>KPI</value>
+  </data>
+  <data name="KPIDownload" xml:space="preserve">
+    <value>KPI Download</value>
+  </data>
+  <data name="LabelConfirmInformation" xml:space="preserve">
+    <value>Are you sure you want to run a report on ALL countries?</value>
+  </data>
+  <data name="LabelPagerOf" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="LabelPagerPage" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="LabelPagerRowsPerPage" xml:space="preserve">
+    <value>Results per page</value>
+  </data>
+  <data name="LabelTotalRecords" xml:space="preserve">
+    <value>Records Selected:</value>
+  </data>
+  <data name="LastDocument" xml:space="preserve">
+    <value>Last Document</value>
+  </data>
+  <data name="LastUpdated" xml:space="preserve">
+    <value>Last Updated:</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="LL" xml:space="preserve">
+    <value>LL</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="LocationDetailsAdd" xml:space="preserve">
+    <value>Add New Location</value>
+  </data>
+  <data name="LocationDetailsSave" xml:space="preserve">
+    <value>Save Location</value>
+  </data>
+  <data name="LocationGroup" xml:space="preserve">
+    <value>Location Group</value>
+  </data>
+  <data name="Logic" xml:space="preserve">
+    <value>Logic</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LoginHeader" xml:space="preserve">
+    <value>MARS - Portal Login</value>
+  </data>
+  <data name="LoginPage" xml:space="preserve">
+    <value>Login Page</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Lstdate" xml:space="preserve">
+    <value>Lstdate</value>
+  </data>
+  <data name="lsttime" xml:space="preserve">
+    <value>Lsttime</value>
+  </data>
+  <data name="LSTWWD" xml:space="preserve">
+    <value>LSTWWD</value>
+  </data>
+  <data name="Maintenance" xml:space="preserve">
+    <value>Maintenance</value>
+  </data>
+  <data name="MaintenanceWarning1" xml:space="preserve">
+    <value>MaintenanceWarning1</value>
+  </data>
+  <data name="MaintenanceWarning2" xml:space="preserve">
+    <value>MaintenanceWarning2</value>
+  </data>
+  <data name="MappingAreaCodes" xml:space="preserve">
+    <value>AREA CODES</value>
+  </data>
+  <data name="MappingCarClasses" xml:space="preserve">
+    <value>CAR CLASSES</value>
+  </data>
+  <data name="MappingCarGroups" xml:space="preserve">
+    <value>CAR GROUPS</value>
+  </data>
+  <data name="MappingCarSegments" xml:space="preserve">
+    <value>CAR SEGMENTS</value>
+  </data>
+  <data name="MappingCMSLocationGroups" xml:space="preserve">
+    <value>CMS LOCATION GROUPS</value>
+  </data>
+  <data name="MappingCMSPools" xml:space="preserve">
+    <value>CMS POOLS</value>
+  </data>
+  <data name="MappingCountry" xml:space="preserve">
+    <value>COUNTRIES</value>
+  </data>
+  <data name="MappingCountryFilter" xml:space="preserve">
+    <value>Filter By Country:</value>
+  </data>
+  <data name="MappingDetailsActive" xml:space="preserve">
+    <value>Is Active:</value>
+  </data>
+  <data name="MappingDetailsAPDTRR" xml:space="preserve">
+    <value>AP DT RR:</value>
+  </data>
+  <data name="MappingDetailsAreaName" xml:space="preserve">
+    <value>Area Name:</value>
+  </data>
+  <data name="MappingDetailsCal" xml:space="preserve">
+    <value>CAL:</value>
+  </data>
+  <data name="MappingDetailsCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="MappingDetailsCarClass" xml:space="preserve">
+    <value>Car Class:</value>
+  </data>
+  <data name="MappingDetailsCarGroup" xml:space="preserve">
+    <value>Car Group:</value>
+  </data>
+  <data name="MappingDetailsCarGroupGold" xml:space="preserve">
+    <value>Car Group Gold:</value>
+  </data>
+  <data name="MappingDetailsCarSales" xml:space="preserve">
+    <value>Car Sales:</value>
+  </data>
+  <data name="MappingDetailsCarSegment" xml:space="preserve">
+    <value>Car Segment:</value>
+  </data>
+  <data name="MappingDetailsCMSLocationGroup" xml:space="preserve">
+    <value>CMS Location Group:</value>
+  </data>
+  <data name="MappingDetailsCMSLocationGroupCode" xml:space="preserve">
+    <value>CMS Location Group Code:</value>
+  </data>
+  <data name="MappingDetailsCMSLocationGroupCodeDW" xml:space="preserve">
+    <value>CMS Location Group Code DW:</value>
+  </data>
+  <data name="MappingDetailsCMSPool" xml:space="preserve">
+    <value>CMS Pool:</value>
+  </data>
+  <data name="MappingDetailsCountry" xml:space="preserve">
+    <value>Country:</value>
+  </data>
+  <data name="MappingDetailsCountryDescription" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="MappingDetailsCountryDw" xml:space="preserve">
+    <value>Country DW:</value>
+  </data>
+  <data name="MappingDetailsErrorMessageAPDTRR" xml:space="preserve">
+    <value>Please enter ap dt rr.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageAreaName" xml:space="preserve">
+    <value>Please enter area name.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageCAL" xml:space="preserve">
+    <value>Please enter cal.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageCarClass" xml:space="preserve">
+    <value>Please enter / select car class.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageCarGroup" xml:space="preserve">
+    <value>Please enter / select  car group.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageCarGroupGold" xml:space="preserve">
+    <value>Please enter / select car group gold.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageCarSegment" xml:space="preserve">
+    <value>Please enter / select car segment.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageCMSLocationGroup" xml:space="preserve">
+    <value>Please enter / select cms location group.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageCMSLocationGroupCode" xml:space="preserve">
+    <value>Please enter / select cms location group code.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageCMSLocationGroupCodeDuplicate" xml:space="preserve">
+    <value>Please enter a unique cms location group code.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageCMSLocationGroupCodeDW" xml:space="preserve">
+    <value>Please enter cms location group code dw.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageCMSPool" xml:space="preserve">
+    <value>Please enter / select cms pool.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageCountry" xml:space="preserve">
+    <value>Please enter country.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageCountryDescription" xml:space="preserve">
+    <value>Please enter country description.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageCountryDuplicate" xml:space="preserve">
+    <value>Please enter a unique country.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageCountryDW" xml:space="preserve">
+    <value>Please enter country dw.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageLocation" xml:space="preserve">
+    <value>Please enter / select location.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageLocationDuplicate" xml:space="preserve">
+    <value>Please enter a unique location.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageLocationDW" xml:space="preserve">
+    <value>Please enter location dw.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageLocationName" xml:space="preserve">
+    <value>Please enter location name.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageLocationNameDW" xml:space="preserve">
+    <value>Please enter location name dw.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageModel" xml:space="preserve">
+    <value>Please enter model.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageOPSArea" xml:space="preserve">
+    <value>Please enter / select ops area.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageOPSRegion" xml:space="preserve">
+    <value>Please enter / select ops region.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageOwnArea" xml:space="preserve">
+    <value>Please enter own area.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageOwnAreaDuplicate" xml:space="preserve">
+    <value>Please enter a unique own area.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageRealLocationName" xml:space="preserve">
+    <value>Please enter real location name.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageServedByLocn" xml:space="preserve">
+    <value>Please enter served by location.</value>
+  </data>
+  <data name="MappingDetailsErrorMessageSortOrder" xml:space="preserve">
+    <value>Please enter / select a value for sort order. (positive number)</value>
+  </data>
+  <data name="MappingDetailsErrorMessageTurnaroundHours" xml:space="preserve">
+    <value>Please enter / select turnaround hours.</value>
+  </data>
+  <data name="MappingDetailsFleetCo" xml:space="preserve">
+    <value>Fleet CO:</value>
+  </data>
+  <data name="MappingDetailsLicensee" xml:space="preserve">
+    <value>Licensee:</value>
+  </data>
+  <data name="MappingDetailsLocation" xml:space="preserve">
+    <value>Location:</value>
+  </data>
+  <data name="MappingDetailsLocationDW" xml:space="preserve">
+    <value>Location DW:</value>
+  </data>
+  <data name="MappingDetailsLocationName" xml:space="preserve">
+    <value>Location Name:</value>
+  </data>
+  <data name="MappingDetailsLocationNameDW" xml:space="preserve">
+    <value>Location Name DW:</value>
+  </data>
+  <data name="MappingDetailsModel" xml:space="preserve">
+    <value>Model:</value>
+  </data>
+  <data name="MappingDetailsOPCO" xml:space="preserve">
+    <value>OPCO:</value>
+  </data>
+  <data name="MappingDetailsOPSArea" xml:space="preserve">
+    <value>OPS Area:</value>
+  </data>
+  <data name="MappingDetailsOPSRegion" xml:space="preserve">
+    <value>OPS Region:</value>
+  </data>
+  <data name="MappingDetailsOwnArea" xml:space="preserve">
+    <value>Own Area:</value>
+  </data>
+  <data name="MappingDetailsRealLocationName" xml:space="preserve">
+    <value>Real Location Name:</value>
+  </data>
+  <data name="MappingDetailsSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="MappingDetailsServedByLocn" xml:space="preserve">
+    <value>Served By Locn:</value>
+  </data>
+  <data name="MappingDetailsSortOrder" xml:space="preserve">
+    <value>Sort Order:</value>
+  </data>
+  <data name="MappingDetailsTurnaroundHours" xml:space="preserve">
+    <value>Turnaround Hours:</value>
+  </data>
+  <data name="MappingDropDownListInitialValue" xml:space="preserve">
+    <value>- Please Select -</value>
+  </data>
+  <data name="MappingLocations" xml:space="preserve">
+    <value>LOCATIONS</value>
+  </data>
+  <data name="MappingModelCode" xml:space="preserve">
+    <value>MODEL CODES</value>
+  </data>
+  <data name="MappingOPSAreas" xml:space="preserve">
+    <value>OPS AREAS</value>
+  </data>
+  <data name="MappingOPSRegions" xml:space="preserve">
+    <value>OPS REGIONS</value>
+  </data>
+  <data name="MappingTableMaintenance" xml:space="preserve">
+    <value>Mapping Maintenance</value>
+  </data>
+  <data name="MappingType" xml:space="preserve">
+    <value>Mapping Table:</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>March</value>
+  </data>
+  <data name="Mars" xml:space="preserve">
+    <value>Mars</value>
+  </data>
+  <data name="MarsAvailabilityTool" xml:space="preserve">
+    <value>Mars Availability Tool</value>
+  </data>
+  <data name="MarsHome" xml:space="preserve">
+    <value>MARS Home</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>May</value>
+  </data>
+  <data name="MessageAreaCodeSaved" xml:space="preserve">
+    <value>Area Code was saved successfully.</value>
+  </data>
+  <data name="MessageCarClassSaved" xml:space="preserve">
+    <value>Car Class was saved successfully.</value>
+  </data>
+  <data name="MessageCarGroupSaved" xml:space="preserve">
+    <value>Car Group was saved successfully.</value>
+  </data>
+  <data name="MessageCarSegmentSaved" xml:space="preserve">
+    <value>Car Segment was saved successfully.</value>
+  </data>
+  <data name="MessageCMSLocationGroupCodeSaved" xml:space="preserve">
+    <value>CMS Location Group was saved successfully.</value>
+  </data>
+  <data name="MessageCMSPoolSaved" xml:space="preserve">
+    <value>CMS Pool was saved successfully.</value>
+  </data>
+  <data name="MessageCountrySaved" xml:space="preserve">
+    <value>Country was saved successfully.</value>
+  </data>
+  <data name="MessageDeleteAreaCode" xml:space="preserve">
+    <value>Area Code was deleted successfully.</value>
+  </data>
+  <data name="MessageDeleteCarClass" xml:space="preserve">
+    <value>Car Class was deleted successfully.</value>
+  </data>
+  <data name="MessageDeleteCarGroup" xml:space="preserve">
+    <value>Car Group was deleted successfully.</value>
+  </data>
+  <data name="MessageDeleteCarSegment" xml:space="preserve">
+    <value>Car Segment was deleted successfully.</value>
+  </data>
+  <data name="MessageDeleteCMSLocationGroup" xml:space="preserve">
+    <value>CMS Location Group Code was deleted successfully.</value>
+  </data>
+  <data name="MessageDeleteCMSPool" xml:space="preserve">
+    <value>CMS Pool was deleted successfully.</value>
+  </data>
+  <data name="MessageDeleteCountry" xml:space="preserve">
+    <value>Country was deleted successfully.</value>
+  </data>
+  <data name="MessageDeleteLocation" xml:space="preserve">
+    <value>Location was deleted successfully.</value>
+  </data>
+  <data name="MessageDeleteModelCode" xml:space="preserve">
+    <value>Model Code deleted successfully.</value>
+  </data>
+  <data name="MessageDeleteOPSArea" xml:space="preserve">
+    <value>OPS Area was deleted successfully.</value>
+  </data>
+  <data name="MessageDeleteOPSRegion" xml:space="preserve">
+    <value>OPS Region was deleted successfully.</value>
+  </data>
+  <data name="MessageDeleteUser" xml:space="preserve">
+    <value>User was deleted successfully.</value>
+  </data>
+  <data name="MessageDeleteVehiclesLease" xml:space="preserve">
+    <value>Vehicle Lease was deleted successfully.</value>
+  </data>
+  <data name="MessageLocationSaved" xml:space="preserve">
+    <value>Location was saved successfully.</value>
+  </data>
+  <data name="MessageModelCodeSaved" xml:space="preserve">
+    <value>Model code saved successfully.</value>
+  </data>
+  <data name="MessageOPSAreaSaved" xml:space="preserve">
+    <value>OPS Area was saved successfully.</value>
+  </data>
+  <data name="MessageOPSRegionSaved" xml:space="preserve">
+    <value>OPS Region was saved successfully.</value>
+  </data>
+  <data name="MessageUserDeletedSuccessfully" xml:space="preserve">
+    <value>User was deleted successfully.</value>
+  </data>
+  <data name="MessageUserInsertedSuccessfully" xml:space="preserve">
+    <value>User was insert successfully.</value>
+  </data>
+  <data name="MessageUserUpdatedSuccessfully" xml:space="preserve">
+    <value>User was updated successfully.</value>
+  </data>
+  <data name="MM" xml:space="preserve">
+    <value>MM</value>
+  </data>
+  <data name="MMDays" xml:space="preserve">
+    <value>MM Days</value>
+  </data>
+  <data name="ModalLoading" xml:space="preserve">
+    <value>Please Wait. Loading....... </value>
+  </data>
+  <data name="ModalSaving" xml:space="preserve">
+    <value>Please Wait. Saving....... </value>
+  </data>
+  <data name="ModalUpdating" xml:space="preserve">
+    <value>Please Wait. Updating....... </value>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="Modelcode" xml:space="preserve">
+    <value>Modelcode</value>
+  </data>
+  <data name="ModelCodeDetailsAdd" xml:space="preserve">
+    <value>Add New Model Code</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Movetype" xml:space="preserve">
+    <value>Movetype</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>NC</value>
+  </data>
+  <data name="NewUser" xml:space="preserve">
+    <value>New User</value>
+  </data>
+  <data name="NextUpdateDue" xml:space="preserve">
+    <value>Next Update Due:</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoneSelected" xml:space="preserve">
+    <value>None Selected</value>
+  </data>
+  <data name="NonRev" xml:space="preserve">
+    <value>Non-Rev</value>
+  </data>
+  <data name="NoRev" xml:space="preserve">
+    <value>No Rev</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="NumericValue" xml:space="preserve">
+    <value>Numeric Value</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>October</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Oneday" xml:space="preserve">
+    <value>1 day</value>
+  </data>
+  <data name="ONRENT" xml:space="preserve">
+    <value>On Rent</value>
+  </data>
+  <data name="OPERATIONALFLEET" xml:space="preserve">
+    <value>Operational Fleet</value>
+  </data>
+  <data name="OperationalUtilization" xml:space="preserve">
+    <value>Operational Utilization</value>
+  </data>
+  <data name="Operstat" xml:space="preserve">
+    <value>Operstat</value>
+  </data>
+  <data name="OPS" xml:space="preserve">
+    <value>OPS</value>
+  </data>
+  <data name="OPSAreaDetailsAdd" xml:space="preserve">
+    <value>Add New OPS Area</value>
+  </data>
+  <data name="OPSAreaDetailsSave" xml:space="preserve">
+    <value>Save OPS Area</value>
+  </data>
+  <data name="OPSRegionDetailsAdd" xml:space="preserve">
+    <value>Add New OPS Region</value>
+  </data>
+  <data name="OPSRegionDetailsSave" xml:space="preserve">
+    <value>Save OPS Region</value>
+  </data>
+  <data name="OptionPreferencesSaveCookies" xml:space="preserve">
+    <value>Save Settings Permanently</value>
+  </data>
+  <data name="OptionPreferencesSaveSession" xml:space="preserve">
+    <value>Save Settings Current Session</value>
+  </data>
+  <data name="OVERDUE" xml:space="preserve">
+    <value>Overdue</value>
+  </data>
+  <data name="OverdueCollections" xml:space="preserve">
+    <value>Overdue / Collections:</value>
+  </data>
+  <data name="OverdueOpenTripsDue" xml:space="preserve">
+    <value>Overdue / Open Trips Due:</value>
+  </data>
+  <data name="Overdues" xml:space="preserve">
+    <value>Overdues</value>
+  </data>
+  <data name="Ownarea" xml:space="preserve">
+    <value>Ownarea</value>
+  </data>
+  <data name="PagerFirst" xml:space="preserve">
+    <value>Go to first page</value>
+  </data>
+  <data name="PagerLast" xml:space="preserve">
+    <value>Go to last page</value>
+  </data>
+  <data name="PagerNext" xml:space="preserve">
+    <value>Go to next page</value>
+  </data>
+  <data name="PagerPrevious" xml:space="preserve">
+    <value>Go to previous page</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="PERCENT" xml:space="preserve">
+    <value>PERCENT</value>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>Percentage</value>
+  </data>
+  <data name="PL" xml:space="preserve">
+    <value>PL</value>
+  </data>
+  <data name="PleaseSelect" xml:space="preserve">
+    <value>- Please Select -</value>
+  </data>
+  <data name="PleaseSelectAllParameters" xml:space="preserve">
+    <value>Please note: After changing report parameters please press 'Generate Report' to refresh it.</value>
+  </data>
+  <data name="PleaseSelectItem" xml:space="preserve">
+    <value>Please select a item: </value>
+  </data>
+  <data name="PleaseSelectReportCriteria" xml:space="preserve">
+    <value>Please select the criteria for your report:</value>
+  </data>
+  <data name="PleaseSelectTheReport" xml:space="preserve">
+    <value>Please select the report you want to display.</value>
+  </data>
+  <data name="Pool" xml:space="preserve">
+    <value>Pool</value>
+  </data>
+  <data name="PoolingComparisonToolTipCarSearch" xml:space="preserve">
+    <value>Click to view current selection in Car Search</value>
+  </data>
+  <data name="PoolingComparisonToolTipReservations" xml:space="preserve">
+    <value>Click to view current selection in Reservations</value>
+  </data>
+  <data name="PoolingGridviewAvailable" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="PoolingGridviewBalance" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="PoolingGridviewCheckin" xml:space="preserve">
+    <value>Check In</value>
+  </data>
+  <data name="PoolingGridviewCheckinLocal" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="PoolingGridviewCheckinOffset" xml:space="preserve">
+    <value>Check In Offset</value>
+  </data>
+  <data name="PoolingGridviewCheckinOneway" xml:space="preserve">
+    <value>Oneway</value>
+  </data>
+  <data name="PoolingGridviewOpenTripsDueIn" xml:space="preserve">
+    <value>Open Trips Due In</value>
+  </data>
+  <data name="PoolingGridviewReservations" xml:space="preserve">
+    <value>Reservations</value>
+  </data>
+  <data name="PoolingGridviewReservationsGold" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="PoolingGridviewReservationsOneway" xml:space="preserve">
+    <value>Oneway</value>
+  </data>
+  <data name="PoolingGridviewReservationsPrepaid" xml:space="preserve">
+    <value>Prepaid</value>
+  </data>
+  <data name="PoolingReservationsCdpidNbr" xml:space="preserve">
+    <value>CDP:</value>
+  </data>
+  <data name="PoolingReservationsCustName" xml:space="preserve">
+    <value>CUSTOMER:</value>
+  </data>
+  <data name="PoolingReservationsFlightNbr" xml:space="preserve">
+    <value>FLT-NBR:</value>
+  </data>
+  <data name="PoolingReservationsGrInclGoldupgr" xml:space="preserve">
+    <value>GROUP (GOLD):</value>
+  </data>
+  <data name="PoolingReservationsN1Type" xml:space="preserve">
+    <value>GOLD STATUS:</value>
+  </data>
+  <data name="PoolingReservationsNeverLost" xml:space="preserve">
+    <value>NEVERLOST:</value>
+  </data>
+  <data name="PoolingReservationsNo1ClubGold" xml:space="preserve">
+    <value>#1-GOLD-NBR:</value>
+  </data>
+  <data name="PoolingReservationsPhone" xml:space="preserve">
+    <value>PHONE:</value>
+  </data>
+  <data name="PoolingReservationsPrepaid" xml:space="preserve">
+    <value>PREPAID:</value>
+  </data>
+  <data name="PoolingReservationsRateQuoted" xml:space="preserve">
+    <value>TARIFF:</value>
+  </data>
+  <data name="PoolingReservationsRemarks" xml:space="preserve">
+    <value>REMARKS:</value>
+  </data>
+  <data name="PoolingReservationsRentLoc" xml:space="preserve">
+    <value>CHECK OUT:</value>
+  </data>
+  <data name="PoolingReservationsResDate" xml:space="preserve">
+    <value>RES-DATE:</value>
+  </data>
+  <data name="PoolingReservationsResDays" xml:space="preserve">
+    <value>DAYS:</value>
+  </data>
+  <data name="PoolingReservationsResId" xml:space="preserve">
+    <value>RES-ID:</value>
+  </data>
+  <data name="PoolingReservationsResLoc" xml:space="preserve">
+    <value>RES LOC:</value>
+  </data>
+  <data name="PoolingReservationsResVehClass" xml:space="preserve">
+    <value>GROUP:</value>
+  </data>
+  <data name="PoolingReservationsRsArrivalDate" xml:space="preserve">
+    <value>DATE:</value>
+  </data>
+  <data name="PoolingReservationsRtrnDate" xml:space="preserve">
+    <value>DATE:</value>
+  </data>
+  <data name="PoolingReservationsRtrnLoc" xml:space="preserve">
+    <value>CHECK IN:</value>
+  </data>
+  <data name="PoolingReservationsTaco" xml:space="preserve">
+    <value>TACO:</value>
+  </data>
+  <data name="PoolingTool" xml:space="preserve">
+    <value>Pooling Tool</value>
+  </data>
+  <data name="PoolingToolStatus30DayChartTitle" xml:space="preserve">
+    <value>Status - 30 Day Actuals</value>
+  </data>
+  <data name="PoolingToolStatus3DayChartTitle" xml:space="preserve">
+    <value>Status - 3 Day Actuals</value>
+  </data>
+  <data name="PoolingToolStatusToolTipCarSearch" xml:space="preserve">
+    <value>Click to view results in Car Search</value>
+  </data>
+  <data name="PoolingToolStatusToolTipReservations" xml:space="preserve">
+    <value>Click to view results in Reservations</value>
+  </data>
+  <data name="PoolingToolStatusToolTipSiteComparison" xml:space="preserve">
+    <value>Click to view results in Site Comparison for </value>
+  </data>
+  <data name="PREDELIVERY" xml:space="preserve">
+    <value>Predelivery</value>
+  </data>
+  <data name="Previous180days" xml:space="preserve">
+    <value>Previous 180 days</value>
+  </data>
+  <data name="Previous30days" xml:space="preserve">
+    <value>Previous 30 days</value>
+  </data>
+  <data name="Previous365days" xml:space="preserve">
+    <value>Previous 365 days</value>
+  </data>
+  <data name="Previous7days" xml:space="preserve">
+    <value>Previous 7 days</value>
+  </data>
+  <data name="Previous90days" xml:space="preserve">
+    <value>Previous 90 days</value>
+  </data>
+  <data name="PreviousCustom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="PrevWWD" xml:space="preserve">
+    <value>PrevWWD</value>
+  </data>
+  <data name="ProjectTitleMARS" xml:space="preserve">
+    <value>MARS</value>
+  </data>
+  <data name="PTAlerts" xml:space="preserve">
+    <value>Alerts</value>
+  </data>
+  <data name="PTAlertsPageTitle" xml:space="preserve">
+    <value>ALERTS</value>
+  </data>
+  <data name="PTFleetComparison" xml:space="preserve">
+    <value>Fleet Comparison</value>
+  </data>
+  <data name="PTFleetComparisonPageTitle3" xml:space="preserve">
+    <value>FLEET COMPARISON - 3 DAY ACTUALS</value>
+  </data>
+  <data name="PTFleetComparisonPageTitle30" xml:space="preserve">
+    <value>FLEET COMPARISON - 30 DAY ACTUALS</value>
+  </data>
+  <data name="PTReservations" xml:space="preserve">
+    <value>Reservations</value>
+  </data>
+  <data name="PTReservationsPageTitle" xml:space="preserve">
+    <value>RESERVATION DETAILS</value>
+  </data>
+  <data name="PTSiteComparison" xml:space="preserve">
+    <value>Site Comparison</value>
+  </data>
+  <data name="PTSiteComparisonPageTitle3" xml:space="preserve">
+    <value>SITE COMPARISON - 3 DAY ACTUALS</value>
+  </data>
+  <data name="PTSiteComparisonPageTitle30" xml:space="preserve">
+    <value>SITE COMPARISON - 30 DAY ACTUALS</value>
+  </data>
+  <data name="PTStatistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="PTStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="PTStatusPageTitle3" xml:space="preserve">
+    <value>STATUS - 3 DAY ACTUALS</value>
+  </data>
+  <data name="PTStatusPageTitle30" xml:space="preserve">
+    <value>STATUS - 30 DAY ACTUALS</value>
+  </data>
+  <data name="RAC" xml:space="preserve">
+    <value>RAC</value>
+  </data>
+  <data name="RecordsSelected" xml:space="preserve">
+    <value>Records Selected</value>
+  </data>
+  <data name="RegDate" xml:space="preserve">
+    <value>Reg Date</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="RemarksMaxLimit" xml:space="preserve">
+    <value>The maximum number of characters for Remarks field is 500</value>
+  </data>
+  <data name="RentableFleetOnPeak" xml:space="preserve">
+    <value>Rentable Fleet On Peak</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="ReportSelectionCarClass" xml:space="preserve">
+    <value>Car Class:</value>
+  </data>
+  <data name="ReportSelectionCarGroup" xml:space="preserve">
+    <value>Car Group:</value>
+  </data>
+  <data name="ReportSelectionCarSegment" xml:space="preserve">
+    <value>Car Segment:</value>
+  </data>
+  <data name="ReportSelectionCheckinOut" xml:space="preserve">
+    <value>Check In / Out:</value>
+  </data>
+  <data name="ReportSelectionCMSLocationGroup" xml:space="preserve">
+    <value>CMS Location Group:</value>
+  </data>
+  <data name="ReportSelectionCMSPool" xml:space="preserve">
+    <value>CMS Pool:</value>
+  </data>
+  <data name="ReportSelectionCountry" xml:space="preserve">
+    <value>Country:</value>
+  </data>
+  <data name="ReportSelectionDateRangeEnd" xml:space="preserve">
+    <value>End:</value>
+  </data>
+  <data name="ReportSelectionDateRangeStart" xml:space="preserve">
+    <value>Start:</value>
+  </data>
+  <data name="ReportSelectionFilter" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="ReportSelectionLocation" xml:space="preserve">
+    <value>Branch:</value>
+  </data>
+  <data name="ReportSelectionOPSArea" xml:space="preserve">
+    <value>OPS Area:</value>
+  </data>
+  <data name="ReportSelectionOPSRegion" xml:space="preserve">
+    <value>OPS Region:</value>
+  </data>
+  <data name="ReportSettingsALL" xml:space="preserve">
+    <value>*** All ***</value>
+  </data>
+  <data name="ReportSettingsALLSelection" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="ReportSettingsBranch" xml:space="preserve">
+    <value>Branch:</value>
+  </data>
+  <data name="ReportSettingsCarClass" xml:space="preserve">
+    <value>Car Class:</value>
+  </data>
+  <data name="ReportSettingsCarGroup" xml:space="preserve">
+    <value>Car Group:</value>
+  </data>
+  <data name="ReportSettingsCarSegment" xml:space="preserve">
+    <value>Car Segment:</value>
+  </data>
+  <data name="ReportSettingsCDP" xml:space="preserve">
+    <value>CDP:</value>
+  </data>
+  <data name="ReportSettingsCheckinOut" xml:space="preserve">
+    <value>Check In / Out:</value>
+  </data>
+  <data name="ReportSettingsCMSLocationGroup" xml:space="preserve">
+    <value>Location Group:</value>
+  </data>
+  <data name="ReportSettingsCMSPool" xml:space="preserve">
+    <value>Pool:</value>
+  </data>
+  <data name="ReportSettingsCountry" xml:space="preserve">
+    <value>Country:</value>
+  </data>
+  <data name="ReportSettingsCustomerName" xml:space="preserve">
+    <value>Customer Name:</value>
+  </data>
+  <data name="ReportSettingsDate" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="ReportSettingsDateRange" xml:space="preserve">
+    <value>Date Range:</value>
+  </data>
+  <data name="ReportSettingsDateRangeEnd" xml:space="preserve">
+    <value>DateRange End:</value>
+  </data>
+  <data name="ReportSettingsDateRangeStart" xml:space="preserve">
+    <value>DateRange Start:</value>
+  </data>
+  <data name="ReportSettingsDayOfWeek" xml:space="preserve">
+    <value>Day of Week:</value>
+  </data>
+  <data name="ReportSettingsDUEWWD" xml:space="preserve">
+    <value>DUEWWD:</value>
+  </data>
+  <data name="ReportSettingsEndDate" xml:space="preserve">
+    <value>End Date:</value>
+  </data>
+  <data name="ReportSettingsFilter" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="ReportSettingsFleet" xml:space="preserve">
+    <value>Fleet:</value>
+  </data>
+  <data name="ReportSettingsFlightNo" xml:space="preserve">
+    <value>Flight Nbr:</value>
+  </data>
+  <data name="ReportSettingsGenerateReport" xml:space="preserve">
+    <value>Generate Report</value>
+  </data>
+  <data name="ReportSettingsGenerateReportAndDownload" xml:space="preserve">
+    <value>Generate Report &amp; Download</value>
+  </data>
+  <data name="ReportSettingsGoToKPIDownload" xml:space="preserve">
+    <value>Go to KPI Download Page</value>
+  </data>
+  <data name="ReportSettingsLocation" xml:space="preserve">
+    <value>Location:</value>
+  </data>
+  <data name="ReportSettingsLogic" xml:space="preserve">
+    <value>Logic:</value>
+  </data>
+  <data name="ReportSettingsLogicCMS" xml:space="preserve">
+    <value>CMS</value>
+  </data>
+  <data name="ReportSettingsLogicOPS" xml:space="preserve">
+    <value>OPS</value>
+  </data>
+  <data name="ReportSettingsLSTWWD" xml:space="preserve">
+    <value>LSTWWD:</value>
+  </data>
+  <data name="ReportSettingsModelcode" xml:space="preserve">
+    <value>Modelcode:</value>
+  </data>
+  <data name="ReportSettingsNo1Gold" xml:space="preserve">
+    <value>#1 Gold:</value>
+  </data>
+  <data name="ReportSettingsNoRev" xml:space="preserve">
+    <value>No Rev:</value>
+  </data>
+  <data name="ReportSettingsOPS" xml:space="preserve">
+    <value>OPS</value>
+  </data>
+  <data name="ReportSettingsOPSArea" xml:space="preserve">
+    <value>Area:</value>
+  </data>
+  <data name="ReportSettingsOPSRegion" xml:space="preserve">
+    <value>Region:</value>
+  </data>
+  <data name="ReportSettingsOwnarea" xml:space="preserve">
+    <value>Ownarea:</value>
+  </data>
+  <data name="ReportSettingsPercent" xml:space="preserve">
+    <value>PERCENT</value>
+  </data>
+  <data name="ReportSettingsRACFID" xml:space="preserve">
+    <value>RACF ID:</value>
+  </data>
+  <data name="ReportSettingsResetZoom" xml:space="preserve">
+    <value>Reset Zoom</value>
+  </data>
+  <data name="ReportSettingsResID" xml:space="preserve">
+    <value>Res-ID:</value>
+  </data>
+  <data name="ReportSettingsStartDate" xml:space="preserve">
+    <value>Start Date:</value>
+  </data>
+  <data name="ReportSettingsStatus" xml:space="preserve">
+    <value>Oper. Status:</value>
+  </data>
+  <data name="ReportSettingsTitle" xml:space="preserve">
+    <value>Please select the criteria for your report:</value>
+  </data>
+  <data name="ReportSettingsTopic" xml:space="preserve">
+    <value>Topic:</value>
+  </data>
+  <data name="ReportSettingsUserDefaultSettingsTitle" xml:space="preserve">
+    <value>Report Default Settings</value>
+  </data>
+  <data name="ReportSettingsValue" xml:space="preserve">
+    <value>VALUE</value>
+  </data>
+  <data name="ResetZoom" xml:space="preserve">
+    <value>Reset Zoom</value>
+  </data>
+  <data name="ReturnToFleetStatusReport" xml:space="preserve">
+    <value>Return to the Fleet Status report</value>
+  </data>
+  <data name="RL" xml:space="preserve">
+    <value>RL</value>
+  </data>
+  <data name="RP" xml:space="preserve">
+    <value>RP</value>
+  </data>
+  <data name="RT" xml:space="preserve">
+    <value>RT</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SavedSearchesAdd" xml:space="preserve">
+    <value>Add new saved search</value>
+  </data>
+  <data name="SaveOK" xml:space="preserve">
+    <value>Save OK</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="SelectToolTipAreaCodes" xml:space="preserve">
+    <value>Click to select Area Codes</value>
+  </data>
+  <data name="SelectToolTipCarClasses" xml:space="preserve">
+    <value>Click to select Car Classes</value>
+  </data>
+  <data name="SelectToolTipCarGroups" xml:space="preserve">
+    <value>Click to select Car Groups</value>
+  </data>
+  <data name="SelectToolTipCarSegments" xml:space="preserve">
+    <value>Click to select Car Segments</value>
+  </data>
+  <data name="SelectToolTipCMSLocationGroups" xml:space="preserve">
+    <value>Click to select CMS Location Groups</value>
+  </data>
+  <data name="SelectToolTipCMSPools" xml:space="preserve">
+    <value>Click to select CMS Pools</value>
+  </data>
+  <data name="SelectToolTipLocations" xml:space="preserve">
+    <value>Click to select Locations</value>
+  </data>
+  <data name="SelectToolTipModelCodes" xml:space="preserve">
+    <value>Click to select Model Codes.</value>
+  </data>
+  <data name="SelectToolTipOPSAreas" xml:space="preserve">
+    <value>Click to select OPS Areas</value>
+  </data>
+  <data name="SelectToolTipOPSRegions" xml:space="preserve">
+    <value>Click to select OPS Regions</value>
+  </data>
+  <data name="SelectYourLanguage" xml:space="preserve">
+    <value>Select your language</value>
+  </data>
+  <data name="September" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="Shop" xml:space="preserve">
+    <value>Shop</value>
+  </data>
+  <data name="SiteComparison" xml:space="preserve">
+    <value>Site Comparison</value>
+  </data>
+  <data name="SizingTool" xml:space="preserve">
+    <value>Sizing Tool</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="StatisticsInfo" xml:space="preserve">
+    <value>* GENERAL row shows how many times the report was run for ***All*** items in the selected group</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="SU" xml:space="preserve">
+    <value>SU</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="SwitchTo30DayActuals" xml:space="preserve">
+    <value>Switch to 30 day actuals</value>
+  </data>
+  <data name="SwitchTo3DayActuals" xml:space="preserve">
+    <value>Switch to 3 day actuals</value>
+  </data>
+  <data name="SwitchToChart" xml:space="preserve">
+    <value>Switch to Chart</value>
+  </data>
+  <data name="SwitchToDataSheet" xml:space="preserve">
+    <value>Switch to Datasheet</value>
+  </data>
+  <data name="SZAdjustment" xml:space="preserve">
+    <value>Adjustment</value>
+  </data>
+  <data name="SZImportFleetSupply" xml:space="preserve">
+    <value>Import Fleet Supply</value>
+  </data>
+  <data name="SZReport" xml:space="preserve">
+    <value>Sizing Report</value>
+  </data>
+  <data name="TB" xml:space="preserve">
+    <value>TB</value>
+  </data>
+  <data name="TC" xml:space="preserve">
+    <value>TC</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="TimeoutError1" xml:space="preserve">
+    <value>Your session has timed out.</value>
+  </data>
+  <data name="TimeoutError2" xml:space="preserve">
+    <value>The application was left inactive for more than 45 minutes&lt;br /&gt; and you have been logged out due to security reasons.</value>
+  </data>
+  <data name="TN" xml:space="preserve">
+    <value>TN</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>*** Today ***</value>
+  </data>
+  <data name="ToolTipCarClass" xml:space="preserve">
+    <value>Please select Car Segment to load Car Classes.</value>
+  </data>
+  <data name="ToolTipCarGroup" xml:space="preserve">
+    <value>Please select Car Class to load Car Groups.</value>
+  </data>
+  <data name="ToolTipCarSegment" xml:space="preserve">
+    <value>Please select Country to load Car Segments.</value>
+  </data>
+  <data name="ToolTipCMSLocationGroup" xml:space="preserve">
+    <value>Please select CMS Pool to load CMS Location Groups.</value>
+  </data>
+  <data name="ToolTipCMSPool" xml:space="preserve">
+    <value>Please select Country to load CMS Pools.</value>
+  </data>
+  <data name="ToolTipCountry" xml:space="preserve">
+    <value>Please select Country to load CMS Pools / OPS Regions / Car Segments or Model Codes.</value>
+  </data>
+  <data name="ToolTipLocation" xml:space="preserve">
+    <value>Please select CMS Location Group / OPS Area to load Locations.</value>
+  </data>
+  <data name="ToolTipLogic" xml:space="preserve">
+    <value>Please choose your logic.</value>
+  </data>
+  <data name="ToolTipModelCode" xml:space="preserve">
+    <value>Please select Country to load Model Codes.</value>
+  </data>
+  <data name="ToolTipOPSArea" xml:space="preserve">
+    <value>Please select OPS Region to load OPS Areas.</value>
+  </data>
+  <data name="ToolTipOPSRegion" xml:space="preserve">
+    <value>Please select Country to load OPS Regions.</value>
+  </data>
+  <data name="Topic" xml:space="preserve">
+    <value>Topic</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="TotalCar" xml:space="preserve">
+    <value>Total Car</value>
+  </data>
+  <data name="TOTALFLEET" xml:space="preserve">
+    <value>Total Fleet</value>
+  </data>
+  <data name="TotalVan" xml:space="preserve">
+    <value>Total Van</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="Turnback" xml:space="preserve">
+    <value>Turnback</value>
+  </data>
+  <data name="TW" xml:space="preserve">
+    <value>TW</value>
+  </data>
+  <data name="UnavailableNonOperationalFleet" xml:space="preserve">
+    <value>Unavailable Non-Operational Fleet</value>
+  </data>
+  <data name="UnavailableOperationalFleet" xml:space="preserve">
+    <value>Unavailable Operational Fleet</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="UserMaintenance" xml:space="preserve">
+    <value>User Maintenance</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="UserRoles" xml:space="preserve">
+    <value>Users / User Roles</value>
+  </data>
+  <data name="UserRolesTitle" xml:space="preserve">
+    <value>Information About User Roles</value>
+  </data>
+  <data name="UsersCountries" xml:space="preserve">
+    <value>Countries:</value>
+  </data>
+  <data name="UsersDetailsAdd" xml:space="preserve">
+    <value>Add New User</value>
+  </data>
+  <data name="UsersDetailsSave" xml:space="preserve">
+    <value>Save User</value>
+  </data>
+  <data name="UsersName" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="UsersRACFID" xml:space="preserve">
+    <value>RACFID:</value>
+  </data>
+  <data name="UsersRoleNames" xml:space="preserve">
+    <value>Roles:</value>
+  </data>
+  <data name="UtilInclOverdue" xml:space="preserve">
+    <value>Util. Incl. Overdue</value>
+  </data>
+  <data name="Utilization" xml:space="preserve">
+    <value>Utilization</value>
+  </data>
+  <data name="VALUE" xml:space="preserve">
+    <value>VALUE</value>
+  </data>
+  <data name="VehicleDetails" xml:space="preserve">
+    <value>Vehicle Details</value>
+  </data>
+  <data name="VehicleIdentNbr" xml:space="preserve">
+    <value>VIN</value>
+  </data>
+  <data name="VehiclesLease" xml:space="preserve">
+    <value>Vehicles Lease</value>
+  </data>
+  <data name="VehiclesLeaseDetailsAdd" xml:space="preserve">
+    <value>Add New Vehicles</value>
+  </data>
+  <data name="VehiclesLeaseDetailsDelete" xml:space="preserve">
+    <value>Delete Vehicles</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="WelcomeNote" xml:space="preserve">
+    <value>Welcome to MARS</value>
+  </data>
+  <data name="WelcomNoteFC" xml:space="preserve">
+    <value>Welcome to MARS Forecasting Tool</value>
+  </data>
+  <data name="WelcomNoteSZ" xml:space="preserve">
+    <value>Welcome to MARS Sizing Tool</value>
+  </data>
+  <data name="WindowsLogonID" xml:space="preserve">
+    <value>Windows Logon ID:</value>
+  </data>
+  <data name="WSNONRAC" xml:space="preserve">
+    <value>WS (NONRAC)</value>
+  </data>
+  <data name="WSRAC" xml:space="preserve">
+    <value>WS (RAC)</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="YourLanguage" xml:space="preserve">
+    <value>Your Language</value>
+  </data>
+  <data name="YourRole" xml:space="preserve">
+    <value>Your Role</value>
+  </data>
+  <data name="NRCarSearch" xml:space="preserve">
+    <value>Non Revenue - Car Search</value>
+  </data>
+  <data name="ReportSettingsPleaseSelect" xml:space="preserve">
+    <value>- Please Select -</value>
+  </data>
+</root>
